@@ -1,6 +1,6 @@
 import { IRecord } from "@/components/records/types";
 import { RecordTypeWrapper } from "./record-type-wrapper";
-import { Building, Mail } from "lucide-react";
+import { Building } from "lucide-react";
 import { jobcandidatesSchema } from "@/lib/schemas";
 import { z } from "zod";
 

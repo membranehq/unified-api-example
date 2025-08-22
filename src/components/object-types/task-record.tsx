@@ -1,6 +1,6 @@
 import { IRecord } from "@/components/records/types";
 import { RecordTypeWrapper } from "./record-type-wrapper";
-import { AlertCircle, User } from "lucide-react";
+import { AlertCircle } from "lucide-react";
 import { tasksSchema } from "@/lib/schemas";
 import { z } from "zod";
 

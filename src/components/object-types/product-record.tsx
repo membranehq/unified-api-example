@@ -1,6 +1,6 @@
 import { IRecord } from "@/components/records/types";
 import { RecordTypeWrapper } from "./record-type-wrapper";
-import { Package, DollarSign } from "lucide-react";
+import { Package } from "lucide-react";
 import { productsSchema } from "@/lib/schemas";
 import { z } from "zod";
 

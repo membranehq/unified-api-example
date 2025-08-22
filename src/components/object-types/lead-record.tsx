@@ -1,6 +1,6 @@
 import { IRecord } from "@/components/records/types";
 import { RecordTypeWrapper } from "./record-type-wrapper";
-import { User, Building, DollarSign } from "lucide-react";
+import { User } from "lucide-react";
 import { leadsSchema } from "@/lib/schemas";
 import { z } from "zod";
 
