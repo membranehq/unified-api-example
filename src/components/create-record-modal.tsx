@@ -38,6 +38,9 @@ export function CreateRecordModal({
     return null;
   }
 
+  // Create a schema without the id field for create forms
+  const createSchema = (config.schema as z.ZodObject<Record<string, z.ZodTypeAny>>).omit({ id: true });
+
   const handleFieldChange = (field: string, value: unknown) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     // Clear error when user starts typing
@@ -120,9 +123,7 @@ export function CreateRecordModal({
           )}
           <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-3 sm:py-4">
             <ZodFormRenderer
-              schema={
-                config.schema as z.ZodObject<Record<string, z.ZodTypeAny>>
-              }
+              schema={createSchema}
               formData={formData}
               errors={errors}
               onFieldChange={handleFieldChange}

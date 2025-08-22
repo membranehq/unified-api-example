@@ -13,6 +13,7 @@ import appObjectConfig from "@/lib/app-object-config";
 import { ZodFormRenderer } from "./zod-form-renderer";
 import { IRecord } from "./records/types";
 import { getSingularForm } from "@/lib/pluralize-utils";
+import { z } from "zod";
 
 interface EditRecordModalProps {
   record: IRecord;
@@ -35,6 +36,9 @@ export function EditRecordModal({
 
   const config =
     appObjectConfig[recordType as keyof typeof appObjectConfig];
+
+  // Create a schema without the id field for edit forms
+  const editSchema = (config.schema as z.ZodObject<Record<string, z.ZodTypeAny>>).omit({ id: true });
 
   const handleFieldChange = (field: string, value: unknown) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -96,8 +100,7 @@ export function EditRecordModal({
           )}
           <div className="flex-1 overflow-y-auto px-4 sm:px-6 py-3 sm:py-4">
             <ZodFormRenderer
-              // @ts-expect-error - Schema type mismatch
-              schema={config.schema}
+              schema={editSchema}
               formData={formData}
               errors={errors}
               onFieldChange={handleFieldChange}
