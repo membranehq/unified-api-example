@@ -1,0 +1,90 @@
+id: 689f2c0400905568ab2f6ded
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: aedf83e2-31d7-4a0a-bbbc-98d07b573869
+createdAt: '2025-08-15T12:46:04.096Z'
+updatedAt: '2025-08-15T12:46:04.096Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    address:
+      $var: $.input.filter.primaryAddress.street
+    city:
+      $var: $.input.filter.primaryAddress.city
+    state:
+      $var: $.input.filter.primaryAddress.state
+    zipcode:
+      $var: $.input.filter.primaryAddress.zip
+    country:
+      $var: $.input.filter.primaryAddress.country
+    number_of_employees:
+      $var: $.input.filter.numberOfEmployees
+    website:
+      $var: $.input.filter.websiteUrl
+    owner_id:
+      $var: $.input.filter.ownerId
+    phone:
+      $var: $.input.filter.primaryPhone
+    last_contacted:
+      $var: $.input.filter.lastActivityTime
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    creater_id:
+      $var: $.input.filter.createdBy
+    updater_id:
+      $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

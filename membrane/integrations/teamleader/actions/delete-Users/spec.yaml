@@ -1,0 +1,50 @@
+id: 68a8260e678af1d0cf6ec12b
+name: Delete User
+key: delete-Users
+uuid: 2c5c6ffd-7ab2-4165-977f-9224e92acd38
+state: READY
+errors: []
+revision: 2f122f67-bb7f-4c4e-9e3a-7a53704403c1
+createdAt: '2025-08-22T08:10:58.852Z'
+updatedAt: '2025-08-22T08:10:58.852Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a8260e678af1d0cf6ebefe
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 15541a7f-5223-48f2-9e8b-1a0feb22aa97
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

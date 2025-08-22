@@ -1,0 +1,52 @@
+id: 68a8261c678af1d0cf6ecec1
+name: Receive Updated User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Users-events
+revision: b01930f3-4266-4faf-8b74-eff7894d3319
+universalFlowId: 68a82616678af1d0cf6ec86c
+integrationId: 689f2bf000905568ab2f66e6
+universalFlowRevision: 7b18ac04-a7cd-4001-93cf-1c2d5188060a
+nodes:
+  Users-updated-trigger:
+    type: data-record-updated-trigger
+    name: User Updated Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping:
+        key: users
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

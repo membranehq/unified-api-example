@@ -1,0 +1,50 @@
+id: 68a8260e678af1d0cf6ec11f
+name: Delete User
+key: delete-Users
+uuid: 2c5c6ffd-7ab2-4165-977f-9224e92acd38
+state: READY
+errors: []
+revision: 2f50d6c0-e675-46d1-9bcf-d584e06b0ad0
+createdAt: '2025-08-22T08:10:58.461Z'
+updatedAt: '2025-08-22T08:10:58.461Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66dc
+parentId: 68a8260e678af1d0cf6ebefe
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 15541a7f-5223-48f2-9e8b-1a0feb22aa97
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

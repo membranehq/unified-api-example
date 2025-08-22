@@ -1,0 +1,58 @@
+id: 68a8260e678af1d0cf6ec0e6
+name: Update User
+key: update-Users
+uuid: 4b5992cf-587e-476c-b119-b77e50d8526f
+state: READY
+errors: []
+revision: 8d20b24e-137b-471a-9c0f-1a673f20507e
+createdAt: '2025-08-22T08:10:59.492Z'
+updatedAt: '2025-08-22T08:10:59.492Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8260e678af1d0cf6ebf0b
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: abae95c1-5ecc-448d-a5ec-c3aba6498de3
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

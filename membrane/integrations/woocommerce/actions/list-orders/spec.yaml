@@ -1,0 +1,104 @@
+id: 68a84f077702482264c62f89
+name: List Orders
+key: list-orders
+uuid: 6d2b58e8-ec77-4b11-9a80-c19c9da69fad
+state: READY
+errors: []
+revision: eeac6ff0-9499-4ea1-af0d-77b16c38424d
+createdAt: '2025-08-22T11:05:44.959Z'
+updatedAt: '2025-08-22T11:05:44.959Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c7d
+parentId: 68a84f077702482264c62e9a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    status:
+      $var: $.input.filter.status
+    customer_id:
+      $var: $.input.filter.customerId
+    customer_note:
+      $var: $.input.filter.notes
+    payment_method:
+      $var: $.input.filter.paymentMethod
+    billing:
+      address_1:
+        $var: $.input.filter.billingAddress.street
+      city:
+        $var: $.input.filter.billingAddress.city
+      state:
+        $var: $.input.filter.billingAddress.state
+      country:
+        $var: $.input.filter.billingAddress.country
+      postcode:
+        $var: $.input.filter.billingAddress.zip
+    shipping:
+      address_1:
+        $var: $.input.filter.shippingAddress.street
+      city:
+        $var: $.input.filter.shippingAddress.city
+      state:
+        $var: $.input.filter.shippingAddress.state
+      country:
+        $var: $.input.filter.shippingAddress.country
+      postcode:
+        $var: $.input.filter.shippingAddress.zip
+    line_items:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          name:
+            $var: $.item.name
+          product_id:
+            $var: $.item.productId
+          quantity:
+            $var: $.item.quantity
+          price:
+            $var: $.item.unitPrice
+          total:
+            $var: $.item.totalAmount
+isCustomized: false
+parentRevision: 24307e40-ddbc-44aa-9509-a6e37166a8f6
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,58 @@
+id: 68a82658e426fdf8cbab8a96
+name: Update Contact
+key: update-Contacts
+uuid: 74f64cff-a9fc-4d63-a156-a60017ed1c31
+state: READY
+errors: []
+revision: 72c56b5b-e66e-42f6-8e77-a3db61a7c289
+createdAt: '2025-08-22T08:12:13.757Z'
+updatedAt: '2025-08-22T08:12:13.757Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a82657e426fdf8cbab88c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: f7c5630c-4b19-4b25-b702-9d20f7d14e01
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

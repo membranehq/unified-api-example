@@ -1,0 +1,38 @@
+id: 689f2c0000905568ab2f6875
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+revision: 75bf2fa1-2a67-4fcf-abf0-188e5f1052b3
+integrationId: 689f2bf000905568ab2f66ec
+customized: false
+universalDataSourceId: 689f2c0000905568ab2f682a
+universalDataSourceRevision: 3f6b0bb8-a50a-47bc-90e7-dd0dcd0d11c9
+collectionKey: accounts
+udm: companies
+defaultPath: /data/accounts
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

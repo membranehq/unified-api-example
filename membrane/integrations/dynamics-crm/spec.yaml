@@ -1,0 +1,24 @@
+id: 689f2bf000905568ab2f66d3
+name: Microsoft Dynamics 365
+key: dynamics-crm
+uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+state: READY
+errors: []
+createdAt: '2025-08-15T12:45:36.203Z'
+updatedAt: '2025-08-15T12:45:48.675Z'
+isDeactivated: false
+logoUri: >-
+  https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+connectorId: 63151d261d39af2f69364172
+connectorVersion: 1.1.18
+hasMissingParameters: false
+hasDocumentation: true
+hasOperations: true
+operationsCount: 1
+hasData: true
+dataCollectionsCount: 18
+hasEvents: false
+eventsCount: 0
+hasGlobalWebhooks: false
+hasUdm: true
+authType: oauth2

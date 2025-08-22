@@ -1,0 +1,107 @@
+id: 689f2c0400905568ab2f6df9
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 9869635b-5620-40ae-a158-a0f1cda629a8
+createdAt: '2025-08-15T12:46:04.088Z'
+updatedAt: '2025-08-15T12:46:04.088Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    owner:
+      $var: $.input.filter.ownerId
+    about:
+      $var: $.input.filter.description
+    addresses:
+      $iterate:
+        source:
+          $var: $.input.filter.addresses
+        item:
+          type:
+            $var: $.item.type
+          street:
+            $var: $.item.street
+          city:
+            $var: $.item.city
+          state:
+            $var: $.item.state
+          country:
+            $var: $.item.country
+          zip:
+            $var: $.item.zip
+    emailAddresses:
+      $iterate:
+        source:
+          $var: $.input.filter.emails
+        item:
+          address:
+            $var: $.item.value
+          type:
+            $var: $.item.type
+    phoneNumbers:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          number:
+            $var: $.item.value
+          type:
+            $var: $.item.type
+    createdAt:
+      $var: $.input.filter.createdTime
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    lastContactedAt:
+      $var: $.input.filter.lastActivityTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

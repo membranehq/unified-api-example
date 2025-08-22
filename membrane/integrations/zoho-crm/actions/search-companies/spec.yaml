@@ -1,0 +1,54 @@
+id: 689f2c0400905568ab2f6e93
+name: Search Companies
+key: search-companies
+state: READY
+errors: []
+revision: 074b64fe-0c23-48c3-b508-de6618084060
+createdAt: '2025-08-15T12:46:03.515Z'
+updatedAt: '2025-08-15T12:46:03.515Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 689f2c0400905568ab2f6b45
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: c13aa46b-a0af-4ed9-af71-fb3d2e95ad12
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

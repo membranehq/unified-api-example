@@ -1,0 +1,69 @@
+id: 68a820cd9fc7b352ffc94693
+name: Jobs
+isDeactivated: false
+state: READY
+errors: []
+key: jobs
+customized: false
+revision: 2649ee4f-d681-4adc-8873-c8469fcde3eb
+universalFieldMappingId: 68a820cd9fc7b352ffc94662
+universalFieldMappingRevision: 26908f16-503a-4b7f-b946-48737ac8cae3
+integrationId: 68a820cb9fc7b352ffc945af
+dataSourceKey: jobs
+dataSourceId: 68a820cd9fc7b352ffc94626
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  jnid:
+    $var: $.id
+  number:
+    $var: $.code
+  date_created:
+    $var: $.createdTime
+  date_updated:
+    $var: $.updatedTime
+  status:
+    $var: $.status
+importValue:
+  id:
+    $var: $.jnid
+  name:
+    $var: $.name
+  createdTime:
+    $var: $.date_created
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_updated
+  status:
+    $var: $.status
+  code:
+    $var: $.number
+integration:
+  id: 68a820cb9fc7b352ffc945af
+  name: Jobnimbus
+  key: jobnimbus
+  uuid: 21962f75-6a23-44f3-8b4e-0ea3ee8fee4b
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.357Z'
+  updatedAt: '2025-08-22T07:48:28.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/jobnimbus/asset-d720393c-e369-41bc-9de8-944e634b1a01.png
+  connectorId: 66f55199229f31ff2197356d
+  connectorVersion: 1.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 54
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

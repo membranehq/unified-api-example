@@ -1,0 +1,39 @@
+id: 68a839b4f8d786c131d7f88e
+name: Job Applications
+isDeactivated: false
+state: READY
+errors: []
+key: job-applications
+revision: 42cd2f1a-7e46-4169-a7b0-bc312bb3d415
+integrationId: 68a839b3f8d786c131d7f870
+customized: false
+universalDataSourceId: 68a839b4f8d786c131d7f87f
+universalDataSourceRevision: 06f7c850-bfaa-44db-bac0-0e7d1a788d08
+collectionKey: job-applications
+udm: job-applications
+defaultPath: /data/job-applications
+integration:
+  id: 68a839b3f8d786c131d7f870
+  name: ADP Workforce Now
+  key: adp-workforce
+  uuid: 70fbdae3-cc83-4be8-a6a2-5090f00ea8bb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:34:43.720Z'
+  updatedAt: '2025-08-22T09:34:44.483Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/adp-workforce/logo-84dfdeb3-08f9-4a0f-b865-104ffc82a88b.png
+  connectorId: 6526714370089fac4849d647
+  connectorVersion: 1.1.8
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 413
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

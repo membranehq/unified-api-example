@@ -1,0 +1,54 @@
+id: 68a8260e678af1d0cf6ec173
+name: Create User
+key: create-Users
+uuid: ac4f22cb-7b1b-4c7e-ab63-df88a08ec273
+state: READY
+errors: []
+revision: ce5977c7-454e-4bb2-b958-bfcdef2e7618
+createdAt: '2025-08-22T08:10:59.690Z'
+updatedAt: '2025-08-22T08:10:59.690Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8260e678af1d0cf6ebf00
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: users
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 8a05b55c-f017-43bd-97d2-da84f21bfe46
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

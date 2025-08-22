@@ -1,0 +1,74 @@
+id: 689f2c0400905568ab2f6e2d
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: fa92d703-d173-47ce-9a6c-3e3738a8ad72
+createdAt: '2025-08-15T12:46:04.172Z'
+updatedAt: '2025-08-15T12:46:04.172Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d5
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    properties:
+      - value:
+          $var: $.input.filter.name
+    owner:
+      id:
+        $var: $.input.filter.ownerId
+    created_time:
+      $var: $.input.filter.createdTime
+    updated_time:
+      $var: $.input.filter.updatedTime
+    _sf_name:
+      $var: $.input.filter.name
+    last_contacted:
+      $var: $.input.filter.lastActivityTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,56 @@
+id: 689f2c0100905568ab2f69e9
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 7afad4c9-6cb3-46c3-b7b2-6cf587fb1412
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f670a
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f689f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  domain:
+    $var: $.websiteUrl
+  name:
+    $var: $.name
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  websiteUrl:
+    $var: $.domain
+  name:
+    $var: $.name
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

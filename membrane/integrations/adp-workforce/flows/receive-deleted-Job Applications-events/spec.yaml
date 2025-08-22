@@ -1,0 +1,51 @@
+id: 68a839b6f8d786c131d7fb5e
+name: Receive Deleted Job Application Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Job Applications-events
+revision: 7825a677-09f0-4355-afeb-4ba9dde96216
+universalFlowId: 68a839b6f8d786c131d7fa8d
+integrationId: 68a839b3f8d786c131d7f870
+universalFlowRevision: a7909d9e-1d4c-440a-948f-fb97b2f3f65d
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Job Applications-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Job Application Deleted Trigger
+    config:
+      dataSource:
+        key: job-applications
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a839b3f8d786c131d7f870
+  name: ADP Workforce Now
+  key: adp-workforce
+  uuid: 70fbdae3-cc83-4be8-a6a2-5090f00ea8bb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:34:43.720Z'
+  updatedAt: '2025-08-22T09:34:44.483Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/adp-workforce/logo-84dfdeb3-08f9-4a0f-b865-104ffc82a88b.png
+  connectorId: 6526714370089fac4849d647
+  connectorVersion: 1.1.8
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 413
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

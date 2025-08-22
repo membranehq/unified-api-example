@@ -1,0 +1,52 @@
+id: 68a820ce9fc7b352ffc947f8
+name: Match Job
+key: match-Jobs
+uuid: 549396f6-e075-4ad8-904d-2026b6051da9
+state: READY
+errors: []
+revision: b1c5d9dc-249c-4e31-bfea-ff52babada88
+createdAt: '2025-08-22T07:48:31.292Z'
+updatedAt: '2025-08-22T07:48:31.292Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc94595
+parentId: 68a820ce9fc7b352ffc946f6
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 6cc97011-3f12-4164-a779-3786e4f0ddb3
+integration:
+  id: 68a820cb9fc7b352ffc94595
+  name: BambooHR
+  key: bamboohr
+  uuid: becd939a-2e65-4f39-bd4e-f5f94bcffab6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.275Z'
+  updatedAt: '2025-08-22T07:48:29.061Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/bamboohr/logohq.png
+  connectorId: 65265ce970089fac483f2ee8
+  connectorVersion: 2.0.9
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 165
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

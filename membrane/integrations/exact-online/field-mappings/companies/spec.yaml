@@ -1,0 +1,118 @@
+id: 689f2c0100905568ab2f69eb
+name: Companies
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 689f2c0000905568ab2f68a1
+key: companies
+customized: false
+revision: ea42b1d3-613b-4313-92f8-ab22b391c8f7
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f670c
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f68a1
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  ID:
+    $var: $.id
+  ActivitySector:
+    $var: $.industry
+  City:
+    $var: $.primaryAddress.city
+  Country:
+    $var: $.primaryAddress.country
+  Created:
+    $var: $.createdTime
+  Creator:
+    $var: $.createdBy
+  Currency:
+    $var: $.currency
+  Modified:
+    $var: $.updatedTime
+  Modifier:
+    $var: $.updatedBy
+  Name:
+    $var: $.name
+  Postcode:
+    $var: $.addresses[0].zip
+  Website:
+    $var: $.websiteUrl
+importValue:
+  id:
+    $var: $.ID
+  name:
+    $var: $.Name
+  websiteUrl:
+    $var: $.Website
+  primaryPhone:
+    $var: $.Phone
+  currency:
+    $var: $.Currency
+  industry:
+    $var: $.ActivitySector
+  primaryAddress:
+    full:
+      $var: $.AddressLine1
+    street:
+      $var: $.AddressLine2
+    city:
+      $var: $.City
+    state:
+      $var: $.State
+    country:
+      $var: $.Country
+    zip:
+      $var: $.Postcode
+  numberOfEmployees:
+    $var: $.CompanySize
+  createdTime:
+    $var: $.Created
+  createdBy:
+    $var: $.Creator
+  updatedTime:
+    $var: $.Modified
+  updatedBy:
+    $var: $.Modifier
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

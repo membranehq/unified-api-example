@@ -1,0 +1,52 @@
+id: 68a8261c678af1d0cf6eceb9
+name: Receive Updated User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Users-events
+revision: ef44ead2-fb48-4c4a-b004-915df8ed5eb0
+universalFlowId: 68a82616678af1d0cf6ec86c
+integrationId: 689f2bf000905568ab2f66f7
+universalFlowRevision: 7b18ac04-a7cd-4001-93cf-1c2d5188060a
+nodes:
+  Users-updated-trigger:
+    type: data-record-updated-trigger
+    name: User Updated Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping:
+        key: users
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

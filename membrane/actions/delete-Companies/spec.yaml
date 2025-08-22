@@ -1,0 +1,21 @@
+id: 689f2c0400905568ab2f6b3f
+name: Delete Company
+key: delete-Companies
+state: READY
+errors: []
+revision: e970243d-9f80-4f9c-bbf2-08436505b1c9
+createdAt: '2025-08-15T12:45:56.189Z'
+updatedAt: '2025-08-15T12:45:56.189Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+isCustomized: false

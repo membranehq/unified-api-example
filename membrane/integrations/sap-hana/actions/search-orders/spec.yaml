@@ -1,0 +1,55 @@
+id: 68a84f077702482264c62fa1
+name: Search Orders
+key: search-orders
+uuid: c5729db6-8993-44d5-b4f1-1b0eff63c144
+state: READY
+errors: []
+revision: 01fb8931-9784-4e4b-a605-95196d2509d2
+createdAt: '2025-08-22T11:05:44.684Z'
+updatedAt: '2025-08-22T11:05:44.684Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c7f
+parentId: 68a84f077702482264c62e93
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: d0c3f90c-b557-4cde-829e-ba869f37bf68
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

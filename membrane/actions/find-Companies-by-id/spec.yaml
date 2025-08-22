@@ -1,0 +1,23 @@
+id: 689f2c0400905568ab2f6b41
+name: Find Company By Id
+key: find-Companies-by-id
+state: READY
+errors: []
+revision: a9d3b092-4fdf-4709-93f5-46759fbcea79
+createdAt: '2025-08-15T12:45:56.194Z'
+updatedAt: '2025-08-15T12:45:56.194Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+isCustomized: false

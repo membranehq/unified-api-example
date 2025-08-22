@@ -1,0 +1,93 @@
+id: 689f2c0400905568ab2f6e0b
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: c3f9fe54-797e-49ff-81b6-e5f3799c49a7
+createdAt: '2025-08-15T12:46:04.099Z'
+updatedAt: '2025-08-15T12:46:04.099Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f3
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    websites:
+      - url:
+          $var: $.input.filter.websiteUrl
+    assignee_id:
+      $var: $.input.filter.ownerId
+    details:
+      $var: $.input.filter.description
+    phone_numbers:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          number:
+            $var: $.item.value
+          category:
+            $var: $.item.type
+    address:
+      street:
+        $var: $.input.filter.primaryAddress.street
+      city:
+        $var: $.input.filter.primaryAddress.city
+      state:
+        $var: $.input.filter.primaryAddress.state
+      country:
+        $var: $.input.filter.primaryAddress.country
+      postal_code:
+        $var: $.input.filter.primaryAddress.zip
+    date_created:
+      $var: $.input.filter.createdTime
+    date_modified:
+      $var: $.input.filter.updatedTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

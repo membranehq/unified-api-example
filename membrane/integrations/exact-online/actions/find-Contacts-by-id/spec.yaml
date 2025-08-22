@@ -1,0 +1,72 @@
+id: 68a82658e426fdf8cbab8b48
+name: Find Contact By Id
+key: find-Contacts-by-id
+uuid: f05cc41d-a7ba-4d31-b695-def1ae641657
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85d5
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a82654e426fdf8cbab874e
+revision: 7e6a9500-5d70-44f3-bf13-e544311adee5
+createdAt: '2025-08-22T08:12:14.193Z'
+updatedAt: '2025-08-22T08:12:14.193Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670c
+parentId: 68a82657e426fdf8cbab88bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: db8d9b84-2a16-4177-bcf9-ca9be54ae497
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

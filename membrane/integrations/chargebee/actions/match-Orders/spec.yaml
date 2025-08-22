@@ -1,0 +1,53 @@
+id: 68a84f077702482264c62fa7
+name: Match Order
+key: match-Orders
+uuid: b97b3387-5a45-4720-afdb-20b71182f23b
+state: READY
+errors: []
+revision: f33db1df-68f8-4ad7-8589-b17b24e40716
+createdAt: '2025-08-22T11:05:45.164Z'
+updatedAt: '2025-08-22T11:05:45.164Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c83
+parentId: 68a84f077702482264c62e8f
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 5a9eb529-cb0a-4451-add8-e058db55835f
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

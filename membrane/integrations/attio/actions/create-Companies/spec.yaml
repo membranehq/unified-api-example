@@ -1,0 +1,54 @@
+id: 689f2c0400905568ab2f6d8f
+name: Create Company
+key: create-Companies
+state: READY
+errors: []
+revision: 66bcd2aa-f8d0-495a-a9b4-3e0e824d6cd6
+createdAt: '2025-08-15T12:46:03.316Z'
+updatedAt: '2025-08-15T12:46:03.316Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6705
+parentId: 689f2c0400905568ab2f6b3d
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: companies
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 41d8061b-be07-478b-b9a7-b54d490fc52f
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

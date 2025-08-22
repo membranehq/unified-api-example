@@ -1,0 +1,24 @@
+id: 68a82657e426fdf8cbab88bd
+name: Find Contact By Id
+key: find-Contacts-by-id
+uuid: f05cc41d-a7ba-4d31-b695-def1ae641657
+state: READY
+errors: []
+revision: db8d9b84-2a16-4177-bcf9-ca9be54ae497
+createdAt: '2025-08-22T08:12:07.988Z'
+updatedAt: '2025-08-22T08:12:07.988Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+isCustomized: false

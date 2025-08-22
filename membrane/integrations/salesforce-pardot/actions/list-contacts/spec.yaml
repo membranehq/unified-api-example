@@ -1,0 +1,79 @@
+id: 68a82658e426fdf8cbab8af2
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 4708a320-1b8e-497f-be4d-71586aa19e38
+createdAt: '2025-08-22T08:12:15.759Z'
+updatedAt: '2025-08-22T08:12:15.759Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f9
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    firstName:
+      $var: $.input.filter.firstName
+    lastName:
+      $var: $.input.filter.lastName
+    email:
+      $var: $.input.filter.primaryEmail
+    phone:
+      $var: $.input.filter.primaryPhone
+    company:
+      $var: $.input.filter.companyName
+    prospectAccountId:
+      $var: $.input.filter.companyId
+    userId:
+      $var: $.input.filter.ownerId
+    createdAt:
+      $var: $.input.filter.createdTime
+    createdById:
+      $var: $.input.filter.createdBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

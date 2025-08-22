@@ -1,0 +1,145 @@
+id: 689f2c0100905568ab2f69df
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 692f361a-512d-4e4d-bf17-196fc302099c
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66f7
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6895
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  contact_id:
+    $var: $.id
+  contact_name:
+    $var: $.name
+  company_name: null
+  contact_type: null
+  customer_sub_type:
+    $var: $.industry
+  website:
+    $var: $.websiteUrl
+  owner_id:
+    $var: $.ownerId
+  currency_code:
+    $var: $.currency
+  billing_address:
+    address: null
+    city:
+      $var: $.primaryAddress.city
+    state:
+      $var: $.primaryAddress.state
+    zip:
+      $var: $.primaryAddress.zip
+    country:
+      $var: $.primaryAddress.country
+    phone:
+      $var: $.primaryPhone
+  shipping_address:
+    address: null
+    city:
+      $var: $.primaryAddress.city
+    state:
+      $var: $.primaryAddress.state
+    zip:
+      $var: $.primaryAddress.zip
+    country:
+      $var: $.primaryAddress.country
+  contact_persons: null
+  default_templates: null
+  created_time:
+    $var: $.createdTime
+  last_modified_time:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: contact_id
+  name:
+    $var: contact_name
+  websiteUrl:
+    $var: website
+  primaryPhone:
+    $var: $.billing_address.phone
+  currency:
+    $var: currency_code
+  ownerId:
+    $var: owner_id
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: billing_address.address
+          - $var: billing_address.street2
+          - $var: billing_address.city
+          - $var: billing_address.state
+          - $var: billing_address.country
+          - $var: billing_address.zip
+        delimiter: ' '
+    street:
+      $concat:
+        values:
+          - $var: billing_address.address
+          - $var: billing_address.street2
+        delimiter: ' '
+    city:
+      $var: billing_address.city
+    state:
+      $var: billing_address.state
+    country:
+      $var: billing_address.country
+    zip:
+      $var: billing_address.zip
+  addresses:
+    - street:
+        $concat:
+          values:
+            - $var: billing_address.address
+            - $var: billing_address.street2
+          delimiter: ' '
+      city:
+        $var: $.billing_address.city
+    - street:
+        $concat:
+          values:
+            - $var: shipping_address.address
+            - $var: shipping_address.street2
+          delimiter: ' '
+      city:
+        $var: $.shipping_address.city
+  createdTime:
+    $var: $.created_time
+  updatedTime:
+    $var: $.last_modified_time
+  numberOfEmployees: null
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

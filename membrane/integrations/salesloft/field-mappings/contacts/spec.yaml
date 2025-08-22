@@ -1,0 +1,152 @@
+id: 68a82654e426fdf8cbab8730
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: e8e60c0e-8ca4-4982-a8bc-bdd1d9e03d42
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f6719
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85b9
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  display_name:
+    $var: $.fullName
+  email_address:
+    $var: $.primaryEmail
+  secondary_email_address:
+    $var: $.emails[1].value
+  personal_email_address:
+    $var: $.emails[2].value
+  phone:
+    $var: $.primaryPhone
+  home_phone:
+    $var: $.phones[1].value
+  mobile_phone:
+    $var: $.phones[2].value
+  title:
+    $var: $.jobTitle
+  city:
+    $var: $.primaryAddress.city
+  state:
+    $var: $.primaryAddress.state
+  country:
+    $var: $.primaryAddress.country
+  person_company_name:
+    $var: $.companyName
+  owner_id:
+    $var: $.ownerId
+  account_id:
+    $var: $.companyId
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  last_contacted_at:
+    $var: $.lastActivityTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.display_name
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  primaryEmail:
+    $var: $.email_address
+  emails:
+    - value:
+        $var: $.email_address
+    - value:
+        $var: $.secondary_email_address
+    - value:
+        $var: $.personal_email_address
+  primaryPhone:
+    $var: $.phone
+  phones:
+    - value:
+        $var: $.phone
+      type: Primary
+    - value:
+        $var: $.home_phone
+      type: Home
+    - value:
+        $var: $.mobile_phone
+      type: Mobile
+  primaryAddress:
+    city:
+      $var: $.city
+    state:
+      $var: $.state
+    country:
+      $var: $.country
+    full:
+      $concat:
+        values:
+          - $var: $.city
+          - $var: $.state
+        delimiter: ''
+  companyName:
+    $var: $.person_company_name
+  companyId:
+    $var: $.account_id
+  ownerId:
+    $var: $.owner_id
+  jobTitle:
+    $var: $.title
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+  lastActivityTime:
+    $var: $.last_contacted_at
+  addresses:
+    - value:
+        city:
+          $var: $.city
+        state:
+          $var: $.state
+        country:
+          $var: $.country
+        full:
+          $concat:
+            values:
+              - $var: $.city
+              - $var: $.state
+            delimiter: ''
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

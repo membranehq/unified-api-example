@@ -1,0 +1,51 @@
+id: 68a82658e426fdf8cbab8b1e
+name: Find Contact By Id
+key: find-Contacts-by-id
+uuid: f05cc41d-a7ba-4d31-b695-def1ae641657
+state: READY
+errors: []
+revision: ee664c39-07bb-41bf-90cd-4f97b36dcdbe
+createdAt: '2025-08-22T08:12:14.169Z'
+updatedAt: '2025-08-22T08:12:14.169Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a82657e426fdf8cbab88bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: db8d9b84-2a16-4177-bcf9-ca9be54ae497
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

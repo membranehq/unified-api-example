@@ -1,0 +1,28 @@
+id: 68a820ce9fc7b352ffc946f4
+name: Search Jobs
+key: search-jobs
+uuid: f39cabe2-82b2-445f-8c7f-ea3286cd1b96
+state: READY
+errors: []
+revision: 312a7861-1f70-4aea-9d7b-51a28dbb0e3f
+createdAt: '2025-08-22T07:48:30.130Z'
+updatedAt: '2025-08-22T07:48:30.130Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

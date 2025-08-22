@@ -1,0 +1,55 @@
+id: 68a84f077702482264c62faf
+name: Search Orders
+key: search-orders
+uuid: c5729db6-8993-44d5-b4f1-1b0eff63c144
+state: READY
+errors: []
+revision: f0ca0431-7a74-4fc8-9a2b-70266819a885
+createdAt: '2025-08-22T11:05:44.679Z'
+updatedAt: '2025-08-22T11:05:44.679Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a84f077702482264c62e93
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: d0c3f90c-b557-4cde-829e-ba869f37bf68
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

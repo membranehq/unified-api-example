@@ -1,0 +1,15 @@
+id: 689f2c0000905568ab2f696d
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f682a
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

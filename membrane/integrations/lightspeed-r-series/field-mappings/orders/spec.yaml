@@ -1,0 +1,79 @@
+id: 68a84f067702482264c62e0c
+name: Orders
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c8d
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a84f057702482264c62d69
+key: orders
+customized: false
+revision: f5749054-3660-4462-95c0-2060a3b39da2
+universalFieldMappingId: 68a84f067702482264c62dd3
+universalFieldMappingRevision: 354e01b1-c9b7-4a5d-92da-12bbe82fa146
+integrationId: 68a84efe7702482264c62c8d
+dataSourceKey: orders
+dataSourceId: 68a84f057702482264c62d69
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  orderID:
+    $var: $.id
+  orderedDate:
+    $var: $.createdTime
+  createTime:
+    $var: $.createdTime
+  timeStamp:
+    $var: $.updatedTime
+  vendorCurrencyCode:
+    $var: $.currency
+importValue:
+  id:
+    $var: $.orderID
+  createdBy:
+    $var: $.createdByEmployeeID
+  createdTime:
+    $var: $.createTime
+  updatedTime:
+    $var: $.timeStamp
+  currency:
+    $var: $.vendorCurrencyCode
+integration:
+  id: 68a84efe7702482264c62c8d
+  name: Lightspeed R-Series
+  key: lightspeed-r-series
+  uuid: 2cee0c2e-162d-41ab-a07b-7f80337f7a40
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.340Z'
+  updatedAt: '2025-08-22T11:05:41.148Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/lightspeed-r-series/asset-ec862902-f916-4b32-ab9e-13fa9b8f9481.png
+  connectorId: 66b2291668e75461beba804b
+  connectorVersion: 1.0.3
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 256
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

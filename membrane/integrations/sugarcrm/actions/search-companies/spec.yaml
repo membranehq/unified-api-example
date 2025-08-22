@@ -1,0 +1,54 @@
+id: 689f2c0400905568ab2f6e6b
+name: Search Companies
+key: search-companies
+state: READY
+errors: []
+revision: 27895c58-1746-4a20-b328-5fb21c6b5235
+createdAt: '2025-08-15T12:46:03.565Z'
+updatedAt: '2025-08-15T12:46:03.565Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 689f2c0400905568ab2f6b45
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: c13aa46b-a0af-4ed9-af71-fb3d2e95ad12
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

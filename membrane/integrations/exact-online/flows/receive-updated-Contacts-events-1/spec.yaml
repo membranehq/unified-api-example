@@ -1,0 +1,73 @@
+id: 68a83a1121039ff70f89d020
+name: Receive Updated Contact Events (1)
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85d5
+  - message: Field Mapping Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a82654e426fdf8cbab874e
+key: receive-updated-Contacts-events-1
+revision: 1e45a581-a8d3-491e-883e-9e0f36ff836c
+universalFlowId: 68a83a0921039ff70f89c7d8
+integrationId: 689f2bf000905568ab2f670c
+universalFlowRevision: ba339b41-1d3d-4928-9748-7bf0b8c1b651
+nodes:
+  Contacts-updated-trigger:
+    type: data-record-updated-trigger
+    name: Contact Updated Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,52 @@
+id: 68a8260e678af1d0cf6ec1cf
+name: Match User
+key: match-Users
+uuid: bdd68b9f-ef05-4d00-9197-92d63abc5eac
+state: READY
+errors: []
+revision: 922f7a02-e3f3-4e43-a2ff-df68637062fd
+createdAt: '2025-08-22T08:11:02.253Z'
+updatedAt: '2025-08-22T08:11:02.253Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 68a8260e678af1d0cf6ebf03
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 073b88ab-29ef-4ddf-86e1-0c096500ff6e
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

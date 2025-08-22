@@ -1,0 +1,38 @@
+id: 68a8260a678af1d0cf6ebc22
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+revision: 7f4aa31c-06a9-4110-930a-c9556842ffd1
+integrationId: 689f2bf000905568ab2f66dc
+customized: false
+universalDataSourceId: 68a8260a678af1d0cf6ebbcf
+universalDataSourceRevision: d79ba68a-4f61-4120-9113-2ee1d3a27628
+collectionKey: users
+udm: users
+defaultPath: /data/users
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

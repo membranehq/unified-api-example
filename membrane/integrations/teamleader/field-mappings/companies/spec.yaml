@@ -1,0 +1,124 @@
+id: 689f2c0100905568ab2f69c4
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 7659c54e-3485-4d74-922c-ecf646470b63
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66fd
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6885
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  telephones:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        type:
+          $var: $.item.type
+        number:
+          $var: $.item.value
+  website:
+    $var: $.websiteUrl
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.type
+        address:
+          line_1:
+            $var: $.item.street
+          postal_code:
+            $var: $.item.zip
+          city:
+            $var: $.item.city
+          country:
+            $var: $.item.country
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.website
+  phones:
+    $iterate:
+      source:
+        $var: $.telephones
+      item:
+        value:
+          $var: $.item.number
+        type:
+          $var: $.item.type
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.type
+        street:
+          $var: $.item.address.line_1
+        city:
+          $var: $.item.address.city
+        country:
+          $var: $.item.address.country
+        zip:
+          $var: $.item.address.postal_code
+  createdTime:
+    $var: $.added_at
+  updatedTime:
+    $var: $.updated_at
+  primaryAddress:
+    street:
+      $var: $.primary_address.line_1
+    city:
+      $var: $.primary_address.city
+    country:
+      $var: $.primary_address.country
+    zip:
+      $var: $.primary_address.postal_code
+    full:
+      $concat:
+        values:
+          - $var: $.primary_address.line_1
+          - $var: $.primary_address.city
+          - $var: $.primary_address.postal_code
+          - $var: $.primary_address.country
+        delimiter: ', '
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

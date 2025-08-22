@@ -1,0 +1,77 @@
+id: 68a8260e678af1d0cf6ec20f
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 79b215b8-d0fa-45bf-ad97-ea741c08e757
+createdAt: '2025-08-22T08:11:00.674Z'
+updatedAt: '2025-08-22T08:11:00.674Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f9
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    username:
+      $var: $.input.filter.userName
+    firstName:
+      $var: $.input.filter.firstName
+    lastName:
+      $var: $.input.filter.lastName
+    email:
+      $var: $.input.filter.primaryEmail
+    createdAt:
+      $var: $.input.filter.createdTime
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    createdById:
+      $var: $.input.filter.createdBy
+    updatedById:
+      $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

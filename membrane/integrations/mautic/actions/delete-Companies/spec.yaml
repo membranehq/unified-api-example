@@ -1,0 +1,50 @@
+id: 689f2c0400905568ab2f6d69
+name: Delete Company
+key: delete-Companies
+state: READY
+errors: []
+revision: 75c1205d-5167-4009-9d86-586d88a77ba9
+createdAt: '2025-08-15T12:46:03.392Z'
+updatedAt: '2025-08-15T12:46:03.392Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6703
+parentId: 689f2c0400905568ab2f6b3f
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: e970243d-9f80-4f9c-bbf2-08436505b1c9
+integration:
+  id: 689f2bf000905568ab2f6703
+  name: Mautic
+  key: mautic
+  uuid: 235cbf28-b7ea-4fcd-887b-fdaa5f7881ab
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.276Z'
+  updatedAt: '2025-08-15T12:45:43.321Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/mautic/asset-fd3948f3-5895-4ed2-9818-3c090ad28ecf.png
+  connectorId: 667c71df7d4a85fdc94a1dfa
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 108
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

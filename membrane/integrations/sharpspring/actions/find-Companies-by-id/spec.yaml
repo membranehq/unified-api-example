@@ -1,0 +1,51 @@
+id: 689f2c0400905568ab2f6dc3
+name: Find Company By Id
+key: find-Companies-by-id
+state: READY
+errors: []
+revision: e1d5fa37-2eef-465d-b653-03866170466c
+createdAt: '2025-08-15T12:46:03.381Z'
+updatedAt: '2025-08-15T12:46:03.381Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 689f2c0400905568ab2f6b41
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: a9d3b092-4fdf-4709-93f5-46759fbcea79
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

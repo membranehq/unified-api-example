@@ -1,0 +1,27 @@
+id: 689f2c0400905568ab2f6b45
+name: Search Companies
+key: search-companies
+state: READY
+errors: []
+revision: c13aa46b-a0af-4ed9-af71-fb3d2e95ad12
+createdAt: '2025-08-15T12:45:56.202Z'
+updatedAt: '2025-08-15T12:45:56.202Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

@@ -1,0 +1,122 @@
+id: 689f2c0200905568ab2f6a73
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: be12d067-219c-4aa6-812b-60b619a5e513
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66f3
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f688f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  websites:
+    - url:
+        $var: $.websiteUrl
+  assignee_id:
+    $var: $.ownerId
+  details:
+    $var: $.description
+  phone_numbers:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        number:
+          $var: $.item.value
+        category:
+          $var: $.item.type
+  address:
+    street:
+      $var: $.primaryAddress.street
+    city:
+      $var: $.primaryAddress.city
+    state:
+      $var: $.primaryAddress.state
+    postal_code:
+      $var: $.primaryAddress.zip
+    country:
+      $var: $.primaryAddress.country
+  date_created:
+    $var: $.createdTime
+  date_modified:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: name
+  websiteUrl:
+    $var: websites[0].url
+  ownerId:
+    $var: assignee_id
+  description:
+    $var: details
+  primaryPhone:
+    $var: phone_numbers[0].number
+  phones:
+    $iterate:
+      source:
+        $var: $.phone_numbers
+      item:
+        value:
+          $var: $.item.number
+        type:
+          $var: $.item.category
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.address.street
+          - $var: $.address.city
+          - $var: $.address.state
+          - $var: $.address.country
+          - $var: $.address.postal_code
+        delimiter: ', '
+    street:
+      $var: $.address.street
+    city:
+      $var: $.address.city
+    state:
+      $var: $.address.state
+    country:
+      $var: $.address.country
+    zip:
+      $var: $.address.postal_code
+  createdTime:
+    $var: date_created
+  updatedTime:
+    $var: date_modified
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

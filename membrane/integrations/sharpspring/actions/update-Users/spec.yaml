@@ -1,0 +1,59 @@
+id: 68a8260e678af1d0cf6ec102
+name: Update User
+key: update-Users
+uuid: 4b5992cf-587e-476c-b119-b77e50d8526f
+state: READY
+errors: []
+revision: a9af0b18-270a-49bb-a07e-a3b3f4dcc5fd
+createdAt: '2025-08-22T08:10:59.566Z'
+updatedAt: '2025-08-22T08:10:59.566Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 68a8260e678af1d0cf6ebf0b
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: abae95c1-5ecc-448d-a5ec-c3aba6498de3
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

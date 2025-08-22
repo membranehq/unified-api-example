@@ -1,0 +1,52 @@
+id: 68a820ce9fc7b352ffc94802
+name: Match Job
+key: match-Jobs
+uuid: 549396f6-e075-4ad8-904d-2026b6051da9
+state: READY
+errors: []
+revision: 2a471daf-cde5-415e-bbb3-5ffa6fc9dcf8
+createdAt: '2025-08-22T07:48:31.348Z'
+updatedAt: '2025-08-22T07:48:31.348Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc9459f
+parentId: 68a820ce9fc7b352ffc946f6
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 6cc97011-3f12-4164-a779-3786e4f0ddb3
+integration:
+  id: 68a820cb9fc7b352ffc9459f
+  name: Recruitee
+  key: recruitee
+  uuid: 7dd6d57d-d6d0-476a-8950-9fc36446637a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.347Z'
+  updatedAt: '2025-08-22T07:48:28.540Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/recruitee/logo.png
+  connectorId: 6466785560f981f3ce696912
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 686
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

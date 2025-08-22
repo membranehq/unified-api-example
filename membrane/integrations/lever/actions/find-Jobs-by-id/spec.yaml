@@ -1,0 +1,71 @@
+id: 68a820ce9fc7b352ffc947be
+name: Find Job By Id
+key: find-Jobs-by-id
+uuid: 56508012-5cb7-42e6-8e29-109f2e8ed072
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a820cd9fc7b352ffc94618
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a820cd9fc7b352ffc9468b
+revision: 37e12125-bc98-46fa-9d69-d90bec842a06
+createdAt: '2025-08-22T07:48:31.051Z'
+updatedAt: '2025-08-22T07:48:31.051Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc9459d
+parentId: 68a820ce9fc7b352ffc946ee
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: fd0f025d-372c-45cd-b3ef-4fdd03e88e0e
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

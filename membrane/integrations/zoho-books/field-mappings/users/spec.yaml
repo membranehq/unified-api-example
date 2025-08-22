@@ -1,0 +1,82 @@
+id: 68a8260b678af1d0cf6ebd96
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: e5071694-f959-4bdf-817d-c382cfd2a2a9
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66f7
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc34
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  user_id:
+    $var: $.id
+  name:
+    $var: $.userName
+  email_ids:
+    $var: $.emails
+  status: null
+  user_role: null
+  role_id:
+    $var: $.roleId
+  photo_url:
+    $var: $.imageUrl
+  created_time:
+    $var: $.createdTime
+  email:
+    $var: $.primaryEmail
+importValue:
+  id:
+    $var: user_id
+  fullName: null
+  firstName: null
+  lastName: null
+  userName:
+    $var: name
+  primaryEmail:
+    $var: email
+  emails:
+    $var: email_ids
+  phones: null
+  imageUrl:
+    $var: photo_url
+  isActive:
+    $var: is_employee
+  roleId:
+    $var: role_id
+  createdTime:
+    $var: created_time
+  primaryPhone: null
+  companyName: null
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

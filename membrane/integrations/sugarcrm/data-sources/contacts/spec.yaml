@@ -1,0 +1,38 @@
+id: 68a82652e426fdf8cbab85af
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+revision: 4a5b37b3-0b67-4e65-b6ed-1e69dfd62715
+integrationId: 689f2bf000905568ab2f66e8
+customized: false
+universalDataSourceId: 68a82652e426fdf8cbab8566
+universalDataSourceRevision: 7d3cacc1-26d7-41d1-a966-6706ed473f9a
+collectionKey: contacts
+udm: contacts
+defaultPath: /data/contacts
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,27 @@
+id: 68a820ce9fc7b352ffc946ec
+name: Create Job
+key: create-Jobs
+uuid: 834f5031-b5c6-4d04-91b6-a64614acd04d
+state: READY
+errors: []
+revision: aacf81e0-a6f0-4a15-85be-ad6e9ca64319
+createdAt: '2025-08-22T07:48:30.129Z'
+updatedAt: '2025-08-22T07:48:30.129Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: jobs
+  fieldMapping:
+    key: jobs
+    input:
+      $var: $.input.fields
+isCustomized: false

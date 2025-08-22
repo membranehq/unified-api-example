@@ -1,0 +1,38 @@
+id: 68a839f621039ff70f89b6c1
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+revision: 5a46f31e-d2a5-4dcf-a273-33f83708ae2c
+integrationId: 68a839f321039ff70f89b5bb
+customized: false
+universalDataSourceId: 68a82652e426fdf8cbab8566
+universalDataSourceRevision: 7d3cacc1-26d7-41d1-a966-6706ed473f9a
+collectionKey: subscribers
+udm: contacts
+defaultPath: /data/subscribers
+integration:
+  id: 68a839f321039ff70f89b5bb
+  name: AWeber
+  key: aweber
+  uuid: 604de3e0-099f-4461-9a54-c788d5ebd98d
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.273Z'
+  updatedAt: '2025-08-22T09:35:48.952Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/aweber-connector/logo.png
+  connectorId: 64aef6f2d2605720d24febc0
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 60
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

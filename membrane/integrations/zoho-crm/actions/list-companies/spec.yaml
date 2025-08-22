@@ -1,0 +1,107 @@
+id: 689f2c0400905568ab2f6de9
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 29bc4f7d-c2f2-41be-b0bd-f6f42243f20d
+createdAt: '2025-08-15T12:46:04.093Z'
+updatedAt: '2025-08-15T12:46:04.093Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Account_Name:
+      $var: $.input.filter.name
+    Description:
+      $var: $.input.filter.description
+    Website:
+      $var: $.input.filter.websiteUrl
+    Owner:
+      id:
+        $var: $.input.filter.ownerId
+    Phone:
+      $var: $.input.filter.primaryPhone
+    Employees:
+      $var: $.input.filter.numberOfEmployees
+    Industry:
+      $var: $.input.filter.industry
+    Billing_Street:
+      $var: $.input.filter.primaryAddress.street
+    Billing_City:
+      $var: $.input.filter.primaryAddress.city
+    Billing_State:
+      $var: $.input.filter.primaryAddress.state
+    Billing_Country:
+      $var: $.input.filter.primaryAddress.country
+    Billing_Code:
+      $var: $.input.filter.primaryAddress.zip
+    Shipping_Street:
+      $var: $.input.filter.addresses[0].street
+    Shipping_City:
+      $var: $.input.filter.addresses[0].city
+    Shipping_State:
+      $var: $.input.filter.addresses[0].state
+    Shipping_Country:
+      $var: $.input.filter.addresses[0].country
+    Shipping_Code:
+      $var: $.input.filter.addresses[0].zip
+    Created_Time:
+      $var: $.input.filter.createdTime
+    Created_By:
+      id:
+        $var: $.input.filter.createdBy
+    Modified_By:
+      id:
+        $var: $.input.filter.updatedBy
+    Modified_Time:
+      $var: $.input.filter.updatedTime
+    Last_Activity_Time:
+      $var: $.input.filter.lastActivityTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

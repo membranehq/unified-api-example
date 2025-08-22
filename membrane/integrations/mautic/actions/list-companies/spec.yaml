@@ -1,0 +1,89 @@
+id: 689f2c0400905568ab2f6e1d
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 28f44548-d28c-4e13-a1d0-42b7fd8b2739
+createdAt: '2025-08-15T12:46:03.720Z'
+updatedAt: '2025-08-15T12:46:03.720Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6703
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    fields:
+      all:
+        companywebsite:
+          $var: $.input.filter.websiteUrl
+        companycountry:
+          $var: $.input.filter.primaryAddress.country
+        companyzipcode:
+          $var: $.input.filter.primaryAddress.zip
+        companystate:
+          $var: $.input.filter.primaryAddress.state
+        companycity:
+          $var: $.input.filter.primaryAddress.city
+        companyphone:
+          $var: $.input.filter.primaryPhone
+        companynumber_of_employees:
+          $var: $.input.filter.numberOfEmployees
+        companydescription:
+          $var: $.input.filter.description
+        companyname:
+          $var: $.input.filter.name
+    dateAdded:
+      $var: $.input.filter.createdTime
+    createdBy:
+      $var: $.input.filter.createdBy
+    dateModified:
+      $var: $.input.filter.updatedTime
+    modifiedBy:
+      $var: $.input.filter.updatedBy
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f6703
+  name: Mautic
+  key: mautic
+  uuid: 235cbf28-b7ea-4fcd-887b-fdaa5f7881ab
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.276Z'
+  updatedAt: '2025-08-15T12:45:43.321Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/mautic/asset-fd3948f3-5895-4ed2-9818-3c090ad28ecf.png
+  connectorId: 667c71df7d4a85fdc94a1dfa
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 108
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

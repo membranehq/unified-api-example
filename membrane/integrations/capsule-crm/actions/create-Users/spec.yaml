@@ -1,0 +1,54 @@
+id: 68a8260e678af1d0cf6ec15c
+name: Create User
+key: create-Users
+uuid: ac4f22cb-7b1b-4c7e-ab63-df88a08ec273
+state: READY
+errors: []
+revision: 488eb8af-4587-4c65-aa04-4084499db747
+createdAt: '2025-08-22T08:10:59.650Z'
+updatedAt: '2025-08-22T08:10:59.650Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 68a8260e678af1d0cf6ebf00
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: users
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 8a05b55c-f017-43bd-97d2-da84f21bfe46
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

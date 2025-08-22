@@ -1,0 +1,58 @@
+id: 68a8260e678af1d0cf6ec0d4
+name: Update User
+key: update-Users
+uuid: 4b5992cf-587e-476c-b119-b77e50d8526f
+state: READY
+errors: []
+revision: d5a014a4-ad8f-4967-8765-7eb153d53a84
+createdAt: '2025-08-22T08:10:59.486Z'
+updatedAt: '2025-08-22T08:10:59.486Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e0
+parentId: 68a8260e678af1d0cf6ebf0b
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: abae95c1-5ecc-448d-a5ec-c3aba6498de3
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

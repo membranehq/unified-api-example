@@ -1,0 +1,38 @@
+id: 68a839f621039ff70f89b6ae
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+revision: a7c2c074-4e09-4f09-a957-dadc2d426429
+integrationId: 68a839f321039ff70f89b5c4
+customized: false
+universalDataSourceId: 68a82652e426fdf8cbab8566
+universalDataSourceRevision: 7d3cacc1-26d7-41d1-a966-6706ed473f9a
+collectionKey: members
+udm: contacts
+defaultPath: /data/members
+integration:
+  id: 68a839f321039ff70f89b5c4
+  name: Mailchimp
+  key: mailchimp
+  uuid: df1e892e-034c-48e7-b7da-d4ed5bce86f6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.278Z'
+  updatedAt: '2025-08-22T09:35:49.379Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/mailchimp/logo.png
+  connectorId: 62471fac996d5c297ae43f5d
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 110
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,59 @@
+id: 68a82659e426fdf8cbab8d13
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: READY
+errors: []
+revision: 78f7e6f2-0a83-4689-aa88-93069ea9219a
+createdAt: '2025-08-22T08:12:16.670Z'
+updatedAt: '2025-08-22T08:12:16.670Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e0
+parentId: 68a82657e426fdf8cbab88c3
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      name:
+        $var: $.input.query.fullName
+      email:
+        $var: $.input.query.primaryEmail
+      phone:
+        $var: $.input.query.primaryPhone
+isCustomized: false
+parentRevision: f5847216-8b12-4033-9a53-fc6113f1e79f
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

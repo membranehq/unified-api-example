@@ -1,0 +1,76 @@
+id: 68a82658e426fdf8cbab8b86
+name: Search Contacts
+key: search-contacts
+uuid: b1c4910e-e855-4b55-8e96-3898d0d50b1e
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85d5
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a82654e426fdf8cbab874e
+revision: 4cc56421-805f-4a00-b629-48a53e2c8722
+createdAt: '2025-08-22T08:12:14.285Z'
+updatedAt: '2025-08-22T08:12:14.285Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670c
+parentId: 68a82657e426fdf8cbab88c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 6497440a-7666-4fd8-99d9-91ec2be51028
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

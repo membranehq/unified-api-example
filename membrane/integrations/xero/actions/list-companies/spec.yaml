@@ -1,0 +1,88 @@
+id: 689f2c0400905568ab2f6df5
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 09fa7901-6ba6-4067-badb-b344671f764e
+createdAt: '2025-08-15T12:46:03.706Z'
+updatedAt: '2025-08-15T12:46:03.706Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    OrganisationID:
+      $var: $.input.filter.id
+    Name:
+      $var: $.input.filter.name
+    Addresses:
+      $iterate:
+        source:
+          $var: $.input.filter.addresses
+        item:
+          AddressType:
+            $var: $.item.type
+          AddressLine1:
+            $var: $.item.street
+          City:
+            $var: $.item.city
+          Region:
+            $var: $.item.state
+          Country:
+            $var: $.item.country
+          PostalCode:
+            $var: $.item.zip
+    Phones:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          PhoneType:
+            $var: $.item.type
+          PhoneNumber:
+            $var: $.item.value
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

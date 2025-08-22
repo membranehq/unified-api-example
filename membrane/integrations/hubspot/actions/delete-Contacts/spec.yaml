@@ -1,0 +1,50 @@
+id: 68a82658e426fdf8cbab8c1d
+name: Delete Contact
+key: delete-Contacts
+uuid: 570d6578-b33d-4b8c-9250-7e0a45f48a5b
+state: READY
+errors: []
+revision: 17568d89-5be8-4641-9109-56bd8bd1afbb
+createdAt: '2025-08-22T08:12:13.866Z'
+updatedAt: '2025-08-22T08:12:13.866Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e6
+parentId: 68a82657e426fdf8cbab88c5
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fcc51862-f2cb-49a2-a342-47d095bc3122
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

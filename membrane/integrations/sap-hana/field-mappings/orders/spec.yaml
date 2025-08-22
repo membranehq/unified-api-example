@@ -1,0 +1,103 @@
+id: 68a84f067702482264c62df3
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+customized: false
+revision: a8c85c37-de35-4341-b130-f48f948faaee
+universalFieldMappingId: 68a84f067702482264c62dd3
+universalFieldMappingRevision: 354e01b1-c9b7-4a5d-92da-12bbe82fa146
+integrationId: 68a84efe7702482264c62c7f
+dataSourceKey: orders
+dataSourceId: 68a84f057702482264c62d71
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  PurchaseOrder:
+    $var: $.id
+  CreatedByUser:
+    $var: $.createdBy
+  CreationDate:
+    $var: $.createdTime
+  LastChangeDateTime:
+    $var: $.updatedTime
+  Customer:
+    $var: $.customerId
+  PricingDocument:
+    $var: $.totalAmount
+  DocumentCurrency:
+    $var: $.currency
+  _PurchaseOrderItem:
+    $iterate:
+      source:
+        $var: $.lineItems
+      item:
+        PurchaseOrderItem:
+          $var: $.item.productId
+        OrderQuantity:
+          $var: $.item.quantity
+        OrderPriceUnit:
+          $var: $.item.unitPrice
+        NetAmount:
+          $var: $.item.totalAmount
+  _PurchaseOrderNote:
+    - PlainLongText:
+        $var: $.notes
+importValue:
+  id:
+    $var: $.PurchaseOrder
+  createdTime:
+    $var: $.CreationDate
+  customerId:
+    $var: $.Customer
+  currency:
+    $var: $.DocumentCurrency
+  totalAmount:
+    $var: $.PricingDocument
+  notes:
+    $var: $._PurchaseOrderNote[0].PlainLongText
+  createdBy:
+    $var: $.CreatedByUser
+  updatedTime:
+    $var: $.LastChangeDateTime
+  lineItems:
+    $iterate:
+      item:
+        productId:
+          $var: $.item.PurchaseOrderItem
+        quantity:
+          $var: $.item.OrderQuantity
+        unitPrice:
+          $var: $.item.OrderPriceUnit
+        totalAmount:
+          $var: $.item.NetPriceAmount
+      source:
+        $var: $._PurchaseOrderItem
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

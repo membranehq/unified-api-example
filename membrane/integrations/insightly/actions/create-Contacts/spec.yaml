@@ -1,0 +1,54 @@
+id: 68a82658e426fdf8cbab8bae
+name: Create Contact
+key: create-Contacts
+uuid: c6a28c7f-b0d2-4373-8e05-1cb6b3c37989
+state: READY
+errors: []
+revision: e0c0b020-77ed-428a-922d-40698ea944b8
+createdAt: '2025-08-22T08:12:14.358Z'
+updatedAt: '2025-08-22T08:12:14.358Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ee
+parentId: 68a82657e426fdf8cbab88bb
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: contacts
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 38860ce8-8263-4d10-b4bd-97f57996a12f
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

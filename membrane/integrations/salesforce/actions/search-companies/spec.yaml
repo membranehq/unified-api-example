@@ -1,0 +1,54 @@
+id: 689f2c0400905568ab2f6e5f
+name: Search Companies
+key: search-companies
+state: READY
+errors: []
+revision: 2b44e2dd-da1b-49c9-b5ff-ba4418ffac46
+createdAt: '2025-08-15T12:46:03.487Z'
+updatedAt: '2025-08-15T12:46:03.487Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 689f2c0400905568ab2f6b45
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: c13aa46b-a0af-4ed9-af71-fb3d2e95ad12
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,106 @@
+id: 68a82658e426fdf8cbab8ae2
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 519adbe2-b993-406c-a210-a2843d737f29
+createdAt: '2025-08-22T08:12:15.760Z'
+updatedAt: '2025-08-22T08:12:15.760Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.fullName
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    job_title:
+      $var: $.input.filter.jobTitle
+    sales_account_id:
+      $var: $.input.filter.companyId
+    email:
+      $var: $.input.filter.primaryEmail
+    emails:
+      $iterate:
+        source:
+          $var: $.input.filter.emails
+        item:
+          value:
+            $var: $.item.value
+          label:
+            $var: $.item.type
+    work_number:
+      $var: $.input.filter.primaryPhone
+    owner_id:
+      $var: $.input.filter.ownerId
+    address:
+      $var: $.input.filter.primaryAddress.street
+    city:
+      $var: $.input.filter.primaryAddress.city
+    state:
+      $var: $.input.filter.primaryAddress.state
+    zipcode:
+      $var: $.input.filter.primaryAddress.zip
+    country:
+      $var: $.input.filter.primaryAddress.country
+    last_contacted:
+      $var: $.input.filter.lastActivityTime
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    creater_id:
+      $var: $.input.filter.createdBy
+    updater_id:
+      $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

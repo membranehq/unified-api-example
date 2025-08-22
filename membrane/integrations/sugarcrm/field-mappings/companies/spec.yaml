@@ -1,0 +1,120 @@
+id: 689f2c0100905568ab2f69c8
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 66acd27e-171b-48d2-922a-4e145feb3699
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66e8
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f687d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  date_entered:
+    $var: $.createdTime
+  date_modified:
+    $var: $.updatedTime
+  modified_user_id:
+    $var: $.updatedBy
+  created_by:
+    $var: $.createdBy
+  description:
+    $var: $.description
+  industry:
+    $var: $.industry
+  billing_address_street:
+    $var: $.primaryAddress.street
+  billing_address_city:
+    $var: $.primaryAddress.city
+  billing_address_state:
+    $var: $.primaryAddress.state
+  billing_address_postalcode:
+    $var: $.primaryAddress.zip
+  billing_address_country:
+    $var: $.primaryAddress.country
+  phone_office:
+    $var: $.primaryPhone
+  website:
+    $var: $.websiteUrl
+  employees:
+    $var: $.numberOfEmployees
+  assigned_user_id:
+    $var: $.ownerId
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.website
+  primaryPhone:
+    $var: $.phone_office
+  description:
+    $var: $.description
+  industry:
+    $var: $.industry
+  ownerId:
+    $var: $.assigned_user_id
+  primaryAddress:
+    street:
+      $var: $.billing_address_street
+    city:
+      $var: $.billing_address_city
+    state:
+      $var: $.billing_address_state
+    country:
+      $var: $.billing_address_country
+    zip:
+      $var: $.billing_address_postalcode
+    full:
+      $concat:
+        values:
+          - $var: $.billing_address_street
+          - $var: $.billing_address_city
+          - $var: $.billing_address_state
+          - $var: $.billing_address_country
+          - $var: $.billing_address_postalcode
+        delimiter: ''
+  numberOfEmployees:
+    $var: $.employees
+  createdTime:
+    $var: $.date_entered
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_modified
+  updatedBy:
+    $var: $.modified_user_id
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

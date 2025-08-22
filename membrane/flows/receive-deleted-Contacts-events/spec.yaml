@@ -1,0 +1,22 @@
+id: 68a82660e426fdf8cbab925b
+name: Receive Deleted Contact Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Contacts-events
+revision: cdc5160e-4248-4cce-82b9-feb411ce2d90
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Contacts-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Contact Deleted Trigger
+    config:
+      dataSource:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

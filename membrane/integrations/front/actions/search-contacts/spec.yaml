@@ -1,0 +1,55 @@
+id: 68a82658e426fdf8cbab8b7e
+name: Search Contacts
+key: search-contacts
+uuid: b1c4910e-e855-4b55-8e96-3898d0d50b1e
+state: READY
+errors: []
+revision: a0e3cfd8-d4f3-4d5b-b03f-0d132b429d84
+createdAt: '2025-08-22T08:12:14.282Z'
+updatedAt: '2025-08-22T08:12:14.282Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6707
+parentId: 68a82657e426fdf8cbab88c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 6497440a-7666-4fd8-99d9-91ec2be51028
+integration:
+  id: 689f2bf000905568ab2f6707
+  name: Front
+  key: front
+  uuid: a3686d04-8658-4e23-8973-c0241caec2b0
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.282Z'
+  updatedAt: '2025-08-15T12:45:47.306Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/front/logo.png
+  connectorId: 64368c00986ed1caaddef4b3
+  connectorVersion: 1.3.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 162
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

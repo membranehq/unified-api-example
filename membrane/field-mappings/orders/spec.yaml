@@ -1,0 +1,15 @@
+id: 68a84f067702482264c62dd3
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+customized: false
+revision: 354e01b1-c9b7-4a5d-92da-12bbe82fa146
+dataSourceKey: orders
+dataSourceId: 68a84f057702482264c62d2a
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

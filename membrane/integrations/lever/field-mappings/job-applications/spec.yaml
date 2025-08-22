@@ -1,0 +1,87 @@
+id: 68a839b4f8d786c131d7f8c6
+name: Job Applications
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a839b4f8d786c131d7f893
+key: job-applications
+customized: false
+revision: 07a4af31-eed1-47dc-89ea-806b4a24bff9
+universalFieldMappingId: 68a839b4f8d786c131d7f8b5
+universalFieldMappingRevision: 5bcd99e6-0e9e-4c09-b2ea-12193be52b81
+integrationId: 68a820cb9fc7b352ffc9459d
+dataSourceKey: job-applications
+dataSourceId: 68a839b4f8d786c131d7f893
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  opportunityId:
+    $var: $.candidateId
+  createdAt:
+    $var: $.createdTime
+  type:
+    $var: $.source
+  owner:
+    $var: $.creditedTo
+  archived:
+    reason:
+      $var: $.rejectionReason
+importValue:
+  id:
+    $var: $.id
+  candidateId:
+    $var: $.opportunityId
+  jobId:
+    $var: $.posting
+  source:
+    $var: $.type
+  rejectedTime:
+    $var: $.archived.archivedAt
+  rejectionReason:
+    $var: $.archived.reason
+  creditedTo:
+    $var: $.owner
+  createdTime:
+    $var: $.createdAt
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

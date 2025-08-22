@@ -1,0 +1,50 @@
+id: 68a82658e426fdf8cbab8c44
+name: Delete Contact
+key: delete-Contacts
+uuid: 570d6578-b33d-4b8c-9250-7e0a45f48a5b
+state: READY
+errors: []
+revision: 7b1b0261-2f97-4f36-9c25-873087af2e5b
+createdAt: '2025-08-22T08:12:13.960Z'
+updatedAt: '2025-08-22T08:12:13.960Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a82657e426fdf8cbab88c5
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fcc51862-f2cb-49a2-a342-47d095bc3122
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

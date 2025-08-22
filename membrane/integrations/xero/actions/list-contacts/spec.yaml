@@ -1,0 +1,73 @@
+id: 68a82658e426fdf8cbab8aea
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: be7c1a0b-bba1-4179-ad54-c44696cd4d32
+createdAt: '2025-08-22T08:12:14.949Z'
+updatedAt: '2025-08-22T08:12:14.949Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    ContactID:
+      $var: $.input.filter.id
+    Name:
+      $var: $.input.filter.fullName
+    FirstName:
+      $var: $.input.filter.firstName
+    LastName:
+      $var: $.input.filter.lastName
+    EmailAddress:
+      $var: $.input.filter.primaryEmail
+    Addresses:
+      $var: $.input.filter.addresses
+    Phones:
+      $var: $.input.filter.phones
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

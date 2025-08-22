@@ -1,0 +1,54 @@
+id: 68a82658e426fdf8cbab8bbe
+name: Create Contact
+key: create-Contacts
+uuid: c6a28c7f-b0d2-4373-8e05-1cb6b3c37989
+state: READY
+errors: []
+revision: fdcbcd5c-ef17-42ab-8994-ef7f887fc88b
+createdAt: '2025-08-22T08:12:14.363Z'
+updatedAt: '2025-08-22T08:12:14.363Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 68a82657e426fdf8cbab88bb
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: contacts
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 38860ce8-8263-4d10-b4bd-97f57996a12f
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

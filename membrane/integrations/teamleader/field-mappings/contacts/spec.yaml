@@ -1,0 +1,141 @@
+id: 68a82655e426fdf8cbab87cc
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 3506e089-1dce-4fb6-bb4d-fc4eb272b55e
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66fd
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85c1
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        type:
+          $var: $.item.type
+        email:
+          $var: $.item.value
+  telephones:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        type:
+          $var: $.item.type
+        number:
+          $var: $.item.value
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.type
+        address:
+          line_1:
+            $var: $.item.street
+          postal_code:
+            $var: $.item.zip
+          city:
+            $var: $.item.city
+          country:
+            $var: $.item.country
+  added_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  primaryEmail:
+    $var: $.emails[0].email
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        value:
+          $var: $.item.email
+        type:
+          $var: $.item.type
+  primaryPhone:
+    $var: $.telephones[0].number
+  phones:
+    $iterate:
+      source:
+        $var: $.telephones
+      item:
+        value:
+          $var: $.item.number
+        type:
+          $var: $.item.type
+  createdTime:
+    $var: $.added_at
+  updatedTime:
+    $var: $.updated_at
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.type
+        city:
+          $var: $.item.address.city
+        country:
+          $var: $.item.address.country
+        zip:
+          $var: $.item.address.postal_code
+        street:
+          $var: $.item.address.line_1
+  fullName:
+    $concat:
+      values:
+        - $var: $.first_name
+        - $var: $.last_name
+      delimiter: ' '
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

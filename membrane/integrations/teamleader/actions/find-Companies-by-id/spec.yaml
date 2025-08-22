@@ -1,0 +1,50 @@
+id: 689f2c0400905568ab2f6dc5
+name: Find Company By Id
+key: find-Companies-by-id
+state: READY
+errors: []
+revision: e0d2b68b-895b-434e-9f8c-fb8d08859506
+createdAt: '2025-08-15T12:46:03.381Z'
+updatedAt: '2025-08-15T12:46:03.381Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 689f2c0400905568ab2f6b41
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: a9d3b092-4fdf-4709-93f5-46759fbcea79
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,38 @@
+id: 689f2c0000905568ab2f6883
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+revision: 35d80f62-6837-455d-887f-f89342434c08
+integrationId: 689f2bf000905568ab2f66f9
+customized: false
+universalDataSourceId: 689f2c0000905568ab2f682a
+universalDataSourceRevision: 3f6b0bb8-a50a-47bc-90e7-dd0dcd0d11c9
+collectionKey: prospect-accounts
+udm: companies
+defaultPath: /data/prospect-accounts
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

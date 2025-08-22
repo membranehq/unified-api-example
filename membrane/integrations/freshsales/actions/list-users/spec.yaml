@@ -1,0 +1,69 @@
+id: 68a8260e678af1d0cf6ec1fd
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: d744fff5-a58d-4003-9c9b-14ab0ee134c4
+createdAt: '2025-08-22T08:11:00.861Z'
+updatedAt: '2025-08-22T08:11:00.861Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    display_name:
+      $var: $.input.filter.fullName
+    email:
+      $var: $.input.filter.primaryEmail
+    work_number:
+      $var: $.input.filter.primaryPhone
+    is_active:
+      $var: $.input.filter.isActive
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

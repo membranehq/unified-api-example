@@ -1,0 +1,54 @@
+id: 68a82658e426fdf8cbab8bac
+name: Create Contact
+key: create-Contacts
+uuid: c6a28c7f-b0d2-4373-8e05-1cb6b3c37989
+state: READY
+errors: []
+revision: b860dfe5-577c-4c2c-acd7-4e0fe54ee60a
+createdAt: '2025-08-22T08:12:14.357Z'
+updatedAt: '2025-08-22T08:12:14.357Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a82657e426fdf8cbab88bb
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: contacts
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 38860ce8-8263-4d10-b4bd-97f57996a12f
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

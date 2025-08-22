@@ -1,0 +1,38 @@
+id: 68a82652e426fdf8cbab85bd
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+revision: f28ee678-3cba-40b4-8f17-b2962738089b
+integrationId: 689f2bf000905568ab2f66f9
+customized: false
+universalDataSourceId: 68a82652e426fdf8cbab8566
+universalDataSourceRevision: 7d3cacc1-26d7-41d1-a966-6706ed473f9a
+collectionKey: prospects
+udm: contacts
+defaultPath: /data/prospects
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

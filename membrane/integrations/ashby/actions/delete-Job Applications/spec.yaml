@@ -1,0 +1,50 @@
+id: 68a839b5f8d786c131d7f984
+name: Delete Job Application
+key: delete-Job Applications
+uuid: a872c081-b672-4f22-9f93-49169800b12f
+state: READY
+errors: []
+revision: 8f07687f-f292-4a61-985d-d733f0ffd821
+createdAt: '2025-08-22T09:34:45.867Z'
+updatedAt: '2025-08-22T09:34:45.867Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc94593
+parentId: 68a839b4f8d786c131d7f904
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: job-applications
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: cbb78cc9-4eeb-4609-9252-6517ca142d11
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

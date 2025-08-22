@@ -1,0 +1,53 @@
+id: 689f2c0400905568ab2f6d85
+name: Create Company
+key: create-Companies
+state: READY
+errors: []
+revision: e38158cd-d717-4be1-a7ec-8399c7fb9198
+createdAt: '2025-08-15T12:46:03.313Z'
+updatedAt: '2025-08-15T12:46:03.313Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f9
+parentId: 689f2c0400905568ab2f6b3d
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: companies
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 41d8061b-be07-478b-b9a7-b54d490fc52f
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

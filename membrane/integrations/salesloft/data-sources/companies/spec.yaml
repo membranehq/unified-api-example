@@ -1,0 +1,38 @@
+id: 689f2c0000905568ab2f6889
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+revision: 124b5318-352e-4b31-9ae1-35cd12281591
+integrationId: 689f2bf000905568ab2f6719
+customized: false
+universalDataSourceId: 689f2c0000905568ab2f682a
+universalDataSourceRevision: 3f6b0bb8-a50a-47bc-90e7-dd0dcd0d11c9
+collectionKey: accounts
+udm: companies
+defaultPath: /data/accounts
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,79 @@
+id: 68a820cd9fc7b352ffc94687
+name: Jobs
+isDeactivated: false
+state: READY
+errors: []
+key: jobs
+customized: false
+revision: 23b1e9f7-d03f-4707-87ee-f58f5db701c4
+universalFieldMappingId: 68a820cd9fc7b352ffc94662
+universalFieldMappingRevision: 26908f16-503a-4b7f-b946-48737ac8cae3
+integrationId: 68a820cb9fc7b352ffc94593
+dataSourceKey: jobs
+dataSourceId: 68a820cd9fc7b352ffc9461a
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  title:
+    $var: $.name
+  confidential:
+    $var: $.isConfidential
+  status:
+    $var: $.status
+  locationId:
+    $var: $.officesIds[0]
+  departmentId:
+    $var: $.departmentsIds[0]
+  updatedAt:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.title
+  status:
+    $var: $.status
+  isConfidential:
+    $var: $.confidential
+  hiringManagersIds:
+    $iterate:
+      source:
+        $var: $.hiringTeam
+      item:
+        value:
+          $var: $.item.userId
+  departmentsIds:
+    - $var: $.departmentId
+  officesIds:
+    - $var: $.locationId
+  updatedTime:
+    $var: $.updatedAt
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

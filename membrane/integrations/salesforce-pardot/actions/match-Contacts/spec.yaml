@@ -1,0 +1,52 @@
+id: 68a82658e426fdf8cbab8be8
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: READY
+errors: []
+revision: 7e805bad-f84c-4cb8-a9fd-ab4305787c8b
+createdAt: '2025-08-22T08:12:16.486Z'
+updatedAt: '2025-08-22T08:12:16.486Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f9
+parentId: 68a82657e426fdf8cbab88c3
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: f5847216-8b12-4033-9a53-fc6113f1e79f
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

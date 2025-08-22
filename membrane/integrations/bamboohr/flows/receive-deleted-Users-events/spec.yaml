@@ -1,0 +1,50 @@
+id: 68a82619678af1d0cf6ecc26
+name: Receive Deleted User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Users-events
+revision: 69694742-d11c-4448-bbd6-6001b5d971be
+universalFlowId: 68a82616678af1d0cf6ec867
+integrationId: 68a820cb9fc7b352ffc94595
+universalFlowRevision: 7a8392bd-b630-438f-b3b9-9632aa909bfe
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Users-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: User Deleted Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc94595
+  name: BambooHR
+  key: bamboohr
+  uuid: becd939a-2e65-4f39-bd4e-f5f94bcffab6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.275Z'
+  updatedAt: '2025-08-22T07:48:29.061Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/bamboohr/logohq.png
+  connectorId: 65265ce970089fac483f2ee8
+  connectorVersion: 2.0.9
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 165
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

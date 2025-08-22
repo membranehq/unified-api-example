@@ -1,0 +1,50 @@
+id: 68a82658e426fdf8cbab8c27
+name: Delete Contact
+key: delete-Contacts
+uuid: 570d6578-b33d-4b8c-9250-7e0a45f48a5b
+state: READY
+errors: []
+revision: 459babdf-d4c8-4e5a-b379-52783f9b28f8
+createdAt: '2025-08-22T08:12:13.877Z'
+updatedAt: '2025-08-22T08:12:13.877Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e2
+parentId: 68a82657e426fdf8cbab88c5
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fcc51862-f2cb-49a2-a342-47d095bc3122
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

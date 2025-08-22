@@ -1,0 +1,144 @@
+id: 68a82654e426fdf8cbab872c
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 1856540c-5553-4bb4-9bd4-452b1168a23d
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66e4
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85b5
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  account_id:
+    $var: $.companyId
+  creator_id:
+    $var: $.createdBy
+  createdAt:
+    $var: $.createdTime
+  owner_id:
+    $var: $.ownerId
+  updatedAt:
+    $var: $.updatedTime
+  addressCity:
+    $var: $.primaryAddress.city
+  addressCountry:
+    $var: $.primaryAddress.country
+  addressState:
+    $var: $.primaryAddress.state
+  addressStreet:
+    $var: $.primaryAddress.street
+  addressZip:
+    $var: $.primaryAddress.zip
+  emails:
+    - $var: $.primaryEmail
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  name:
+    $var: $.fullName
+  source:
+    $var: $.source
+  title:
+    $var: $.jobTitle
+importValue:
+  fullName:
+    $var: $.name
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  primaryEmail:
+    $var: $.emails[0]
+  emails:
+    - value:
+        $var: $.emails[0]
+  primaryAddress:
+    street:
+      $var: $.addressStreet
+    city:
+      $var: $.addressCity
+    state:
+      $var: $.addressState
+    country:
+      $var: $.addressCountry
+    zip:
+      $var: $.addressZip
+    full:
+      $concat:
+        values:
+          - $var: $.addressStreet
+          - $var: $.addressCity
+          - $var: $.addressState
+          - $var: $.addressCountry
+          - $var: $.addressZip
+        delimiter: ', '
+  companyId:
+    $var: $.account_id
+  ownerId:
+    $var: $.owner_id
+  jobTitle:
+    $var: $.title
+  source:
+    $var: $.source
+  createdTime:
+    $var: $.createdAt
+  createdBy:
+    $var: $.creator_id
+  updatedTime:
+    $var: $.updatedAt
+  updatedBy:
+    $var: $.updater_id
+  addresses:
+    - value:
+        street:
+          $var: $.addressStreet
+        city:
+          $var: $.addressCity
+        state:
+          $var: $.addressState
+        country:
+          $var: $.addressCountry
+        zip:
+          $var: $.addressZip
+        full:
+          $concat:
+            values:
+              - $var: $.addressStreet
+              - $var: $.addressCity
+              - $var: $.addressState
+              - $var: $.addressCountry
+              - $var: $.addressZip
+            delimiter: ', '
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

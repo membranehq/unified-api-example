@@ -1,0 +1,52 @@
+id: 68a8261d678af1d0cf6ed054
+name: Receive Updated User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Users-events
+revision: a72ed9b7-730d-4f4b-9dad-49fd769c90f9
+universalFlowId: 68a82616678af1d0cf6ec86c
+integrationId: 689f2bf000905568ab2f66e8
+universalFlowRevision: 7b18ac04-a7cd-4001-93cf-1c2d5188060a
+nodes:
+  Users-updated-trigger:
+    type: data-record-updated-trigger
+    name: User Updated Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping:
+        key: users
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

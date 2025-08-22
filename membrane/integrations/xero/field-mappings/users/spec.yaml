@@ -1,0 +1,75 @@
+id: 68a8260b678af1d0cf6ebd8a
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: adf82744-3430-49ea-a6f6-c91d5401125d
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66da
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc17
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  UserID:
+    $var: $.id
+  EmailAddress:
+    $var: $.primaryEmail
+  FirstName:
+    $var: $.firstName
+  LastName:
+    $var: $.lastName
+  OrganisationRole:
+    $var: $.roleId
+importValue:
+  id:
+    $var: UserID
+  fullName:
+    $concat:
+      delimiter: ' '
+      values:
+        - $var: $.FirstName
+        - $var: $.LastName
+  firstName:
+    $var: FirstName
+  lastName:
+    $var: LastName
+  primaryEmail:
+    $var: EmailAddress
+  updatedTime:
+    $var: UpdatedDateUTC
+  roleId:
+    $var: $.OrganisationRole
+  emails:
+    - value:
+        $var: EmailAddress
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

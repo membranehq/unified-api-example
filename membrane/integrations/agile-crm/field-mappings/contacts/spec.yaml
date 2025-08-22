@@ -1,0 +1,154 @@
+id: 68a82654e426fdf8cbab8734
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: fb9512cc-59da-4aae-ad65-96cab2b3231f
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66d5
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85bb
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  _sf_first_name:
+    $var: $.firstName
+  _sf_last_name:
+    $var: $.lastName
+  _sf_email:
+    email:
+      $var: $.primaryEmail
+  _sf_phone:
+    phone:
+      $var: $.primaryPhone
+  _sf_company:
+    $var: $.companyName
+  _sf_title:
+    $var: $.jobTitle
+  _sf_address:
+    address:
+      $var: $.primaryAddress.street
+    city:
+      $var: $.primaryAddress.city
+    state:
+      $var: $.primaryAddress.state
+    zip:
+      $var: $.primaryAddress.zip
+    countryname:
+      $var: $.primaryAddress.country
+  created_time:
+    $var: $.createdTime
+  updated_time:
+    $var: $.updatedTime
+  last_contacted:
+    $var: $.lastActivityTime
+  source:
+    $var: $.source
+  contact_company_id:
+    $var: $.companyId
+  owner:
+    id:
+      $var: $.ownerId
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $._sf_name
+  owner:
+    $var: $.owner.id
+  createdTime:
+    $var: $.created_time
+  updatedTime:
+    $var: $.updated_time
+  lastActivityTime:
+    $var: $.last_contacted
+  primaryPhone:
+    $var: $._sf_phone.phone
+  firstName:
+    $var: $._sf_first_name
+  lastName:
+    $var: $._sf_last_name
+  primaryEmail:
+    $var: $._sf_email.email
+  primaryAddress:
+    country:
+      $var: $._sf_address.countryname
+    state:
+      $var: $._sf_address.state
+    city:
+      $var: $._sf_address.city
+    zip:
+      $var: $._sf_address.zip
+    street:
+      $var: $._sf_address.address
+    full:
+      $concat:
+        values:
+          - $var: $._sf_address.address
+          - $var: $._sf_address.city
+          - $var: $._sf_address.state
+          - $var: $._sf_address.zip
+          - $var: $._sf_address.countryname
+        delimiter: ', '
+  companyId:
+    $var: $.contact_company_id
+  companyName:
+    $var: $._sf_company
+  jobTitle:
+    $var: $._sf_title
+  source:
+    $var: $.source
+  fullName:
+    $concat:
+      values:
+        - $var: $._sf_first_name
+        - $var: $._sf_last_name
+      delimiter: ' '
+  emails:
+    - value:
+        $var: $._sf_email.email
+  phones:
+    - value:
+        $var: $._sf_phone.phone
+  addresses:
+    - value:
+        country:
+          $var: $._sf_address.countryname
+        state:
+          $var: $._sf_address.state
+        city:
+          $var: $._sf_address.city
+        zip:
+          $var: $._sf_address.zip
+        street:
+          $var: $._sf_address.address
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

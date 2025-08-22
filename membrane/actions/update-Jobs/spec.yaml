@@ -1,0 +1,31 @@
+id: 68a820ce9fc7b352ffc946f0
+name: Update Job
+key: update-Jobs
+uuid: 89c02434-866b-4651-a823-6adc140e3a23
+state: READY
+errors: []
+revision: b572e2a2-8343-4e5b-a1e3-3ac65ca060f5
+createdAt: '2025-08-22T07:48:30.131Z'
+updatedAt: '2025-08-22T07:48:30.131Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: jobs
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: jobs
+    input:
+      $var: $.input.fields
+isCustomized: false

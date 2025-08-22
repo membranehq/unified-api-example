@@ -1,0 +1,53 @@
+id: 689f2c0400905568ab2f6d9f
+name: Create Company
+key: create-Companies
+state: READY
+errors: []
+revision: a9a7d023-86a2-4348-b2f6-1653e254df32
+createdAt: '2025-08-15T12:46:03.365Z'
+updatedAt: '2025-08-15T12:46:03.365Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 689f2c0400905568ab2f6b3d
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: companies
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 41d8061b-be07-478b-b9a7-b54d490fc52f
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

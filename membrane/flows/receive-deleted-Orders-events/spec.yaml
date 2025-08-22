@@ -1,0 +1,22 @@
+id: 68a84f097702482264c63216
+name: Receive Deleted Order Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Orders-events
+revision: 34b9abf5-da30-4d0d-87fc-ba697bbf050c
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Orders-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Order Deleted Trigger
+    config:
+      dataSource:
+        key: orders
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

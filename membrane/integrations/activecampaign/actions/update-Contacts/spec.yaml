@@ -1,0 +1,58 @@
+id: 68a82658e426fdf8cbab8a9a
+name: Update Contact
+key: update-Contacts
+uuid: 74f64cff-a9fc-4d63-a156-a60017ed1c31
+state: READY
+errors: []
+revision: 92aa138d-7714-482c-9ae8-18b34b19aac6
+createdAt: '2025-08-22T08:12:13.758Z'
+updatedAt: '2025-08-22T08:12:13.758Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66dc
+parentId: 68a82657e426fdf8cbab88c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: f7c5630c-4b19-4b25-b702-9d20f7d14e01
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

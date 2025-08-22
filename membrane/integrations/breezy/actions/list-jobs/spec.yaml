@@ -1,0 +1,75 @@
+id: 68a820ce9fc7b352ffc947de
+name: List Jobs
+key: list-jobs
+uuid: 9c8eae4e-285e-4803-9fdb-e4d4ca730535
+state: READY
+errors: []
+revision: 50ea7113-54c7-4240-9dd2-02e868214e8c
+createdAt: '2025-08-22T07:48:31.279Z'
+updatedAt: '2025-08-22T07:48:31.279Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ff
+parentId: 68a820ce9fc7b352ffc946f2
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    department:
+      $var: $.input.filter.departmentsIds[0]
+    _id:
+      $var: $.input.filter.id
+    state:
+      $var: $.input.filter.status
+    creator_id:
+      $var: $.input.filter.createdBy
+    creation_date:
+      $var: $.input.filter.createdTime
+    updated_date:
+      $var: $.input.filter.updatedTime
+isCustomized: false
+parentRevision: 7d76b55e-9a20-4f69-a17b-dd6684d26903
+integration:
+  id: 689f2bf000905568ab2f66ff
+  name: Breezy HR
+  key: breezy
+  uuid: 07230773-02e2-487f-b133-9e5d944aa495
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:45.073Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/breezy/logo.png
+  connectorId: 643e81f7badd839bce463919
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 5
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

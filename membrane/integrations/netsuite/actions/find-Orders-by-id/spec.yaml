@@ -1,0 +1,52 @@
+id: 68a84f077702482264c62f97
+name: Find Order By Id
+key: find-Orders-by-id
+uuid: e61fda56-4534-42c9-b101-736d50deed70
+state: READY
+errors: []
+revision: 69f68e70-36b9-4f33-aa60-9f95c4ccb037
+createdAt: '2025-08-22T11:05:45.069Z'
+updatedAt: '2025-08-22T11:05:45.069Z'
+isDeactivated: false
+integrationId: 68a839f321039ff70f89b5bd
+parentId: 68a84f067702482264c62e8d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 421b882f-73ec-4aa8-8a8f-84529268453b
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

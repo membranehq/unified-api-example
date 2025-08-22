@@ -1,0 +1,56 @@
+id: 68a82658e426fdf8cbab8b88
+name: Search Contacts
+key: search-contacts
+uuid: b1c4910e-e855-4b55-8e96-3898d0d50b1e
+state: READY
+errors: []
+revision: c847d645-eedd-40f6-ad7c-fde4779d716e
+createdAt: '2025-08-22T08:12:14.286Z'
+updatedAt: '2025-08-22T08:12:14.286Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6703
+parentId: 68a82657e426fdf8cbab88c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 6497440a-7666-4fd8-99d9-91ec2be51028
+integration:
+  id: 689f2bf000905568ab2f6703
+  name: Mautic
+  key: mautic
+  uuid: 235cbf28-b7ea-4fcd-887b-fdaa5f7881ab
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.276Z'
+  updatedAt: '2025-08-15T12:45:43.321Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/mautic/asset-fd3948f3-5895-4ed2-9818-3c090ad28ecf.png
+  connectorId: 667c71df7d4a85fdc94a1dfa
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 108
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

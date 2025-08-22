@@ -1,0 +1,58 @@
+id: 68a8260e678af1d0cf6ec1bd
+name: Match User
+key: match-Users
+uuid: bdd68b9f-ef05-4d00-9197-92d63abc5eac
+state: READY
+errors: []
+revision: 3abd0083-7f00-42c6-9689-ba085214209f
+createdAt: '2025-08-22T08:11:01.956Z'
+updatedAt: '2025-08-22T08:11:01.956Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d3
+parentId: 68a8260e678af1d0cf6ebf03
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      fullname:
+        $var: $.input.query.fullName
+      internalemailaddress:
+        $var: $.input.query.primaryEmail
+isCustomized: false
+parentRevision: 073b88ab-29ef-4ddf-86e1-0c096500ff6e
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

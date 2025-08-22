@@ -1,0 +1,50 @@
+id: 68a82658e426fdf8cbab8c4a
+name: Delete Contact
+key: delete-Contacts
+uuid: 570d6578-b33d-4b8c-9250-7e0a45f48a5b
+state: READY
+errors: []
+revision: 563dcd6b-50dd-4d11-a1e8-f915d8ad158f
+createdAt: '2025-08-22T08:12:13.962Z'
+updatedAt: '2025-08-22T08:12:13.962Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 68a82657e426fdf8cbab88c5
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fcc51862-f2cb-49a2-a342-47d095bc3122
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

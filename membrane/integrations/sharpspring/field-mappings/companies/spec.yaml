@@ -1,0 +1,103 @@
+id: 689f2c0100905568ab2f69d3
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 402259c0-2b55-49de-8859-a2087d1aa15f
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66ea
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6887
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  ownerID:
+    $var: $.ownerId
+  accountName:
+    $var: $.name
+  phone:
+    $var: $.primaryPhone
+  numberOfEmployees:
+    $var: $.numberOfEmployees
+  website:
+    $var: $.websiteUrl
+  billingCity:
+    $var: $.primaryAddress.city
+  billingCountry:
+    $var: $.primaryAddress.country
+  billingPostalCode:
+    $var: $.primaryAddress.zip
+  billingState:
+    $var: $.primaryAddress.state
+  billingStreetAddress:
+    $var: $.primaryAddress.street
+  industry:
+    $var: $.industry
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.accountName
+  websiteUrl:
+    $var: $.website
+  industry:
+    $var: $.industry
+  primaryPhone:
+    $var: $.phone
+  ownerId:
+    $var: $.ownerID
+  primaryAddress:
+    street:
+      $var: $.billingStreetAddress
+    city:
+      $var: $.billingCity
+    state:
+      $var: $.billingState
+    country:
+      $var: $.billingCountry
+    zip:
+      $var: $.billingPostalCode
+    full:
+      $concat:
+        values:
+          - $var: $.billingStreetAddress
+          - $var: $.billingCity
+          - $var: $.billingState
+          - $var: $.billingPostalCode
+          - $var: $.billingCountry
+        delimiter: ', '
+  numberOfEmployees:
+    $var: $.numberOfEmployees
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

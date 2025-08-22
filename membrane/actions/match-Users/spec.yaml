@@ -1,0 +1,25 @@
+id: 68a8260e678af1d0cf6ebf03
+name: Match User
+key: match-Users
+uuid: bdd68b9f-ef05-4d00-9197-92d63abc5eac
+state: READY
+errors: []
+revision: 073b88ab-29ef-4ddf-86e1-0c096500ff6e
+createdAt: '2025-08-22T08:10:54.069Z'
+updatedAt: '2025-08-22T08:10:54.069Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

@@ -1,0 +1,28 @@
+id: 68a839b4f8d786c131d7f908
+name: Search Job Applications
+key: search-job-applications
+uuid: 3319f60d-f0b6-403a-83a4-809596396d5f
+state: READY
+errors: []
+revision: f12d926c-de87-4d02-89dd-17f5c8d2780b
+createdAt: '2025-08-22T09:34:44.999Z'
+updatedAt: '2025-08-22T09:34:44.999Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: job-applications
+  dataSource:
+    key: job-applications
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

@@ -1,0 +1,54 @@
+id: 68a8260e678af1d0cf6ec170
+name: Create User
+key: create-Users
+uuid: ac4f22cb-7b1b-4c7e-ab63-df88a08ec273
+state: READY
+errors: []
+revision: 70d44e8b-c075-4e89-a1ae-bfa3a5fdd888
+createdAt: '2025-08-22T08:10:59.688Z'
+updatedAt: '2025-08-22T08:10:59.688Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a8260e678af1d0cf6ebf00
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: users
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 8a05b55c-f017-43bd-97d2-da84f21bfe46
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

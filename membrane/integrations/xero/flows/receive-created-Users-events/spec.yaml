@@ -1,0 +1,51 @@
+id: 68a8261d678af1d0cf6ed0db
+name: Receive Created User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Users-events
+revision: e4d3d532-3426-4ffd-896e-fd6941ee286d
+universalFlowId: 68a82616678af1d0cf6ec863
+integrationId: 689f2bf000905568ab2f66da
+universalFlowRevision: 838c9f04-1800-4d92-aed1-56d3f5e0c14f
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Users-created-trigger:
+    type: data-record-created-trigger
+    name: User Created Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping:
+        key: users
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

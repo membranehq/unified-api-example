@@ -1,0 +1,78 @@
+id: 68a839b5f8d786c131d7fa13
+name: List Job Applications
+key: list-job-applications
+uuid: 7613bd70-5aa9-44d3-adc5-0744b90dcf9d
+state: READY
+errors: []
+revision: d2f97ff9-dddf-4c8b-9c30-a83c6d5691cd
+createdAt: '2025-08-22T09:34:46.162Z'
+updatedAt: '2025-08-22T09:34:46.162Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a9
+parentId: 68a839b4f8d786c131d7f90a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: job-applications
+  dataSource:
+    key: job-applications
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    candidate_id:
+      $var: $.input.filter.candidateId
+    applied_at:
+      $var: $.input.filter.appliedAt
+    rejected_at:
+      $var: $.input.filter.rejectedTime
+    rejection_reason:
+      $var: $.input.filter.rejectionReason
+    job_post_id:
+      $var: $.input.filter.jobId
+    status:
+      $var: $.input.filter.status
+    current_stage:
+      $var: $.input.filter.currentStage
+    job_id:
+      $var: $.input.filter.jobId
+isCustomized: false
+parentRevision: 1764531a-1bf6-43ba-a95c-4d672d38ea11
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

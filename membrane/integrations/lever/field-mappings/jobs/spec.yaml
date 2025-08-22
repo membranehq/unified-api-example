@@ -1,0 +1,95 @@
+id: 68a820cd9fc7b352ffc9468b
+name: Jobs
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a820cd9fc7b352ffc94618
+key: jobs
+customized: false
+revision: c154b197-418f-4472-baee-93f769c848e2
+universalFieldMappingId: 68a820cd9fc7b352ffc94662
+universalFieldMappingRevision: 26908f16-503a-4b7f-b946-48737ac8cae3
+integrationId: 68a820cb9fc7b352ffc9459d
+dataSourceKey: jobs
+dataSourceId: 68a820cd9fc7b352ffc94618
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  text:
+    $var: $.name
+  createdAt:
+    $var: $.createdTime
+  updatedAt:
+    $var: $.updatedTime
+  confidentiality:
+    $jsonata: '$.isConfidential ? ''confidential'' : ''non-confidential'''
+  content:
+    description:
+      $var: $.description
+  reqCode:
+    $var: $.code
+  department:
+    $var: $.departmentsIds[0]
+  description:
+    $var: $.description
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.text
+  description:
+    $var: $.description
+  code:
+    $var: $.reqCode
+  status:
+    $var: $.state
+  isConfidential:
+    $jsonata: $.confidentiality = 'confidential'
+  hiringManagersIds:
+    - $var: $.hiringManager
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

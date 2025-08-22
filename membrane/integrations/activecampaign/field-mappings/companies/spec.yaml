@@ -1,0 +1,66 @@
+id: 689f2c0100905568ab2f69db
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 126b0356-3262-45c5-9a7a-75ac77ad9202
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66dc
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6879
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  accountUrl:
+    $var: $.websiteUrl
+  createdTimestamp:
+    $var: $.createdTime
+  updatedTimestamp:
+    $var: $.updatedTime
+  owner:
+    $var: $.ownerId
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.accountUrl
+  ownerId:
+    $var: $.owner
+  createdTime:
+    $var: $.createdTimestamp
+  updatedTime:
+    $var: $.updatedTimestamp
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

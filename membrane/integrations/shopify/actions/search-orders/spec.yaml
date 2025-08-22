@@ -1,0 +1,75 @@
+id: 68a84f077702482264c62fb3
+name: Search Orders
+key: search-orders
+uuid: c5729db6-8993-44d5-b4f1-1b0eff63c144
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c85
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a84f057702482264c62d6d
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a84f067702482264c62e05
+revision: c7874408-5c66-487c-a5ce-a6b37de4b02b
+createdAt: '2025-08-22T11:05:44.678Z'
+updatedAt: '2025-08-22T11:05:44.678Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c85
+parentId: 68a84f077702482264c62e93
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: d0c3f90c-b557-4cde-829e-ba869f37bf68
+integration:
+  id: 68a84efe7702482264c62c85
+  name: Shopify
+  key: shopify
+  uuid: 605b2fc9-0180-4a14-9917-19fe62a96c32
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.336Z'
+  updatedAt: '2025-08-22T11:05:38.392Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/shopify/logo.png
+  connectorId: 6466785860f981f3ce696916
+  connectorVersion: 2.0.4
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

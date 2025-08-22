@@ -1,0 +1,95 @@
+id: 689f2c0400905568ab2f6e07
+name: List Companies
+key: list-companies
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 689f2c0000905568ab2f688b
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 689f2c0100905568ab2f69cb
+revision: 3525aa2f-266f-4ca7-a953-6d6d9362e34e
+createdAt: '2025-08-15T12:46:03.711Z'
+updatedAt: '2025-08-15T12:46:03.711Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6701
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    currency_id:
+      $var: $.input.filter.currency
+    main_address:
+      address_line_1:
+        $var: $.input.filter.primaryAddress.street
+      city:
+        $var: $.input.filter.primaryAddress.city
+      postal_code:
+        $var: $.input.filter.primaryAddress.zip
+      country_id:
+        $var: $.input.filter.primaryAddress.country
+      region:
+        $var: $.input.filter.primaryAddress.state
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

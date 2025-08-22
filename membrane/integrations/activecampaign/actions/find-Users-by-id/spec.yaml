@@ -1,0 +1,51 @@
+id: 68a8260e678af1d0cf6ec191
+name: Find User By Id
+key: find-Users-by-id
+uuid: 350cc6a4-3580-4da9-af3d-ea9b8f6b6c9f
+state: READY
+errors: []
+revision: 02eec5c5-9cc5-4b8d-b01f-8c1c811e4a10
+createdAt: '2025-08-22T08:10:59.759Z'
+updatedAt: '2025-08-22T08:10:59.759Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66dc
+parentId: 68a8260e678af1d0cf6ebf05
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 83eee06b-8492-4c0f-8924-951b664a1dae
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

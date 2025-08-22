@@ -1,0 +1,51 @@
+id: 68a8260e678af1d0cf6ec129
+name: Delete User
+key: delete-Users
+uuid: 2c5c6ffd-7ab2-4165-977f-9224e92acd38
+state: READY
+errors: []
+revision: ce95824b-63f8-4450-b32b-7863eab148c3
+createdAt: '2025-08-22T08:10:58.759Z'
+updatedAt: '2025-08-22T08:10:58.759Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 68a8260e678af1d0cf6ebefe
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 15541a7f-5223-48f2-9e8b-1a0feb22aa97
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,22 @@
+id: 68a84f077702482264c62e98
+name: Delete Order
+key: delete-Orders
+uuid: cb1de9f2-7588-4022-bcea-3e16438d9d75
+state: READY
+errors: []
+revision: 6c955296-be87-411f-bc36-639930e15821
+createdAt: '2025-08-22T11:05:43.050Z'
+updatedAt: '2025-08-22T11:05:43.050Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: orders
+  id:
+    $var: $.input.id
+isCustomized: false

@@ -1,0 +1,22 @@
+id: 68a820ce9fc7b352ffc946ea
+name: Delete Job
+key: delete-Jobs
+uuid: 0e1320ef-126e-49b8-bf3a-fcada2f0a43e
+state: READY
+errors: []
+revision: d88266de-21fb-4eee-82ec-4dcfca1d8561
+createdAt: '2025-08-22T07:48:30.122Z'
+updatedAt: '2025-08-22T07:48:30.122Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: jobs
+  id:
+    $var: $.input.id
+isCustomized: false

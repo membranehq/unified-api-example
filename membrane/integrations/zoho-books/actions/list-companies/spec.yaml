@@ -1,0 +1,100 @@
+id: 689f2c0400905568ab2f6e0f
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: cc6e079e-c089-4ef0-ba04-07a6e84e43ba
+createdAt: '2025-08-15T12:46:03.713Z'
+updatedAt: '2025-08-15T12:46:03.713Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    contact_id:
+      $var: $.input.filter.id
+    contact_name:
+      $var: $.input.filter.name
+    company_name: null
+    website:
+      $var: $.input.filter.websiteUrl
+    owner_id:
+      $var: $.input.filter.ownerId
+    billing_address:
+      address: null
+      city:
+        $var: $.input.filter.primaryAddress.city
+      state:
+        $var: $.input.filter.primaryAddress.state
+      zip:
+        $var: $.input.filter.primaryAddress.zip
+      country:
+        $var: $.input.filter.primaryAddress.country
+      phone:
+        $var: $.input.filter.primaryPhone
+    shipping_address:
+      address: null
+      city:
+        $var: $.input.filter.primaryAddress.city
+      state:
+        $var: $.input.filter.primaryAddress.state
+      zip:
+        $var: $.input.filter.primaryAddress.zip
+      country:
+        $var: $.input.filter.primaryAddress.country
+    contact_persons: null
+    default_templates: null
+    contact_type: null
+    customer_sub_type:
+      $var: $.input.filter.industry
+    created_time:
+      $var: $.input.filter.createdTime
+    last_modified_time:
+      $var: $.input.filter.updatedTime
+    currency_code:
+      $var: $.input.filter.currency
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

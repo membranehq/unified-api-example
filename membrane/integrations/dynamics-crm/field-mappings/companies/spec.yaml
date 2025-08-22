@@ -1,0 +1,107 @@
+id: 689f2c0100905568ab2f69ba
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 50462fff-b1f2-47b8-8496-ebb220b5ce68
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66d3
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f686d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  address1_composite:
+    $var: $.primaryAddress.full
+  createdby:
+    $var: $.createdBy
+  createdon:
+    $var: $.createdTime
+  description:
+    $var: $.description
+  modifiedby:
+    $var: $.updatedBy
+  modifiedon:
+    $var: $.updatedTime
+  name:
+    $var: $.name
+  numberofemployees:
+    $var: $.numberOfEmployees
+  ownerid:
+    $var: $.ownerId
+  telephone1:
+    $var: $.primaryPhone
+  websiteurl:
+    $var: $.websiteUrl
+importValue:
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.websiteurl
+  phones:
+    - value:
+        $var: $.telephone1
+    - value:
+        $var: $.telephone2
+    - value:
+        $var: $.telephone3
+  primaryPhone:
+    $var: $.telephone1
+  description:
+    $var: $.description
+  ownerId:
+    $var: $.ownerid
+  primaryAddress:
+    full:
+      $var: $.address1_composite
+    street:
+      $var: $.address1_line1
+    city:
+      $var: $.address1_city
+    state:
+      $var: $.address1_stateorprovince
+    country:
+      $var: $.address1_country
+    zip:
+      $var: $.address1_postalcode
+  numberOfEmployees:
+    $var: $.numberofemployees
+  createdTime:
+    $var: $.createdon
+  createdBy:
+    $var: $.createdby
+  updatedTime:
+    $var: $.modifiedon
+  updatedBy:
+    $var: $.modifiedby
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

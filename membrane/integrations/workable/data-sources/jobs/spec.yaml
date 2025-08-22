@@ -1,0 +1,38 @@
+id: 68a820cd9fc7b352ffc94614
+name: Jobs
+isDeactivated: false
+state: READY
+errors: []
+key: jobs
+revision: 8062f5b7-47bf-4c41-9a27-2e10095244e0
+integrationId: 68a820cb9fc7b352ffc945a1
+customized: false
+universalDataSourceId: 68a820cd9fc7b352ffc945fc
+universalDataSourceRevision: a4a0dc92-c1c9-4072-8ea9-98625ed2e1f5
+collectionKey: jobs
+udm: jobs
+defaultPath: /data/jobs
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

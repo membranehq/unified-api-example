@@ -1,0 +1,59 @@
+id: 68a84f077702482264c62f99
+name: List Orders
+key: list-orders
+uuid: 6d2b58e8-ec77-4b11-9a80-c19c9da69fad
+state: READY
+errors: []
+revision: 8601a7a4-b2f7-40eb-97f8-9c391f390635
+createdAt: '2025-08-22T11:05:45.191Z'
+updatedAt: '2025-08-22T11:05:45.191Z'
+isDeactivated: false
+integrationId: 68a839f321039ff70f89b5bd
+parentId: 68a84f077702482264c62e9a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false
+parentRevision: 24307e40-ddbc-44aa-9509-a6e37166a8f6
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

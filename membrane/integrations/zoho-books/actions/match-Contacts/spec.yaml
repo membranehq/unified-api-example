@@ -1,0 +1,52 @@
+id: 68a82658e426fdf8cbab8bf8
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: READY
+errors: []
+revision: 2075fd40-1abd-4c2c-acda-7e186e45a6b5
+createdAt: '2025-08-22T08:12:15.576Z'
+updatedAt: '2025-08-22T08:12:15.576Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a82657e426fdf8cbab88c3
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: f5847216-8b12-4033-9a53-fc6113f1e79f
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

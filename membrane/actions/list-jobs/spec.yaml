@@ -1,0 +1,31 @@
+id: 68a820ce9fc7b352ffc946f2
+name: List Jobs
+key: list-jobs
+uuid: 9c8eae4e-285e-4803-9fdb-e4d4ca730535
+state: READY
+errors: []
+revision: 7d76b55e-9a20-4f69-a17b-dd6684d26903
+createdAt: '2025-08-22T07:48:30.131Z'
+updatedAt: '2025-08-22T07:48:30.131Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

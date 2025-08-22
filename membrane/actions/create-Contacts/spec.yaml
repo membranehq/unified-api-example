@@ -1,0 +1,27 @@
+id: 68a82657e426fdf8cbab88bb
+name: Create Contact
+key: create-Contacts
+uuid: c6a28c7f-b0d2-4373-8e05-1cb6b3c37989
+state: READY
+errors: []
+revision: 38860ce8-8263-4d10-b4bd-97f57996a12f
+createdAt: '2025-08-22T08:12:07.992Z'
+updatedAt: '2025-08-22T08:12:07.992Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: contacts
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false

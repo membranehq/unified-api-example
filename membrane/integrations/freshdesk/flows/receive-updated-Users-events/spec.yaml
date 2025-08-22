@@ -1,0 +1,52 @@
+id: 68a8261c678af1d0cf6eceaf
+name: Receive Updated User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Users-events
+revision: 60ecb23c-14b8-49c5-8c0b-563ebf390222
+universalFlowId: 68a82616678af1d0cf6ec86c
+integrationId: 689f2bf000905568ab2f6710
+universalFlowRevision: 7b18ac04-a7cd-4001-93cf-1c2d5188060a
+nodes:
+  Users-updated-trigger:
+    type: data-record-updated-trigger
+    name: User Updated Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping:
+        key: users
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

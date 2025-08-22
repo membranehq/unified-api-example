@@ -1,0 +1,52 @@
+id: 68a82667e426fdf8cbab999c
+name: Receive Created Contact Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Contacts-events
+revision: ac6c5c1c-1d01-457d-a9e6-bc7350597785
+universalFlowId: 68a82660e426fdf8cbab9253
+integrationId: 689f2bf000905568ab2f6705
+universalFlowRevision: 506639a7-7b47-45c0-b05e-058e54e989d6
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Contacts-created-trigger:
+    type: data-record-created-trigger
+    name: Contact Created Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,113 @@
+id: 68a820cd9fc7b352ffc9467a
+name: Jobs
+isDeactivated: false
+state: READY
+errors: []
+key: jobs
+customized: false
+revision: 36569168-98d7-4d6a-8c84-863555f9f176
+universalFieldMappingId: 68a820cd9fc7b352ffc94662
+universalFieldMappingRevision: 26908f16-503a-4b7f-b946-48737ac8cae3
+integrationId: 68a820cb9fc7b352ffc945a9
+dataSourceKey: jobs
+dataSourceId: 68a820cd9fc7b352ffc9460b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  notes:
+    $var: $.description
+  confidential:
+    $var: $.isConfidential
+  status:
+    $var: $.status
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  departments:
+    $iterate:
+      source:
+        $var: $.departmentsIds
+      item:
+        id:
+          $var: $.item
+  offices:
+    $iterate:
+      source:
+        $var: $.officesIds
+      item:
+        id:
+          $var: $.item
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  code:
+    $var: requisition_id
+  status:
+    $var: $.status
+  isConfidential:
+    $var: $.confidential
+  hiringManagersIds:
+    $iterate:
+      source:
+        $var: $.hiring_team.hiring_managers
+      item:
+        $var: $.item.id
+  recruitersIds:
+    $iterate:
+      source:
+        $var: $.hiring_team.recruiters
+      item:
+        $var: $.item.id
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+  description:
+    $var: $.notes
+  departmentsIds:
+    $iterate:
+      source:
+        $var: $.departments
+      item:
+        $var: $.item.id
+  officesIds:
+    $iterate:
+      source:
+        $var: $.offices
+      item:
+        $var: $.item.id
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

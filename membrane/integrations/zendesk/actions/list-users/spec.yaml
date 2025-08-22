@@ -1,0 +1,81 @@
+id: 68a8260e678af1d0cf6ec217
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: a118a5b3-2345-4e3e-bf4a-96205d7cb131
+createdAt: '2025-08-22T08:11:00.753Z'
+updatedAt: '2025-08-22T08:11:00.753Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f0
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    active:
+      $var: $.input.filter.isActive
+    alias:
+      $var: $.input.filter.userName
+    created_at:
+      $var: $.input.filter.createdTime
+    custom_role_id:
+      $var: $.input.filter.roleId
+    email:
+      $var: $.input.filter.primaryEmail
+    iana_time_zone:
+      $var: $.input.filter.timezone
+    name:
+      $var: $.input.filter.fullName
+    phone:
+      $var: $.input.filter.primaryPhone
+    remote_photo_url:
+      $var: $.input.filter.imageUrl
+    updated_at:
+      $var: $.input.filter.updatedTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66f0
+  name: Zendesk
+  key: zendesk
+  uuid: 77c714e0-e2a5-4333-ade5-02cb0e398340
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.267Z'
+  updatedAt: '2025-08-15T12:45:46.486Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zendesk/logo.png
+  connectorId: 643e957fbadd839bce5208e3
+  connectorVersion: 1.5.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 393
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 60
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

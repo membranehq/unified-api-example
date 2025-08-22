@@ -1,0 +1,25 @@
+id: 68a84f077702482264c62e8f
+name: Match Order
+key: match-Orders
+uuid: b97b3387-5a45-4720-afdb-20b71182f23b
+state: READY
+errors: []
+revision: 5a9eb529-cb0a-4451-add8-e058db55835f
+createdAt: '2025-08-22T11:05:43.089Z'
+updatedAt: '2025-08-22T11:05:43.089Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

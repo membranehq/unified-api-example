@@ -1,0 +1,89 @@
+id: 68a82658e426fdf8cbab8ade
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: ae877a9c-331f-42e9-9499-5917cb56acb8
+createdAt: '2025-08-22T08:12:15.578Z'
+updatedAt: '2025-08-22T08:12:15.578Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    First_Name:
+      $var: $.input.filter.firstName
+    Last_Name:
+      $var: $.input.filter.lastName
+    Full_Name:
+      $var: $.input.filter.fullName
+    Title:
+      $var: $.input.filter.jobTitle
+    Email:
+      $var: $.input.filter.primaryEmail
+    Phone:
+      $var: $.input.filter.primaryPhone
+    Account_Name:
+      $var: $.input.filter.companyId
+    Lead_Source:
+      $var: $.input.filter.source
+    Owner:
+      $var: $.input.filter.ownerId
+    Last_Activity_Time:
+      $var: $.input.filter.lastActivityTime
+    Created_Time:
+      $var: $.input.filter.createdTime
+    Created_By:
+      $var: $.input.filter.createdBy
+    Modified_By:
+      $var: $.input.filter.updatedBy
+    Modified_Time:
+      $var: $.input.filter.updatedTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

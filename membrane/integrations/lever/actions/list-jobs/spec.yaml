@@ -1,0 +1,102 @@
+id: 68a820ce9fc7b352ffc947e0
+name: List Jobs
+key: list-jobs
+uuid: 9c8eae4e-285e-4803-9fdb-e4d4ca730535
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a820cd9fc7b352ffc94618
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a820cd9fc7b352ffc9468b
+revision: 317b22aa-12ee-43ce-9a57-5fe74050acf3
+createdAt: '2025-08-22T07:48:31.280Z'
+updatedAt: '2025-08-22T07:48:31.280Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc9459d
+parentId: 68a820ce9fc7b352ffc946f2
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    text:
+      $var: $.input.filter.name
+    createdAt:
+      $var: $.input.filter.createdTime
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    hiringManager:
+      $var: $.input.filter.hiringManagersIds[0]
+    confidentiality:
+      $jsonata: '$.isConfidential ? ''confidential'' : ''non-confidential'''
+    content:
+      description:
+        $var: $.input.filter.description
+    state:
+      $var: $.input.filter.status
+    reqCode:
+      $var: $.input.filter.code
+    department:
+      $var: $.input.filter.departmentsIds[0]
+    description:
+      $var: $.input.filter.description
+isCustomized: false
+parentRevision: 7d76b55e-9a20-4f69-a17b-dd6684d26903
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,52 @@
+id: 68a8260e678af1d0cf6ec1a7
+name: Find User By Id
+key: find-Users-by-id
+uuid: 350cc6a4-3580-4da9-af3d-ea9b8f6b6c9f
+state: READY
+errors: []
+revision: 766b8454-8038-47c1-ad8d-8b6a53c9ecf3
+createdAt: '2025-08-22T08:10:59.769Z'
+updatedAt: '2025-08-22T08:10:59.769Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a9
+parentId: 68a8260e678af1d0cf6ebf05
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 83eee06b-8492-4c0f-8924-951b664a1dae
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,50 @@
+id: 68a83a0d21039ff70f89cc9e
+name: Receive Deleted Contact Events (1)
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Contacts-events-1
+revision: 39f88066-ca31-454e-8100-06caf6dd3f23
+universalFlowId: 68a83a0921039ff70f89c7d4
+integrationId: 689f2bf000905568ab2f66e8
+universalFlowRevision: adc45729-338e-426c-a077-cd4dc0291e26
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Contacts-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Contact Deleted Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

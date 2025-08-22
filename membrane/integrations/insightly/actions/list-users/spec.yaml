@@ -1,0 +1,58 @@
+id: 68a8260e678af1d0cf6ec215
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 2f189028-5134-4d2c-9385-232f0325c60a
+createdAt: '2025-08-22T08:11:00.752Z'
+updatedAt: '2025-08-22T08:11:00.752Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ee
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

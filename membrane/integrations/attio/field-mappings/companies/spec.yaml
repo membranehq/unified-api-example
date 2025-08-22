@@ -1,0 +1,106 @@
+id: 689f2c0200905568ab2f6a63
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 3135addd-fe55-44f7-889b-a5f4bf1effce
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f6705
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f688d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    record_id:
+      $var: $.id
+  values:
+    name:
+      - value:
+          $var: $.name
+    domains:
+      - domain:
+          $var: $.websiteUrl
+    description:
+      - value:
+          $var: $.description
+    employee_range:
+      - option_write:
+          $var: $.numberOfEmployees
+    primary_location:
+      - line_1:
+          $var: $.primaryAddress.street
+        region:
+          $var: $.primaryAddress.state
+        locality:
+          $var: $.primaryAddress.city
+        postcode:
+          $var: $.primaryAddress.zip
+        country_code:
+          $var: $.primaryAddress.country
+importValue:
+  id:
+    $var: $.id.record_id
+  name:
+    $var: $.values.name[0].value
+  websiteUrl:
+    $var: $.values.domains[0].domain
+  description:
+    $var: $.values.description[0].value
+  numberOfEmployees:
+    $var: $.values.employee_range[0].option.id.option_id
+  createdTime:
+    $var: $.created_at
+  primaryAddress:
+    street:
+      $var: $.values.primary_location[0].line_1
+    city:
+      $var: $.values.primary_location[0].locality
+    state:
+      $var: $.values.primary_location[0].region
+    country:
+      $var: $.values.primary_location[0].country_code
+    zip:
+      $var: $.values.primary_location[0].postcode
+    full:
+      $concat:
+        values:
+          - $var: $.values.primary_location[0].line_1
+          - $var: $.values.primary_location[0].locality
+          - $var: $.values.primary_location[0].region
+          - $var: $.values.primary_location[0].postcode
+          - $var: $.values.primary_location[0].country_code
+        delimiter: ', '
+  createdBy:
+    $var: $.values.created_by[0].created_by_actor.id
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

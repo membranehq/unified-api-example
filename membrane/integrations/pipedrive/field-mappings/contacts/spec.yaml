@@ -1,0 +1,107 @@
+id: 68a82654e426fdf8cbab8738
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 639f1b41-c9d5-4693-9aca-df5cc70f49f1
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66e0
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85ad
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.fullName
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  phone:
+    $var: $.primaryPhone
+  phones:
+    $var: $.phones
+  emails:
+    $var: $.emails
+  email:
+    $var: $.primaryEmail
+  owner_id:
+    $var: $.ownerId
+  org_id:
+    $var: $.companyId
+  org:
+    name:
+      $var: $.companyName
+  update_time:
+    $var: $.updatedTime
+  added_by_user_id:
+    $var: $.createdBy
+  add_time:
+    $var: $.createdTime
+  last_activity_date:
+    $var: $.lastActivityTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.phone
+  stage:
+    $var: $.marketing_status
+  companyName:
+    $var: $.org.name
+  companyId:
+    $var: $.org_id
+  ownerId:
+    $var: $.owner_id
+  createdBy:
+    $var: $.added_by_user_id
+  createdTime:
+    $var: $.add_time
+  updatedTime:
+    $var: $.update_time
+  lastActivityTime:
+    $var: $.last_activity_date
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.phone
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

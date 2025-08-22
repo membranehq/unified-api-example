@@ -1,0 +1,51 @@
+id: 68a84f077702482264c62f6f
+name: Find Order By Id
+key: find-Orders-by-id
+uuid: e61fda56-4534-42c9-b101-736d50deed70
+state: READY
+errors: []
+revision: 4dd8b972-9c2a-4e8a-afdc-9ac8cd0a99e8
+createdAt: '2025-08-22T11:05:44.568Z'
+updatedAt: '2025-08-22T11:05:44.568Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c7d
+parentId: 68a84f067702482264c62e8d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 421b882f-73ec-4aa8-8a8f-84529268453b
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

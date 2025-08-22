@@ -1,0 +1,51 @@
+id: 68a82658e426fdf8cbab8c38
+name: Delete Contact
+key: delete-Contacts
+uuid: 570d6578-b33d-4b8c-9250-7e0a45f48a5b
+state: READY
+errors: []
+revision: ded1ac47-6f45-40e0-9d8e-e91c3ac347a8
+createdAt: '2025-08-22T08:12:14.069Z'
+updatedAt: '2025-08-22T08:12:14.069Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 68a82657e426fdf8cbab88c5
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fcc51862-f2cb-49a2-a342-47d095bc3122
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

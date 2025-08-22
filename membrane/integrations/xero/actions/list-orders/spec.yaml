@@ -1,0 +1,81 @@
+id: 68a84f077702482264c62f7d
+name: List Orders
+key: list-orders
+uuid: 6d2b58e8-ec77-4b11-9a80-c19c9da69fad
+state: READY
+errors: []
+revision: 186e97ce-ba5f-4d0d-b13a-e775c8970775
+createdAt: '2025-08-22T11:05:44.950Z'
+updatedAt: '2025-08-22T11:05:44.950Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a84f077702482264c62e9a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    LineItems:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          Quantity:
+            $var: $.item.quantity
+          UnitAmount:
+            $var: $.item.unitPrice
+          Item:
+            Code:
+              $var: $.item.sku
+            Name:
+              $var: $.item.name
+          LineAmount:
+            $var: $.item.totalAmount
+    CurrencyCode:
+      $var: $.input.filter.currency
+    Status:
+      $var: $.input.filter.status
+    Total:
+      $var: $.input.filter.totalAmount
+isCustomized: false
+parentRevision: 24307e40-ddbc-44aa-9509-a6e37166a8f6
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

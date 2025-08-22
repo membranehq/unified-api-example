@@ -1,0 +1,52 @@
+id: 68a84f0a7702482264c63405
+name: Receive Updated Order Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Orders-events
+revision: 454c9258-1481-4ad3-a1b3-ee249153ab49
+universalFlowId: 68a84f097702482264c6321a
+integrationId: 68a84efe7702482264c62c7d
+universalFlowRevision: 8c10cef1-70b5-42e8-8110-f79d73221b22
+nodes:
+  Orders-updated-trigger:
+    type: data-record-updated-trigger
+    name: Order Updated Trigger
+    config:
+      dataSource:
+        key: orders
+      fieldMapping:
+        key: orders
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

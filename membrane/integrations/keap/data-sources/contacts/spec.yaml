@@ -1,0 +1,38 @@
+id: 68a82652e426fdf8cbab85b3
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+revision: 1e6f443d-cbd5-477e-a7d5-259b2b69c1f2
+integrationId: 689f2bf000905568ab2f66e2
+customized: false
+universalDataSourceId: 68a82652e426fdf8cbab8566
+universalDataSourceRevision: 7d3cacc1-26d7-41d1-a966-6706ed473f9a
+collectionKey: contacts
+udm: contacts
+defaultPath: /data/contacts
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

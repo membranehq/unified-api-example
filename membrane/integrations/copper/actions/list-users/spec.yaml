@@ -1,0 +1,63 @@
+id: 68a8260e678af1d0cf6ec21b
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 6cba28d5-dd38-42c4-88b9-8e940730fa5a
+createdAt: '2025-08-22T08:11:01.384Z'
+updatedAt: '2025-08-22T08:11:01.384Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f3
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.fullName
+    email:
+      $var: $.input.filter.primaryEmail
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

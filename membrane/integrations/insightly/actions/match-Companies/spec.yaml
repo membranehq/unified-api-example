@@ -1,0 +1,51 @@
+id: 689f2c0400905568ab2f6e45
+name: Match Company
+key: match-Companies
+state: READY
+errors: []
+revision: bbfe751a-93b9-4bac-b720-347fa82873ef
+createdAt: '2025-08-15T12:46:03.772Z'
+updatedAt: '2025-08-15T12:46:03.772Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ee
+parentId: 689f2c0400905568ab2f6b43
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 7a9c045d-bdca-4b23-b69c-161df9a23cf4
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

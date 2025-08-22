@@ -1,0 +1,102 @@
+id: 68a82658e426fdf8cbab8adc
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 7f3f3cfb-08bb-465b-a07c-1c88b511c8e6
+createdAt: '2025-08-22T08:12:15.772Z'
+updatedAt: '2025-08-22T08:12:15.772Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d3
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    firstname:
+      $var: $.input.filter.firstName
+    lastname:
+      $var: $.input.filter.lastName
+    fullname:
+      $var: $.input.filter.fullName
+    jobtitle:
+      $var: $.input.filter.jobTitle
+    ownerid:
+      $var: $.input.filter.ownerId
+    mobilephone:
+      $var: $.input.filter.phones[3].value
+    address1_composite:
+      $var: $.input.filter.primaryAddress.full
+    address1_stateorprovince:
+      $var: $.input.filter.primaryAddress.state
+    address1_city:
+      $var: $.input.filter.primaryAddress.city
+    address1_line1:
+      $var: $.input.filter.primaryAddress.street
+    address1_postalcode:
+      $var: $.input.filter.primaryAddress.zip
+    telephone1:
+      $var: $.input.filter.primaryPhone
+    telephone2:
+      $var: $.input.filter.phones[1].value
+    telephone3:
+      $var: $.input.filter.phones[2].value
+    emailaddress1:
+      $var: $.input.filter.primaryEmail
+    emailaddress2:
+      $var: $.input.filter.emails[1].value
+    emailaddress3:
+      $var: $.input.filter.emails[2].value
+    createdon:
+      $var: $.input.filter.createdTime
+    createdby:
+      $var: $.input.filter.createdBy
+    modifiedon:
+      $var: $.input.filter.updatedTime
+    modifiedby:
+      $var: $.input.filter.updatedBy
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

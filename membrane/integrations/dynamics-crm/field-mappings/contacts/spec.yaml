@@ -1,0 +1,172 @@
+id: 68a82654e426fdf8cbab8728
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: cc811d6b-46f4-4f9c-bb55-4c5bb09bdc56
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66d3
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85b7
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  address1_city:
+    $var: $.primaryAddress.city
+  address1_composite:
+    $var: $.primaryAddress.full
+  address1_line1:
+    $var: $.primaryAddress.street
+  address1_postalcode:
+    $var: $.primaryAddress.zip
+  address1_stateorprovince:
+    $var: $.primaryAddress.state
+  createdby:
+    $var: $.createdBy
+  createdon:
+    $var: $.createdTime
+  emailaddress1:
+    $var: $.primaryEmail
+  emailaddress2:
+    $var: $.emails[1].value
+  emailaddress3:
+    $var: $.emails[2].value
+  firstname:
+    $var: $.firstName
+  fullname:
+    $var: $.fullName
+  jobtitle:
+    $var: $.jobTitle
+  lastname:
+    $var: $.lastName
+  mobilephone:
+    $var: $.phones[3].value
+  modifiedby:
+    $var: $.updatedBy
+  modifiedon:
+    $var: $.updatedTime
+  ownerid:
+    $var: $.ownerId
+  parentcustomerid:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: accounts
+            id:
+              $var: $.companyId
+  telephone1:
+    $var: $.primaryPhone
+  telephone2:
+    $var: $.phones[1].value
+  telephone3:
+    $var: $.phones[2].value
+importValue:
+  fullName:
+    $var: $.fullname
+  firstName:
+    $var: $.firstname
+  lastName:
+    $var: $.lastname
+  primaryEmail:
+    $var: $.emailaddress1
+  jobTitle:
+    $var: $.jobtitle
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.parentcustomerid.type
+            is: accounts
+          value:
+            $var: $.parentcustomerid.id
+  emails:
+    - value:
+        $var: $.emailaddress1
+    - value:
+        $var: $.emailaddress2
+    - value:
+        $var: $.emailaddress3
+  primaryPhone:
+    $var: $.telephone1
+  phones:
+    - value:
+        $var: $.telephone1
+    - value:
+        $var: $.telephone2
+    - value:
+        $var: $.telephone3
+    - value:
+        $var: $.mobilephone
+  primaryAddress:
+    full:
+      $var: $.address1_composite
+    state:
+      $var: $.address1_stateorprovince
+    country:
+      $var: $.address1_country
+    city:
+      $var: $.address1_city
+    street:
+      $var: $.address1_line1
+    zip:
+      $var: $.address1_postalcode
+  ownerId:
+    $var: $.ownerid
+  createdTime:
+    $var: $.createdon
+  createdBy:
+    $var: $.createdby
+  updatedTime:
+    $var: $.modifiedon
+  updatedBy:
+    $var: $.modifiedby
+  addresses:
+    - value:
+        full:
+          $var: $.address1_composite
+        state:
+          $var: $.address1_stateorprovince
+        country:
+          $var: $.address1_country
+        city:
+          $var: $.address1_city
+        street:
+          $var: $.address1_line1
+        zip:
+          $var: $.address1_postalcode
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

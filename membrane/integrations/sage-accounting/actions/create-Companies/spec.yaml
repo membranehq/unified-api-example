@@ -1,0 +1,73 @@
+id: 689f2c0400905568ab2f6d8d
+name: Create Company
+key: create-Companies
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 689f2c0000905568ab2f688b
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 689f2c0100905568ab2f69cb
+revision: 05560fa2-f62b-4895-b847-a56403558dba
+createdAt: '2025-08-15T12:46:03.315Z'
+updatedAt: '2025-08-15T12:46:03.315Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6701
+parentId: 689f2c0400905568ab2f6b3d
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: companies
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 41d8061b-be07-478b-b9a7-b54d490fc52f
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

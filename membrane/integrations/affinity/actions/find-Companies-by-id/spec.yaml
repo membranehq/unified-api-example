@@ -1,0 +1,50 @@
+id: 689f2c0400905568ab2f6ddd
+name: Find Company By Id
+key: find-Companies-by-id
+state: READY
+errors: []
+revision: 7070dbbe-4ff6-4307-b855-2ff8fbd0496f
+createdAt: '2025-08-15T12:46:03.973Z'
+updatedAt: '2025-08-15T12:46:03.973Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 689f2c0400905568ab2f6b41
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: a9d3b092-4fdf-4709-93f5-46759fbcea79
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

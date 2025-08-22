@@ -1,0 +1,83 @@
+id: 68a82658e426fdf8cbab8b12
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 45b6c116-3111-4c4c-a922-a7991c9ae384
+createdAt: '2025-08-22T08:12:15.754Z'
+updatedAt: '2025-08-22T08:12:15.754Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66dc
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    email:
+      $var: $.input.filter.primaryEmail
+    phone:
+      $var: $.input.filter.primaryPhone
+    firstName:
+      $var: $.input.filter.firstName
+    lastName:
+      $var: $.input.filter.lastName
+    jobTitle:
+      $var: $.input.filter.jobTitle
+    orgid:
+      $var: $.input.filter.companyId
+    orgname:
+      $var: $.input.filter.companyName
+    created_timestamp:
+      $var: $.input.filter.createdTime
+    updated_timestamp:
+      $var: $.input.filter.updatedTime
+    created_by:
+      $var: $.input.filter.createdBy
+    updated_by:
+      $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

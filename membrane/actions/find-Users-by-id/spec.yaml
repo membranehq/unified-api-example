@@ -1,0 +1,24 @@
+id: 68a8260e678af1d0cf6ebf05
+name: Find User By Id
+key: find-Users-by-id
+uuid: 350cc6a4-3580-4da9-af3d-ea9b8f6b6c9f
+state: READY
+errors: []
+revision: 83eee06b-8492-4c0f-8924-951b664a1dae
+createdAt: '2025-08-22T08:10:54.070Z'
+updatedAt: '2025-08-22T08:10:54.070Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+isCustomized: false

@@ -1,0 +1,80 @@
+id: 68a820ce9fc7b352ffc947dc
+name: List Jobs
+key: list-jobs
+uuid: 9c8eae4e-285e-4803-9fdb-e4d4ca730535
+state: READY
+errors: []
+revision: bd7f9659-4cf6-4aa3-94fe-8cb8c5f6f5df
+createdAt: '2025-08-22T07:48:31.297Z'
+updatedAt: '2025-08-22T07:48:31.297Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a1
+parentId: 68a820ce9fc7b352ffc946f2
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    title:
+      $var: $.input.filter.name
+    full_title:
+      $var: $.input.filter.name
+    shortcode:
+      $var: $.input.filter.code
+    code:
+      $var: $.input.filter.code
+    state:
+      $var: $.input.filter.status
+    department_hierarchy:
+      $iterate:
+        source:
+          $var: $.input.filter.departmentsIds
+        item:
+          id:
+            $var: $.item
+    created_at:
+      $var: $.input.filter.createdTime
+isCustomized: false
+parentRevision: 7d76b55e-9a20-4f69-a17b-dd6684d26903
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

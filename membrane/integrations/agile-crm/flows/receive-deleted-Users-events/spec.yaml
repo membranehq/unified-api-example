@@ -1,0 +1,50 @@
+id: 68a82619678af1d0cf6ecc3c
+name: Receive Deleted User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Users-events
+revision: ee189283-a1a0-4eb9-a176-3ce99d6b8f8f
+universalFlowId: 68a82616678af1d0cf6ec867
+integrationId: 689f2bf000905568ab2f66d5
+universalFlowRevision: 7a8392bd-b630-438f-b3b9-9632aa909bfe
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Users-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: User Deleted Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

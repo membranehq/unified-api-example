@@ -1,0 +1,66 @@
+id: 689f2c0400905568ab2f6e11
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 0361742c-ae03-4a22-a999-e23a28385082
+createdAt: '2025-08-15T12:46:03.714Z'
+updatedAt: '2025-08-15T12:46:03.714Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6707
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    domains:
+      - $var: $.input.filter.websiteUrl
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f6707
+  name: Front
+  key: front
+  uuid: a3686d04-8658-4e23-8973-c0241caec2b0
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.282Z'
+  updatedAt: '2025-08-15T12:45:47.306Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/front/logo.png
+  connectorId: 64368c00986ed1caaddef4b3
+  connectorVersion: 1.3.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 162
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

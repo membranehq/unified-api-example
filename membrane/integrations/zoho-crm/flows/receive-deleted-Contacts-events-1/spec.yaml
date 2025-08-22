@@ -1,0 +1,50 @@
+id: 68a83a0d21039ff70f89cc95
+name: Receive Deleted Contact Events (1)
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Contacts-events-1
+revision: cd0d1e99-5aaf-464f-a2c6-3a0699aaec9d
+universalFlowId: 68a83a0921039ff70f89c7d4
+integrationId: 689f2bf000905568ab2f66d8
+universalFlowRevision: adc45729-338e-426c-a077-cd4dc0291e26
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Contacts-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Contact Deleted Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

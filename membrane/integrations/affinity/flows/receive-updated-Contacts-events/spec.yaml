@@ -1,0 +1,52 @@
+id: 68a82667e426fdf8cbab988f
+name: Receive Updated Contact Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Contacts-events
+revision: cae29f6c-93ac-4665-bf8a-32c854480fca
+universalFlowId: 68a82660e426fdf8cbab9257
+integrationId: 689f2bf000905568ab2f670a
+universalFlowRevision: 8fd464fb-11b7-4ee9-bac7-eb6137772617
+nodes:
+  Contacts-updated-trigger:
+    type: data-record-updated-trigger
+    name: Contact Updated Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

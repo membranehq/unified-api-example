@@ -1,0 +1,51 @@
+id: 689f2c0400905568ab2f6e31
+name: Match Company
+key: match-Companies
+state: READY
+errors: []
+revision: d5df9b35-3231-4ce7-b778-2e7bb2cda02f
+createdAt: '2025-08-15T12:46:04.218Z'
+updatedAt: '2025-08-15T12:46:04.218Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e4
+parentId: 689f2c0400905568ab2f6b43
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 7a9c045d-bdca-4b23-b69c-161df9a23cf4
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,15 @@
+id: 68a839b4f8d786c131d7f8b5
+name: Job Applications
+isDeactivated: false
+state: READY
+errors: []
+key: job-applications
+customized: false
+revision: 5bcd99e6-0e9e-4c09-b2ea-12193be52b81
+dataSourceKey: job-applications
+dataSourceId: 68a839b4f8d786c131d7f87f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

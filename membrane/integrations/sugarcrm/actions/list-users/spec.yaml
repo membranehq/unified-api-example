@@ -1,0 +1,81 @@
+id: 68a8260e678af1d0cf6ec201
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 10f5ec0a-e47a-418a-a390-35a2f4ec4e57
+createdAt: '2025-08-22T08:11:01.160Z'
+updatedAt: '2025-08-22T08:11:01.160Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    full_name:
+      $var: $.input.filter.fullName
+    user_name:
+      $var: $.input.filter.userName
+    date_entered:
+      $var: $.input.filter.createdTime
+    date_modified:
+      $var: $.input.filter.updatedTime
+    modified_user_id:
+      $var: $.input.filter.updatedBy
+    created_by:
+      $var: $.input.filter.createdBy
+    phone_work:
+      $var: $.input.filter.primaryPhone
+    email1:
+      $var: $.input.filter.primaryEmail
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

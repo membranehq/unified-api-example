@@ -1,0 +1,51 @@
+id: 68a82658e426fdf8cbab8b2a
+name: Find Contact By Id
+key: find-Contacts-by-id
+uuid: f05cc41d-a7ba-4d31-b695-def1ae641657
+state: READY
+errors: []
+revision: 3fa33c49-d667-4bf0-8451-91588561ef32
+createdAt: '2025-08-22T08:12:14.156Z'
+updatedAt: '2025-08-22T08:12:14.156Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 68a82657e426fdf8cbab88bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: db8d9b84-2a16-4177-bcf9-ca9be54ae497
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

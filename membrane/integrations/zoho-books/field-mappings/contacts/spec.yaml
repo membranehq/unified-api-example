@@ -1,0 +1,84 @@
+id: 68a82654e426fdf8cbab8744
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 32ea97da-113d-4870-b1a6-29b88d51eb70
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66f7
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85cb
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  contact_id:
+    $var: $.companyId
+  contact_person_id:
+    $var: $.id
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  email:
+    $var: $.primaryEmail
+  phone:
+    $var: $.primaryPhone
+  designation:
+    $var: $.jobTitle
+importValue:
+  id:
+    $var: $.contact_person_id
+  fullName:
+    $concat:
+      values:
+        - $var: $.first_name
+        - $var: $.last_name
+      delimiter: ' '
+  firstName:
+    $var: first_name
+  lastName:
+    $var: last_name
+  primaryEmail:
+    $var: email
+  primaryPhone:
+    $var: phone
+  jobTitle:
+    $var: designation
+  companyId:
+    $var: $.contact_id
+  emails:
+    - value:
+        $var: email
+  phones:
+    - value:
+        $var: phone
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

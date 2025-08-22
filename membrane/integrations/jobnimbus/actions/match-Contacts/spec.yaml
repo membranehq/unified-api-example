@@ -1,0 +1,58 @@
+id: 68a82658e426fdf8cbab8c04
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: READY
+errors: []
+revision: 10234609-40e4-41a0-b71f-52d19d6fdfa6
+createdAt: '2025-08-22T08:12:15.581Z'
+updatedAt: '2025-08-22T08:12:15.581Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945af
+parentId: 68a82657e426fdf8cbab88c3
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      email:
+        $var: $.input.query.primaryEmail
+      last_name:
+        $var: $.input.query.lastName
+isCustomized: false
+parentRevision: f5847216-8b12-4033-9a53-fc6113f1e79f
+integration:
+  id: 68a820cb9fc7b352ffc945af
+  name: Jobnimbus
+  key: jobnimbus
+  uuid: 21962f75-6a23-44f3-8b4e-0ea3ee8fee4b
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.357Z'
+  updatedAt: '2025-08-22T07:48:28.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/jobnimbus/asset-d720393c-e369-41bc-9de8-944e634b1a01.png
+  connectorId: 66f55199229f31ff2197356d
+  connectorVersion: 1.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 54
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

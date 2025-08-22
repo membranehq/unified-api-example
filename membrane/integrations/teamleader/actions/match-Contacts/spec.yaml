@@ -1,0 +1,52 @@
+id: 68a82658e426fdf8cbab8bec
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: READY
+errors: []
+revision: 7c7213df-70b9-409d-b6d3-7faf3789fef3
+createdAt: '2025-08-22T08:12:15.752Z'
+updatedAt: '2025-08-22T08:12:15.752Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a82657e426fdf8cbab88c3
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: f5847216-8b12-4033-9a53-fc6113f1e79f
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

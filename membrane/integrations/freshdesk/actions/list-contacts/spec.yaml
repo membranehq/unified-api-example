@@ -1,0 +1,83 @@
+id: 68a82658e426fdf8cbab8b08
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 6d417355-54f8-403f-98fd-5950591ecc4f
+createdAt: '2025-08-22T08:12:15.051Z'
+updatedAt: '2025-08-22T08:12:15.051Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    address:
+      $var: $.input.filter.primaryAddress.full
+    company_id:
+      $var: $.input.filter.companyId
+    email:
+      $var: $.input.filter.primaryEmail
+    id:
+      $var: $.input.filter.id
+    job_title:
+      $var: $.input.filter.jobTitle
+    name:
+      $var: $.input.filter.fullName
+    phone:
+      $var: $.input.filter.primaryPhone
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    other_emails:
+      $iterate:
+        source:
+          $var: $.input.filter.emails
+        item:
+          $var: $.item.value
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

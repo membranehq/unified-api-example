@@ -1,0 +1,53 @@
+id: 68a82667e426fdf8cbab9895
+name: Receive Updated Contact Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Contacts-events
+revision: 6bf91109-2cf3-49ea-8339-9c9bee1df59e
+universalFlowId: 68a82660e426fdf8cbab9257
+integrationId: 68a820cb9fc7b352ffc945af
+universalFlowRevision: 8fd464fb-11b7-4ee9-bac7-eb6137772617
+nodes:
+  Contacts-updated-trigger:
+    type: data-record-updated-trigger
+    name: Contact Updated Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc945af
+  name: Jobnimbus
+  key: jobnimbus
+  uuid: 21962f75-6a23-44f3-8b4e-0ea3ee8fee4b
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.357Z'
+  updatedAt: '2025-08-22T07:48:28.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/jobnimbus/asset-d720393c-e369-41bc-9de8-944e634b1a01.png
+  connectorId: 66f55199229f31ff2197356d
+  connectorVersion: 1.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 54
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

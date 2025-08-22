@@ -1,0 +1,77 @@
+id: 68a82658e426fdf8cbab8bf6
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f66f5
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85dc
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a82654e426fdf8cbab873e
+revision: 09ae9d4f-9e16-41a5-9d85-6eefa0a0e0df
+createdAt: '2025-08-22T08:12:15.579Z'
+updatedAt: '2025-08-22T08:12:15.579Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f5
+parentId: 68a82657e426fdf8cbab88c3
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      name:
+        $var: $.input.query.fullName
+      email:
+        $var: $.input.query.primaryEmail
+isCustomized: false
+parentRevision: f5847216-8b12-4033-9a53-fc6113f1e79f
+integration:
+  id: 689f2bf000905568ab2f66f5
+  name: Intercom
+  key: intercom
+  uuid: 2b1b26c9-4359-4871-a67f-5dcc7a864403
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:46.788Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/intercom-connector/logo.png
+  connectorId: 64384553986ed1caad49a446
+  connectorVersion: 1.1.7
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 77
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

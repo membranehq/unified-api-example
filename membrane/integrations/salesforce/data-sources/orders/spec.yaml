@@ -1,0 +1,38 @@
+id: 68a84f057702482264c62d73
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+revision: 036f7b06-398c-4e97-baeb-d249b0459572
+integrationId: 689f2bf000905568ab2f66d1
+customized: false
+universalDataSourceId: 68a84f057702482264c62d2a
+universalDataSourceRevision: d3d9c334-f70b-4f3f-b27a-5f10df5b1179
+collectionKey: orders
+udm: orders
+defaultPath: /data/orders
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

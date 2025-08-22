@@ -1,0 +1,38 @@
+id: 68a84f057702482264c62d64
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+revision: 6154a24a-876e-4ed9-b223-1d16a20df4ab
+integrationId: 689f2bf000905568ab2f66da
+customized: false
+universalDataSourceId: 68a84f057702482264c62d2a
+universalDataSourceRevision: d3d9c334-f70b-4f3f-b27a-5f10df5b1179
+collectionKey: purchase-orders
+udm: orders
+defaultPath: /data/purchase-orders
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

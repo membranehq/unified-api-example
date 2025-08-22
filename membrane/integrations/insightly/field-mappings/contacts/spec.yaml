@@ -1,0 +1,136 @@
+id: 68a82655e426fdf8cbab87c9
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 5d4c4714-b039-42c2-a237-c7cf29b4bf40
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66ee
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85c3
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  FIRST_NAME:
+    $var: $.firstName
+  LAST_NAME:
+    $var: $.lastName
+  DATE_CREATED_UTC:
+    $var: $.createdTime
+  DATE_UPDATED_UTC:
+    $var: $.updatedTime
+  PHONE:
+    $var: $.primaryPhone
+  EMAIL_ADDRESS:
+    $var: $.primaryEmail
+  ADDRESS_MAIL_STREET:
+    $var: $.primaryAddress.street
+  ADDRESS_MAIL_CITY:
+    $var: $.primaryAddress.city
+  ADDRESS_MAIL_STATE:
+    $var: $.primaryAddress.state
+  ADDRESS_MAIL_POSTCODE:
+    $var: $.primaryAddress.zip
+  ADDRESS_MAIL_COUNTRY:
+    $var: $.primaryAddress.country
+  LAST_ACTIVITY_DATE_UTC:
+    $var: $.lastActivityTime
+  TITLE:
+    $var: $.jobTitle
+importValue:
+  id:
+    $var: $.CONTACT_ID
+  fullName:
+    $concat:
+      values:
+        - $var: $.FIRST_NAME
+        - $var: $.LAST_NAME
+      delimiter: '  '
+  firstName:
+    $var: $.FIRST_NAME
+  lastName:
+    $var: $.LAST_NAME
+  primaryEmail:
+    $var: $.EMAIL_ADDRESS
+  primaryPhone:
+    $var: $.PHONE
+  primaryAddress:
+    street:
+      $var: $.ADDRESS_MAIL_STREET
+    city:
+      $var: $.ADDRESS_MAIL_CITY
+    state:
+      $var: $.ADDRESS_MAIL_STATE
+    country:
+      $var: $.ADDRESS_MAIL_COUNTRY
+    zip:
+      $var: $.ADDRESS_MAIL_POSTCODE
+    full:
+      $concat:
+        values:
+          - $var: $.ADDRESS_MAIL_STREET
+          - $var: $.ADDRESS_MAIL_CITY
+          - $var: $.ADDRESS_MAIL_STATE
+          - $var: $.ADDRESS_MAIL_POSTCODE
+          - $var: $.ADDRESS_MAIL_COUNTRY
+        delimiter: ', '
+  companyId:
+    $var: $.ORGANISATION_ID
+  ownerId:
+    $var: $.OWNER_USER_ID
+  jobTitle:
+    $var: $.TITLE
+  createdTime:
+    $var: $.DATE_CREATED_UTC
+  updatedTime:
+    $var: $.DATE_UPDATED_UTC
+  lastActivityTime:
+    $var: $.LAST_ACTIVITY_DATE_UTC
+  emails:
+    - value:
+        $var: $.EMAIL_ADDRESS
+  phones:
+    - value:
+        $var: $.PHONE
+  addresses:
+    - value:
+        street:
+          $var: $.ADDRESS_MAIL_STREET
+        city:
+          $var: $.ADDRESS_MAIL_CITY
+        state:
+          $var: $.ADDRESS_MAIL_STATE
+        country:
+          $var: $.ADDRESS_MAIL_COUNTRY
+        zip:
+          $var: $.ADDRESS_MAIL_POSTCODE
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

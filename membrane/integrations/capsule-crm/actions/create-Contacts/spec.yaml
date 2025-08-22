@@ -1,0 +1,54 @@
+id: 68a82658e426fdf8cbab8ba2
+name: Create Contact
+key: create-Contacts
+uuid: c6a28c7f-b0d2-4373-8e05-1cb6b3c37989
+state: READY
+errors: []
+revision: d6d239ff-1c8c-4439-834a-7bedf7dbf4f9
+createdAt: '2025-08-22T08:12:14.390Z'
+updatedAt: '2025-08-22T08:12:14.390Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 68a82657e426fdf8cbab88bb
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: contacts
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 38860ce8-8263-4d10-b4bd-97f57996a12f
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,85 @@
+id: 68a82658e426fdf8cbab8af8
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 1e8d79ac-588a-47e8-9226-2e0222fa6a15
+createdAt: '2025-08-22T08:12:15.367Z'
+updatedAt: '2025-08-22T08:12:15.367Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ee
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    FIRST_NAME:
+      $var: $.input.filter.firstName
+    LAST_NAME:
+      $var: $.input.filter.lastName
+    PHONE:
+      $var: $.input.filter.primaryPhone
+    EMAIL_ADDRESS:
+      $var: $.input.filter.primaryEmail
+    ADDRESS_MAIL_STREET:
+      $var: $.input.filter.primaryAddress.street
+    ADDRESS_MAIL_CITY:
+      $var: $.input.filter.primaryAddress.city
+    ADDRESS_MAIL_STATE:
+      $var: $.input.filter.primaryAddress.state
+    ADDRESS_MAIL_POSTCODE:
+      $var: $.input.filter.primaryAddress.zip
+    ADDRESS_MAIL_COUNTRY:
+      $var: $.input.filter.primaryAddress.country
+    DATE_CREATED_UTC:
+      $var: $.input.filter.createdTime
+    DATE_UPDATED_UTC:
+      $var: $.input.filter.updatedTime
+    LAST_ACTIVITY_DATE_UTC:
+      $var: $.input.filter.lastActivityTime
+    TITLE:
+      $var: $.input.filter.jobTitle
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

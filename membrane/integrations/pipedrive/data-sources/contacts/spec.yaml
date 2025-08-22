@@ -1,0 +1,38 @@
+id: 68a82652e426fdf8cbab85ad
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+revision: 662bc3b5-b966-4f00-bc81-4beddb2f3f00
+integrationId: 689f2bf000905568ab2f66e0
+customized: false
+universalDataSourceId: 68a82652e426fdf8cbab8566
+universalDataSourceRevision: 7d3cacc1-26d7-41d1-a966-6706ed473f9a
+collectionKey: persons
+udm: contacts
+defaultPath: /data/persons
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

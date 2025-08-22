@@ -1,0 +1,77 @@
+id: 689f2c0400905568ab2f6ec9
+name: Update Company
+key: update-Companies
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f66f5
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 689f2c0000905568ab2f6891
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 689f2c0100905568ab2f69dd
+revision: 26f21d9d-937f-4bf8-8ba9-63c96d983706
+createdAt: '2025-08-15T12:46:03.580Z'
+updatedAt: '2025-08-15T12:46:03.580Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f5
+parentId: 689f2c0400905568ab2f6b49
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 7800d79a-d9ea-4b11-bbaf-565bf587f91f
+integration:
+  id: 689f2bf000905568ab2f66f5
+  name: Intercom
+  key: intercom
+  uuid: 2b1b26c9-4359-4871-a67f-5dcc7a864403
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:46.788Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/intercom-connector/logo.png
+  connectorId: 64384553986ed1caad49a446
+  connectorVersion: 1.1.7
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 77
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

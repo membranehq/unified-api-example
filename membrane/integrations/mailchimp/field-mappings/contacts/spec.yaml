@@ -1,0 +1,126 @@
+id: 68a839f721039ff70f89b84b
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: fb855653-1a8f-4432-8c74-fb5b62072ef2
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 68a839f321039ff70f89b5c4
+dataSourceKey: contacts
+dataSourceId: 68a839f621039ff70f89b6ae
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  full_name:
+    $var: $.fullName
+  source:
+    $var: $.source
+  email_address:
+    $var: $.primaryEmail
+  status:
+    $var: $.stage
+  last_changed:
+    $var: $.updatedTime
+  merge_fields:
+    FNAME:
+      $var: $.firstName
+    LNAME:
+      $var: $.lastName
+    PHONE:
+      $var: $.primaryPhone
+    ADDRESS:
+      country:
+        $var: $.primaryAddress.country
+      city:
+        $var: $.primaryAddress.city
+      state:
+        $var: $.primaryAddress.state
+      addr1:
+        $var: $.primaryAddress.street
+      zip:
+        $var: $.primaryAddress.zip
+importValue:
+  fullName:
+    $var: $.full_name
+  firstName:
+    $var: $.merge_fields.FNAME
+  lastName:
+    $var: $.merge_fields.LNAME
+  primaryEmail:
+    $var: $.email_address
+  stage:
+    $var: $.status
+  source:
+    $var: $.source
+  updatedTime:
+    $var: $.last_changed
+  primaryPhone:
+    $var: $.merge_fields.PHONE
+  primaryAddress:
+    country:
+      $var: $.merge_fields.ADDRESS.country
+    city:
+      $var: $.merge_fields.ADDRESS.city
+    state:
+      $var: $.merge_fields.ADDRESS.state
+    street:
+      $var: $.merge_fields.ADDRESS.addr1
+    zip:
+      $var: $.merge_fields.ADDRESS.zip
+    full:
+      $concat:
+        values:
+          - $var: $.merge_fields.ADDRESS.addr1
+          - $var: $.merge_fields.ADDRESS.city
+          - $var: $.merge_fields.ADDRESS.state
+          - $var: $.merge_fields.ADDRESS.zip
+          - $var: $.merge_fields.ADDRESS.country
+        delimiter: ', '
+  emails:
+    - value:
+        $var: $.email_address
+  phones:
+    - value:
+        $var: $.merge_fields.PHONE
+  addresses:
+    - value:
+        country:
+          $var: $.merge_fields.ADDRESS.country
+        city:
+          $var: $.merge_fields.ADDRESS.city
+        state:
+          $var: $.merge_fields.ADDRESS.state
+        street:
+          $var: $.merge_fields.ADDRESS.addr1
+        zip:
+          $var: $.merge_fields.ADDRESS.zip
+integration:
+  id: 68a839f321039ff70f89b5c4
+  name: Mailchimp
+  key: mailchimp
+  uuid: df1e892e-034c-48e7-b7da-d4ed5bce86f6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.278Z'
+  updatedAt: '2025-08-22T09:35:49.379Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/mailchimp/logo.png
+  connectorId: 62471fac996d5c297ae43f5d
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 110
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

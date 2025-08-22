@@ -1,0 +1,78 @@
+id: 689f2c0400905568ab2f6df3
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: aa6cc3d9-6905-47a9-87c2-c4e3ddf1d29d
+createdAt: '2025-08-15T12:46:03.706Z'
+updatedAt: '2025-08-15T12:46:03.706Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e4
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    websiteUrl:
+      $var: $.input.filter.websiteUrl
+    industry:
+      $var: $.input.filter.industry
+    numberOfEmployees:
+      $var: $.input.filter.numberOfEmployees
+    owner_id:
+      $var: $.input.filter.ownerId
+    createdAt:
+      $var: $.input.filter.createdTime
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    creator_id:
+      $var: $.input.filter.createdBy
+    updater_id:
+      $var: $.input.filter.updatedBy
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

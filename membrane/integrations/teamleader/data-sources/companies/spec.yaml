@@ -1,0 +1,38 @@
+id: 689f2c0000905568ab2f6885
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+revision: aae0aee4-f3f3-4b53-a78a-1beb49a0c8ee
+integrationId: 689f2bf000905568ab2f66fd
+customized: false
+universalDataSourceId: 689f2c0000905568ab2f682a
+universalDataSourceRevision: 3f6b0bb8-a50a-47bc-90e7-dd0dcd0d11c9
+collectionKey: companies
+udm: companies
+defaultPath: /data/companies
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

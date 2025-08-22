@@ -1,0 +1,56 @@
+id: 68a82658e426fdf8cbab8b6e
+name: Search Contacts
+key: search-contacts
+uuid: b1c4910e-e855-4b55-8e96-3898d0d50b1e
+state: READY
+errors: []
+revision: adad366b-cda1-407f-8d36-5eb303f529cc
+createdAt: '2025-08-22T08:12:14.298Z'
+updatedAt: '2025-08-22T08:12:14.298Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 68a82657e426fdf8cbab88c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 6497440a-7666-4fd8-99d9-91ec2be51028
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

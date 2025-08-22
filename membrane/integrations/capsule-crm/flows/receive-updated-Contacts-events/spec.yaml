@@ -1,0 +1,52 @@
+id: 68a82668e426fdf8cbab9a37
+name: Receive Updated Contact Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Contacts-events
+revision: d35b0421-ed03-4b48-a60b-9990665351f4
+universalFlowId: 68a82660e426fdf8cbab9257
+integrationId: 689f2bf000905568ab2f671b
+universalFlowRevision: 8fd464fb-11b7-4ee9-bac7-eb6137772617
+nodes:
+  Contacts-updated-trigger:
+    type: data-record-updated-trigger
+    name: Contact Updated Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

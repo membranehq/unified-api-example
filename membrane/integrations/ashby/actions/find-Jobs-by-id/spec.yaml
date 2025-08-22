@@ -1,0 +1,51 @@
+id: 68a820ce9fc7b352ffc947c0
+name: Find Job By Id
+key: find-Jobs-by-id
+uuid: 56508012-5cb7-42e6-8e29-109f2e8ed072
+state: READY
+errors: []
+revision: f8868eb0-2c50-4686-a6f9-c505f156e5c3
+createdAt: '2025-08-22T07:48:31.053Z'
+updatedAt: '2025-08-22T07:48:31.053Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc94593
+parentId: 68a820ce9fc7b352ffc946ee
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: fd0f025d-372c-45cd-b3ef-4fdd03e88e0e
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

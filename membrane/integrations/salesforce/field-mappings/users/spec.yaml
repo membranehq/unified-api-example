@@ -1,0 +1,117 @@
+id: 68a8260b678af1d0cf6ebd84
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 8c9ac107-4a44-411e-a658-dcefc12036fb
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66d1
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc1e
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  Username:
+    $var: $.userName
+  LastName:
+    $var: $.lastName
+  FirstName:
+    $var: $.firstName
+  Name:
+    $var: $.fullName
+  CompanyName:
+    $var: $.companyName
+  Email:
+    $var: $.primaryEmail
+  Phone:
+    $var: $.primaryPhone
+  IsActive:
+    $var: $.isActive
+  TimeZoneSidKey:
+    $var: $.timezone
+  UserRoleId:
+    $var: $.roleId
+  CreatedDate:
+    $var: $.createdTime
+  CreatedById:
+    $var: $.createdBy
+  LastModifiedDate:
+    $var: $.updatedTime
+  LastModifiedById:
+    $var: $.updatedBy
+  AccountId:
+    $var: $.companyId
+  FullPhotoUrl:
+    $var: $.imageUrl
+importValue:
+  id:
+    $var: $.Id
+  fullName:
+    $var: $.Name
+  firstName:
+    $var: $.FirstName
+  lastName:
+    $var: $.LastName
+  userName:
+    $var: $.Username
+  primaryEmail:
+    $var: $.Email
+  emails:
+    - $var: $.Email
+  primaryPhone:
+    $var: $.Phone
+  companyName:
+    $var: $.CompanyName
+  companyId:
+    $var: $.AccountId
+  contactId:
+    $var: $.ContactId
+  timezone:
+    $var: $.TimeZoneSidKey
+  isActive:
+    $var: $.IsActive
+  roleId:
+    $var: $.UserRoleId
+  createdTime:
+    $var: $.CreatedDate
+  createdBy:
+    $var: $.CreatedById
+  updatedTime:
+    $var: $.LastModifiedDate
+  updatedBy:
+    $var: $.LastModifiedById
+  imageUrl:
+    $var: $.FullPhotoUrl
+  phones:
+    - value:
+        $var: $.Phone
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

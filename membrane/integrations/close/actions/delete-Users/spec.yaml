@@ -1,0 +1,50 @@
+id: 68a8260e678af1d0cf6ec13d
+name: Delete User
+key: delete-Users
+uuid: 2c5c6ffd-7ab2-4165-977f-9224e92acd38
+state: READY
+errors: []
+revision: 2527a7c2-6b4b-4471-ba9d-afaeb6c9a7ea
+createdAt: '2025-08-22T08:10:58.858Z'
+updatedAt: '2025-08-22T08:10:58.858Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8260e678af1d0cf6ebefe
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 15541a7f-5223-48f2-9e8b-1a0feb22aa97
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

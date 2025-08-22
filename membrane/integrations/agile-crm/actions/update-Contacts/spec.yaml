@@ -1,0 +1,58 @@
+id: 68a82658e426fdf8cbab8a94
+name: Update Contact
+key: update-Contacts
+uuid: 74f64cff-a9fc-4d63-a156-a60017ed1c31
+state: READY
+errors: []
+revision: aa935fda-8a54-4692-b08b-14f9938b3c81
+createdAt: '2025-08-22T08:12:13.955Z'
+updatedAt: '2025-08-22T08:12:13.955Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d5
+parentId: 68a82657e426fdf8cbab88c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: f7c5630c-4b19-4b25-b702-9d20f7d14e01
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,90 @@
+id: 68a82658e426fdf8cbab8c87
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 3fa86a10-7a33-4e92-aff1-85b44071ec79
+createdAt: '2025-08-22T08:12:15.780Z'
+updatedAt: '2025-08-22T08:12:15.780Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e0
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.fullName
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    phones:
+      $var: $.input.filter.phones
+    emails:
+      $var: $.input.filter.emails
+    phone:
+      $var: $.input.filter.primaryPhone
+    email:
+      $var: $.input.filter.primaryEmail
+    owner_id:
+      $var: $.input.filter.ownerId
+    org_id:
+      $var: $.input.filter.companyId
+    org:
+      name:
+        $var: $.input.filter.companyName
+    added_by_user_id:
+      $var: $.input.filter.createdBy
+    add_time:
+      $var: $.input.filter.createdTime
+    update_time:
+      $var: $.input.filter.updatedTime
+    last_activity_date:
+      $var: $.input.filter.lastActivityTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

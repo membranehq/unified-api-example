@@ -1,0 +1,56 @@
+id: 68a820ce9fc7b352ffc947f4
+name: Search Jobs
+key: search-jobs
+uuid: f39cabe2-82b2-445f-8c7f-ea3286cd1b96
+state: READY
+errors: []
+revision: 8cfeae00-2bc4-427d-834e-6f4885a9a9f0
+createdAt: '2025-08-22T07:48:31.075Z'
+updatedAt: '2025-08-22T07:48:31.075Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945af
+parentId: 68a820ce9fc7b352ffc946f4
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 312a7861-1f70-4aea-9d7b-51a28dbb0e3f
+integration:
+  id: 68a820cb9fc7b352ffc945af
+  name: Jobnimbus
+  key: jobnimbus
+  uuid: 21962f75-6a23-44f3-8b4e-0ea3ee8fee4b
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.357Z'
+  updatedAt: '2025-08-22T07:48:28.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/jobnimbus/asset-d720393c-e369-41bc-9de8-944e634b1a01.png
+  connectorId: 66f55199229f31ff2197356d
+  connectorVersion: 1.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 54
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

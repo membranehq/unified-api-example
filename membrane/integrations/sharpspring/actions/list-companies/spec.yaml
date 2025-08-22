@@ -1,0 +1,83 @@
+id: 689f2c0400905568ab2f6dff
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 9e8a2631-0f6b-4e07-8b9c-fd62f026d60c
+createdAt: '2025-08-15T12:46:04.102Z'
+updatedAt: '2025-08-15T12:46:04.102Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    accountName:
+      $var: $.input.filter.name
+    website:
+      $var: $.input.filter.websiteUrl
+    industry:
+      $var: $.input.filter.industry
+    phone:
+      $var: $.input.filter.primaryPhone
+    ownerID:
+      $var: $.input.filter.ownerId
+    billingStreetAddress:
+      $var: $.input.filter.primaryAddress.street
+    billingCity:
+      $var: $.input.filter.primaryAddress.city
+    billingState:
+      $var: $.input.filter.primaryAddress.state
+    billingCountry:
+      $var: $.input.filter.primaryAddress.country
+    billingPostalCode:
+      $var: $.input.filter.primaryAddress.zip
+    numberOfEmployees:
+      $var: $.input.filter.numberOfEmployees
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

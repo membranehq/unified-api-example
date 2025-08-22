@@ -1,0 +1,28 @@
+id: 68a84f077702482264c62e93
+name: Search Orders
+key: search-orders
+uuid: c5729db6-8993-44d5-b4f1-1b0eff63c144
+state: READY
+errors: []
+revision: d0c3f90c-b557-4cde-829e-ba869f37bf68
+createdAt: '2025-08-22T11:05:43.102Z'
+updatedAt: '2025-08-22T11:05:43.102Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

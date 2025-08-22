@@ -1,0 +1,53 @@
+id: 68a84f077702482264c62fa9
+name: Match Order
+key: match-Orders
+uuid: b97b3387-5a45-4720-afdb-20b71182f23b
+state: READY
+errors: []
+revision: 44191e7e-dee8-49eb-b808-358fb39b81c2
+createdAt: '2025-08-22T11:05:45.163Z'
+updatedAt: '2025-08-22T11:05:45.163Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c89
+parentId: 68a84f077702482264c62e8f
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 5a9eb529-cb0a-4451-add8-e058db55835f
+integration:
+  id: 68a84efe7702482264c62c89
+  name: PayPal
+  key: paypal
+  uuid: 3f7450ae-67f4-4940-ac36-ffa248ea5acb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.338Z'
+  updatedAt: '2025-08-22T11:05:38.391Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/paypal/asset-0f0851b5-76ed-412e-bfa9-d2618b5e6162.png
+  connectorId: 665ee151c57ef06438e068f2
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 109
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

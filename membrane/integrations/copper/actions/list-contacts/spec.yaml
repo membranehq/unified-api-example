@@ -1,0 +1,112 @@
+id: 68a82658e426fdf8cbab8afe
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: ca67828a-6a70-43c4-9a4c-b04c8a414ade
+createdAt: '2025-08-22T08:12:15.579Z'
+updatedAt: '2025-08-22T08:12:15.579Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f3
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.fullName
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    title:
+      $var: $.input.filter.jobTitle
+    email:
+      $var: $.input.filter.primaryEmail
+    emails:
+      $iterate:
+        source:
+          $var: $.input.filter.emails
+        item:
+          email:
+            $var: $.item.value
+          category:
+            $var: $.item.type
+    phone_numbers:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          number:
+            $var: $.item.value
+          category:
+            $var: $.item.type
+    company_name:
+      $var: $.input.filter.companyName
+    company_id:
+      $var: $.input.filter.companyId
+    assignee_id:
+      $var: $.input.filter.ownerId
+    address:
+      street:
+        $var: $.input.filter.primaryAddress.street
+      city:
+        $var: $.input.filter.primaryAddress.city
+      state:
+        $var: $.input.filter.primaryAddress.state
+      country:
+        $var: $.input.filter.primaryAddress.country
+      postal_code:
+        $var: $.input.filter.primaryAddress.zip
+    date_created:
+      $var: $.input.filter.createdTime
+    date_modified:
+      $var: $.input.filter.updatedTime
+    date_last_contacted:
+      $var: $.input.filter.lastActivityTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

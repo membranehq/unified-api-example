@@ -1,0 +1,56 @@
+id: 68a8260e678af1d0cf6ec253
+name: Search Users
+key: search-users
+uuid: c19d2bfb-950c-49b3-8ed7-2f06074559c1
+state: READY
+errors: []
+revision: 020306d5-67de-4d64-ae13-078db37a89ae
+createdAt: '2025-08-22T08:10:59.906Z'
+updatedAt: '2025-08-22T08:10:59.906Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6705
+parentId: 68a8260e678af1d0cf6ebf07
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 07803f64-c623-49af-aee4-e7ae3e068432
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

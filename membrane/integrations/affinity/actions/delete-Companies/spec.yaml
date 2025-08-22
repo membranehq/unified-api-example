@@ -1,0 +1,49 @@
+id: 689f2c0400905568ab2f6d65
+name: Delete Company
+key: delete-Companies
+state: READY
+errors: []
+revision: 339c8630-21a6-47a4-8c99-3630ef587bc6
+createdAt: '2025-08-15T12:46:01.803Z'
+updatedAt: '2025-08-15T12:46:01.803Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 689f2c0400905568ab2f6b3f
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: e970243d-9f80-4f9c-bbf2-08436505b1c9
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

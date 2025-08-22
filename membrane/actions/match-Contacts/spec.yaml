@@ -1,0 +1,25 @@
+id: 68a82657e426fdf8cbab88c3
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: READY
+errors: []
+revision: f5847216-8b12-4033-9a53-fc6113f1e79f
+createdAt: '2025-08-22T08:12:07.991Z'
+updatedAt: '2025-08-22T08:12:07.991Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

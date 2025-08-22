@@ -1,0 +1,51 @@
+id: 68a82658e426fdf8cbab8b3e
+name: Find Contact By Id
+key: find-Contacts-by-id
+uuid: f05cc41d-a7ba-4d31-b695-def1ae641657
+state: READY
+errors: []
+revision: d067fbc7-8812-4a27-8aed-6c8d63b3b5cb
+createdAt: '2025-08-22T08:12:14.191Z'
+updatedAt: '2025-08-22T08:12:14.191Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a82657e426fdf8cbab88bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: db8d9b84-2a16-4177-bcf9-ca9be54ae497
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

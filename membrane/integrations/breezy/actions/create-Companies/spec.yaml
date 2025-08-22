@@ -1,0 +1,53 @@
+id: 689f2c0400905568ab2f6d9d
+name: Create Company
+key: create-Companies
+state: READY
+errors: []
+revision: d8422db1-38eb-465e-a987-7d132fd1c672
+createdAt: '2025-08-15T12:46:03.365Z'
+updatedAt: '2025-08-15T12:46:03.365Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ff
+parentId: 689f2c0400905568ab2f6b3d
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: companies
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 41d8061b-be07-478b-b9a7-b54d490fc52f
+integration:
+  id: 689f2bf000905568ab2f66ff
+  name: Breezy HR
+  key: breezy
+  uuid: 07230773-02e2-487f-b133-9e5d944aa495
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:45.073Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/breezy/logo.png
+  connectorId: 643e81f7badd839bce463919
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 5
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

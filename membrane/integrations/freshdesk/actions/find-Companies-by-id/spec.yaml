@@ -1,0 +1,50 @@
+id: 689f2c0400905568ab2f6dd9
+name: Find Company By Id
+key: find-Companies-by-id
+state: READY
+errors: []
+revision: cb5ef3dc-79cf-4ced-b994-381182665cb8
+createdAt: '2025-08-15T12:46:03.866Z'
+updatedAt: '2025-08-15T12:46:03.866Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 689f2c0400905568ab2f6b41
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: a9d3b092-4fdf-4709-93f5-46759fbcea79
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

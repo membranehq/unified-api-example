@@ -1,0 +1,182 @@
+id: 68a82654e426fdf8cbab8740
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 15e769e6-0ad7-4c32-b366-792319e66be3
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f671b
+dataSourceKey: contacts
+dataSourceId: 68a82653e426fdf8cbab8642
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  jobTitle:
+    $var: $.jobTitle
+  organisation:
+    $var: $.companyId
+  owner:
+    $var: $.ownerId
+  createdAt:
+    $var: $.createdTime
+  updatedAt:
+    $var: $.updatedTime
+  lastContactedAt:
+    $var: $.lastActivityTime
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.type
+        street:
+          $var: $.item.street
+        city:
+          $var: $.item.city
+        state:
+          $var: $.item.state
+        country:
+          $var: $.item.country
+        zip:
+          $var: $.item.zip
+  phoneNumbers:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        number:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  emailAddresses:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        address:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  email:
+    $var: $.primaryEmail
+importValue:
+  id:
+    $var: $.id
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  emails:
+    $iterate:
+      source:
+        $var: $.emailAddresses
+      item:
+        value:
+          $var: $.item.address
+        type:
+          $var: $.item.type
+  primaryEmail:
+    $var: $.emailAddresses[0].address
+  phones:
+    $iterate:
+      source:
+        $var: $.phoneNumbers
+      item:
+        value:
+          $var: $.item.number
+        type:
+          $var: $.item.type
+  primaryPhone:
+    $var: $.phoneNumbers[0].number
+  companyId:
+    $var: $.organisation
+  ownerId:
+    $var: $.owner
+  jobTitle:
+    $var: $.jobTitle
+  primaryAddress:
+    type:
+      $var: $.addresses[0].type
+    street:
+      $var: $.addresses[0].street
+    city:
+      $var: $.addresses[0].city
+    state:
+      $var: $.addresses[0].state
+    country:
+      $var: $.addresses[0].country
+    zip:
+      $var: $.addresses[0].zip
+    full:
+      $concat:
+        values:
+          - $var: $.addresses[0].street
+          - $var: $.addresses[0].city
+          - $var: $.addresses[0].state
+          - $var: $.addresses[0].zip
+          - $var: $.addresses[0].country
+        delimiter: ', '
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.type
+        street:
+          $var: $.item.street
+        city:
+          $var: $.item.city
+        state:
+          $var: $.item.state
+        country:
+          $var: $.item.country
+        zip:
+          $var: $.item.zip
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
+  lastActivityTime:
+    $var: $.lastContactedAt
+  fullName:
+    $concat:
+      values:
+        - $var: $.firstName
+        - $var: $.lastName
+      delimiter: ' '
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

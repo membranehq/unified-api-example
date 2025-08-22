@@ -1,0 +1,24 @@
+id: 68a82660e426fdf8cbab9253
+name: Receive Created Contact Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Contacts-events
+revision: 506639a7-7b47-45c0-b05e-058e54e989d6
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Contacts-created-trigger:
+    type: data-record-created-trigger
+    name: Contact Created Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

@@ -1,0 +1,78 @@
+id: 689f2c0400905568ab2f6def
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 6594a831-21e5-477d-b172-74bca608a964
+createdAt: '2025-08-15T12:46:04.104Z'
+updatedAt: '2025-08-15T12:46:04.104Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e2
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    address:
+      country_code:
+        $var: $.input.filter.primaryAddress.country
+      line1:
+        $var: $.input.filter.primaryAddress.street
+      locality:
+        $var: $.input.filter.primaryAddress.city
+      region:
+        $var: $.input.filter.primaryAddress.state
+      zip_code:
+        $var: $.input.filter.primaryAddress.zip
+    company_name:
+      $var: $.input.filter.name
+    phone_number:
+      number:
+        $var: $.input.filter.primaryPhone
+    website:
+      $var: $.input.filter.websiteUrl
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

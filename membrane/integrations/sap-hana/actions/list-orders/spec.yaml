@@ -1,0 +1,89 @@
+id: 68a84f077702482264c62fab
+name: List Orders
+key: list-orders
+uuid: 6d2b58e8-ec77-4b11-9a80-c19c9da69fad
+state: READY
+errors: []
+revision: 69dd4a7d-21f7-4759-b9b3-2fc7f9c1bf49
+createdAt: '2025-08-22T11:05:44.951Z'
+updatedAt: '2025-08-22T11:05:44.951Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c7f
+parentId: 68a84f077702482264c62e9a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    PurchaseOrder:
+      $var: $.input.filter.id
+    Customer:
+      $var: $.input.filter.customerId
+    DocumentCurrency:
+      $var: $.input.filter.currency
+    PricingDocument:
+      $var: $.input.filter.totalAmount
+    CreationDate:
+      $var: $.input.filter.createdTime
+    CreatedByUser:
+      $var: $.input.filter.createdBy
+    _PurchaseOrderNote:
+      - PlainLongText:
+          $var: $.input.filter.notes
+    LastChangeDateTime:
+      $var: $.input.filter.updatedTime
+    _PurchaseOrderItem:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          PurchaseOrderItem:
+            $var: $.item.productId
+          OrderQuantity:
+            $var: $.item.quantity
+          OrderPriceUnit:
+            $var: $.item.unitPrice
+          NetAmount:
+            $var: $.item.totalAmount
+isCustomized: false
+parentRevision: 24307e40-ddbc-44aa-9509-a6e37166a8f6
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

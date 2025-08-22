@@ -1,0 +1,51 @@
+id: 68a8260e678af1d0cf6ec19f
+name: Find User By Id
+key: find-Users-by-id
+uuid: 350cc6a4-3580-4da9-af3d-ea9b8f6b6c9f
+state: READY
+errors: []
+revision: 78af6791-1ce5-46b0-b478-ff92ddf8585e
+createdAt: '2025-08-22T08:10:59.763Z'
+updatedAt: '2025-08-22T08:10:59.763Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ee
+parentId: 68a8260e678af1d0cf6ebf05
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 83eee06b-8492-4c0f-8924-951b664a1dae
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

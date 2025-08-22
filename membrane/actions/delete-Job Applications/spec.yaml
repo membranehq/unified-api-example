@@ -1,0 +1,22 @@
+id: 68a839b4f8d786c131d7f904
+name: Delete Job Application
+key: delete-Job Applications
+uuid: a872c081-b672-4f22-9f93-49169800b12f
+state: READY
+errors: []
+revision: cbb78cc9-4eeb-4609-9252-6517ca142d11
+createdAt: '2025-08-22T09:34:44.998Z'
+updatedAt: '2025-08-22T09:34:44.998Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: job-applications
+  id:
+    $var: $.input.id
+isCustomized: false

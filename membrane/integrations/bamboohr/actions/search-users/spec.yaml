@@ -1,0 +1,55 @@
+id: 68a8260e678af1d0cf6ec25f
+name: Search Users
+key: search-users
+uuid: c19d2bfb-950c-49b3-8ed7-2f06074559c1
+state: READY
+errors: []
+revision: 85a98c65-3b1d-4447-a94e-c36341018b7c
+createdAt: '2025-08-22T08:10:59.975Z'
+updatedAt: '2025-08-22T08:10:59.975Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc94595
+parentId: 68a8260e678af1d0cf6ebf07
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 07803f64-c623-49af-aee4-e7ae3e068432
+integration:
+  id: 68a820cb9fc7b352ffc94595
+  name: BambooHR
+  key: bamboohr
+  uuid: becd939a-2e65-4f39-bd4e-f5f94bcffab6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.275Z'
+  updatedAt: '2025-08-22T07:48:29.061Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/bamboohr/logohq.png
+  connectorId: 65265ce970089fac483f2ee8
+  connectorVersion: 2.0.9
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 165
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

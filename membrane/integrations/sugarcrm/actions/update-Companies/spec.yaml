@@ -1,0 +1,57 @@
+id: 689f2c0400905568ab2f6ead
+name: Update Company
+key: update-Companies
+state: READY
+errors: []
+revision: 2bd98478-6038-4a7c-97e2-d01f28b554bc
+createdAt: '2025-08-15T12:46:03.570Z'
+updatedAt: '2025-08-15T12:46:03.570Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 689f2c0400905568ab2f6b49
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 7800d79a-d9ea-4b11-bbaf-565bf587f91f
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

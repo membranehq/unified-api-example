@@ -1,0 +1,52 @@
+id: 68a84f0b7702482264c634bc
+name: Receive Updated Order Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Orders-events
+revision: 4225d785-6701-42d2-be47-cf51c8de6a88
+universalFlowId: 68a84f097702482264c6321a
+integrationId: 68a84efe7702482264c62c7f
+universalFlowRevision: 8c10cef1-70b5-42e8-8110-f79d73221b22
+nodes:
+  Orders-updated-trigger:
+    type: data-record-updated-trigger
+    name: Order Updated Trigger
+    config:
+      dataSource:
+        key: orders
+      fieldMapping:
+        key: orders
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

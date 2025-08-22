@@ -1,0 +1,86 @@
+id: 68a8260e678af1d0cf6ec225
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 2dab92f0-f12c-4e5d-80ba-159c4cbe50ce
+createdAt: '2025-08-22T08:11:00.853Z'
+updatedAt: '2025-08-22T08:11:00.853Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    available:
+      $var: $.input.filter.isActive
+    role_ids:
+      - $var: $.input.filter.roleId
+    id:
+      $var: $.input.filter.id
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    contact:
+      active:
+        $var: $.input.filter.isActive
+      email:
+        $var: $.input.filter.primaryEmail
+      language:
+        $var: $.input.filter.timezone
+      mobile:
+        $var: $.input.filter.primaryPhone
+      name:
+        $var: $.input.filter.fullName
+      time_zone:
+        $var: $.input.filter.timezone
+    email:
+      $var: $.input.filter.primaryEmail
+    time_zone:
+      $var: $.input.filter.timezone
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,46 @@
+id: 689f2c0000905568ab2f688b
+name: Companies
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+key: companies
+revision: c057eecf-54ec-413a-9f24-196578b20afc
+integrationId: 689f2bf000905568ab2f6701
+customized: false
+universalDataSourceId: 689f2c0000905568ab2f682a
+universalDataSourceRevision: 3f6b0bb8-a50a-47bc-90e7-dd0dcd0d11c9
+collectionKey: contacts
+udm: companies
+defaultPath: /data/contacts
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

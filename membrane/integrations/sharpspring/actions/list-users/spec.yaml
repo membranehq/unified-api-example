@@ -1,0 +1,76 @@
+id: 68a8260e678af1d0cf6ec211
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: e9b4e653-27a0-47bb-8dd5-2a233d1f7ec6
+createdAt: '2025-08-22T08:11:01.477Z'
+updatedAt: '2025-08-22T08:11:01.477Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    displayName:
+      $var: $.input.filter.fullName
+    firstName:
+      $var: $.input.filter.firstName
+    lastName:
+      $var: $.input.filter.lastName
+    emailAddress:
+      $var: $.input.filter.primaryEmail
+    phone:
+      $var: $.input.filter.primaryPhone
+    isActive:
+      $var: $.input.filter.isActive
+    userTimezone:
+      $var: $.input.filter.timezone
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,161 @@
+id: 68a82654e426fdf8cbab874e
+name: Contacts
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85d5
+key: contacts
+customized: false
+revision: ad465f4a-f2c9-4b13-b43c-29d0eb9e9f28
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f670c
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85d5
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  ID:
+    $var: $.id
+  Account:
+    $var: $.companyId
+  AccountName:
+    $var: $.companyName
+  AddressStreet:
+    $var: $.primaryAddress.street
+  City:
+    $var: $.primaryAddress.city
+  Country:
+    $var: $.primaryAddress.country
+  Created:
+    $var: $.createdTime
+  Creator:
+    $var: $.createdBy
+  Email:
+    $var: $.primaryEmail
+  FirstName:
+    $var: $.firstName
+  FullName:
+    $var: $.fullName
+  LastName:
+    $var: $.lastName
+  Modified:
+    $var: $.updatedTime
+  Modifier:
+    $var: $.updatedBy
+  Phone:
+    $var: $.primaryPhone
+  State:
+    $var: $.primaryAddress.state
+  Title:
+    $var: $.jobTitle
+  LeadSource:
+    $var: $.source
+importValue:
+  id:
+    $var: $.ID
+  fullName:
+    $var: $.FullName
+  firstName:
+    $var: $.FirstName
+  lastName:
+    $var: $.LastName
+  primaryEmail:
+    $var: $.Email
+  primaryPhone:
+    $var: $.Phone
+  primaryAddress:
+    street:
+      $var: $.AddressStreet
+    city:
+      $var: $.City
+    state:
+      $var: $.State
+    country:
+      $var: $.Country
+    zip:
+      $var: $.Postcode
+    full:
+      $concat:
+        values:
+          - $var: $.AddressStreet
+          - $var: $.City
+          - $var: $.State
+          - $var: $.Postcode
+          - $var: $.Country
+        delimiter: ', '
+  companyName:
+    $var: $.AccountName
+  companyId:
+    $var: $.Account
+  jobTitle:
+    $var: $.Title
+  source:
+    $var: $.LeadSource
+  createdTime:
+    $var: $.Created
+  createdBy:
+    $var: $.Creator
+  updatedTime:
+    $var: $.Modified
+  updatedBy:
+    $var: $.Modifier
+  emails:
+    - value:
+        $var: $.Email
+  phones:
+    - value:
+        $var: $.Phone
+  addresses:
+    - value:
+        street:
+          $var: $.AddressStreet
+        city:
+          $var: $.City
+        state:
+          $var: $.State
+        country:
+          $var: $.Country
+        zip:
+          $var: $.Postcode
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,54 @@
+id: 68a82658e426fdf8cbab8bba
+name: Create Contact
+key: create-Contacts
+uuid: c6a28c7f-b0d2-4373-8e05-1cb6b3c37989
+state: READY
+errors: []
+revision: c50f8908-46a3-48f7-a363-ca63adc516c7
+createdAt: '2025-08-22T08:12:14.362Z'
+updatedAt: '2025-08-22T08:12:14.362Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6707
+parentId: 68a82657e426fdf8cbab88bb
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: contacts
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 38860ce8-8263-4d10-b4bd-97f57996a12f
+integration:
+  id: 689f2bf000905568ab2f6707
+  name: Front
+  key: front
+  uuid: a3686d04-8658-4e23-8973-c0241caec2b0
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.282Z'
+  updatedAt: '2025-08-15T12:45:47.306Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/front/logo.png
+  connectorId: 64368c00986ed1caaddef4b3
+  connectorVersion: 1.3.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 162
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

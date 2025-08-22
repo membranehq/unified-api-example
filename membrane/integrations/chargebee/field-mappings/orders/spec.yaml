@@ -1,0 +1,95 @@
+id: 68a84f067702482264c62df5
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+customized: false
+revision: 6716bc7a-6756-4a67-8dfa-b6bcd3237963
+universalFieldMappingId: 68a84f067702482264c62dd3
+universalFieldMappingRevision: 354e01b1-c9b7-4a5d-92da-12bbe82fa146
+integrationId: 68a84efe7702482264c62c83
+dataSourceKey: orders
+dataSourceId: 68a84f057702482264c62d62
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  document_number:
+    $var: $.name
+  customer_id:
+    $var: $.customerId
+  status:
+    $var: $.status
+  payment_status:
+    $var: $.paymentStatus
+  total:
+    $var: $.totalAmount
+  currency_code:
+    $var: $.currency
+  order_line_items:
+    $iterate:
+      source:
+        $var: $.lineItems
+      item:
+        unit_price:
+          $var: $.item.unitPrice
+        amount:
+          $var: $.item.totalAmount
+        fulfillment_quantity:
+          $var: $.item.quantity
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.document_number
+  customerId:
+    $var: $.customer_id
+  status:
+    $var: $.status
+  currency:
+    $var: $.currency_code
+  totalAmount:
+    $var: $.total
+  lineItems:
+    $iterate:
+      source:
+        $var: $.order_line_items
+      item:
+        totalAmount:
+          $var: $.item.amount
+        quantity:
+          $var: $.item.fulfillment_quantity
+        unitPrice:
+          $var: $.item.unit_price
+  paymentStatus:
+    $var: $.payment_status
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

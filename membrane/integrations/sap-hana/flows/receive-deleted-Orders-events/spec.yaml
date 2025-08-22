@@ -1,0 +1,50 @@
+id: 68a84f0a7702482264c6336d
+name: Receive Deleted Order Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Orders-events
+revision: eded1a3a-a14f-4563-a96d-d4c24e830c63
+universalFlowId: 68a84f097702482264c63216
+integrationId: 68a84efe7702482264c62c7f
+universalFlowRevision: 34b9abf5-da30-4d0d-87fc-ba697bbf050c
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Orders-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Order Deleted Trigger
+    config:
+      dataSource:
+        key: orders
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

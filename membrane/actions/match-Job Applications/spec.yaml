@@ -1,0 +1,25 @@
+id: 68a839b4f8d786c131d7f906
+name: Match Job Application
+key: match-Job Applications
+uuid: 05284663-bc7a-4e90-9430-80866d7f50d0
+state: READY
+errors: []
+revision: 7cf1a965-b40a-4d51-9b7a-51eb42f257f9
+createdAt: '2025-08-22T09:34:44.999Z'
+updatedAt: '2025-08-22T09:34:44.999Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: job-applications
+  dataSource:
+    key: job-applications
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

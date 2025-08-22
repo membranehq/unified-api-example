@@ -1,0 +1,22 @@
+id: 68a82657e426fdf8cbab88c5
+name: Delete Contact
+key: delete-Contacts
+uuid: 570d6578-b33d-4b8c-9250-7e0a45f48a5b
+state: READY
+errors: []
+revision: fcc51862-f2cb-49a2-a342-47d095bc3122
+createdAt: '2025-08-22T08:12:07.981Z'
+updatedAt: '2025-08-22T08:12:07.981Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+isCustomized: false

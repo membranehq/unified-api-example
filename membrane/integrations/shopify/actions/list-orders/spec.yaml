@@ -1,0 +1,116 @@
+id: 68a84f077702482264c62f9f
+name: List Orders
+key: list-orders
+uuid: 6d2b58e8-ec77-4b11-9a80-c19c9da69fad
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c85
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a84f057702482264c62d6d
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a84f067702482264c62e05
+revision: 97130b30-fcb2-431d-a9fe-49c8355cafd3
+createdAt: '2025-08-22T11:05:44.955Z'
+updatedAt: '2025-08-22T11:05:44.955Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c85
+parentId: 68a84f077702482264c62e9a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    note:
+      $var: $.input.filter.notes
+    customer:
+      id:
+        $var: $.input.filter.customerId
+    currency:
+      $var: $.input.filter.currency
+    fulfillment_status:
+      $var: $.input.filter.fullFillmentStatus
+    financial_status:
+      $var: $.input.filter.paymentStatus
+    billing_address:
+      address1:
+        $var: $.input.filter.billingAddress.street
+      city:
+        $var: $.input.filter.billingAddress.city
+      province:
+        $var: $.input.filter.billingAddress.state
+      country:
+        $var: $.input.filter.billingAddress.country
+      zip:
+        $var: $.input.filter.billingAddress.zip
+    shipping_address:
+      address1:
+        $var: $.input.filter.shippingAddress.street
+      city:
+        $var: $.input.filter.shippingAddress.city
+      province:
+        $var: $.input.filter.shippingAddress.state
+      country:
+        $var: $.input.filter.shippingAddress.country
+      zip:
+        $var: $.input.filter.shippingAddress.zip
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 24307e40-ddbc-44aa-9509-a6e37166a8f6
+integration:
+  id: 68a84efe7702482264c62c85
+  name: Shopify
+  key: shopify
+  uuid: 605b2fc9-0180-4a14-9917-19fe62a96c32
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.336Z'
+  updatedAt: '2025-08-22T11:05:38.392Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/shopify/logo.png
+  connectorId: 6466785860f981f3ce696916
+  connectorVersion: 2.0.4
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

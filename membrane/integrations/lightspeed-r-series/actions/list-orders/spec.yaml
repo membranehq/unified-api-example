@@ -1,0 +1,90 @@
+id: 68a84f077702482264c62f93
+name: List Orders
+key: list-orders
+uuid: 6d2b58e8-ec77-4b11-9a80-c19c9da69fad
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c8d
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a84f057702482264c62d69
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a84f067702482264c62e0c
+revision: f6c34db8-a7aa-48c5-9fcc-aff57cc630de
+createdAt: '2025-08-22T11:05:44.900Z'
+updatedAt: '2025-08-22T11:05:44.900Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c8d
+parentId: 68a84f077702482264c62e9a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    orderID:
+      $var: $.input.filter.id
+    orderedDate:
+      $var: $.input.filter.createdTime
+    createTime:
+      $var: $.input.filter.createdTime
+    timeStamp:
+      $var: $.input.filter.updatedTime
+    vendorCurrencyCode:
+      $var: $.input.filter.currency
+isCustomized: false
+parentRevision: 24307e40-ddbc-44aa-9509-a6e37166a8f6
+integration:
+  id: 68a84efe7702482264c62c8d
+  name: Lightspeed R-Series
+  key: lightspeed-r-series
+  uuid: 2cee0c2e-162d-41ab-a07b-7f80337f7a40
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.340Z'
+  updatedAt: '2025-08-22T11:05:41.148Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/lightspeed-r-series/asset-ec862902-f916-4b32-ab9e-13fa9b8f9481.png
+  connectorId: 66b2291668e75461beba804b
+  connectorVersion: 1.0.3
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 256
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

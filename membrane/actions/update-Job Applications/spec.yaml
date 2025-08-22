@@ -1,0 +1,31 @@
+id: 68a839b4f8d786c131d7f8fe
+name: Update Job Application
+key: update-Job Applications
+uuid: 0a56fe18-337c-4c86-b5b9-bee993c0f180
+state: READY
+errors: []
+revision: e4b5aa23-3eda-4774-915f-ce28257437b3
+createdAt: '2025-08-22T09:34:45.005Z'
+updatedAt: '2025-08-22T09:34:45.005Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: job-applications
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: job-applications
+    input:
+      $var: $.input.fields
+isCustomized: false

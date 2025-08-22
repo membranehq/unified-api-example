@@ -1,0 +1,95 @@
+id: 68a8260e678af1d0cf6ec1f3
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 161c93ee-ccab-4160-8192-5f86849b46d5
+createdAt: '2025-08-22T08:11:01.385Z'
+updatedAt: '2025-08-22T08:11:01.385Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Id:
+      $var: $.input.filter.id
+    Username:
+      $var: $.input.filter.userName
+    LastName:
+      $var: $.input.filter.lastName
+    FirstName:
+      $var: $.input.filter.firstName
+    Name:
+      $var: $.input.filter.fullName
+    CompanyName:
+      $var: $.input.filter.companyName
+    Email:
+      $var: $.input.filter.primaryEmail
+    Phone:
+      $var: $.input.filter.primaryPhone
+    IsActive:
+      $var: $.input.filter.isActive
+    TimeZoneSidKey:
+      $var: $.input.filter.timezone
+    UserRoleId:
+      $var: $.input.filter.roleId
+    CreatedDate:
+      $var: $.input.filter.createdTime
+    CreatedById:
+      $var: $.input.filter.createdBy
+    LastModifiedDate:
+      $var: $.input.filter.updatedTime
+    LastModifiedById:
+      $var: $.input.filter.updatedBy
+    AccountId:
+      $var: $.input.filter.companyId
+    FullPhotoUrl:
+      $var: $.input.filter.imageUrl
+    ContactId:
+      $var: $.input.filter.contactId
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

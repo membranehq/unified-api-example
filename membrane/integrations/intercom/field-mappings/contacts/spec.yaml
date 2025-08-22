@@ -1,0 +1,141 @@
+id: 68a82654e426fdf8cbab873e
+name: Contacts
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f66f5
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85dc
+key: contacts
+customized: false
+revision: 10a03915-eb39-4cc9-9729-0b4e86a9746e
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66f5
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85dc
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  role:
+    $var: $.jobTitle
+  email:
+    $var: $.primaryEmail
+  phone:
+    $var: $.primaryPhone
+  name:
+    $var: $.fullName
+  owner_id:
+    $var: $.ownerId
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  last_seen_at:
+    $var: $.lastActivityTime
+  location:
+    type:
+      $var: $.primaryAddress.type
+    country:
+      $var: $.primaryAddress.country
+    region:
+      $var: $.primaryAddress.state
+    city:
+      $var: $.primaryAddress.city
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.phone
+  primaryAddress:
+    type:
+      $var: $.location.type
+    city:
+      $var: $.location.city
+    state:
+      $var: $.location.region
+    country:
+      $var: $.location.country
+    full:
+      $concat:
+        values:
+          - $var: $.location.city
+          - $var: $.location.region
+          - $var: $.location.country
+        delimiter: ', '
+  ownerId:
+    $var: $.owner_id
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+  jobTitle:
+    $var: $.role
+  lastActivityTime:
+    $var: $.last_seen_at
+  firstName:
+    $firstName:
+      $var: $.name
+  lastName:
+    $lastName:
+      $var: $.name
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.phone
+  addresses:
+    - value:
+        type:
+          $var: $.location.type
+        city:
+          $var: $.location.city
+        state:
+          $var: $.location.region
+        country:
+          $var: $.location.country
+integration:
+  id: 689f2bf000905568ab2f66f5
+  name: Intercom
+  key: intercom
+  uuid: 2b1b26c9-4359-4871-a67f-5dcc7a864403
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:46.788Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/intercom-connector/logo.png
+  connectorId: 64384553986ed1caad49a446
+  connectorVersion: 1.1.7
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 77
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

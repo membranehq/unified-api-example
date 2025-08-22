@@ -1,0 +1,103 @@
+id: 689f2c0400905568ab2f6e1b
+name: List Companies
+key: list-companies
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 689f2c0000905568ab2f68a1
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 689f2c0100905568ab2f69eb
+revision: c55923e4-bb60-48c6-9b83-4df4bf9f6a3f
+createdAt: '2025-08-15T12:46:03.717Z'
+updatedAt: '2025-08-15T12:46:03.717Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670c
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    ID:
+      $var: $.input.filter.id
+    ActivitySector:
+      $var: $.input.filter.industry
+    City:
+      $var: $.input.filter.primaryAddress.city
+    Country:
+      $var: $.input.filter.primaryAddress.country
+    Created:
+      $var: $.input.filter.createdTime
+    Creator:
+      $var: $.input.filter.createdBy
+    Currency:
+      $var: $.input.filter.currency
+    Modified:
+      $var: $.input.filter.updatedTime
+    Modifier:
+      $var: $.input.filter.updatedBy
+    Name:
+      $var: $.input.filter.name
+    Postcode:
+      $var: $.input.filter.addresses[0].zip
+    Website:
+      $var: $.input.filter.websiteUrl
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

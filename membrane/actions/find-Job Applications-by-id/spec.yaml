@@ -1,0 +1,24 @@
+id: 68a839b4f8d786c131d7f902
+name: Find Job Application By Id
+key: find-Job Applications-by-id
+uuid: 05309c41-908d-430d-aaab-a6c6b4436a0c
+state: READY
+errors: []
+revision: 42c8948d-7a27-4113-86f4-154c2edeb8f7
+createdAt: '2025-08-22T09:34:44.997Z'
+updatedAt: '2025-08-22T09:34:44.997Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: job-applications
+  dataSource:
+    key: job-applications
+  id:
+    $var: $.input.id
+isCustomized: false

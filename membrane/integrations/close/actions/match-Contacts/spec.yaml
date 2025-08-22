@@ -1,0 +1,59 @@
+id: 68a82658e426fdf8cbab8bfc
+name: Match Contact
+key: match-Contacts
+uuid: 3b5d122b-2364-42b2-af38-8c19ee0bb267
+state: READY
+errors: []
+revision: ac8ad547-b561-4914-8e26-307cfc477491
+createdAt: '2025-08-22T08:12:16.668Z'
+updatedAt: '2025-08-22T08:12:16.668Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a82657e426fdf8cbab88c3
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      name:
+        $var: $.input.query.fullName
+      email:
+        $var: $.input.query.primaryEmail
+      title:
+        $var: $.input.query.jobTitle
+isCustomized: false
+parentRevision: f5847216-8b12-4033-9a53-fc6113f1e79f
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

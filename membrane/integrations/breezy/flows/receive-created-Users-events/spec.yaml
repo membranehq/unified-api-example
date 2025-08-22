@@ -1,0 +1,51 @@
+id: 68a8261c678af1d0cf6ecef2
+name: Receive Created User Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Users-events
+revision: 416ab7c1-6983-4d43-8aba-077096721b5c
+universalFlowId: 68a82616678af1d0cf6ec863
+integrationId: 689f2bf000905568ab2f66ff
+universalFlowRevision: 838c9f04-1800-4d92-aed1-56d3f5e0c14f
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Users-created-trigger:
+    type: data-record-created-trigger
+    name: User Created Trigger
+    config:
+      dataSource:
+        key: users
+      fieldMapping:
+        key: users
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66ff
+  name: Breezy HR
+  key: breezy
+  uuid: 07230773-02e2-487f-b133-9e5d944aa495
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:45.073Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/breezy/logo.png
+  connectorId: 643e81f7badd839bce463919
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 5
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

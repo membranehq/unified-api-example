@@ -1,0 +1,50 @@
+id: 68a8260e678af1d0cf6ec11b
+name: Delete User
+key: delete-Users
+uuid: 2c5c6ffd-7ab2-4165-977f-9224e92acd38
+state: READY
+errors: []
+revision: f6e9bdc5-f979-4ba8-b627-f1c1e2d72a5b
+createdAt: '2025-08-22T08:10:58.459Z'
+updatedAt: '2025-08-22T08:10:58.459Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e4
+parentId: 68a8260e678af1d0cf6ebefe
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 15541a7f-5223-48f2-9e8b-1a0feb22aa97
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,39 @@
+id: 68a84f057702482264c62d6b
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+revision: eb56aed7-8f29-4fee-89c7-1948b09eaa1f
+integrationId: 68a84efe7702482264c62c89
+customized: false
+universalDataSourceId: 68a84f057702482264c62d2a
+universalDataSourceRevision: d3d9c334-f70b-4f3f-b27a-5f10df5b1179
+collectionKey: orders
+udm: orders
+defaultPath: /data/orders
+integration:
+  id: 68a84efe7702482264c62c89
+  name: PayPal
+  key: paypal
+  uuid: 3f7450ae-67f4-4940-ac36-ffa248ea5acb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.338Z'
+  updatedAt: '2025-08-22T11:05:38.391Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/paypal/asset-0f0851b5-76ed-412e-bfa9-d2618b5e6162.png
+  connectorId: 665ee151c57ef06438e068f2
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 109
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

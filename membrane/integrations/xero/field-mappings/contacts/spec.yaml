@@ -1,0 +1,111 @@
+id: 68a82654e426fdf8cbab8726
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 0b219b8d-3703-4cdc-a6d9-d21ea088bc1f
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66da
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85b1
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  ContactID:
+    $var: $.id
+  Name:
+    $var: $.fullName
+  FirstName:
+    $var: $.firstName
+  LastName:
+    $var: $.lastName
+  EmailAddress:
+    $var: $.primaryEmail
+  Addresses:
+    $var: $.addresses
+  Phones:
+    $var: $.phones
+importValue:
+  id:
+    $var: ContactID
+  fullName:
+    $concat:
+      delimiter: ' '
+      values:
+        - $var: $.FirstName
+        - $var: $.LastName
+  firstName:
+    $var: FirstName
+  lastName:
+    $var: LastName
+  primaryEmail:
+    $var: EmailAddress
+  primaryPhone:
+    $var: Phones[0].PhoneNumber
+  phones:
+    $var: Phones
+    $map:
+      value:
+        $var: PhoneNumber
+      type:
+        $var: PhoneType
+  primaryAddress:
+    type: primary
+    full:
+      $concat:
+        values:
+          - $var: $.Addresses[0].AddressLine1
+          - $var: $.Addresses[0].City
+          - $var: $.Addresses[0].Region
+          - $var: $.Addresses[0].Country
+          - $var: $.Addresses[0].PostalCode
+        delimiter: ', '
+    street:
+      $var: Addresses[0].AddressLine1
+    city:
+      $var: Addresses[0].City
+    state:
+      $var: Addresses[0].Region
+    country:
+      $var: Addresses[0].Country
+    zip:
+      $var: Addresses[0].PostalCode
+  addresses:
+    $var: $.Addresses
+  updatedTime:
+    $var: UpdatedDateUTC
+  companyName:
+    $var: $.Name
+  emails:
+    - value:
+        $var: EmailAddress
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

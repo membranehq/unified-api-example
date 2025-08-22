@@ -1,0 +1,50 @@
+id: 68a84f077702482264c62fd9
+name: Delete Order
+key: delete-Orders
+uuid: cb1de9f2-7588-4022-bcea-3e16438d9d75
+state: READY
+errors: []
+revision: 13e79f51-e7c7-4fab-95cd-f48604f16d0b
+createdAt: '2025-08-22T11:05:44.576Z'
+updatedAt: '2025-08-22T11:05:44.576Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a84f077702482264c62e98
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: orders
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 6c955296-be87-411f-bc36-639930e15821
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

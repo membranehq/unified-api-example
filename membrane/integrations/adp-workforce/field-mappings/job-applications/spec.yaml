@@ -1,0 +1,68 @@
+id: 68a839b4f8d786c131d7f8c8
+name: Job Applications
+isDeactivated: false
+state: READY
+errors: []
+key: job-applications
+customized: false
+revision: 2fdaf38a-108d-4c7e-896b-7841a7fa82ed
+universalFieldMappingId: 68a839b4f8d786c131d7f8b5
+universalFieldMappingRevision: 5bcd99e6-0e9e-4c09-b2ea-12193be52b81
+integrationId: 68a839b3f8d786c131d7f870
+dataSourceKey: job-applications
+dataSourceId: 68a839b4f8d786c131d7f88e
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  itemID:
+    $var: $.id
+  applicationStatusCode:
+    effectiveDate:
+      $var: $.createdTime
+    codeValue:
+      $var: $.status
+  applicationSource:
+    submittedDate:
+      $var: $.appliedAt
+  applicant:
+    personOID:
+      $var: $.candidateId
+importValue:
+  id:
+    $var: $.itemID
+  candidateId:
+    $var: $.applicant.personOID
+  appliedAt:
+    $var: $.applicationSource.submittedDate
+  status:
+    $var: $.applicationStatusCode.codeValue
+  createdTime:
+    $var: $.applicationStatusCode.effectiveDate
+integration:
+  id: 68a839b3f8d786c131d7f870
+  name: ADP Workforce Now
+  key: adp-workforce
+  uuid: 70fbdae3-cc83-4be8-a6a2-5090f00ea8bb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:34:43.720Z'
+  updatedAt: '2025-08-22T09:34:44.483Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/adp-workforce/logo-84dfdeb3-08f9-4a0f-b865-104ffc82a88b.png
+  connectorId: 6526714370089fac4849d647
+  connectorVersion: 1.1.8
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 413
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

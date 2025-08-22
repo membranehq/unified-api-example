@@ -1,0 +1,49 @@
+id: 689f2c0400905568ab2f6d45
+name: Delete Company
+key: delete-Companies
+state: READY
+errors: []
+revision: a1687e41-4b5c-44c6-b495-c9cc3a9a0103
+createdAt: '2025-08-15T12:46:01.679Z'
+updatedAt: '2025-08-15T12:46:01.679Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 689f2c0400905568ab2f6b3f
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: e970243d-9f80-4f9c-bbf2-08436505b1c9
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

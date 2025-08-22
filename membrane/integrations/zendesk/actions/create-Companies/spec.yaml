@@ -1,0 +1,53 @@
+id: 689f2c0400905568ab2f6d8b
+name: Create Company
+key: create-Companies
+state: READY
+errors: []
+revision: 6bfb1535-2318-47ff-8c5b-990aa10c4f02
+createdAt: '2025-08-15T12:46:03.315Z'
+updatedAt: '2025-08-15T12:46:03.315Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f0
+parentId: 689f2c0400905568ab2f6b3d
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: companies
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 41d8061b-be07-478b-b9a7-b54d490fc52f
+integration:
+  id: 689f2bf000905568ab2f66f0
+  name: Zendesk
+  key: zendesk
+  uuid: 77c714e0-e2a5-4333-ade5-02cb0e398340
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.267Z'
+  updatedAt: '2025-08-15T12:45:46.486Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zendesk/logo.png
+  connectorId: 643e957fbadd839bce5208e3
+  connectorVersion: 1.5.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 393
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 60
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

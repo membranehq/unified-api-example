@@ -1,0 +1,54 @@
+id: 689f2c0400905568ab2f6e8b
+name: Search Companies
+key: search-companies
+state: READY
+errors: []
+revision: 37738c41-721e-4d27-91d4-3bab89df9433
+createdAt: '2025-08-15T12:46:03.508Z'
+updatedAt: '2025-08-15T12:46:03.508Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 689f2c0400905568ab2f6b45
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: c13aa46b-a0af-4ed9-af71-fb3d2e95ad12
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,147 @@
+id: 68a82654e426fdf8cbab872a
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 8797d6e0-7a82-4357-bb1c-59ddca28d07f
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66ea
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85bf
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  accountID:
+    $var: $.companyId
+  ownerID:
+    $var: $.ownerId
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  emailAddress:
+    $var: $.primaryEmail
+  phoneNumber:
+    $var: $.primaryPhone
+  street:
+    $var: $.primaryAddress.street
+  city:
+    $var: $.primaryAddress.city
+  country:
+    $var: $.primaryAddress.country
+  state:
+    $var: $.primaryAddress.state
+  zipcode:
+    $var: $.primaryAddress.zip
+  leadStatus:
+    $var: $.stage
+  companyName:
+    $var: $.companyName
+  title:
+    $var: $.jobTitle
+  createTimestamp:
+    $var: $.createdTime
+  updateTimestamp:
+    $var: $.updatedTime
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  primaryEmail:
+    $var: $.emailAddress
+  primaryPhone:
+    $var: $.phoneNumber
+  primaryAddress:
+    street:
+      $var: $.street
+    city:
+      $var: $.city
+    country:
+      $var: $.country
+    state:
+      $var: $.state
+    zip:
+      $var: $.zipcode
+    full:
+      $concat:
+        values:
+          - $var: $.street
+          - $var: $.city
+          - $var: $.state
+          - $var: $.zipcode
+          - $var: $.country
+        delimiter: ', '
+  stage:
+    $var: $.leadStatus
+  companyName:
+    $var: $.companyName
+  companyId:
+    $var: $.accountID
+  ownerId:
+    $var: $.ownerID
+  jobTitle:
+    $var: $.title
+  createdTime:
+    $var: $.createTimestamp
+  updatedTime:
+    $var: $.updateTimestamp
+  fullName:
+    $concat:
+      values:
+        - $var: $.firstName
+        - $var: $.lastName
+      delimiter: ' '
+  emails:
+    - value:
+        $var: $.emailAddress
+  phones:
+    - value:
+        $var: $.phoneNumber
+  addresses:
+    - value:
+        street:
+          $var: $.street
+        city:
+          $var: $.city
+        country:
+          $var: $.country
+        state:
+          $var: $.state
+        zip:
+          $var: $.zipcode
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

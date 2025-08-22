@@ -1,0 +1,136 @@
+id: 68a839f721039ff70f89b86a
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: c6fdbef5-ae8b-45a1-b901-ac9e3cb35d44
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 68a839f321039ff70f89b5c9
+dataSourceKey: contacts
+dataSourceId: 68a839f621039ff70f89b6ca
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  firstname:
+    $var: $.firstName
+  lastname:
+    $var: $.lastName
+  email:
+    $var: $.primaryEmail
+  address:
+    $var: $.primaryAddress.street
+  city:
+    $var: $.primaryAddress.city
+  state:
+    $var: $.primaryAddress.state
+  zip:
+    $var: $.primaryAddress.zip
+  cell_phone:
+    $var: $.primaryPhone
+  dlm:
+    $var: $.updatedTime
+  company:
+    $var: $.companyName
+  title:
+    $var: $.jobTitle
+importValue:
+  id:
+    $var: $.id
+  firstName:
+    $var: $.firstname
+  lastName:
+    $var: $.lastname
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.cell_phone
+  phones:
+    - value:
+        $var: $.cell_phone
+      type: cell
+    - value:
+        $var: $.office_phone
+      type: office
+    - value:
+        $var: $.home_phone
+      type: home
+  primaryAddress:
+    street:
+      $var: $.address
+    city:
+      $var: $.city
+    state:
+      $var: $.state
+    country:
+      $var: $.country
+    zip:
+      $var: $.zip
+    full:
+      $concat:
+        values:
+          - $var: $.address
+          - $var: $.city
+          - $var: $.state
+          - $var: $.zip
+          - $var: $.country
+        delimiter: ', '
+  companyName:
+    $var: $.company
+  jobTitle:
+    $var: $.title
+  updatedTime:
+    $var: $.dlm
+  fullName:
+    $concat:
+      values:
+        - $var: $.firstname
+        - $var: $.lastname
+      delimiter: ' '
+  emails:
+    - value:
+        $var: $.email
+  addresses:
+    - value:
+        street:
+          $var: $.address
+        city:
+          $var: $.city
+        state:
+          $var: $.state
+        country:
+          $var: $.country
+        zip:
+          $var: $.zip
+integration:
+  id: 68a839f321039ff70f89b5c9
+  name: Ontraport
+  key: ontraport
+  uuid: c0df51a8-557d-46c1-b2a3-ad27dcc044d6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.281Z'
+  updatedAt: '2025-08-22T09:35:49.709Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/ontraport/logo-56571cbe-9f4f-48e6-bc24-07634dbed2c0.png
+  connectorId: 65f45bb115058a59b3807b33
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

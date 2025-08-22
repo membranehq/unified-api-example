@@ -1,0 +1,52 @@
+id: 68a83a1121039ff70f89cfd2
+name: Receive Updated Contact Events (1)
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Contacts-events-1
+revision: 595bb7df-3b0a-4bdc-b545-b0b177258a74
+universalFlowId: 68a83a0921039ff70f89c7d8
+integrationId: 68a839f321039ff70f89b5c4
+universalFlowRevision: ba339b41-1d3d-4928-9748-7bf0b8c1b651
+nodes:
+  Contacts-updated-trigger:
+    type: data-record-updated-trigger
+    name: Contact Updated Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping:
+        key: contacts
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a839f321039ff70f89b5c4
+  name: Mailchimp
+  key: mailchimp
+  uuid: df1e892e-034c-48e7-b7da-d4ed5bce86f6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.278Z'
+  updatedAt: '2025-08-22T09:35:49.379Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/mailchimp/logo.png
+  connectorId: 62471fac996d5c297ae43f5d
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 110
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

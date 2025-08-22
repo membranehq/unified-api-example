@@ -1,0 +1,31 @@
+id: 68a82657e426fdf8cbab88c7
+name: Update Contact
+key: update-Contacts
+uuid: 74f64cff-a9fc-4d63-a156-a60017ed1c31
+state: READY
+errors: []
+revision: f7c5630c-4b19-4b25-b702-9d20f7d14e01
+createdAt: '2025-08-22T08:12:07.990Z'
+updatedAt: '2025-08-22T08:12:07.990Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: contacts
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: contacts
+    input:
+      $var: $.input.fields
+isCustomized: false

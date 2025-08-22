@@ -1,0 +1,52 @@
+id: 68a8260e678af1d0cf6ec19b
+name: Find User By Id
+key: find-Users-by-id
+uuid: 350cc6a4-3580-4da9-af3d-ea9b8f6b6c9f
+state: READY
+errors: []
+revision: a7f14ebc-5678-423a-9414-4bcac495a638
+createdAt: '2025-08-22T08:10:59.762Z'
+updatedAt: '2025-08-22T08:10:59.762Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 68a8260e678af1d0cf6ebf05
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 83eee06b-8492-4c0f-8924-951b664a1dae
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

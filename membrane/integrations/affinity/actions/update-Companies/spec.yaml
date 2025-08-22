@@ -1,0 +1,57 @@
+id: 689f2c0400905568ab2f6ed5
+name: Update Company
+key: update-Companies
+state: READY
+errors: []
+revision: 65d5d6b6-d456-4c2f-8bbd-5c1a9bb1fb11
+createdAt: '2025-08-15T12:46:03.585Z'
+updatedAt: '2025-08-15T12:46:03.585Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 689f2c0400905568ab2f6b49
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 7800d79a-d9ea-4b11-bbaf-565bf587f91f
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,73 @@
+id: 68a82658e426fdf8cbab8b0a
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 3036cb87-862c-484c-aa17-079b13a6b001
+createdAt: '2025-08-22T08:12:15.265Z'
+updatedAt: '2025-08-22T08:12:15.265Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    firstName:
+      $var: $.input.filter.firstName
+    lastName:
+      $var: $.input.filter.lastName
+    emailAddresses:
+      $iterate:
+        source:
+          $var: $.input.filter.emails
+        item:
+          $var: $.item.value
+    id:
+      $var: $.input.filter.id
+    primaryEmailAddress:
+      $var: $.input.filter.primaryEmail
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

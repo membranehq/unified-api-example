@@ -1,0 +1,140 @@
+id: 68a84f067702482264c62dec
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+customized: false
+revision: 9a49d5ec-38c8-4c1c-8922-18e64b53f3f7
+universalFieldMappingId: 68a84f067702482264c62dd3
+universalFieldMappingRevision: 354e01b1-c9b7-4a5d-92da-12bbe82fa146
+integrationId: 68a84efe7702482264c62c7d
+dataSourceKey: orders
+dataSourceId: 68a84f057702482264c62d7d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  status:
+    $var: $.status
+  customer_id:
+    $var: $.customerId
+  customer_note:
+    $var: $.notes
+  billing:
+    address_1:
+      $var: $.billingAddress.street
+    city:
+      $var: $.billingAddress.city
+    state:
+      $var: $.billingAddress.state
+    postcode:
+      $var: $.billingAddress.zip
+    country:
+      $var: $.billingAddress.country
+  shipping:
+    address_1:
+      $var: $.shippingAddress.street
+    city:
+      $var: $.shippingAddress.city
+    state:
+      $var: $.shippingAddress.state
+    postcode:
+      $var: $.shippingAddress.zip
+    country:
+      $var: $.shippingAddress.country
+  payment_method:
+    $var: $.paymentMethod
+  line_items:
+    $iterate:
+      source:
+        $var: $.lineItems
+      item:
+        name:
+          $var: $.item.name
+        product_id:
+          $var: $.item.productId
+        quantity:
+          $var: $.item.quantity
+        price:
+          $var: $.item.unitPrice
+        total:
+          $var: $.item.totalAmount
+importValue:
+  name:
+    $var: $.order_key
+  notes:
+    $var: $.customer_note
+  status:
+    $var: $.status
+  customerId:
+    $var: $.customer_id
+  currency:
+    $var: $.currency
+  totalAmount:
+    $var: $.total
+  paymentMethod:
+    $var: $.payment_method
+  billingAddress:
+    street:
+      $var: $.billing.address_1
+    city:
+      $var: $.billing.city
+    state:
+      $var: $.billing.state
+    country:
+      $var: $.billing.country
+    zip:
+      $var: $.billing.postcode
+  shippingAddress:
+    street:
+      $var: $.shipping.address_1
+    city:
+      $var: $.shipping.city
+    state:
+      $var: $.shipping.state
+    country:
+      $var: $.shipping.country
+    zip:
+      $var: $.shipping.postcode
+  lineItems:
+    $iterate:
+      source:
+        $var: $.line_items
+      item:
+        name:
+          $var: $.item.name
+        productId:
+          $var: $.item.product_id
+        quantity:
+          $var: $.item.quantity
+        unitPrice:
+          $var: $.item.price
+        totalAmount:
+          $var: $.item.total
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

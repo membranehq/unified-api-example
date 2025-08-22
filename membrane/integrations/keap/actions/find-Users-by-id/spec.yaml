@@ -1,0 +1,51 @@
+id: 68a8260e678af1d0cf6ec189
+name: Find User By Id
+key: find-Users-by-id
+uuid: 350cc6a4-3580-4da9-af3d-ea9b8f6b6c9f
+state: READY
+errors: []
+revision: b72586ee-9c9e-4a2f-b1e9-27369b5e86f1
+createdAt: '2025-08-22T08:10:59.756Z'
+updatedAt: '2025-08-22T08:10:59.756Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e2
+parentId: 68a8260e678af1d0cf6ebf05
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 83eee06b-8492-4c0f-8924-951b664a1dae
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

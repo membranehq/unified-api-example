@@ -1,0 +1,61 @@
+id: 689f2c0100905568ab2f69e1
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 59e33e74-b9d3-4aa6-a8fc-9cb8a96cf7c6
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f6707
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6897
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  domains:
+    - $var: $.websiteUrl
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.domains[0]
+  description:
+    $var: $.description
+  primaryAddress: {}
+integration:
+  id: 689f2bf000905568ab2f6707
+  name: Front
+  key: front
+  uuid: a3686d04-8658-4e23-8973-c0241caec2b0
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.282Z'
+  updatedAt: '2025-08-15T12:45:47.306Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/front/logo.png
+  connectorId: 64368c00986ed1caaddef4b3
+  connectorVersion: 1.3.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 162
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

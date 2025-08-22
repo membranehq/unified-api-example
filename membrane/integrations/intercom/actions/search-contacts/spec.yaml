@@ -1,0 +1,75 @@
+id: 68a82658e426fdf8cbab8b7a
+name: Search Contacts
+key: search-contacts
+uuid: b1c4910e-e855-4b55-8e96-3898d0d50b1e
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f66f5
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85dc
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a82654e426fdf8cbab873e
+revision: 8528c83f-4de4-4f5c-ae75-5c1b4d3dc406
+createdAt: '2025-08-22T08:12:14.271Z'
+updatedAt: '2025-08-22T08:12:14.271Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f5
+parentId: 68a82657e426fdf8cbab88c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 6497440a-7666-4fd8-99d9-91ec2be51028
+integration:
+  id: 689f2bf000905568ab2f66f5
+  name: Intercom
+  key: intercom
+  uuid: 2b1b26c9-4359-4871-a67f-5dcc7a864403
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:46.788Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/intercom-connector/logo.png
+  connectorId: 64384553986ed1caad49a446
+  connectorVersion: 1.1.7
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 77
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

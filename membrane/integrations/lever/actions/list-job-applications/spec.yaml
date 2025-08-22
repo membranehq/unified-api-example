@@ -1,0 +1,96 @@
+id: 68a839b5f8d786c131d7f990
+name: List Job Applications
+key: list-job-applications
+uuid: 7613bd70-5aa9-44d3-adc5-0744b90dcf9d
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a839b4f8d786c131d7f893
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a839b4f8d786c131d7f8c6
+revision: 7794ef39-b0b3-486c-8a81-05effc117be7
+createdAt: '2025-08-22T09:34:46.060Z'
+updatedAt: '2025-08-22T09:34:46.060Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc9459d
+parentId: 68a839b4f8d786c131d7f90a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: job-applications
+  dataSource:
+    key: job-applications
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    opportunityId:
+      $var: $.input.filter.candidateId
+    createdAt:
+      $var: $.input.filter.createdTime
+    type:
+      $var: $.input.filter.source
+    posting:
+      $var: $.input.filter.jobId
+    owner:
+      $var: $.input.filter.creditedTo
+    archived:
+      archivedAt:
+        $var: $.input.filter.rejectedTime
+      reason:
+        $var: $.input.filter.rejectionReason
+isCustomized: false
+parentRevision: 1764531a-1bf6-43ba-a95c-4d672d38ea11
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

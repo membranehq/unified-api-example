@@ -1,0 +1,81 @@
+id: 68a8260e678af1d0cf6ec213
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 1559386e-f247-406e-b263-30bfc07d4b7e
+createdAt: '2025-08-22T08:11:00.674Z'
+updatedAt: '2025-08-22T08:11:00.674Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    account:
+      id:
+        $var: $.input.filter.companyId
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    email:
+      $var: $.input.filter.primaryEmail
+    telephones:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          type:
+            $var: $.item.type
+          number:
+            $var: $.item.value
+    time_zone:
+      $var: $.input.filter.timezone
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

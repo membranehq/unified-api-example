@@ -1,0 +1,133 @@
+id: 68a82654e426fdf8cbab8752
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: fc69fd01-4534-4e5b-b4db-0279edfbbc80
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 68a820cb9fc7b352ffc945af
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85d9
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  created_by:
+    $var: $.createdBy
+  date_created:
+    $var: $.createdTime
+  date_updated:
+    $var: $.updatedTime
+  address_line1:
+    $var: $.primaryAddress.street
+  city:
+    $var: $.primaryAddress.city
+  state_text:
+    $var: $.primaryAddress.state
+  zip:
+    $var: $.primaryAddress.zip
+  country_name:
+    $var: $.primaryAddress.country
+  source_name:
+    $var: $.source
+  email:
+    $var: $.primaryEmail
+importValue:
+  id:
+    $var: $.jnid
+  fullName:
+    $var: $.display_name
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.mobile_phone
+  companyName:
+    $var: $.company
+  source:
+    $var: $.source_name
+  createdBy:
+    $var: $.created_by
+  primaryAddress:
+    street:
+      $concat:
+        values:
+          - $var: $.address_line1
+          - $var: $.address_line2
+        delimiter: ' '
+    city:
+      $var: $.city
+    state:
+      $var: $.state_text
+    country:
+      $var: $.country_name
+    zip:
+      $var: $.zip
+    full:
+      $concat:
+        values:
+          - $concat:
+              values:
+                - $var: $.address_line1
+                - $var: $.address_line2
+              delimiter: ' '
+          - $var: $.city
+          - $var: $.state_text
+          - $var: $.zip
+          - $var: $.country_name
+        delimiter: ', '
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.mobile_phone
+  addresses:
+    - value:
+        street:
+          $concat:
+            values:
+              - $var: $.address_line1
+              - $var: $.address_line2
+            delimiter: ' '
+        city:
+          $var: $.city
+        state:
+          $var: $.state_text
+        country:
+          $var: $.country_name
+        zip:
+          $var: $.zip
+integration:
+  id: 68a820cb9fc7b352ffc945af
+  name: Jobnimbus
+  key: jobnimbus
+  uuid: 21962f75-6a23-44f3-8b4e-0ea3ee8fee4b
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.357Z'
+  updatedAt: '2025-08-22T07:48:28.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/jobnimbus/asset-d720393c-e369-41bc-9de8-944e634b1a01.png
+  connectorId: 66f55199229f31ff2197356d
+  connectorVersion: 1.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 54
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

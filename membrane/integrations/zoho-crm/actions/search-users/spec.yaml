@@ -1,0 +1,55 @@
+id: 68a8260e678af1d0cf6ec233
+name: Search Users
+key: search-users
+uuid: c19d2bfb-950c-49b3-8ed7-2f06074559c1
+state: READY
+errors: []
+revision: 2156cd63-c8f9-4988-8775-8beaeb666b0b
+createdAt: '2025-08-22T08:10:59.883Z'
+updatedAt: '2025-08-22T08:10:59.883Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a8260e678af1d0cf6ebf07
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 07803f64-c623-49af-aee4-e7ae3e068432
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

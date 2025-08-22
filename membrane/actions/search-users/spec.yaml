@@ -1,0 +1,28 @@
+id: 68a8260e678af1d0cf6ebf07
+name: Search Users
+key: search-users
+uuid: c19d2bfb-950c-49b3-8ed7-2f06074559c1
+state: READY
+errors: []
+revision: 07803f64-c623-49af-aee4-e7ae3e068432
+createdAt: '2025-08-22T08:10:54.071Z'
+updatedAt: '2025-08-22T08:10:54.071Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

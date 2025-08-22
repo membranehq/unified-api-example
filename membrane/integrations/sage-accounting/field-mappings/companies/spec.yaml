@@ -1,0 +1,102 @@
+id: 689f2c0100905568ab2f69cb
+name: Companies
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 689f2c0000905568ab2f688b
+key: companies
+customized: false
+revision: 0ff2dfba-1503-46f4-92d4-4c02eca8c226
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f6701
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f688b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  currency_id:
+    $var: $.currency
+  main_address:
+    address_line_1:
+      $var: $.primaryAddress.street
+    city:
+      $var: $.primaryAddress.city
+    postal_code:
+      $var: $.primaryAddress.zip
+    country_id:
+      $var: $.primaryAddress.country
+    region:
+      $var: $.primaryAddress.state
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: name
+  currency:
+    $var: currency_id
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: main_address.address_line_1
+          - $var: main_address.address_line_2
+          - $var: main_address.city
+          - $var: main_address.region
+          - $var: main_address.postal_code
+          - $var: main_address.country.id
+        delimiter: ' '
+    street:
+      $var: main_address.address_line_1
+    city:
+      $var: main_address.city
+    state:
+      $var: main_address.region
+    country:
+      $var: main_address.country.id
+    zip:
+      $var: main_address.postal_code
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

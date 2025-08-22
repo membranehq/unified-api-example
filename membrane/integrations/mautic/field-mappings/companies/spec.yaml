@@ -1,0 +1,106 @@
+id: 689f2c0100905568ab2f69ed
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: f12c9a0d-f2c2-4582-af00-0567551c41b1
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f6703
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f68a3
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  fields:
+    all:
+      companywebsite:
+        $var: $.websiteUrl
+      companycountry:
+        $var: $.primaryAddress.country
+      companyzipcode:
+        $var: $.primaryAddress.zip
+      companystate:
+        $var: $.primaryAddress.state
+      companycity:
+        $var: $.primaryAddress.city
+      companyphone:
+        $var: $.primaryPhone
+      companyname:
+        $var: $.name
+      companynumber_of_employees:
+        $var: $.numberOfEmployees
+      companydescription:
+        $var: $.description
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.fields.all.companyname
+  websiteUrl:
+    $var: $.fields.all.companywebsite
+  primaryPhone:
+    $var: $.fields.all.companyphone
+  description:
+    $var: $.fields.all.companydescription
+  primaryAddress:
+    type: ''
+    street:
+      $var: $.fields.all.companyaddress1
+    city:
+      $var: $.fields.all.companycity
+    state:
+      $var: $.fields.all.companystate
+    country:
+      $var: $.fields.all.companycountry
+    zip:
+      $var: $.fields.all.companyzipcode
+    full:
+      $concat:
+        values:
+          - $var: $.fields.all.companyaddress1
+          - $var: $.fields.all.companycity
+          - $var: $.fields.all.companystate
+          - $var: $.fields.all.companyzipcode
+          - $var: $.fields.all.companycountry
+        delimiter: ', '
+  numberOfEmployees:
+    $var: $.fields.all.companynumber_of_employees
+  createdTime:
+    $var: $.dateAdded
+  createdBy:
+    $var: $.createdBy
+  updatedTime:
+    $var: $.dateModified
+  updatedBy:
+    $var: $.modifiedBy
+integration:
+  id: 689f2bf000905568ab2f6703
+  name: Mautic
+  key: mautic
+  uuid: 235cbf28-b7ea-4fcd-887b-fdaa5f7881ab
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.276Z'
+  updatedAt: '2025-08-15T12:45:43.321Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/mautic/asset-fd3948f3-5895-4ed2-9818-3c090ad28ecf.png
+  connectorId: 667c71df7d4a85fdc94a1dfa
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 108
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

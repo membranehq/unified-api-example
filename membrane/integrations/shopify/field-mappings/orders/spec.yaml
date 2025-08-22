@@ -1,0 +1,131 @@
+id: 68a84f067702482264c62e05
+name: Orders
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c85
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a84f057702482264c62d6d
+key: orders
+customized: false
+revision: 248c78ed-f1ae-49c6-adbb-d6f866ce1405
+universalFieldMappingId: 68a84f067702482264c62dd3
+universalFieldMappingRevision: 354e01b1-c9b7-4a5d-92da-12bbe82fa146
+integrationId: 68a84efe7702482264c62c85
+dataSourceKey: orders
+dataSourceId: 68a84f057702482264c62d6d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  note:
+    $var: $.notes
+  customer:
+    id:
+      $var: $.customerId
+  currency:
+    $var: $.currency
+  fulfillment_status:
+    $var: $.fullFillmentStatus
+  financial_status:
+    $var: $.paymentStatus
+  billing_address:
+    address1:
+      $var: $.billingAddress.street
+    city:
+      $var: $.billingAddress.city
+    province:
+      $var: $.billingAddress.state
+    country:
+      $var: $.billingAddress.country
+    zip:
+      $var: $.billingAddress.zip
+  shipping_address:
+    address1:
+      $var: $.shippingAddress.street
+    city:
+      $var: $.shippingAddress.city
+    province:
+      $var: $.shippingAddress.state
+    country:
+      $var: $.shippingAddress.country
+    zip:
+      $var: $.shippingAddress.zip
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  notes:
+    $var: $.note
+  customerId:
+    $var: $.customer.id
+  currency:
+    $var: $.currencyCode
+  fullFillmentStatus:
+    $var: $.displayFulfillmentStatus
+  paymentStatus:
+    $var: $.displayFinancialStatus
+  billingAddress:
+    street:
+      $var: $.billingAddress.address1
+    city:
+      $var: $.billingAddress.city
+    state:
+      $var: $.billingAddress.province
+    country:
+      $var: $.billingAddress.country
+    zip:
+      $var: $.billingAddress.zip
+  shippingAddress:
+    street:
+      $var: $.shippingAddress.address1
+    city:
+      $var: $.shippingAddress.city
+    state:
+      $var: $.shippingAddress.province
+    country:
+      $var: $.shippingAddress.country
+    zip:
+      $var: $.shippingAddress.zip
+integration:
+  id: 68a84efe7702482264c62c85
+  name: Shopify
+  key: shopify
+  uuid: 605b2fc9-0180-4a14-9917-19fe62a96c32
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.336Z'
+  updatedAt: '2025-08-22T11:05:38.392Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/shopify/logo.png
+  connectorId: 6466785860f981f3ce696916
+  connectorVersion: 2.0.4
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

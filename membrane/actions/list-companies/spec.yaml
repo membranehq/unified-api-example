@@ -1,0 +1,30 @@
+id: 689f2c0400905568ab2f6b47
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+createdAt: '2025-08-15T12:45:56.199Z'
+updatedAt: '2025-08-15T12:45:56.199Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

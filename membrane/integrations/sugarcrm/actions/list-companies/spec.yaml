@@ -1,0 +1,92 @@
+id: 689f2c0400905568ab2f6df1
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: aac75bfa-c443-4c88-bc36-ba0e5af24796
+createdAt: '2025-08-15T12:46:03.705Z'
+updatedAt: '2025-08-15T12:46:03.705Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    date_entered:
+      $var: $.input.filter.createdTime
+    date_modified:
+      $var: $.input.filter.updatedTime
+    modified_user_id:
+      $var: $.input.filter.updatedBy
+    created_by:
+      $var: $.input.filter.createdBy
+    description:
+      $var: $.input.filter.description
+    industry:
+      $var: $.input.filter.industry
+    billing_address_street:
+      $var: $.input.filter.primaryAddress.street
+    billing_address_city:
+      $var: $.input.filter.primaryAddress.city
+    billing_address_state:
+      $var: $.input.filter.primaryAddress.state
+    billing_address_postalcode:
+      $var: $.input.filter.primaryAddress.zip
+    billing_address_country:
+      $var: $.input.filter.primaryAddress.country
+    phone_office:
+      $var: $.input.filter.primaryPhone
+    website:
+      $var: $.input.filter.websiteUrl
+    employees:
+      $var: $.input.filter.numberOfEmployees
+    assigned_user_id:
+      $var: $.input.filter.ownerId
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

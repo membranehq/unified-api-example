@@ -1,0 +1,72 @@
+id: 68a820ce9fc7b352ffc947e6
+name: List Jobs
+key: list-jobs
+uuid: 9c8eae4e-285e-4803-9fdb-e4d4ca730535
+state: READY
+errors: []
+revision: 3992a6b4-6935-45bf-b661-67fd3cd5c117
+createdAt: '2025-08-22T07:48:31.290Z'
+updatedAt: '2025-08-22T07:48:31.290Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945af
+parentId: 68a820ce9fc7b352ffc946f2
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    jnid:
+      $var: $.input.filter.id
+    date_created:
+      $var: $.input.filter.createdTime
+    date_updated:
+      $var: $.input.filter.updatedTime
+    status:
+      $var: $.input.filter.status
+    number:
+      $var: $.input.filter.code
+    name:
+      $var: $.input.filter.name
+isCustomized: false
+parentRevision: 7d76b55e-9a20-4f69-a17b-dd6684d26903
+integration:
+  id: 68a820cb9fc7b352ffc945af
+  name: Jobnimbus
+  key: jobnimbus
+  uuid: 21962f75-6a23-44f3-8b4e-0ea3ee8fee4b
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.357Z'
+  updatedAt: '2025-08-22T07:48:28.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/jobnimbus/asset-d720393c-e369-41bc-9de8-944e634b1a01.png
+  connectorId: 66f55199229f31ff2197356d
+  connectorVersion: 1.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 54
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

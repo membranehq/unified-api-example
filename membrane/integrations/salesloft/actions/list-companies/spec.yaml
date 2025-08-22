@@ -1,0 +1,92 @@
+id: 689f2c0400905568ab2f6dfb
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 9a790e50-86b9-4521-ab61-ea1784023b89
+createdAt: '2025-08-15T12:46:03.707Z'
+updatedAt: '2025-08-15T12:46:03.707Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    industry:
+      $var: $.input.filter.industry
+    size:
+      $var: $.input.filter.numberOfEmployees
+    phone:
+      $var: $.input.filter.primaryPhone
+    website:
+      $var: $.input.filter.websiteUrl
+    street:
+      $var: $.input.filter.primaryAddress.street
+    city:
+      $var: $.input.filter.primaryAddress.city
+    state:
+      $var: $.input.filter.primaryAddress.state
+    postal_code:
+      $var: $.input.filter.primaryAddress.zip
+    country:
+      $var: $.input.filter.primaryAddress.country
+    owner_id:
+      $var: $.input.filter.ownerId
+    creator_id:
+      $var: $.input.filter.createdBy
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    last_contacted_at:
+      $var: $.input.filter.lastActivityTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

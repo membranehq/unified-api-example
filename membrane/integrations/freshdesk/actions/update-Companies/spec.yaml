@@ -1,0 +1,57 @@
+id: 689f2c0400905568ab2f6ed1
+name: Update Company
+key: update-Companies
+state: READY
+errors: []
+revision: 805aa70c-0e9b-4020-b820-1857ecb8df9b
+createdAt: '2025-08-15T12:46:03.583Z'
+updatedAt: '2025-08-15T12:46:03.583Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 689f2c0400905568ab2f6b49
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 7800d79a-d9ea-4b11-bbaf-565bf587f91f
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

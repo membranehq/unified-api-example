@@ -1,0 +1,55 @@
+id: 68a820ce9fc7b352ffc947aa
+name: Create Job
+key: create-Jobs
+uuid: 834f5031-b5c6-4d04-91b6-a64614acd04d
+state: READY
+errors: []
+revision: 3cc47e6f-c43b-4329-a5d9-2e4f68e6b1b0
+createdAt: '2025-08-22T07:48:30.970Z'
+updatedAt: '2025-08-22T07:48:30.970Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945af
+parentId: 68a820ce9fc7b352ffc946ec
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: jobs
+  fieldMapping:
+    key: jobs
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: aacf81e0-a6f0-4a15-85be-ad6e9ca64319
+integration:
+  id: 68a820cb9fc7b352ffc945af
+  name: Jobnimbus
+  key: jobnimbus
+  uuid: 21962f75-6a23-44f3-8b4e-0ea3ee8fee4b
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.357Z'
+  updatedAt: '2025-08-22T07:48:28.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/jobnimbus/asset-d720393c-e369-41bc-9de8-944e634b1a01.png
+  connectorId: 66f55199229f31ff2197356d
+  connectorVersion: 1.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 54
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

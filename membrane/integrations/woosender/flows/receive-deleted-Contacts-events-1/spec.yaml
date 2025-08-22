@@ -1,0 +1,51 @@
+id: 68a83a0d21039ff70f89ccdb
+name: Receive Deleted Contact Events (1)
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Contacts-events-1
+revision: f4ba4135-9006-4eb1-87a1-790017ad9e9e
+universalFlowId: 68a83a0921039ff70f89c7d4
+integrationId: 68a839f321039ff70f89b5d5
+universalFlowRevision: adc45729-338e-426c-a077-cd4dc0291e26
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Contacts-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Contact Deleted Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a839f321039ff70f89b5d5
+  name: Woosender
+  key: woosender
+  uuid: 167b9214-bd8c-4879-98a0-18983e22adcf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.287Z'
+  updatedAt: '2025-08-22T09:35:48.168Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/woosender/asset-73957177-ee9b-4f8d-9ae3-ae4b928a032b.png
+  connectorId: 66cc82dffb9b04754806fab5
+  connectorVersion: 1.0.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 7
+  hasData: true
+  dataCollectionsCount: 1
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,75 @@
+id: 68a839f721039ff70f89b86c
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 783e7975-3235-4cbe-afe1-136d3d0c380e
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 68a839f321039ff70f89b5d5
+dataSourceKey: contacts
+dataSourceId: 68a839f621039ff70f89b6cc
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  full_name:
+    $var: $.fullName
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  email:
+    $var: $.primaryEmail
+  phone_number:
+    $var: $.primaryPhone
+  company:
+    $var: $.companyName
+importValue:
+  fullName:
+    $var: $.FullName
+  firstName:
+    $var: $.FirstName
+  lastName:
+    $var: $.LastName
+  primaryEmail:
+    $var: $.Email
+  primaryPhone:
+    $var: $.PhoneNumber
+  companyName:
+    $var: $.CampaignName
+  emails:
+    - value:
+        $var: $.Email
+  phones:
+    - value:
+        $var: $.PhoneNumber
+integration:
+  id: 68a839f321039ff70f89b5d5
+  name: Woosender
+  key: woosender
+  uuid: 167b9214-bd8c-4879-98a0-18983e22adcf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.287Z'
+  updatedAt: '2025-08-22T09:35:48.168Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/woosender/asset-73957177-ee9b-4f8d-9ae3-ae4b928a032b.png
+  connectorId: 66cc82dffb9b04754806fab5
+  connectorVersion: 1.0.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 7
+  hasData: true
+  dataCollectionsCount: 1
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,102 @@
+id: 68a839f721039ff70f89b860
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: ccf25c2b-d22c-4e9f-a648-4a7a86d42450
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 68a839f321039ff70f89b5bb
+dataSourceKey: contacts
+dataSourceId: 68a839f621039ff70f89b6c1
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  city:
+    $var: $.primaryAddress.city
+  country:
+    $var: $.primaryAddress.country
+  email:
+    $var: $.primaryEmail
+  id:
+    $var: $.id
+  name:
+    $var: $.fullName
+  postal_code:
+    $var: $.primaryAddress.zip
+  region:
+    $var: $.primaryAddress.state
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  primaryEmail:
+    $var: $.email
+  primaryAddress:
+    city:
+      $var: $.city
+    state:
+      $var: $.region
+    country:
+      $var: $.country
+    zip:
+      $var: $.area_code
+    full:
+      $concat:
+        values:
+          - $var: $.city
+          - $var: $.region
+          - $var: $.area_code
+          - $var: $.country
+        delimiter: ', '
+  lastActivityTime:
+    $var: $.last_followup_sent_at
+  firstName:
+    $firstName:
+      $var: $.name
+  lastName:
+    $lastName:
+      $var: $.name
+  emails:
+    - value:
+        $var: $.email
+  addresses:
+    - value:
+        city:
+          $var: $.city
+        state:
+          $var: $.region
+        country:
+          $var: $.country
+        zip:
+          $var: $.area_code
+integration:
+  id: 68a839f321039ff70f89b5bb
+  name: AWeber
+  key: aweber
+  uuid: 604de3e0-099f-4461-9a54-c788d5ebd98d
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.273Z'
+  updatedAt: '2025-08-22T09:35:48.952Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/aweber-connector/logo.png
+  connectorId: 64aef6f2d2605720d24febc0
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 60
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

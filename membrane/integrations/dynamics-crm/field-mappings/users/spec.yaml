@@ -1,0 +1,84 @@
+id: 68a8260b678af1d0cf6ebd71
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 376ac10e-08c7-40dd-92df-914a46deca6e
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66d3
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc0b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  createdby:
+    $var: $.createdBy
+  createdon:
+    $var: $.createdTime
+  firstname:
+    $var: $.firstName
+  fullname:
+    $var: $.fullName
+  internalemailaddress:
+    $var: $.primaryEmail
+  lastname:
+    $var: $.lastName
+  modifiedby:
+    $var: $.updatedBy
+  modifiedon:
+    $var: $.updatedTime
+  nickname:
+    $var: $.userName
+importValue:
+  fullName:
+    $var: $.fullname
+  firstName:
+    $var: $.firstname
+  lastName:
+    $var: $.lastname
+  userName:
+    $var: $.nickname
+  primaryEmail:
+    $var: $.internalemailaddress
+  createdTime:
+    $var: $.createdon
+  createdBy:
+    $var: $.createdby
+  updatedTime:
+    $var: $.modifiedon
+  updatedBy:
+    $var: $.modifiedby
+  emails:
+    - value:
+        $var: $.internalemailaddress
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

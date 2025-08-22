@@ -1,0 +1,96 @@
+id: 68a8260b678af1d0cf6ebe18
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 8a2676d1-0448-408a-b225-f41d3debeb70
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66f0
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc2c
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  alias:
+    $var: $.userName
+  custom_role_id:
+    $var: $.roleId
+  email:
+    $var: $.primaryEmail
+  name:
+    $var: $.fullName
+  phone:
+    $var: $.primaryPhone
+  remote_photo_url:
+    $var: $.imageUrl
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: name
+  userName:
+    $var: alias
+  primaryEmail:
+    $var: email
+  primaryPhone:
+    $var: phone
+  companyId:
+    $var: organization_id
+  imageUrl:
+    $var: remote_photo_url
+  timezone:
+    $var: time_zone
+  roleId:
+    $var: custom_role_id
+  isActive:
+    $var: active
+  createdTime:
+    $var: created_at
+  createdBy:
+    $var: created_at
+  updatedTime:
+    $var: updated_at
+  updatedBy:
+    $var: updated_at
+  firstName:
+    $firstName:
+      $var: name
+  lastName:
+    $lastName:
+      $var: name
+  emails:
+    - value:
+        $var: email
+  phones:
+    - value:
+        $var: phone
+integration:
+  id: 689f2bf000905568ab2f66f0
+  name: Zendesk
+  key: zendesk
+  uuid: 77c714e0-e2a5-4333-ade5-02cb0e398340
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.267Z'
+  updatedAt: '2025-08-15T12:45:46.486Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zendesk/logo.png
+  connectorId: 643e957fbadd839bce5208e3
+  connectorVersion: 1.5.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 393
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 60
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

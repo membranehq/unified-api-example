@@ -1,0 +1,15 @@
+id: 68a82654e426fdf8cbab86d9
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: d88662d3-ea32-4775-b222-45e5d4037a88
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab8566
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

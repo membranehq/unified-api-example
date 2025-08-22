@@ -1,0 +1,179 @@
+id: 689f2c0100905568ab2f69b6
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 272413d3-744b-46d9-ac26-2a89c0de884a
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66d8
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6873
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  Owner:
+    id:
+      $var: $.ownerId
+  Account_Name:
+    $var: $.name
+  Phone:
+    $var: $.primaryPhone
+  Website:
+    $var: $.websiteUrl
+  Industry:
+    $var: $.industry
+  Employees:
+    $var: $.numberOfEmployees
+  Created_By:
+    id:
+      $var: $.createdBy
+  Modified_By:
+    id:
+      $var: $.updatedBy
+  Created_Time:
+    $var: $.createdTime
+  Modified_Time:
+    $var: $.updatedTime
+  Last_Activity_Time:
+    $var: $.lastActivityTime
+  Billing_Street:
+    $var: $.primaryAddress.street
+  Shipping_Street:
+    $var: $.addresses[0].street
+  Billing_City:
+    $var: $.primaryAddress.city
+  Shipping_City:
+    $var: $.addresses[0].city
+  Billing_State:
+    $var: $.primaryAddress.state
+  Shipping_State:
+    $var: $.addresses[0].state
+  Billing_Code:
+    $var: $.primaryAddress.zip
+  Shipping_Code:
+    $var: $.addresses[0].zip
+  Billing_Country:
+    $var: $.primaryAddress.country
+  Shipping_Country:
+    $var: $.addresses[0].country
+  Description:
+    $var: $.description
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.Account_Name
+  description:
+    $var: $.Description
+  websiteUrl:
+    $var: $.Website
+  ownerId:
+    $var: $.Owner.id
+  primaryPhone:
+    $var: $.Phone
+  phones:
+    - value:
+        $var: $.Phone
+  industry:
+    $var: $.Industry
+  numberOfEmployees:
+    $var: $.Employees
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.Billing_Street
+          - $var: $.Billing_City
+          - $var: $.Billing_State
+          - $var: $.Billing_Country
+          - $var: $.Billing_Code
+        delimiter: ', '
+    street:
+      $var: $.Billing_Street
+    city:
+      $var: $.Billing_City
+    state:
+      $var: $.Billing_State
+    country:
+      $var: $.Billing_Country
+    zip:
+      $var: $.Billing_Code
+  addresses:
+    - full:
+        $concat:
+          values:
+            - $var: $.Shipping_Street
+            - $var: $.Shipping_City
+            - $var: $.Shipping_State
+            - $var: $.Shipping_Country
+            - $var: $.Shipping_Code
+          delimiter: ', '
+      street:
+        $var: $.Shipping_Street
+      city:
+        $var: $.Shipping_City
+      state:
+        $var: $.Shipping_State
+      country:
+        $var: $.Shipping_Country
+      zip:
+        $var: $.Shipping_Code
+    - full:
+        $concat:
+          values:
+            - $var: $.Billing_Street
+            - $var: $.Billing_City
+            - $var: $.Billing_State
+            - $var: $.Billing_Country
+            - $var: $.Billing_Code
+          delimiter: ', '
+      street:
+        $var: $.Billing_Street
+      city:
+        $var: $.Billing_City
+      state:
+        $var: $.Billing_State
+      country:
+        $var: $.Billing_Country
+      zip:
+        $var: $.Billing_Code
+  createdTime:
+    $var: $.Created_Time
+  createdBy:
+    $var: $.Created_By.id
+  updatedTime:
+    $var: $.Modified_Time
+  updatedBy:
+    $var: $.Modified_By.id
+  lastActivityTime:
+    $var: $.Last_Activity_Time
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

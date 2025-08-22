@@ -1,0 +1,177 @@
+id: 68a82654e426fdf8cbab8736
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 48c13322-66ba-471d-ad89-02cb40f925ba
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66d8
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85a9
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  Owner:
+    $var: $.ownerId
+  Lead_Source:
+    $var: $.source
+  First_Name:
+    $var: $.firstName
+  Last_Name:
+    $var: $.lastName
+  Full_Name:
+    $var: $.fullName
+  Account_Name:
+    $var: $.companyId
+  Email:
+    $var: $.primaryEmail
+  Title:
+    $var: $.jobTitle
+  Phone:
+    $var: $.primaryPhone
+  Created_By:
+    $var: $.createdBy
+  Modified_By:
+    $var: $.updatedBy
+  Created_Time:
+    $var: $.createdTime
+  Modified_Time:
+    $var: $.updatedTime
+  Last_Activity_Time:
+    $var: $.lastActivityTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.Full_Name
+  firstName:
+    $var: $.First_Name
+  lastName:
+    $var: $.Last_Name
+  primaryEmail:
+    $var: $.Email
+  emails:
+    - value:
+        $var: $.Email
+    - value:
+        $var: $.Secondary_Email
+  primaryPhone:
+    $var: $.Phone
+  phones:
+    - value:
+        $var: $.Phone
+    - value:
+        $var: $.Mobile
+    - value:
+        $var: $.Home_Phone
+    - value:
+        $var: $.Other_Phone
+  primaryAddress:
+    street:
+      $var: $.Mailing_Street
+    city:
+      $var: $.Mailing_City
+    state:
+      $var: $.Mailing_State
+    country:
+      $var: $.Mailing_Country
+    zip:
+      $var: $.Mailing_Zip
+    full:
+      $concat:
+        values:
+          - $var: $.Mailing_Street
+          - $var: $.Mailing_City
+          - $var: $.Mailing_State
+          - $var: $.Mailing_Country
+          - $var: $.Mailing_Zip
+        delimiter: ', '
+  companyId:
+    $var: $.Account_Name
+  ownerId:
+    $var: $.Owner
+  jobTitle:
+    $var: $.Title
+  source:
+    $var: $.Lead_Source
+  createdTime:
+    $var: $.Created_Time
+  createdBy:
+    $var: $.Created_By
+  updatedTime:
+    $var: $.Modified_Time
+  updatedBy:
+    $var: $.Modified_By
+  lastActivityTime:
+    $var: $.Last_Activity_Time
+  addresses:
+    - street:
+        $var: $.Mailing_Street
+      city:
+        $var: $.Mailing_City
+      state:
+        $var: $.Mailing_State
+      country:
+        $var: $.Mailing_Country
+      zip:
+        $var: $.Mailing_Zip
+      full:
+        $concat:
+          values:
+            - $var: $.Mailing_Street
+            - $var: $.Mailing_City
+            - $var: $.Mailing_State
+            - $var: $.Mailing_Country
+            - $var: $.Mailing_Zip
+          delimiter: ', '
+    - street:
+        $var: $.Other_Street
+      city:
+        $var: $.Other_City
+      state:
+        $var: $.Other_State
+      country:
+        $var: $.Other_Country
+      zip:
+        $var: $.Other_Zip
+      full:
+        $concat:
+          values:
+            - $var: $.Other_Street
+            - $var: $.Other_City
+            - $var: $.Other_State
+            - $var: $.Other_Country
+            - $var: $.Other_Zip
+          delimiter: ', '
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

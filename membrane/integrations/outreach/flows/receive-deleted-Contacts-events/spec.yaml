@@ -1,0 +1,50 @@
+id: 68a82665e426fdf8cbab973b
+name: Receive Deleted Contact Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Contacts-events
+revision: cac42461-9110-4ccf-ae5d-0c4ff3727ebc
+universalFlowId: 68a82660e426fdf8cbab925b
+integrationId: 689f2bf000905568ab2f66e4
+universalFlowRevision: cdc5160e-4248-4cce-82b9-feb411ce2d90
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Contacts-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Contact Deleted Trigger
+    config:
+      dataSource:
+        key: contacts
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

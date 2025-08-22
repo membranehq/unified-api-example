@@ -1,0 +1,39 @@
+id: 68a84f057702482264c62d62
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+revision: 085ec3ce-b287-4488-81e0-9e5fddf02a2a
+integrationId: 68a84efe7702482264c62c83
+customized: false
+universalDataSourceId: 68a84f057702482264c62d2a
+universalDataSourceRevision: d3d9c334-f70b-4f3f-b27a-5f10df5b1179
+collectionKey: orders
+udm: orders
+defaultPath: /data/orders
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

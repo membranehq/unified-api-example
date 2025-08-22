@@ -1,0 +1,91 @@
+id: 68a84f067702482264c62dfe
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+customized: false
+revision: 85631329-1d82-4d5e-b135-924b6524019a
+universalFieldMappingId: 68a84f067702482264c62dd3
+universalFieldMappingRevision: 354e01b1-c9b7-4a5d-92da-12bbe82fa146
+integrationId: 689f2bf000905568ab2f66da
+dataSourceKey: orders
+dataSourceId: 68a84f057702482264c62d64
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  LineItems:
+    $iterate:
+      source:
+        $var: $.lineItems
+      item:
+        Quantity:
+          $var: $.item.quantity
+        UnitAmount:
+          $var: $.item.unitPrice
+        Item:
+          Code:
+            $var: $.item.sku
+          Name:
+            $var: $.item.name
+        LineAmount:
+          $var: $.item.totalAmount
+  CurrencyCode:
+    $var: $.currency
+  Status:
+    $var: $.status
+importValue:
+  id:
+    $var: $.PurchaseOrderID
+  name:
+    $var: $.PurchaseOrderNumber
+  status:
+    $var: $.Status
+  currency:
+    $var: $.CurrencyCode
+  totalAmount:
+    $var: $.Total
+  lineItems:
+    $iterate:
+      source:
+        $var: $.LineItems
+      item:
+        name:
+          $var: $.item.Item.Name
+        sku:
+          $var: $.item.ItemCode
+        quantity:
+          $var: $.item.Quantity
+        totalAmount:
+          $var: $.item.LineAmount
+        unitPrice:
+          $var: $.item.UnitAmount
+  updatedTime:
+    $var: $.UpdatedDateUTC
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,50 @@
+id: 689f2c0400905568ab2f6db7
+name: Find Company By Id
+key: find-Companies-by-id
+state: READY
+errors: []
+revision: 31c2f60e-4b6b-40e9-812c-b48be5e3c47a
+createdAt: '2025-08-15T12:46:03.377Z'
+updatedAt: '2025-08-15T12:46:03.377Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 689f2c0400905568ab2f6b41
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: a9d3b092-4fdf-4709-93f5-46759fbcea79
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

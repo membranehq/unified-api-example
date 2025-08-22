@@ -1,0 +1,55 @@
+id: 68a82658e426fdf8cbab8b68
+name: Search Contacts
+key: search-contacts
+uuid: b1c4910e-e855-4b55-8e96-3898d0d50b1e
+state: READY
+errors: []
+revision: 589ea6f5-34cc-4da7-bc88-f08dc3dffb26
+createdAt: '2025-08-22T08:12:14.294Z'
+updatedAt: '2025-08-22T08:12:14.294Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a82657e426fdf8cbab88c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 6497440a-7666-4fd8-99d9-91ec2be51028
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

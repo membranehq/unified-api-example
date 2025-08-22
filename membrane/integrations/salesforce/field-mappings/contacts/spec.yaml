@@ -1,0 +1,185 @@
+id: 68a82654e426fdf8cbab871b
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 2c2cc801-56aa-4269-a8e9-8d4263df88b8
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66d1
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85a4
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  AccountId:
+    $var: $.companyId
+  LastName:
+    $var: $.lastName
+  FirstName:
+    $var: $.firstName
+  MailingStreet:
+    $var: $.primaryAddress.street
+  MailingCity:
+    $var: $.primaryAddress.city
+  MailingState:
+    $var: $.primaryAddress.state
+  MailingPostalCode:
+    $var: $.primaryAddress.zip
+  MailingCountry:
+    $var: $.primaryAddress.country
+  Phone:
+    $var: $.primaryPhone
+  MobilePhone:
+    $var: $.phones[1].value
+  HomePhone:
+    $var: $.phones[2].value
+  OtherPhone:
+    $var: $.phones[3].value
+  Email:
+    $var: $.primaryEmail
+  Title:
+    $var: $.jobTitle
+  LeadSource:
+    $var: $.source
+  OwnerId:
+    $var: $.ownerId
+  CreatedDate:
+    $var: $.createdTime
+  CreatedById:
+    $var: $.createdBy
+  LastModifiedDate:
+    $var: $.updatedTime
+  LastModifiedById:
+    $var: $.updatedBy
+  LastActivityDate:
+    $var: $.lastActivityTime
+importValue:
+  id:
+    $var: $.Id
+  fullName:
+    $var: $.Name
+  firstName:
+    $var: $.FirstName
+  lastName:
+    $var: $.LastName
+  companyId:
+    $var: $.AccountId
+  ownerId:
+    $var: $.OwnerId
+  primaryEmail:
+    $var: $.Email
+  primaryPhone:
+    $var: $.Phone
+  phones:
+    - value:
+        $var: $.Phone
+    - value:
+        $var: $.MobilePhone
+    - value:
+        $var: $.HomePhone
+    - value:
+        $var: $.OtherPhone
+  source:
+    $var: $.LeadSource
+  jobTitle:
+    $var: $.Title
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.MailingStreet
+          - $var: $.MailingCity
+          - $var: $.MailingState
+          - $var: $.MailingPostalCode
+          - $var: $.MailingCountry
+        delimiter: ' '
+    street:
+      $var: $.MailingStreet
+    city:
+      $var: $.MailingCity
+    state:
+      $var: $.MailingState
+    country:
+      $var: $.MailingCountry
+    zip:
+      $var: $.MailingPostalCode
+  addresses:
+    - full:
+        $concat:
+          values:
+            - $var: $.MailingStreet
+            - $var: $.MailingCity
+            - $var: $.MailingState
+            - $var: $.MailingPostalCode
+            - $var: $.MailingCountry
+          delimiter: ' '
+      street:
+        $var: $.MailingStreet
+      city:
+        $var: $.MailingCity
+      state:
+        $var: $.MailingState
+      country:
+        $var: $.MailingCountry
+      zip:
+        $var: $.MailingPostalCode
+    - full:
+        $concat:
+          values:
+            - $var: $.OtherStreet
+            - $var: $.OtherCity
+            - $var: $.OtherState
+            - $var: $.OtherPostalCode
+            - $var: $.OtherCountry
+          delimiter: ' '
+      street:
+        $var: $.OtherStreet
+      city:
+        $var: $.OtherCity
+      country:
+        $var: $.OtherCountry
+      zip:
+        $var: $.OtherPostalCode
+  createdTime:
+    $var: $.CreatedDate
+  createdBy:
+    $var: $.CreatedById
+  updatedTime:
+    $var: $.LastModifiedDate
+  updatedBy:
+    $var: $.LastModifiedById
+  lastActivityTime:
+    $var: $.LastActivityDate
+  emails:
+    - value:
+        $var: $.Email
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

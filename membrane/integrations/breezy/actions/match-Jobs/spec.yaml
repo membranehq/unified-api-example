@@ -1,0 +1,52 @@
+id: 68a820ce9fc7b352ffc947fc
+name: Match Job
+key: match-Jobs
+uuid: 549396f6-e075-4ad8-904d-2026b6051da9
+state: READY
+errors: []
+revision: 7710b975-f06e-459a-af1a-dbbb8f399d02
+createdAt: '2025-08-22T07:48:31.293Z'
+updatedAt: '2025-08-22T07:48:31.293Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ff
+parentId: 68a820ce9fc7b352ffc946f6
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 6cc97011-3f12-4164-a779-3786e4f0ddb3
+integration:
+  id: 689f2bf000905568ab2f66ff
+  name: Breezy HR
+  key: breezy
+  uuid: 07230773-02e2-487f-b133-9e5d944aa495
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:45.073Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/breezy/logo.png
+  connectorId: 643e81f7badd839bce463919
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 5
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

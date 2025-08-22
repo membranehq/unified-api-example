@@ -1,0 +1,38 @@
+id: 68a84f057702482264c62d7d
+name: Orders
+isDeactivated: false
+state: READY
+errors: []
+key: orders
+revision: bac90b6c-1886-4883-b6dd-23839397a45a
+integrationId: 68a84efe7702482264c62c7d
+customized: false
+universalDataSourceId: 68a84f057702482264c62d2a
+universalDataSourceRevision: d3d9c334-f70b-4f3f-b27a-5f10df5b1179
+collectionKey: orders
+udm: orders
+defaultPath: /data/orders
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

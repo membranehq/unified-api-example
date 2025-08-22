@@ -1,0 +1,100 @@
+id: 68a8260b678af1d0cf6ebd79
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 8d387c9a-9e56-49e2-88fb-1ba4ea7e1845
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66d5
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebcb9
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  email:
+    $var: $.primaryEmail
+  phone:
+    $var: $.primaryPhone
+  is_disabled:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.isActive
+            is: false
+          value: true
+      default: false
+  pic:
+    $var: $.imageUrl
+  name:
+    $var: $.fullName
+  role_id:
+    $var: $.roleId
+  createdTime:
+    $var: $.createdTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.phone
+  imageUrl:
+    $var: $.pic
+  roleId:
+    $var: $.role_id
+  createdTime:
+    $var: $.createdTime
+  isActive:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.is_disabled
+            is: true
+          value: false
+      default: true
+  firstName:
+    $firstName:
+      $var: $.name
+  lastName:
+    $lastName:
+      $var: $.name
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.phone
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

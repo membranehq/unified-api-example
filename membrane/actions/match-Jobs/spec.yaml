@@ -1,0 +1,25 @@
+id: 68a820ce9fc7b352ffc946f6
+name: Match Job
+key: match-Jobs
+uuid: 549396f6-e075-4ad8-904d-2026b6051da9
+state: READY
+errors: []
+revision: 6cc97011-3f12-4164-a779-3786e4f0ddb3
+createdAt: '2025-08-22T07:48:30.142Z'
+updatedAt: '2025-08-22T07:48:30.142Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

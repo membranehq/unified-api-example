@@ -1,0 +1,69 @@
+id: 68a8260e678af1d0cf6ec221
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 0348fc0e-3064-43d4-b8f0-d348e624aee8
+createdAt: '2025-08-22T08:11:00.852Z'
+updatedAt: '2025-08-22T08:11:00.852Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6707
+parentId: 68a8260e678af1d0cf6ebf09
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    email:
+      $var: $.input.filter.primaryEmail
+    username:
+      $var: $.input.filter.userName
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 79e0222e-faa5-47c3-a040-535af88cff99
+integration:
+  id: 689f2bf000905568ab2f6707
+  name: Front
+  key: front
+  uuid: a3686d04-8658-4e23-8973-c0241caec2b0
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.282Z'
+  updatedAt: '2025-08-15T12:45:47.306Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/front/logo.png
+  connectorId: 64368c00986ed1caaddef4b3
+  connectorVersion: 1.3.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 162
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

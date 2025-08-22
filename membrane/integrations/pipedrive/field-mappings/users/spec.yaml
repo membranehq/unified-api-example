@@ -1,0 +1,96 @@
+id: 68a8260b678af1d0cf6ebda0
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 7b1ae19a-e782-4071-a552-fc47f6c60af5
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66e0
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc0d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.fullName
+  email:
+    $var: $.primaryEmail
+  phone:
+    $var: $.primaryPhone
+  timezone_name:
+    $var: $.timezone
+  icon_url:
+    $var: $.imageUrl
+  active_flag:
+    $var: $.isActive
+  role_id:
+    $var: $.roleId
+  created:
+    $var: $.createdTime
+  modified:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  firstName:
+    $firstName:
+      $var: $.name
+  lastName:
+    $lastName:
+      $var: $.name
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.phone
+  timezone:
+    $var: $.timezone_name
+  isActive:
+    $var: $.active_flag
+  roleId:
+    $var: $.role_id
+  createdTime:
+    $var: $.created
+  updatedTime:
+    $var: $.modified
+  imageUrl:
+    $var: $.icon_url
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.phone
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

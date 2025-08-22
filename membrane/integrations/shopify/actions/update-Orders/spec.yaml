@@ -1,0 +1,78 @@
+id: 68a84f077702482264c62fd1
+name: Update Order
+key: update-Orders
+uuid: 5610026c-431e-421b-9d2e-9fbeb0d3583d
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c85
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a84f057702482264c62d6d
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a84f067702482264c62e05
+revision: 5537dcf8-80c6-42ca-bd4f-d83196956b22
+createdAt: '2025-08-22T11:05:44.701Z'
+updatedAt: '2025-08-22T11:05:44.701Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c85
+parentId: 68a84f077702482264c62e91
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: orders
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: orders
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 80af9919-4d46-4aee-9136-d383f4645127
+integration:
+  id: 68a84efe7702482264c62c85
+  name: Shopify
+  key: shopify
+  uuid: 605b2fc9-0180-4a14-9917-19fe62a96c32
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.336Z'
+  updatedAt: '2025-08-22T11:05:38.392Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/shopify/logo.png
+  connectorId: 6466785860f981f3ce696916
+  connectorVersion: 2.0.4
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,153 @@
+id: 689f2c0100905568ab2f69e3
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 14d6ae6e-bef1-4e5c-8484-782cffbe3065
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66fb
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6899
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  url:
+    $var: $.websiteUrl
+  addresses:
+    $iterate:
+      locator: $.addresses
+      items:
+        address_1:
+          $var: $.addresses.$current.street
+        city:
+          $var: $.addresses.$current.city
+        state:
+          $var: $.addresses.$current.state
+        country:
+          $var: $.addresses.$current.country
+        zipcode:
+          $var: $.addresses.$current.zip
+      source:
+        $var: $.addresses
+      item:
+        city:
+          $var: $.item.city
+        state:
+          $var: $.item.state
+        zipcode:
+          $var: $.item.zip
+        country:
+          $var: $.item.country
+        address_1:
+          $var: $.item.street
+        label:
+          $var: $.item.type
+  updated_by:
+    $var: $.updatedBy
+  created_by:
+    $var: $.createdBy
+  date_created:
+    $var: $.createdTime
+  date_updated:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.url
+  description:
+    $var: $.description
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.addresses[0].address_1
+          - $var: $.addresses[0].address_2
+          - $var: $.addresses[0].city
+          - $var: $.addresses[0].state
+          - $var: $.addresses[0].zipcode
+          - $var: $.addresses[0].country
+        delimiter: ' '
+    street:
+      $var: $.addresses[0].address_1
+    city:
+      $var: $.addresses[0].city
+    state:
+      $var: $.addresses[0].state
+    country:
+      $var: $.addresses[0].country
+    zip:
+      $var: $.addresses[0].zipcode
+  addresses:
+    $iterate:
+      locator: $.addresses
+      items:
+        street:
+          $var: $.addresses.current.address_1
+        city:
+          $var: $.addresses.current.city
+        state:
+          $var: $.addresses.current.state
+        country:
+          $var: $.addresses.current.country
+        zip:
+          $var: $.addresses.current.zipcode
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.label
+        street:
+          $var: $.item.address_1
+        city:
+          $var: $.item.city
+        state:
+          $var: $.item.state
+        country:
+          $var: $.item.country
+        zip:
+          $var: $.item.zipcode
+  createdTime:
+    $var: $.date_created
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_updated
+  updatedBy:
+    $var: $.updated_by
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

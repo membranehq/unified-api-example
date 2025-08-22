@@ -1,0 +1,83 @@
+id: 68a82658e426fdf8cbab8b0e
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 4260e585-8cdd-4e16-8bc1-06d56d51f34f
+createdAt: '2025-08-22T08:12:14.963Z'
+updatedAt: '2025-08-22T08:12:14.963Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6703
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    fields:
+      all:
+        title:
+          $var: $.input.filter.jobTitle
+        firstname:
+          $var: $.input.filter.firstName
+    owner:
+      id:
+        $var: $.input.filter.ownerId
+      username:
+        $var: $.input.filter.ownerId
+      firstName:
+        $var: $.input.filter.firstName
+      lastName:
+        $var: $.input.filter.lastName
+    dateAdded:
+      $var: $.input.filter.createdTime
+    createdBy:
+      $var: $.input.filter.createdBy
+    dateModified:
+      $var: $.input.filter.updatedTime
+    modifiedBy:
+      $var: $.input.filter.updatedBy
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f6703
+  name: Mautic
+  key: mautic
+  uuid: 235cbf28-b7ea-4fcd-887b-fdaa5f7881ab
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.276Z'
+  updatedAt: '2025-08-15T12:45:43.321Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/mautic/asset-fd3948f3-5895-4ed2-9818-3c090ad28ecf.png
+  connectorId: 667c71df7d4a85fdc94a1dfa
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 108
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

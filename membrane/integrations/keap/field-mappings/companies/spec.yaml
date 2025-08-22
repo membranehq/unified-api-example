@@ -1,0 +1,98 @@
+id: 689f2c0100905568ab2f69d1
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: bd6ae900-ef8b-4ba2-9ae4-56348039c89b
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66e2
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6893
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  address:
+    country_code:
+      $var: $.primaryAddress.country
+    line1:
+      $var: $.primaryAddress.street
+    locality:
+      $var: $.primaryAddress.city
+    region:
+      $var: $.primaryAddress.state
+    zip_code:
+      $var: $.primaryAddress.zip
+  company_name:
+    $var: $.name
+  id:
+    $var: $.id
+  phone_number:
+    number:
+      $var: $.primaryPhone
+  website:
+    $var: $.websiteUrl
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.company_name
+  websiteUrl:
+    $var: $.website
+  primaryPhone:
+    $var: $.phone_number.number
+  phones:
+    - value:
+        $var: $.phone_number.number
+      type:
+        $var: $.phone_number.type
+  primaryAddress:
+    zip:
+      $var: $.address.zip_code
+    country:
+      $var: $.address.country_code
+    state:
+      $var: $.address.region
+    city:
+      $var: $.address.locality
+    street:
+      $var: $.address.line1
+    full:
+      $concat:
+        values:
+          - $var: $.address.line1
+          - $var: $.address.line2
+          - $var: $.address.locality
+          - $var: $.address.region
+          - $var: $.address.country_code
+          - $var: $.address.zip_code
+        delimiter: ', '
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

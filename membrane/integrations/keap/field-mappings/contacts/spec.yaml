@@ -1,0 +1,146 @@
+id: 68a82654e426fdf8cbab871f
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 7a4f88a2-d7a1-4f7a-9804-85af816cbc30
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66e2
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85b3
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  given_name:
+    $var: $.firstName
+  family_name:
+    $var: $.lastName
+  job_title:
+    $var: $.jobTitle
+  company_id:
+    $var: $.companyId
+  company_name:
+    $var: $.companyName
+  date_created:
+    $var: $.createdTime
+  email:
+    $var: $.primaryEmail
+  last_updated:
+    $var: $.updatedTime
+  owner_id:
+    $var: $.ownerId
+  source_type:
+    $var: $.source
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $concat:
+      values:
+        - $var: $.given_name
+        - $var: $.family_name
+      delimiter: ' '
+  firstName:
+    $var: $.given_name
+  lastName:
+    $var: $.family_name
+  primaryEmail:
+    $var: $.email_addresses[0].email
+  emails:
+    $iterate:
+      locator: $.email_addresses
+      items:
+        value:
+          $var: $.email_addresses.$current.email
+  primaryPhone:
+    $var: $.phone_numbers[0].number
+  phones:
+    $iterate:
+      locator: $.phone_numbers
+      items:
+        value:
+          $var: $.phone_numbers.$current.number
+        type:
+          $var: $.phone_numbers.$current.type
+  primaryAddress:
+    country:
+      $var: $.addresses[0].country_code
+    state:
+      $var: $.addresses[0].region
+    city:
+      $var: $.addresses[0].locality
+    street:
+      $var: $.addresses[0].line1
+    zip:
+      $var: $.addresses[0].zip_code
+    full:
+      $concat:
+        values:
+          - $var: $.addresses[0].line1
+          - $var: $.addresses[0].locality
+          - $var: $.addresses[0].region
+          - $var: $.addresses[0].zip_code
+          - $var: $.addresses[0].country_code
+        delimiter: ', '
+  addresses:
+    $iterate:
+      locator: $.addresses
+      items:
+        type:
+          $var: $.addresses.$current.type
+        country:
+          $var: $.addresses.$current.country_code
+        state:
+          $var: $.addresses.$current.region
+        city:
+          $var: $.addresses.$current.locality
+        street:
+          $var: $.addresses.$current.line1
+        zip:
+          $var: $.addresses.$current.zip_code
+  companyName:
+    $var: $.company_name
+  companyId:
+    $var: $.company_id
+  ownerId:
+    $var: $.owner_id
+  jobTitle:
+    $var: $.job_title
+  source:
+    $var: $.source_type
+  createdTime:
+    $var: $.date_created
+  updatedTime:
+    $var: $.last_updated
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

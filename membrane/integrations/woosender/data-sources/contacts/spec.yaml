@@ -1,0 +1,39 @@
+id: 68a839f621039ff70f89b6cc
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+revision: 5338b97b-a58c-43ff-adfe-63eae42e937f
+integrationId: 68a839f321039ff70f89b5d5
+customized: false
+universalDataSourceId: 68a82652e426fdf8cbab8566
+universalDataSourceRevision: 7d3cacc1-26d7-41d1-a966-6706ed473f9a
+collectionKey: contacts
+udm: contacts
+defaultPath: /data/contacts
+integration:
+  id: 68a839f321039ff70f89b5d5
+  name: Woosender
+  key: woosender
+  uuid: 167b9214-bd8c-4879-98a0-18983e22adcf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.287Z'
+  updatedAt: '2025-08-22T09:35:48.168Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/woosender/asset-73957177-ee9b-4f8d-9ae3-ae4b928a032b.png
+  connectorId: 66cc82dffb9b04754806fab5
+  connectorVersion: 1.0.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 7
+  hasData: true
+  dataCollectionsCount: 1
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

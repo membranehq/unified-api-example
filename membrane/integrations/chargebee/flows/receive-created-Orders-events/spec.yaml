@@ -1,0 +1,52 @@
+id: 68a84f0b7702482264c63474
+name: Receive Created Order Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Orders-events
+revision: 837cd492-bc1e-4a64-aa4b-fda9e7a2bdb5
+universalFlowId: 68a84f097702482264c6321e
+integrationId: 68a84efe7702482264c62c83
+universalFlowRevision: e9a5a8ef-5c3a-44ae-847d-0dd76ddf903f
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Orders-created-trigger:
+    type: data-record-created-trigger
+    name: Order Created Trigger
+    config:
+      dataSource:
+        key: orders
+      fieldMapping:
+        key: orders
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

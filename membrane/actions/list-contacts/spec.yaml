@@ -1,0 +1,31 @@
+id: 68a82657e426fdf8cbab88bf
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+createdAt: '2025-08-22T08:12:07.988Z'
+updatedAt: '2025-08-22T08:12:07.988Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

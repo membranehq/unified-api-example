@@ -1,0 +1,91 @@
+id: 68a839f721039ff70f89b85d
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 358637e9-c65d-4c2e-b5ac-96a8a05619fd
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 68a839f321039ff70f89b5bd
+dataSourceKey: contacts
+dataSourceId: 68a839f621039ff70f89b6be
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  firstName:
+    $var: $.firstName
+  title:
+    $var: $.jobTitle
+  email:
+    $var: $.primaryEmail
+  lastModifiedDate:
+    $var: $.updatedTime
+  dateCreated:
+    $var: $.createdTime
+  lastName:
+    $var: $.lastName
+  phone:
+    $var: $.primaryPhone
+  jobTitle:
+    $var: $.jobTitle
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $concat:
+      values:
+        - $var: $.firstName
+        - $var: $.lastName
+      delimiter: ' '
+  firstName:
+    $var: $.firstName
+  primaryEmail:
+    $var: $.email
+  lastName:
+    $var: $.lastName
+  primaryPhone:
+    $var: $.phone
+  jobTitle:
+    $var: $.title
+  source:
+    $var: $.contactSource.refName
+  createdTime:
+    $var: $.dateCreated
+  updatedTime:
+    $var: $.lastModifiedDate
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.phone
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

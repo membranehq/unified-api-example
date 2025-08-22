@@ -1,0 +1,54 @@
+id: 68a84f077702482264c62f69
+name: Create Order
+key: create-Orders
+uuid: f4c9026f-a6a3-4539-8b53-8c99b58cdf6d
+state: READY
+errors: []
+revision: 8fb34c6f-dd02-4f60-9899-3e4b37e367cb
+createdAt: '2025-08-22T11:05:44.594Z'
+updatedAt: '2025-08-22T11:05:44.594Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a84f067702482264c62e8b
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: orders
+  fieldMapping:
+    key: orders
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: e245e380-cb59-440a-b47b-7e758b237300
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

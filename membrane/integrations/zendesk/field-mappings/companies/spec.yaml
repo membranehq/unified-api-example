@@ -1,0 +1,64 @@
+id: 689f2c0100905568ab2f69d7
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 89fd931e-3c30-4755-9e51-52961bbd513e
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66f0
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f694c
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  details:
+    $var: $.description
+  domain_names:
+    - $var: $.websiteUrl
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: name
+  websiteUrl:
+    $var: $.domain_names[0]
+  description:
+    $var: details
+  createdTime:
+    $var: created_at
+  updatedTime:
+    $var: updated_at
+integration:
+  id: 689f2bf000905568ab2f66f0
+  name: Zendesk
+  key: zendesk
+  uuid: 77c714e0-e2a5-4333-ade5-02cb0e398340
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.267Z'
+  updatedAt: '2025-08-15T12:45:46.486Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zendesk/logo.png
+  connectorId: 643e957fbadd839bce5208e3
+  connectorVersion: 1.5.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 393
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 60
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

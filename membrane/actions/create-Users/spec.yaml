@@ -1,0 +1,27 @@
+id: 68a8260e678af1d0cf6ebf00
+name: Create User
+key: create-Users
+uuid: ac4f22cb-7b1b-4c7e-ab63-df88a08ec273
+state: READY
+errors: []
+revision: 8a05b55c-f017-43bd-97d2-da84f21bfe46
+createdAt: '2025-08-22T08:10:54.073Z'
+updatedAt: '2025-08-22T08:10:54.073Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: users
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false

@@ -1,0 +1,96 @@
+id: 68a8260b678af1d0cf6ebd90
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 3535033b-e1eb-4cd8-bf81-7b5a9ba38c2f
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66fd
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc28
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  account:
+    id:
+      $var: $.companyId
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  email:
+    $var: $.primaryEmail
+  telephones:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        type:
+          $var: $.item.type
+        number:
+          $var: $.item.value
+  time_zone:
+    $var: $.timezone
+importValue:
+  id:
+    $var: $.id
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  primaryEmail:
+    $var: $.email
+  phones:
+    $iterate:
+      source:
+        $var: $.telephones
+      item:
+        value:
+          $var: $.item.number
+        type:
+          $var: $.item.type
+  companyId:
+    $var: $.account.id
+  timezone:
+    $var: $.time_zone
+  fullName:
+    $concat:
+      values:
+        - $var: $.first_name
+        - $var: $.last_name
+      delimiter: ' '
+  emails:
+    - value:
+        $var: $.email
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

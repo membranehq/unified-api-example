@@ -1,0 +1,24 @@
+id: 68a820ce9fc7b352ffc946ee
+name: Find Job By Id
+key: find-Jobs-by-id
+uuid: 56508012-5cb7-42e6-8e29-109f2e8ed072
+state: READY
+errors: []
+revision: fd0f025d-372c-45cd-b3ef-4fdd03e88e0e
+createdAt: '2025-08-22T07:48:30.132Z'
+updatedAt: '2025-08-22T07:48:30.132Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  id:
+    $var: $.input.id
+isCustomized: false

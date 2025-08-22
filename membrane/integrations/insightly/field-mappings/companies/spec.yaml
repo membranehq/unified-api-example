@@ -1,0 +1,110 @@
+id: 689f2c0100905568ab2f69f1
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 80fe1b84-6b1a-4731-9227-93cd55907611
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66ee
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f692c
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  ORGANISATION_NAME:
+    $var: $.name
+  BACKGROUND:
+    $var: $.description
+  OWNER_USER_ID:
+    $var: $.ownerId
+  DATE_CREATED_UTC:
+    $var: $.createdTime
+  DATE_UPDATED_UTC:
+    $var: $.updatedTime
+  LAST_ACTIVITY_DATE_UTC:
+    $var: $.lastActivityTime
+  CREATED_USER_ID:
+    $var: $.createdBy
+  PHONE:
+    $var: $.primaryPhone
+  WEBSITE:
+    $var: $.websiteUrl
+  ADDRESS_BILLING_STREET:
+    $var: $.primaryAddress.street
+  ADDRESS_BILLING_CITY:
+    $var: $.primaryAddress.city
+  ADDRESS_BILLING_STATE:
+    $var: $.primaryAddress.state
+  ADDRESS_BILLING_COUNTRY:
+    $var: $.primaryAddress.country
+  ADDRESS_BILLING_POSTCODE:
+    $var: $.primaryAddress.zip
+importValue:
+  id:
+    $var: $.ORGANISATION_ID
+  name:
+    $var: $.ORGANISATION_NAME
+  websiteUrl:
+    $var: $.WEBSITE
+  primaryPhone:
+    $var: $.PHONE
+  description:
+    $var: $.BACKGROUND
+  ownerId:
+    $var: $.OWNER_USER_ID
+  primaryAddress:
+    street:
+      $var: $.ADDRESS_BILLING_STREET
+    city:
+      $var: $.ADDRESS_BILLING_CITY
+    state:
+      $var: $.ADDRESS_BILLING_STATE
+    country:
+      $var: $.ADDRESS_BILLING_COUNTRY
+    zip:
+      $var: $.ADDRESS_BILLING_POSTCODE
+    full:
+      $concat:
+        values:
+          - $var: $.ADDRESS_BILLING_STREET
+          - $var: $.ADDRESS_BILLING_CITY
+          - $var: $.ADDRESS_BILLING_STATE
+          - $var: $.ADDRESS_BILLING_POSTCODE
+          - $var: $.ADDRESS_BILLING_COUNTRY
+        delimiter: ', '
+  createdTime:
+    $var: $.DATE_CREATED_UTC
+  updatedTime:
+    $var: $.DATE_UPDATED_UTC
+  lastActivityTime:
+    $var: $.LAST_ACTIVITY_DATE_UTC
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

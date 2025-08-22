@@ -1,0 +1,107 @@
+id: 68a82654e426fdf8cbab874a
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 3441db29-3fa4-4e9d-968e-9a68771578c8
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f6710
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85d1
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  address:
+    $var: $.primaryAddress.full
+  company_id:
+    $var: $.companyId
+  email:
+    $var: $.primaryEmail
+  id:
+    $var: $.id
+  job_title:
+    $var: $.jobTitle
+  name:
+    $var: $.fullName
+  phone:
+    $var: $.primaryPhone
+  other_emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        $var: $.item.value
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: id
+  fullName:
+    $var: name
+  primaryEmail:
+    $var: email
+  emails:
+    $iterate:
+      source:
+        $var: $.other_emails
+      item:
+        value:
+          $var: $.item
+        type: null
+  primaryPhone:
+    $var: phone
+  phones:
+    - value:
+        $var: $.phone
+  primaryAddress:
+    full:
+      $var: address
+  addresses:
+    - full:
+        $var: $.address
+  companyId:
+    $var: company_id
+  jobTitle:
+    $var: job_title
+  createdTime:
+    $var: created_at
+  updatedTime:
+    $var: updated_at
+  firstName:
+    $firstName:
+      $var: name
+  lastName:
+    $lastName:
+      $var: name
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

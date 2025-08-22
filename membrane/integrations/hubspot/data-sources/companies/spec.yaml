@@ -1,0 +1,38 @@
+id: 689f2c0000905568ab2f6871
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+revision: ed082514-cf0c-4b98-af9e-16f0704f1cd1
+integrationId: 689f2bf000905568ab2f66e6
+customized: false
+universalDataSourceId: 689f2c0000905568ab2f682a
+universalDataSourceRevision: 3f6b0bb8-a50a-47bc-90e7-dd0dcd0d11c9
+collectionKey: companies
+udm: companies
+defaultPath: /data/companies
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,108 @@
+id: 689f2c0100905568ab2f69cd
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 835e4481-8111-41f8-b003-0e069bd239d4
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66f9
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6883
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  billingAddressOne:
+    $var: $.primaryAddress.street
+  billingCity:
+    $var: $.primaryAddress.city
+  billingCountry:
+    $var: $.primaryAddress.country
+  billingState:
+    $var: $.primaryAddress.state
+  billingZip:
+    $var: $.primaryAddress.zip
+  industry:
+    $var: $.industry
+  phone:
+    $var: $.primaryPhone
+  website:
+    $var: $.websiteUrl
+  createdAt:
+    $var: $.createdTime
+  updatedAt:
+    $var: $.updatedTime
+  createdById:
+    $var: $.createdBy
+  updatedById:
+    $var: $.updatedBy
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.website
+  primaryPhone:
+    $var: $.phone
+  primaryAddress:
+    street:
+      $var: $.billingAddressOne
+    city:
+      $var: $.billingCity
+    state:
+      $var: $.billingState
+    country:
+      $var: $.billingCountry
+    zip:
+      $var: $.billingZip
+    full:
+      $concat:
+        values:
+          - $var: $.billingAddressOne
+          - $var: $.billingCity
+          - $var: $.billingState
+          - $var: $.billingZip
+          - $var: $.billingCountry
+        delimiter: ', '
+  industry:
+    $var: $.industry
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
+  createdBy:
+    $var: $.createdById
+  updatedBy:
+    $var: $.updatedById
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

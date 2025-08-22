@@ -1,0 +1,58 @@
+id: 68a839b5f8d786c131d7f97e
+name: Update Job Application
+key: update-Job Applications
+uuid: 0a56fe18-337c-4c86-b5b9-bee993c0f180
+state: READY
+errors: []
+revision: c63f93b0-7343-4cc4-bd2d-aab2b0dc4b0d
+createdAt: '2025-08-22T09:34:45.883Z'
+updatedAt: '2025-08-22T09:34:45.883Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc94593
+parentId: 68a839b4f8d786c131d7f8fe
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: job-applications
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: job-applications
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: e4b5aa23-3eda-4774-915f-ce28257437b3
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

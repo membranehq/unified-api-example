@@ -1,0 +1,68 @@
+id: 689f2c0100905568ab2f69e5
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 2d4886a0-8124-4c9a-a343-cfb242608b16
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f6710
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f689b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  industry:
+    $var: $.industry
+importValue:
+  id:
+    $var: id
+  name:
+    $var: name
+  description:
+    $var: description
+  industry:
+    $var: industry
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,15 @@
+id: 68a820cd9fc7b352ffc94662
+name: Jobs
+isDeactivated: false
+state: READY
+errors: []
+key: jobs
+customized: false
+revision: 26908f16-503a-4b7f-b946-48737ac8cae3
+dataSourceKey: jobs
+dataSourceId: 68a820cd9fc7b352ffc945fc
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

@@ -1,0 +1,22 @@
+id: 68a8260e678af1d0cf6ebefe
+name: Delete User
+key: delete-Users
+uuid: 2c5c6ffd-7ab2-4165-977f-9224e92acd38
+state: READY
+errors: []
+revision: 15541a7f-5223-48f2-9e8b-1a0feb22aa97
+createdAt: '2025-08-22T08:10:54.062Z'
+updatedAt: '2025-08-22T08:10:54.062Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+isCustomized: false

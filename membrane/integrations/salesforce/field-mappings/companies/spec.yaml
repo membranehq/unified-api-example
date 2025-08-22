@@ -1,0 +1,171 @@
+id: 689f2c0100905568ab2f69c6
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 5b902b14-55a0-4f78-a912-66c184e715ca
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66d1
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f686b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  Name:
+    $var: $.name
+  BillingStreet:
+    $var: $.primaryAddress.street
+  BillingCity:
+    $var: $.primaryAddress.city
+  BillingState:
+    $var: $.primaryAddress.state
+  BillingPostalCode:
+    $var: $.primaryAddress.zip
+  BillingCountry:
+    $var: $.primaryAddress.country
+  ShippingStreet:
+    $var: $.addresses[1].street
+  ShippingCity:
+    $var: $.addresses[1].city
+  ShippingState:
+    $var: $.addresses[1].state
+  ShippingPostalCode:
+    $var: $.addresses[1].zip
+  ShippingCountry:
+    $var: $.addresses[1].country
+  Phone:
+    $var: $.primaryPhone
+  Website:
+    $var: $.websiteUrl
+  Industry:
+    $var: $.industry
+  NumberOfEmployees:
+    $var: $.numberOfEmployees
+  Description:
+    $var: $.description
+  OwnerId:
+    $var: $.ownerId
+  CreatedDate:
+    $var: $.createdTime
+  CreatedById:
+    $var: $.createdBy
+  LastModifiedDate:
+    $var: $.updatedTime
+  LastModifiedById:
+    $var: $.updatedBy
+  LastActivityDate:
+    $var: $.lastActivityTime
+importValue:
+  id:
+    $var: $.Id
+  name:
+    $var: $.Name
+  ownerId:
+    $var: $.OwnerId
+  websiteUrl:
+    $var: $.Website
+  primaryPhone:
+    $var: $.Phone
+  numberOfEmployees:
+    $var: $.NumberOfEmployees
+  description:
+    $var: $.Description
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.BillingStreet
+          - $var: $.BillingCity
+          - $var: $.BillingState
+          - $var: $.BillingPostalCode
+          - $var: $.BillingCountry
+        delimiter: ' '
+    street:
+      $var: $.BillingStreet
+    city:
+      $var: $.BillingCity
+    state:
+      $var: $.BillingState
+    country:
+      $var: $.BillingCountry
+    zip:
+      $var: $.BillingPostalCode
+  addresses:
+    - full:
+        $concat:
+          values:
+            - $var: $.BillingStreet
+            - $var: $.BillingCity
+            - $var: $.BillingState
+            - $var: $.BillingPostalCode
+            - $var: $.BillingCountry
+          delimiter: ' '
+      street:
+        $var: $.BillingStreet
+      city:
+        $var: $.BillingCity
+      state:
+        $var: $.BillingState
+      country:
+        $var: $.BillingCountry
+      zip:
+        $var: $.BillingPostalCode
+    - full:
+        $concat:
+          - $var: $.ShippingStreet
+          - $var: $.ShippingCity
+          - $var: $.ShippingState
+          - $var: $.ShippingPostalCode
+          - $var: $.ShippingCountry
+      street:
+        $var: $.ShippingStreet
+      city:
+        $var: $.ShippingCity
+      state:
+        $var: $.ShippingState
+      country:
+        $var: $.ShippingCountry
+      zip:
+        $var: $.ShippingPostalCode
+  createdTime:
+    $var: $.CreatedDate
+  createdBy:
+    $var: $.CreatedById
+  updatedTime:
+    $var: $.LastModifiedDate
+  updatedBy:
+    $var: $.LastModifiedById
+  lastActivityTime:
+    $var: $.LastActivityDate
+  industry:
+    $var: $.Industry
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

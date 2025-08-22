@@ -1,0 +1,160 @@
+id: 68a82654e426fdf8cbab8724
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: c115231d-a7b6-40a0-a6ce-95523424ea9c
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66e8
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85af
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $concat:
+      values:
+        - $var: $.firstName
+        - $var: $.lastName
+      delimiter: ' '
+  date_modified:
+    $var: $.updatedTime
+  modified_user_id:
+    $var: $.updatedBy
+  created_by:
+    $var: $.createdBy
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  title:
+    $var: $.jobTitle
+  phone_work:
+    $var: $.primaryPhone
+  primary_address_street:
+    $var: $.primaryAddress.street
+  primary_address_city:
+    $var: $.primaryAddress.city
+  primary_address_state:
+    $var: $.primaryAddress.state
+  primary_address_postalcode:
+    $var: $.primaryAddress.zip
+  primary_address_country:
+    $var: $.primaryAddress.country
+  lead_source:
+    $var: $.source
+  account_id:
+    $var: $.companyId
+  assigned_user_id:
+    $var: $.ownerId
+  email1:
+    $var: $.primaryEmail
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  primaryEmail:
+    $var: $.email1
+  emails:
+    $iterate:
+      locator: $.email
+      items:
+        value:
+          $var: $.email.$current.email_address
+  primaryPhone:
+    $var: $.phone_work
+  primaryAddress:
+    street:
+      $var: $.primary_address_street
+    city:
+      $var: $.primary_address_city
+    state:
+      $var: $.primary_address_state
+    country:
+      $var: $.primary_address_country
+    zip:
+      $var: $.primary_address_postalcode
+    full:
+      $concat:
+        values:
+          - $var: $.primary_address_street
+          - $var: $.primary_address_city
+          - $var: $.primary_address_state
+          - $var: $.primary_address_country
+          - $var: $.primary_address_postalcode
+        delimiter: ''
+  companyId:
+    $var: $.account_id
+  ownerId:
+    $var: $.assigned_user_id
+  jobTitle:
+    $var: $.title
+  source:
+    $var: $.lead_source
+  createdTime:
+    $var: $.date_entered
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_modified
+  updatedBy:
+    $var: $.modified_user_id
+  phones:
+    - value:
+        $var: $.phone_work
+  addresses:
+    - value:
+        street:
+          $var: $.primary_address_street
+        city:
+          $var: $.primary_address_city
+        state:
+          $var: $.primary_address_state
+        country:
+          $var: $.primary_address_country
+        zip:
+          $var: $.primary_address_postalcode
+        full:
+          $concat:
+            values:
+              - $var: $.primary_address_street
+              - $var: $.primary_address_city
+              - $var: $.primary_address_state
+              - $var: $.primary_address_country
+              - $var: $.primary_address_postalcode
+            delimiter: ''
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

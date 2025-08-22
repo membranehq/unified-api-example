@@ -1,0 +1,103 @@
+id: 68a82658e426fdf8cbab8af6
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 3e12cf12-fc02-4201-bb46-7a07ff6b10e9
+createdAt: '2025-08-22T08:12:14.887Z'
+updatedAt: '2025-08-22T08:12:14.887Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    emails:
+      $iterate:
+        source:
+          $var: $.input.filter.emails
+        item:
+          type:
+            $var: $.item.type
+          email:
+            $var: $.item.value
+    telephones:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          type:
+            $var: $.item.type
+          number:
+            $var: $.item.value
+    addresses:
+      $iterate:
+        source:
+          $var: $.input.filter.addresses
+        item:
+          type:
+            $var: $.item.type
+          address:
+            line_1:
+              $var: $.item.street
+            postal_code:
+              $var: $.item.zip
+            city:
+              $var: $.item.city
+            country:
+              $var: $.item.country
+    added_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

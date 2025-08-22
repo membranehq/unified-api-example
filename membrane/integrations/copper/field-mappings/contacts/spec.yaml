@@ -1,0 +1,180 @@
+id: 68a82654e426fdf8cbab873c
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 48f0b178-c8c3-44a5-a239-01755582ff68
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66f3
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85c9
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.fullName
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  title:
+    $var: $.jobTitle
+  email:
+    $var: $.primaryEmail
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        email:
+          $var: $.item.value
+        category:
+          $var: $.item.type
+  address:
+    street:
+      $var: $.primaryAddress.street
+    city:
+      $var: $.primaryAddress.city
+    state:
+      $var: $.primaryAddress.state
+    postal_code:
+      $var: $.primaryAddress.zip
+    country:
+      $var: $.primaryAddress.country
+  assignee_id:
+    $var: $.ownerId
+  company_id:
+    $var: $.companyId
+  company_name:
+    $var: $.companyName
+  phone_numbers:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        number:
+          $var: $.item.value
+        category:
+          $var: $.item.type
+  date_created:
+    $var: $.createdTime
+  date_modified:
+    $var: $.updatedTime
+  date_last_contacted:
+    $var: $.lastActivityTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: name
+  firstName:
+    $var: first_name
+  lastName:
+    $var: last_name
+  primaryEmail:
+    $var: emails[0].email
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        value:
+          $var: $.item.email
+        type:
+          $var: $.item.category
+  primaryPhone:
+    $var: phone_numbers[0].number
+  phones:
+    $iterate:
+      source:
+        $var: $.phone_numbers
+      item:
+        value:
+          $var: $.item.number
+        type:
+          $var: $.item.category
+  companyName:
+    $var: company_name
+  companyId:
+    $var: company_id
+  ownerId:
+    $var: assignee_id
+  jobTitle:
+    $var: title
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.address.street
+          - $var: $.address.city
+          - $var: $.address.state
+          - $var: $.address.country
+          - $var: $.address.postal_code
+        delimiter: ', '
+    street:
+      $var: $.address.street
+    city:
+      $var: $.address.city
+    state:
+      $var: $.address.state
+    country:
+      $var: $.address.country
+    zip:
+      $var: $.address.postal_code
+  createdTime:
+    $var: date_created
+  updatedTime:
+    $var: date_modified
+  lastActivityTime:
+    $var: date_last_contacted
+  addresses:
+    - value:
+        full:
+          $concat:
+            values:
+              - $var: $.address.street
+              - $var: $.address.city
+              - $var: $.address.state
+              - $var: $.address.country
+              - $var: $.address.postal_code
+            delimiter: ', '
+        street:
+          $var: $.address.street
+        city:
+          $var: $.address.city
+        state:
+          $var: $.address.state
+        country:
+          $var: $.address.country
+        zip:
+          $var: $.address.postal_code
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

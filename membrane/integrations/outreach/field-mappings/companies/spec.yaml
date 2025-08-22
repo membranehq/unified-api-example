@@ -1,0 +1,84 @@
+id: 689f2c0100905568ab2f69c0
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 856136e3-8474-42dc-94be-cc47402db709
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66e4
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6877
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  owner_id:
+    $var: $.ownerId
+  description:
+    $var: $.description
+  industry:
+    $var: $.industry
+  name:
+    $var: $.name
+  numberOfEmployees:
+    $var: $.numberOfEmployees
+  updater_id:
+    $var: $.updatedBy
+  updatedAt:
+    $var: $.updatedTime
+  websiteUrl:
+    $var: $.websiteUrl
+  creator_id:
+    $var: $.createdBy
+  createdAt:
+    $var: $.createdTime
+importValue:
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  websiteUrl:
+    $var: $.websiteUrl
+  numberOfEmployees:
+    $var: $.numberOfEmployees
+  industry:
+    $var: $.industry
+  ownerId:
+    $var: $.owner_id
+  createdTime:
+    $var: $.createdAt
+  createdBy:
+    $var: $.creator_id
+  updatedTime:
+    $var: $.updatedAt
+  updatedBy:
+    $var: $.updater_id
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

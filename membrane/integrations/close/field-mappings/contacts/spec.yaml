@@ -1,0 +1,122 @@
+id: 68a82654e426fdf8cbab8748
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 61c3c154-4cdc-409d-acff-cf0d3e13ed6e
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f66fb
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85cf
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.fullName
+  title:
+    $var: $.jobTitle
+  email:
+    $var: $.primaryEmail
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        email:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  phones:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        phone:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  lead_id:
+    $var: $.companyId
+  updated_by:
+    $var: $.updatedBy
+  date_updated:
+    $var: $.updatedTime
+  created_by:
+    $var: $.createdBy
+  date_created:
+    $var: $.createdTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  firstName:
+    $firstName:
+      $var: $.name
+  lastName:
+    $lastName:
+      $var: $.name
+  jobTitle:
+    $var: $.title
+  companyId:
+    $var: $.lead_id
+  primaryEmail:
+    $var: $.emails[0].email
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        value:
+          $var: $.item.email
+        type:
+          $var: $.item.type
+  primaryPhone:
+    $var: $.phones[0].phone
+  phones:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        value:
+          $var: $.item.phone
+        type:
+          $var: $.item.type
+  updatedBy:
+    $var: $.updated_by
+  updatedTime:
+    $var: $.date_updated
+  createdBy:
+    $var: $.created_by
+  createdTime:
+    $var: $.date_created
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

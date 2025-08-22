@@ -1,0 +1,104 @@
+id: 68a8260b678af1d0cf6ebd7b
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 127bd818-6bf4-4e13-8861-c64de600209a
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66e2
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc11
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  company_name:
+    $var: $.companyName
+  created_by:
+    $var: $.createdBy
+  date_created:
+    $var: $.createdTime
+  email:
+    $var: $.primaryEmail
+  family_name:
+    $var: $.lastName
+  given_name:
+    $var: $.firstName
+  last_updated:
+    $var: $.updatedTime
+  last_updated_by:
+    $var: $.updatedBy
+  time_zone:
+    $var: $.timezone
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $concat:
+      values:
+        - $var: $.given_name
+        - $var: $.family_name
+      delimiter: ' '
+  firstName:
+    $var: $.given_name
+  lastName:
+    $var: $.family_name
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.phone_numbers[0].number
+  phones:
+    $iterate:
+      locator: $.phone_numbers
+      items:
+        value:
+          $var: $.phone_numbers.$current.number
+        type:
+          $var: $.phone_numbers.$current.type
+  companyName:
+    $var: $.company_name
+  timezone:
+    $var: $.time_zone
+  isActive: null
+  createdTime:
+    $var: $.date_created
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.last_updated
+  updatedBy:
+    $var: $.last_updated_by
+  emails:
+    - value:
+        $var: $.email
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

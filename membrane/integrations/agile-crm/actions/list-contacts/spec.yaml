@@ -1,0 +1,99 @@
+id: 68a82658e426fdf8cbab8af0
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 9a8f7ebf-1a08-4ca7-ad4d-03766620f4bc
+createdAt: '2025-08-22T08:12:15.753Z'
+updatedAt: '2025-08-22T08:12:15.753Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d5
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    source:
+      $var: $.input.filter.source
+    owner:
+      id:
+        $var: $.input.filter.ownerId
+    created_time:
+      $var: $.input.filter.createdTime
+    updated_time:
+      $var: $.input.filter.updatedTime
+    last_contacted:
+      $var: $.input.filter.lastActivityTime
+    _sf_first_name:
+      $var: $.input.filter.firstName
+    _sf_last_name:
+      $var: $.input.filter.lastName
+    _sf_company:
+      $var: $.input.filter.companyName
+    _sf_title:
+      $var: $.input.filter.jobTitle
+    _sf_email:
+      email:
+        $var: $.input.filter.primaryEmail
+    _sf_phone:
+      phone:
+        $var: $.input.filter.primaryPhone
+    _sf_address:
+      address:
+        $var: $.input.filter.primaryAddress.street
+      city:
+        $var: $.input.filter.primaryAddress.city
+      state:
+        $var: $.input.filter.primaryAddress.state
+      zip:
+        $var: $.input.filter.primaryAddress.zip
+      countryname:
+        $var: $.input.filter.primaryAddress.country
+    contact_company_id:
+      $var: $.input.filter.companyId
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

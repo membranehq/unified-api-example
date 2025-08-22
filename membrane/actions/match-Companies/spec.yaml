@@ -1,0 +1,24 @@
+id: 689f2c0400905568ab2f6b43
+name: Match Company
+key: match-Companies
+state: READY
+errors: []
+revision: 7a9c045d-bdca-4b23-b69c-161df9a23cf4
+createdAt: '2025-08-15T12:45:56.195Z'
+updatedAt: '2025-08-15T12:45:56.195Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

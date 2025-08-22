@@ -1,0 +1,55 @@
+id: 68a820ce9fc7b352ffc947ec
+name: Search Jobs
+key: search-jobs
+uuid: f39cabe2-82b2-445f-8c7f-ea3286cd1b96
+state: READY
+errors: []
+revision: fb0fea55-b8c9-4e3f-bb57-be3224e2dea1
+createdAt: '2025-08-22T07:48:31.047Z'
+updatedAt: '2025-08-22T07:48:31.047Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a1
+parentId: 68a820ce9fc7b352ffc946f4
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: jobs
+  dataSource:
+    key: jobs
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 312a7861-1f70-4aea-9d7b-51a28dbb0e3f
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

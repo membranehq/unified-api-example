@@ -1,0 +1,58 @@
+id: 68a84f077702482264c62fcd
+name: Update Order
+key: update-Orders
+uuid: 5610026c-431e-421b-9d2e-9fbeb0d3583d
+state: READY
+errors: []
+revision: 8e033096-37ff-4adb-9e82-44e67c4fe788
+createdAt: '2025-08-22T11:05:44.680Z'
+updatedAt: '2025-08-22T11:05:44.680Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a84f077702482264c62e91
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: orders
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: orders
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 80af9919-4d46-4aee-9136-d383f4645127
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

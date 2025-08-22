@@ -1,0 +1,72 @@
+id: 689f2c0100905568ab2f69cf
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: ed233835-a66a-44fa-bcd0-f7caa81a10cc
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66d5
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f687b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  _sf_name:
+    $var: $.name
+  owner:
+    id:
+      $var: $.ownerId
+  created_time:
+    $var: $.createdTime
+  updated_time:
+    $var: $.updatedTime
+  last_contacted:
+    $var: $.lastActivityTime
+  properties:
+    - value:
+        $var: $.name
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $._sf_name
+  owner:
+    $var: $.owner.id
+  createdTime:
+    $var: $.created_time
+  updatedTime:
+    $var: $.updated_time
+  lastActivityTime:
+    $var: $.last_contacted
+  ownerId:
+    $var: $.owner.id
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,103 @@
+id: 689f2c0400905568ab2f6e13
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 9f6d19fe-605f-452e-b441-4fa7893c633a
+createdAt: '2025-08-15T12:46:04.111Z'
+updatedAt: '2025-08-15T12:46:04.111Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    url:
+      $var: $.input.filter.websiteUrl
+    addresses:
+      $iterate:
+        locator: $.addresses
+        items:
+          address_1:
+            $var: $.addresses.$current.street
+          city:
+            $var: $.addresses.$current.city
+          state:
+            $var: $.addresses.$current.state
+          country:
+            $var: $.addresses.$current.country
+          zipcode:
+            $var: $.addresses.$current.zip
+        source:
+          $var: $.input.filter.addresses
+        item:
+          city:
+            $var: $.item.city
+          state:
+            $var: $.item.state
+          zipcode:
+            $var: $.item.zip
+          country:
+            $var: $.item.country
+          address_1:
+            $var: $.item.street
+          label:
+            $var: $.item.type
+    updated_by:
+      $var: $.input.filter.updatedBy
+    created_by:
+      $var: $.input.filter.createdBy
+    date_created:
+      $var: $.input.filter.createdTime
+    date_updated:
+      $var: $.input.filter.updatedTime
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

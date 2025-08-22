@@ -1,0 +1,108 @@
+id: 689f2c0100905568ab2f69b8
+name: Companies
+isDeactivated: false
+state: READY
+errors: []
+key: companies
+customized: false
+revision: 95927265-d1e8-4c25-afdf-dc750fb82aa9
+universalFieldMappingId: 689f2c0000905568ab2f696d
+universalFieldMappingRevision: 5d1f5394-98cd-4bc5-b10b-2061ef9edb8a
+integrationId: 689f2bf000905568ab2f66e6
+dataSourceKey: companies
+dataSourceId: 689f2c0000905568ab2f6871
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  website:
+    $var: $.websiteUrl
+  hubspot_owner_id:
+    $var: $.ownerId
+  phone:
+    $var: $.primaryPhone
+  description:
+    $var: $.description
+  industry:
+    $var: $.industry
+  address:
+    $var: $.primaryAddress.street
+  city:
+    $var: $.primaryAddress.city
+  state:
+    $var: $.primaryAddress.state
+  country:
+    $var: $.primaryAddress.country
+  zip:
+    $var: $.primaryAddress.zip
+importValue:
+  id:
+    $var: $.hs_object_id
+  name:
+    $var: $.name
+  websiteUrl:
+    $var: $.website
+  primaryPhone:
+    $var: $.phone
+  description:
+    $var: $.description
+  industry:
+    $var: $.industry
+  ownerId:
+    $var: $.hubspot_owner_id
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.address
+          - $var: $.city
+          - $var: $.state
+          - $var: $.country
+          - $var: $.zip
+        delimiter: ' '
+    street:
+      $var: $.address
+    city:
+      $var: $.city
+    state:
+      $var: $.state
+    country:
+      $var: $.country
+    zip:
+      $var: $.zip
+  createdTime:
+    $var: $.createdate
+  createdBy:
+    $var: $.hs_created_by_user_id
+  updatedTime:
+    $var: $.hs_lastmodifieddate
+  updatedBy:
+    $var: $.hs_updated_by_user_id
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

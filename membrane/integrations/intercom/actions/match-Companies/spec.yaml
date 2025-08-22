@@ -1,0 +1,71 @@
+id: 689f2c0400905568ab2f6e4f
+name: Match Company
+key: match-Companies
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f66f5
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 689f2c0000905568ab2f6891
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 689f2c0100905568ab2f69dd
+revision: 56f99d78-2f83-4b46-9e6c-b9480e927ab5
+createdAt: '2025-08-15T12:46:03.775Z'
+updatedAt: '2025-08-15T12:46:03.775Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f5
+parentId: 689f2c0400905568ab2f6b43
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 7a9c045d-bdca-4b23-b69c-161df9a23cf4
+integration:
+  id: 689f2bf000905568ab2f66f5
+  name: Intercom
+  key: intercom
+  uuid: 2b1b26c9-4359-4871-a67f-5dcc7a864403
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:46.788Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/intercom-connector/logo.png
+  connectorId: 64384553986ed1caad49a446
+  connectorVersion: 1.1.7
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 77
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

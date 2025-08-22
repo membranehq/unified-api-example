@@ -1,0 +1,81 @@
+id: 68a82658e426fdf8cbab8ae4
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: 0d376443-539b-41fa-a027-a886b0673194
+createdAt: '2025-08-22T08:12:15.771Z'
+updatedAt: '2025-08-22T08:12:15.771Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e2
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    company_id:
+      $var: $.input.filter.companyId
+    company_name:
+      $var: $.input.filter.companyName
+    date_created:
+      $var: $.input.filter.createdTime
+    family_name:
+      $var: $.input.filter.lastName
+    given_name:
+      $var: $.input.filter.firstName
+    job_title:
+      $var: $.input.filter.jobTitle
+    last_updated:
+      $var: $.input.filter.updatedTime
+    owner_id:
+      $var: $.input.filter.ownerId
+    source_type:
+      $var: $.input.filter.source
+    email:
+      $var: $.input.filter.primaryEmail
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,96 @@
+id: 68a8260b678af1d0cf6ebd88
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: a2192c7c-bb15-42b9-a901-0df23c978a61
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66e4
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc15
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  email:
+    $var: $.primaryEmail
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  phoneNumber:
+    $var: $.primaryPhone
+  username:
+    $var: $.userName
+  creator_id:
+    $var: $.createdBy
+  updater_id:
+    $var: $.updatedBy
+  role_id:
+    $var: $.roleId
+  createdAt:
+    $var: $.createdTime
+  primaryTimezone:
+    $var: $.timezone
+  updatedAt:
+    $var: $.updatedTime
+importValue:
+  fullName:
+    $var: $.name
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  userName:
+    $var: $.username
+  primaryEmail:
+    $var: $.email
+  primaryPhone:
+    $var: $.phoneNumber
+  timezone:
+    $var: $.primaryTimezone
+  roleId:
+    $var: $.role_id
+  createdTime:
+    $var: $.createdAt
+  createdBy:
+    $var: $.creator_id
+  updatedTime:
+    $var: $.updatedAt
+  updatedBy:
+    $var: $.updater_id
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.phoneNumber
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

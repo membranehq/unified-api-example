@@ -1,0 +1,100 @@
+id: 68a82658e426fdf8cbab8ae6
+name: List Contacts
+key: list-contacts
+uuid: 3efc2d73-54b4-4605-84df-0f7260793517
+state: READY
+errors: []
+revision: d87ad4a7-7e3f-4bdd-a668-2b3bcb34b008
+createdAt: '2025-08-22T08:12:14.887Z'
+updatedAt: '2025-08-22T08:12:14.887Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 68a82657e426fdf8cbab88bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: contacts
+  dataSource:
+    key: contacts
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    date_modified:
+      $var: $.input.filter.updatedTime
+    modified_user_id:
+      $var: $.input.filter.updatedBy
+    created_by:
+      $var: $.input.filter.createdBy
+    first_name:
+      $var: $.input.filter.firstName
+    last_name:
+      $var: $.input.filter.lastName
+    name:
+      $concat:
+        values:
+          - $var: $.input.filter.salutation
+          - $var: $.input.filter.firstName
+          - $var: $.input.filter.lastName
+        delimiter: ' '
+    title:
+      $var: $.input.filter.jobTitle
+    phone_work:
+      $var: $.input.filter.primaryPhone
+    primary_address_street:
+      $var: $.input.filter.primaryAddress.street
+    primary_address_city:
+      $var: $.input.filter.primaryAddress.city
+    primary_address_state:
+      $var: $.input.filter.primaryAddress.state
+    primary_address_postalcode:
+      $var: $.input.filter.primaryAddress.zip
+    primary_address_country:
+      $var: $.input.filter.primaryAddress.country
+    lead_source:
+      $var: $.input.filter.source
+    account_id:
+      $var: $.input.filter.companyId
+    assigned_user_id:
+      $var: $.input.filter.ownerId
+    email1:
+      $var: $.input.filter.primaryEmail
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: c9b642d8-7c8b-49b8-8b36-deea7064b43e
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

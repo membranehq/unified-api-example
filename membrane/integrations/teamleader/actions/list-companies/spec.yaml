@@ -1,0 +1,91 @@
+id: 689f2c0400905568ab2f6e01
+name: List Companies
+key: list-companies
+state: READY
+errors: []
+revision: 212f9ec1-007e-4790-a56d-481c64d7bb0b
+createdAt: '2025-08-15T12:46:03.709Z'
+updatedAt: '2025-08-15T12:46:03.709Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 689f2c0400905568ab2f6b47
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: companies
+  dataSource:
+    key: companies
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    telephones:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          type:
+            $var: $.item.type
+          number:
+            $var: $.item.value
+    website:
+      $var: $.input.filter.websiteUrl
+    addresses:
+      $iterate:
+        source:
+          $var: $.input.filter.addresses
+        item:
+          type:
+            $var: $.item.type
+          address:
+            line_1:
+              $var: $.item.street
+            postal_code:
+              $var: $.item.zip
+            city:
+              $var: $.item.city
+            country:
+              $var: $.item.country
+    added_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+isCustomized: false
+parentRevision: 7ed6751a-52b6-4a6a-807b-303b22e133e9
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

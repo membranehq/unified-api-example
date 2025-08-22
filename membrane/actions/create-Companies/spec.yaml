@@ -1,0 +1,26 @@
+id: 689f2c0400905568ab2f6b3d
+name: Create Company
+key: create-Companies
+state: READY
+errors: []
+revision: 41d8061b-be07-478b-b9a7-b54d490fc52f
+createdAt: '2025-08-15T12:45:56.205Z'
+updatedAt: '2025-08-15T12:45:56.205Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: companies
+  fieldMapping:
+    key: companies
+    input:
+      $var: $.input.fields
+isCustomized: false

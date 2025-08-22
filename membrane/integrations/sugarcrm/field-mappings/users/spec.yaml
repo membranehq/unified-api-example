@@ -1,0 +1,95 @@
+id: 68a8260b678af1d0cf6ebd86
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 76cbfd99-b3db-4652-ae23-5681023c40fd
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f66e8
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebc19
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  user_name:
+    $var: $.userName
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  full_name:
+    $var: $.fullName
+  date_entered:
+    $var: $.createdTime
+  date_modified:
+    $var: $.updatedTime
+  modified_user_id:
+    $var: $.updatedBy
+  created_by:
+    $var: $.createdBy
+  phone_work:
+    $var: $.primaryPhone
+  email1:
+    $var: $.primaryEmail
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.full_name
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  userName:
+    $var: $.user_name
+  primaryEmail:
+    $var: $.email1
+  emails:
+    $iterate:
+      locator: $.email
+      items:
+        value:
+          $var: $.email.$current.email_address
+  primaryPhone:
+    $var: $.phone_work
+  createdTime:
+    $var: $.date_entered
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_modified
+  updatedBy:
+    $var: $.modified_user_id
+  phones:
+    - value:
+        $var: $.phone_work
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,122 @@
+id: 68a839f721039ff70f89b863
+name: Contacts
+isDeactivated: false
+state: READY
+errors: []
+key: contacts
+customized: false
+revision: 97c8b268-f66a-431f-a9af-fa240fbef04e
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 68a839f321039ff70f89b5bf
+dataSourceKey: contacts
+dataSourceId: 68a839f621039ff70f89b6c4
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  name:
+    $var: $.fullName
+  title:
+    $var: $.jobTitle
+  email:
+    $var: $.primaryEmail
+  organization_name:
+    $var: $.companyName
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  other_fields: {}
+  contact_stage_id:
+    $var: $.stage
+  owner_id:
+    $var: $.ownerId
+  source:
+    $var: $.source
+  organization_id:
+    $var: $.companyId
+  last_activity_date:
+    $var: $.lastActivityTime
+  typed_custom_fields: {}
+importValue:
+  id:
+    $var: id
+  fullName:
+    $var: name
+  firstName:
+    $var: first_name
+  lastName:
+    $var: last_name
+  primaryEmail:
+    $var: email
+  primaryPhone:
+    $var: direct_phone
+  primaryAddress:
+    full:
+      $var: present_raw_address
+  stage:
+    $var: contact_stage_id
+  companyName:
+    $var: organization_name
+  companyId:
+    $var: organization_id
+  ownerId:
+    $var: owner_id
+  jobTitle:
+    $var: title
+  source:
+    $var: source
+  createdTime:
+    $var: created_at
+  createdBy:
+    $var: owner_id
+  updatedTime:
+    $var: updated_at
+  updatedBy:
+    $var: owner_id
+  lastActivityTime:
+    $var: last_activity_date
+  emails:
+    - value:
+        $var: email
+  phones:
+    - value:
+        $var: direct_phone
+  addresses:
+    - value:
+        full:
+          $var: present_raw_address
+integration:
+  id: 68a839f321039ff70f89b5bf
+  name: Apollo.io
+  key: apolloio
+  uuid: e7c3f6c9-6594-49e6-ab36-08c4fe257b4a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.275Z'
+  updatedAt: '2025-08-22T09:35:48.285Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/apolloio/logo-f5de86b0-814e-4b1f-9a4a-703f3feb7c20.png
+  connectorId: 65a005dd7044394991406843
+  connectorVersion: 1.1.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 38
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

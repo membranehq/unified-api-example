@@ -1,0 +1,31 @@
+id: 68a8260e678af1d0cf6ebf09
+name: List Users
+key: list-users
+uuid: 9aed2388-d8c3-44a6-9b76-1be50d87bd71
+state: READY
+errors: []
+revision: 79e0222e-faa5-47c3-a040-535af88cff99
+createdAt: '2025-08-22T08:10:54.076Z'
+updatedAt: '2025-08-22T08:10:54.076Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: users
+  dataSource:
+    key: users
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

@@ -1,0 +1,39 @@
+id: 68a820cd9fc7b352ffc9460b
+name: Jobs
+isDeactivated: false
+state: READY
+errors: []
+key: jobs
+revision: 17ab3304-3993-45b7-bbd0-d5294feffbff
+integrationId: 68a820cb9fc7b352ffc945a9
+customized: false
+universalDataSourceId: 68a820cd9fc7b352ffc945fc
+universalDataSourceRevision: a4a0dc92-c1c9-4072-8ea9-98625ed2e1f5
+collectionKey: jobs
+udm: jobs
+defaultPath: /data/jobs
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

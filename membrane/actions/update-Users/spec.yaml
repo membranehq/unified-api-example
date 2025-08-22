@@ -1,0 +1,31 @@
+id: 68a8260e678af1d0cf6ebf0b
+name: Update User
+key: update-Users
+uuid: 4b5992cf-587e-476c-b119-b77e50d8526f
+state: READY
+errors: []
+revision: abae95c1-5ecc-448d-a5ec-c3aba6498de3
+createdAt: '2025-08-22T08:10:54.072Z'
+updatedAt: '2025-08-22T08:10:54.072Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: users
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: users
+    input:
+      $var: $.input.fields
+isCustomized: false

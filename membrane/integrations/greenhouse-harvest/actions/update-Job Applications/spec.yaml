@@ -1,0 +1,59 @@
+id: 68a839b5f8d786c131d7f988
+name: Update Job Application
+key: update-Job Applications
+uuid: 0a56fe18-337c-4c86-b5b9-bee993c0f180
+state: READY
+errors: []
+revision: 2f42192e-d0a3-4acd-8ba5-134b3733bfd7
+createdAt: '2025-08-22T09:34:45.885Z'
+updatedAt: '2025-08-22T09:34:45.885Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a9
+parentId: 68a839b4f8d786c131d7f8fe
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: job-applications
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: job-applications
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: e4b5aa23-3eda-4774-915f-ce28257437b3
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

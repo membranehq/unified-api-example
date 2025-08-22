@@ -1,0 +1,85 @@
+id: 68a84f077702482264c62f8d
+name: List Orders
+key: list-orders
+uuid: 6d2b58e8-ec77-4b11-9a80-c19c9da69fad
+state: READY
+errors: []
+revision: 68e2e97c-5494-461f-8546-60a8f9641d23
+createdAt: '2025-08-22T11:05:45.164Z'
+updatedAt: '2025-08-22T11:05:45.164Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c83
+parentId: 68a84f077702482264c62e9a
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    document_number:
+      $var: $.input.filter.name
+    customer_id:
+      $var: $.input.filter.customerId
+    status:
+      $var: $.input.filter.status
+    payment_status:
+      $var: $.input.filter.paymentStatus
+    currency_code:
+      $var: $.input.filter.currency
+    total:
+      $var: $.input.filter.totalAmount
+    order_line_items:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          unit_price:
+            $var: $.item.unitPrice
+          amount:
+            $var: $.item.totalAmount
+          fulfillment_quantity:
+            $var: $.item.quantity
+isCustomized: false
+parentRevision: 24307e40-ddbc-44aa-9509-a6e37166a8f6
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

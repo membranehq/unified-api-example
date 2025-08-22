@@ -1,0 +1,27 @@
+id: 68a839b4f8d786c131d7f900
+name: Create Job Application
+key: create-Job Applications
+uuid: 6cbd4ade-cedb-4fee-87cb-40b13378643b
+state: READY
+errors: []
+revision: e2d60f44-0356-411b-8d3a-74326e89ca21
+createdAt: '2025-08-22T09:34:45.006Z'
+updatedAt: '2025-08-22T09:34:45.006Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: job-applications
+  fieldMapping:
+    key: job-applications
+    input:
+      $var: $.input.fields
+isCustomized: false

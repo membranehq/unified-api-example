@@ -1,0 +1,87 @@
+id: 68a8260b678af1d0cf6ebd77
+name: Users
+isDeactivated: false
+state: READY
+errors: []
+key: users
+customized: false
+revision: 01aff21b-7a80-4dd0-a7e5-804b2075a3ce
+universalFieldMappingId: 68a8260b678af1d0cf6ebd31
+universalFieldMappingRevision: c06861f2-d157-4334-965b-e45b05713736
+integrationId: 689f2bf000905568ab2f6719
+dataSourceKey: users
+dataSourceId: 68a8260a678af1d0cf6ebcc4
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  name:
+    $var: $.fullName
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  active:
+    $var: $.isActive
+  time_zone:
+    $var: $.timezone
+  email:
+    $var: $.primaryEmail
+  role:
+    $var: $.roleId
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  primaryEmail:
+    $var: $.email
+  timezone:
+    $var: $.time_zone
+  isActive:
+    $var: $.active
+  roleId:
+    $var: $.role
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+  emails:
+    - value:
+        $var: $.email
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

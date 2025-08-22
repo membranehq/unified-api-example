@@ -1,0 +1,96 @@
+id: 68a82654e426fdf8cbab8757
+name: Contacts
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a82652e426fdf8cbab85c5
+key: contacts
+customized: false
+revision: 4baa53c9-15ae-4723-ba41-5ff3d6e140de
+universalFieldMappingId: 68a82654e426fdf8cbab86d9
+universalFieldMappingRevision: d88662d3-ea32-4775-b222-45e5d4037a88
+integrationId: 689f2bf000905568ab2f6701
+dataSourceKey: contacts
+dataSourceId: 68a82652e426fdf8cbab85c5
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.fullName
+  job_title:
+    $var: $.jobTitle
+  telephone:
+    $var: $.primaryPhone
+  email:
+    $var: $.primaryEmail
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: name
+  primaryEmail:
+    $var: email
+  emails:
+    - value:
+        $var: email
+      type: primary
+  primaryPhone:
+    $var: telephone
+  phones:
+    - value:
+        $var: telephone
+      type: primary
+    - value:
+        $var: mobile
+      type: mobile
+    - value:
+        $var: fax
+      type: fax
+  jobTitle:
+    $var: job_title
+  firstName:
+    $firstName:
+      $var: name
+  lastName:
+    $lastName:
+      $var: name
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

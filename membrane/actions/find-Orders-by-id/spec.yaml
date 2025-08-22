@@ -1,0 +1,24 @@
+id: 68a84f067702482264c62e8d
+name: Find Order By Id
+key: find-Orders-by-id
+uuid: e61fda56-4534-42c9-b101-736d50deed70
+state: READY
+errors: []
+revision: 421b882f-73ec-4aa8-8a8f-84529268453b
+createdAt: '2025-08-22T11:05:43.122Z'
+updatedAt: '2025-08-22T11:05:43.122Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: orders
+  dataSource:
+    key: orders
+  id:
+    $var: $.input.id
+isCustomized: false
