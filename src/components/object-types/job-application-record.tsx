@@ -14,8 +14,6 @@ type JobApplicationData = z.infer<typeof jobapplicationsSchema>;
 export function JobApplicationRecord({ record }: JobApplicationRecordProps) {
   const jobAppData = record.data as Partial<JobApplicationData>;
 
-  const candidateId = typeof jobAppData?.candidateId === 'string' ? jobAppData.candidateId : null;
-  const jobId = typeof jobAppData?.jobId === 'string' ? jobAppData.jobId : null;
   const status = typeof jobAppData?.status === 'string' ? jobAppData.status : null;
   const currentStage = typeof jobAppData?.currentStage === 'string' ? jobAppData.currentStage : null;
 

@@ -9,7 +9,7 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useAuth } from "./contexts/auth-context";
 import { useUserTracking } from "@/lib/posthog";
 import { Skeleton } from "@/components/ui/skeleton";
-import { FolderOpen, Database, Zap, RefreshCw, AlertTriangle, Link, Plug, Plug2 } from "lucide-react";
+import { FolderOpen, Database, Zap, RefreshCw, AlertTriangle, Plug2 } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { useDataSources, useIntegration } from "@integration-app/react";
 import { JetBrains_Mono } from "next/font/google";

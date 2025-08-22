@@ -12,7 +12,7 @@ export function usePostHogAnalytics() {
 // Utility functions for common analytics events
 export const analytics = {
   // Track user sign up
-  trackSignUp: (method: string, properties?: Record<string, any>) => {
+  trackSignUp: (method: string, properties?: Record<string, unknown>) => {
     posthog.capture("user_signed_up", {
       method,
       ...properties,
@@ -20,7 +20,7 @@ export const analytics = {
   },
 
   // Track user sign in
-  trackSignIn: (method: string, properties?: Record<string, any>) => {
+  trackSignIn: (method: string, properties?: Record<string, unknown>) => {
     posthog.capture("user_signed_in", {
       method,
       ...properties,
@@ -28,7 +28,10 @@ export const analytics = {
   },
 
   // Track feature usage
-  trackFeatureUsage: (feature: string, properties?: Record<string, any>) => {
+  trackFeatureUsage: (
+    feature: string,
+    properties?: Record<string, unknown>
+  ) => {
     posthog.capture("feature_used", {
       feature,
       ...properties,
@@ -36,7 +39,10 @@ export const analytics = {
   },
 
   // Track button clicks
-  trackButtonClick: (buttonName: string, properties?: Record<string, any>) => {
+  trackButtonClick: (
+    buttonName: string,
+    properties?: Record<string, unknown>
+  ) => {
     posthog.capture("button_clicked", {
       button_name: buttonName,
       ...properties,
@@ -44,7 +50,10 @@ export const analytics = {
   },
 
   // Track form submissions
-  trackFormSubmission: (formName: string, properties?: Record<string, any>) => {
+  trackFormSubmission: (
+    formName: string,
+    properties?: Record<string, unknown>
+  ) => {
     posthog.capture("form_submitted", {
       form_name: formName,
       ...properties,
@@ -52,7 +61,7 @@ export const analytics = {
   },
 
   // Track errors
-  trackError: (error: string, properties?: Record<string, any>) => {
+  trackError: (error: string, properties?: Record<string, unknown>) => {
     posthog.capture("error_occurred", {
       error,
       ...properties,
@@ -60,7 +69,7 @@ export const analytics = {
   },
 
   // Set user properties
-  setUserProperties: (properties: Record<string, any>) => {
+  setUserProperties: (properties: Record<string, unknown>) => {
     posthog.people.set(properties);
   },
 
@@ -68,7 +77,7 @@ export const analytics = {
   identify: (
     userId: string,
     email: string,
-    properties?: Record<string, any>
+    properties?: Record<string, unknown>
   ) => {
     posthog.identify(userId, {
       email,
@@ -78,7 +87,7 @@ export const analytics = {
   },
 
   // Identify user by email only (when you don't have a userId)
-  identifyByEmail: (email: string, properties?: Record<string, any>) => {
+  identifyByEmail: (email: string, properties?: Record<string, unknown>) => {
     posthog.identify(email, {
       email,
       $email: email,
@@ -89,7 +98,7 @@ export const analytics = {
   // Set user properties including email
   setUserPropertiesWithEmail: (
     email: string,
-    properties: Record<string, any>
+    properties: Record<string, unknown>
   ) => {
     posthog.people.set({
       email,
@@ -108,7 +117,7 @@ export const analytics = {
 export function usePageView() {
   const posthog = usePostHog();
 
-  return (pageName: string, properties?: Record<string, any>) => {
+  return (pageName: string, properties?: Record<string, unknown>) => {
     posthog.capture("$pageview", {
       page_name: pageName,
       ...properties,
@@ -120,7 +129,7 @@ export function usePageView() {
 export function useTrackEvent() {
   const posthog = usePostHog();
 
-  return (eventName: string, properties?: Record<string, any>) => {
+  return (eventName: string, properties?: Record<string, unknown>) => {
     posthog.capture(eventName, properties);
   };
 }
@@ -133,7 +142,7 @@ export function useUserIdentification() {
     identifyUser: (
       userId: string,
       email: string,
-      properties?: Record<string, any>
+      properties?: Record<string, unknown>
     ) => {
       posthog.identify(userId, {
         email,
@@ -141,14 +150,14 @@ export function useUserIdentification() {
         ...properties,
       });
     },
-    identifyByEmail: (email: string, properties?: Record<string, any>) => {
+    identifyByEmail: (email: string, properties?: Record<string, unknown>) => {
       posthog.identify(email, {
         email,
         $email: email,
         ...properties,
       });
     },
-    setUserProperties: (email: string, properties: Record<string, any>) => {
+    setUserProperties: (email: string, properties: Record<string, unknown>) => {
       posthog.people.set({
         email,
         $email: email,
@@ -167,7 +176,7 @@ export function useUserTracking() {
     trackUserAction: (
       action: string,
       email: string,
-      properties?: Record<string, any>
+      properties?: Record<string, unknown>
     ) => {
       posthog.capture(action, {
         email,
@@ -180,7 +189,7 @@ export function useUserTracking() {
     trackFeatureUsage: (
       feature: string,
       email: string,
-      properties?: Record<string, any>
+      properties?: Record<string, unknown>
     ) => {
       posthog.capture("feature_used", {
         feature,
@@ -194,7 +203,7 @@ export function useUserTracking() {
     trackPageView: (
       pageName: string,
       email: string,
-      properties?: Record<string, any>
+      properties?: Record<string, unknown>
     ) => {
       posthog.capture("$pageview", {
         page_name: pageName,
@@ -209,7 +218,7 @@ export function useUserTracking() {
       integration: string,
       dataSource: string,
       email: string,
-      properties?: Record<string, any>
+      properties?: Record<string, unknown>
     ) => {
       posthog.capture("integration_used", {
         integration,
@@ -225,7 +234,7 @@ export function useUserTracking() {
       operation: "create" | "update" | "delete",
       recordType: string,
       email: string,
-      properties?: Record<string, any>
+      properties?: Record<string, unknown>
     ) => {
       posthog.capture("record_operation", {
         operation,
@@ -237,77 +246,3 @@ export function useUserTracking() {
     },
   };
 }
-
-/*
-USAGE EXAMPLES:
-
-1. Basic user identification:
-```tsx
-import { useUserIdentification } from "@/lib/posthog";
-
-function MyComponent() {
-  const { identifyUser } = useUserIdentification();
-  
-  const handleLogin = (userId: string, email: string) => {
-    identifyUser(userId, email, {
-      plan: "pro",
-      signup_date: new Date().toISOString(),
-    });
-  };
-}
-```
-
-2. Tracking user actions with email:
-```tsx
-import { useUserTracking } from "@/lib/posthog";
-
-function MyComponent() {
-  const { trackUserAction, trackFeatureUsage } = useUserTracking();
-  const { user } = useAuth();
-  
-  const handleButtonClick = () => {
-    if (user?.email) {
-      trackUserAction("button_clicked", user.email, {
-        button_name: "create_record",
-        page: "dashboard",
-      });
-    }
-  };
-  
-  const handleFeatureUse = () => {
-    if (user?.email) {
-      trackFeatureUsage("sync_configuration", user.email, {
-        integration: "slack",
-        data_source: "users",
-      });
-    }
-  };
-}
-```
-
-3. Tracking in auth context (already implemented):
-```tsx
-// Automatically identifies users when they log in
-// Tracks login events with email
-// Resets tracking when users log out
-```
-
-4. Setting user properties:
-```tsx
-import { analytics } from "@/lib/posthog";
-
-// Set user properties with email
-analytics.setUserPropertiesWithEmail("user@example.com", {
-  plan: "pro",
-  team_size: 10,
-  industry: "technology",
-});
-```
-
-POSTHOG EMAIL TRACKING FEATURES:
-- Users are automatically identified by email when they log in
-- All events include the user's email for easy filtering and analysis
-- User properties are set with email for cohort analysis
-- Email is stored in both 'email' and '$email' fields (PostHog standard)
-- Automatic reset when users log out
-*/

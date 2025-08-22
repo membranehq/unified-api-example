@@ -1,7 +1,7 @@
 import { User } from "lucide-react";
 import { RecordTypeWrapper } from "./record-type-wrapper";
 import Image from "next/image";
-import { userSchema } from "@/lib/app-object-config";
+import { usersSchema } from "@/lib/schemas";
 import { z } from "zod";
 import { IRecord } from "../records/types";
 
@@ -10,7 +10,7 @@ interface UserRecordProps {
 }
 
 // Derive the type from the Zod schema
-type UserData = z.infer<typeof userSchema>;
+type UserData = z.infer<typeof usersSchema>;
 
 export function UserRecord({ record }: UserRecordProps) {
   const userData = record.data as Partial<UserData>;

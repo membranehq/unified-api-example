@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import {
   Integration,
-  useDataSource,
   useIntegrationApp,
 } from "@integration-app/react";
 

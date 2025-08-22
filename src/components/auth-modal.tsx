@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Loader2, Mail } from "lucide-react";
+import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 
 export function AuthModal() {
@@ -36,6 +36,7 @@ export function AuthModal() {
       window.location.reload();
     } catch (error) {
       toast.error("Authentication failed. Please try again.");
+      console.error(error);
     } finally {
       setIsSubmitting(false);
     }

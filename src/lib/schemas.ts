@@ -1,4 +1,4 @@
-import { z } from 'zod';
+import { z } from "zod";
 
 export const ordersSchema = z.object({
   id: z.string(),
@@ -12,35 +12,37 @@ export const ordersSchema = z.object({
   paymentStatus: z.string(),
   fullFillmentStatus: z.string(),
   billingAddress: z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-}),
+    type: z.string(),
+    full: z.string(),
+    street: z.string(),
+    city: z.string(),
+    state: z.string(),
+    country: z.string(),
+    zip: z.string(),
+  }),
   shippingAddress: z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-}),
-  lineItems: z.array(z.object({
-  name: z.string(),
-  productId: z.string(),
-  sku: z.string(),
-  quantity: z.number(),
-  unitPrice: z.number(),
-  totalAmount: z.number()
-})),
+    type: z.string(),
+    full: z.string(),
+    street: z.string(),
+    city: z.string(),
+    state: z.string(),
+    country: z.string(),
+    zip: z.string(),
+  }),
+  lineItems: z.array(
+    z.object({
+      name: z.string(),
+      productId: z.string(),
+      sku: z.string(),
+      quantity: z.number(),
+      unitPrice: z.number(),
+      totalAmount: z.number(),
+    })
+  ),
   createdTime: z.string().datetime(),
   createdBy: z.string(),
   updatedTime: z.string().datetime(),
-  updatedBy: z.string()
+  updatedBy: z.string(),
 });
 
 export const jobapplicationsSchema = z.object({
@@ -57,7 +59,7 @@ export const jobapplicationsSchema = z.object({
   createdTime: z.string().datetime(),
   createdBy: z.string(),
   updatedTime: z.string().datetime(),
-  updatedBy: z.string()
+  updatedBy: z.string(),
 });
 
 export const contactsSchema = z.object({
@@ -66,33 +68,39 @@ export const contactsSchema = z.object({
   firstName: z.string(),
   lastName: z.string(),
   primaryEmail: z.string(),
-  emails: z.array(z.object({
-  value: z.string(),
-  type: z.string()
-})),
+  emails: z.array(
+    z.object({
+      value: z.string(),
+      type: z.string(),
+    })
+  ),
   primaryPhone: z.string(),
-  phones: z.array(z.object({
-  value: z.string(),
-  type: z.string()
-})),
+  phones: z.array(
+    z.object({
+      value: z.string(),
+      type: z.string(),
+    })
+  ),
   primaryAddress: z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-}),
-  addresses: z.array(z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-})),
+    type: z.string(),
+    full: z.string(),
+    street: z.string(),
+    city: z.string(),
+    state: z.string(),
+    country: z.string(),
+    zip: z.string(),
+  }),
+  addresses: z.array(
+    z.object({
+      type: z.string(),
+      full: z.string(),
+      street: z.string(),
+      city: z.string(),
+      state: z.string(),
+      country: z.string(),
+      zip: z.string(),
+    })
+  ),
   stage: z.string(),
   companyName: z.string(),
   companyId: z.string(),
@@ -103,7 +111,7 @@ export const contactsSchema = z.object({
   createdBy: z.string(),
   updatedTime: z.string().datetime(),
   updatedBy: z.string(),
-  lastActivityTime: z.string().datetime()
+  lastActivityTime: z.string().datetime(),
 });
 
 export const usersSchema = z.object({
@@ -114,33 +122,39 @@ export const usersSchema = z.object({
   lastName: z.string(),
   userName: z.string(),
   primaryEmail: z.string(),
-  emails: z.array(z.object({
-  value: z.string(),
-  type: z.string()
-})),
+  emails: z.array(
+    z.object({
+      value: z.string(),
+      type: z.string(),
+    })
+  ),
   primaryPhone: z.string(),
-  phones: z.array(z.object({
-  value: z.string(),
-  type: z.string()
-})),
+  phones: z.array(
+    z.object({
+      value: z.string(),
+      type: z.string(),
+    })
+  ),
   primaryAddress: z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-}),
-  addresses: z.array(z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-})),
+    type: z.string(),
+    full: z.string(),
+    street: z.string(),
+    city: z.string(),
+    state: z.string(),
+    country: z.string(),
+    zip: z.string(),
+  }),
+  addresses: z.array(
+    z.object({
+      type: z.string(),
+      full: z.string(),
+      street: z.string(),
+      city: z.string(),
+      state: z.string(),
+      country: z.string(),
+      zip: z.string(),
+    })
+  ),
   companyName: z.string(),
   companyId: z.string(),
   imageUrl: z.string(),
@@ -150,7 +164,7 @@ export const usersSchema = z.object({
   createdTime: z.string().datetime(),
   createdBy: z.string(),
   updatedTime: z.string().datetime(),
-  updatedBy: z.string()
+  updatedBy: z.string(),
 });
 
 export const jobsSchema = z.object({
@@ -167,45 +181,55 @@ export const jobsSchema = z.object({
   createdTime: z.string().datetime(),
   createdBy: z.string(),
   updatedTime: z.string().datetime(),
-  updatedBy: z.string()
+  updatedBy: z.string(),
 });
 
 export const companiesSchema = z.object({
   id: z.string(),
   name: z.string(),
   websiteUrl: z.string(),
-  phones: z.array(z.object({
-  value: z.string(),
-  type: z.string()
-})),
+  phones: z.array(
+    z.object({
+      value: z.string(),
+      type: z.string(),
+    })
+  ),
   primaryPhone: z.string(),
   description: z.string(),
   currency: z.string(),
   industry: z.string(),
   ownerId: z.string(),
   primaryAddress: z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-}),
-  addresses: z.array(z.object({
-  type: z.string(),
-  full: z.string(),
-  street: z.string(),
-  city: z.string(),
-  state: z.string(),
-  country: z.string(),
-  zip: z.string()
-})),
+    type: z.string(),
+    full: z.string(),
+    street: z.string(),
+    city: z.string(),
+    state: z.string(),
+    country: z.string(),
+    zip: z.string(),
+  }),
+  addresses: z.array(
+    z.object({
+      type: z.string(),
+      full: z.string(),
+      street: z.string(),
+      city: z.string(),
+      state: z.string(),
+      country: z.string(),
+      zip: z.string(),
+    })
+  ),
   numberOfEmployees: z.number(),
   createdTime: z.string().datetime(),
   createdBy: z.string(),
   updatedTime: z.string().datetime(),
   updatedBy: z.string(),
-  lastActivityTime: z.string().datetime()
+  lastActivityTime: z.string().datetime(),
 });
-export type RecordType = "orders" | "job-applications" | "contacts" | "users" | "jobs" | "companies"
+export type RecordType =
+  | "orders"
+  | "job-applications"
+  | "contacts"
+  | "users"
+  | "jobs"
+  | "companies";

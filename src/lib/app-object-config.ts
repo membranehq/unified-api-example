@@ -2,22 +2,17 @@ import { z } from "zod";
 import { RecordType } from "@/lib/schemas";
 import {
   Mail,
-  User,
-  File,
-  Briefcase,
+  User, Briefcase,
   Users,
   Building2,
-  Building,
+  Building
 } from "lucide-react";
 import {
-  EmailRecord,
-  UserRecord,
-  FileRecord,
-  OrderRecord,
+  UserRecord, OrderRecord,
   JobApplicationRecord,
   ContactRecord,
   JobRecord,
-  CompanyRecord,
+  CompanyRecord
 } from "@/components/object-types";
 import { IRecord } from "@/components/records/types";
 import {

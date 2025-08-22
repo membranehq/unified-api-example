@@ -5,7 +5,7 @@ import { Instrument_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { IntegrationAppProvider } from "./providers/integration-app-provider";
-import { AuthProvider, useAuth } from "./contexts/auth-context";
+import { AuthProvider } from "./contexts/auth-context";
 import { AuthModal } from "../components/auth-modal";
 import { Header } from "@/components/header";
 import { PHProvider } from "./providers/posthog-provider";
