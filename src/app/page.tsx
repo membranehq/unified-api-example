@@ -14,6 +14,10 @@ import { useIntegration } from "@membranehq/react";
 import { JetBrains_Mono } from "next/font/google";
 import appObjects from "@/lib/app-object-config";
 import { SelectionGroup } from "../components/selection-group";
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Icons } from "@/components/ui/icons";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 import { useMembraneRecords } from "../hooks/use-membrane-records";
@@ -218,6 +222,7 @@ const RecordsScreen = ({
     handleCreateRecord,
     handleUpdateRecord,
     mutateRecords,
+    code,
   } = useMembraneRecords({
     integrationKey,
     dataSourceKey: appObjectKey,
@@ -295,13 +300,48 @@ const RecordsScreen = ({
       onRefetch={handleRefetch}
       renderHeader={() => (
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
-          {!recordsLoading ? (
-            <div className="text-sm">
-              Showing {cleanedRecords.length} records
-            </div>
-          ) : (
-            <div></div>
-          )}
+          <div className="flex items-center gap-2">
+            {!recordsLoading ? (
+              <div className="text-sm">
+                Showing {cleanedRecords.length} records
+              </div>
+            ) : (
+              <div></div>
+            )}
+            {code && (
+              <Popover>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="h-8 w-8 p-0"
+                    title="View API Code"
+                  >
+                    <Icons.code className="h-4 w-4" />
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-96 p-4" align="start">
+                  <div className="space-y-2">
+                    <h4 className="font-medium text-sm">API Code Example</h4>
+                    <div className="rounded border overflow-hidden">
+                      <SyntaxHighlighter
+                        language="typescript"
+                        style={oneLight}
+                        customStyle={{
+                          margin: 0,
+                          fontSize: '14px',
+                          fontFamily: jetbrainsMono.style.fontFamily,
+                        }}
+                        showLineNumbers={true}
+                      >
+                        {code}
+                      </SyntaxHighlighter>
+                    </div>
+                  </div>
+                </PopoverContent>
+              </Popover>
+            )}
+          </div>
           <PaginationControls
             pagination={pagination}
             isNavigating={recordsLoading}
@@ -444,7 +484,7 @@ export default function Page() {
 
   const integrationItems = (appliedToIntegrations || []).map((integration) => ({
     id: integration.id,
-    key: integration.key,
+    key: integration.key!,
     name: integration.name,
     logoUri: integration.logoUri,
     disabled: integration.state !== "READY",

@@ -27,13 +27,13 @@ export function useMembraneRecords({
       ? `records-${integrationKey}-${dataSourceKey}-${cursor || "initial"}`
       : null;
 
+  const actionKey = getElementKey(
+    getSingularForm(dataSourceKey!),
+    "list-action"
+  );
+
   // Fetcher function for SWR
   const fetchRecords = useCallback(async () => {
-    const actionKey = getElementKey(
-      getSingularForm(dataSourceKey!),
-      "list-action"
-    );
-
     const result = await membraneClient
       .connection(integrationKey!)
       .action(actionKey)
@@ -173,6 +173,15 @@ export function useMembraneRecords({
     [membraneClient, integrationKey, dataSourceKey, mutateRecords, recordsData]
   );
 
+  const code = `import { useIntegrationApp } from "@membranehq/react";
+
+const membraneClient = useIntegrationApp();
+
+const result = await membraneClient
+  .connection("${integrationKey}")
+  .action("${actionKey}")
+  .run({ cursor: ${cursor ? `"${cursor}"` : "undefined"} });`;
+
   return {
     records,
     recordsData,
@@ -182,5 +191,6 @@ export function useMembraneRecords({
     handleCreateRecord,
     handleUpdateRecord,
     mutateRecords,
+    code,
   };
 }
