@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { RecordType } from "@/lib/schemas";
+import { AppObjectKey } from "@/lib/schemas";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useAuth } from "./contexts/auth-context";
@@ -282,7 +282,7 @@ const RecordsScreen = ({
   return (
     <Records
       records={cleanedRecords}
-      appObjectKey={appObjectKey as RecordType}
+      appObjectKey={appObjectKey as AppObjectKey}
       appObjectLabel={appObjects[appObjectKey as keyof typeof appObjects].label}
       isLoading={recordsLoading}
       onDeleteRecord={async (id: string) => handleDeleteRecord(id)}

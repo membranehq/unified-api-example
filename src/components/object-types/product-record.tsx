@@ -1,5 +1,5 @@
 import { IRecord } from "@/components/records/types";
-import { RecordTypeWrapper } from "./app-object-wrapper";
+import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { Package } from "lucide-react";
 import { productsSchema } from "@/lib/schemas";
 import { z } from "zod";
@@ -21,7 +21,7 @@ export function ProductRecord({ record }: ProductRecordProps) {
   const status = typeof productData?.status === 'string' ? productData.status : null;
 
   return (
-    <RecordTypeWrapper>
+    <AppObjectComponentWrapper>
       <div className="flex items-center gap-1 sm:gap-2 min-w-0">
         <Package className="w-3 h-3 sm:w-4 sm:h-4 text-indigo-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
@@ -44,6 +44,6 @@ export function ProductRecord({ record }: ProductRecordProps) {
           </div>
         </div>
       </div>
-    </RecordTypeWrapper>
+    </AppObjectComponentWrapper>
   );
 }

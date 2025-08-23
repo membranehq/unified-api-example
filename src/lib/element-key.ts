@@ -11,7 +11,7 @@ import { capitalize } from "./string-utils";
  * e.g, it should be create-company, not create-Companies.
  */
 export const getElementKey = (
-  recordType: string,
+  appObjectKey: string,
   elementType:
     | "list-action"
     | "create-action"
@@ -21,25 +21,25 @@ export const getElementKey = (
     | "data-source"
     | "flow"
 ) => {
-  const pluralizedRecordType = getPluralForm(recordType);
+  const pluralizedAppObjectKey = getPluralForm(appObjectKey);
 
   switch (elementType) {
     case "list-action":
-      return `list-${pluralizedRecordType}`;
+      return `list-${pluralizedAppObjectKey}`;
 
     // TODO: FIX---------------------
     case "create-action":
-      return `create-${capitalize(pluralizedRecordType)}`;
+      return `create-${capitalize(pluralizedAppObjectKey)}`;
     case "update-action":
-      return `update-${capitalize(pluralizedRecordType)}`;
+      return `update-${capitalize(pluralizedAppObjectKey)}`;
     case "delete-action":
-      return `delete-${capitalize(pluralizedRecordType)}`;
+      return `delete-${capitalize(pluralizedAppObjectKey)}`;
     // -----------------------------
     case "field-mapping":
-      return `${pluralizedRecordType}`;
+      return `${pluralizedAppObjectKey}`;
     case "data-source":
-      return `${pluralizedRecordType}`;
+      return `${pluralizedAppObjectKey}`;
     case "flow":
-      return `receive-${recordType}-events`;
+      return `receive-${appObjectKey}-events`;
   }
 };

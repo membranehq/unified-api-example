@@ -1,5 +1,5 @@
 import { User } from "lucide-react";
-import { RecordTypeWrapper } from "./app-object-wrapper";
+import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import Image from "next/image";
 import { usersSchema } from "@/lib/schemas";
 import { z } from "zod";
@@ -19,7 +19,7 @@ export function UserRecord({ record }: UserRecordProps) {
   const userAvatar = typeof userData?.imageUrl === 'string' ? userData.imageUrl : null;
 
   return (
-    <RecordTypeWrapper>
+    <AppObjectComponentWrapper>
       <div className="flex items-center gap-1 sm:gap-2 min-w-0">
         {userAvatar ? (
           <div className="w-3 h-3 sm:w-4 sm:h-4 rounded-full overflow-hidden flex-shrink-0">
@@ -47,6 +47,6 @@ export function UserRecord({ record }: UserRecordProps) {
           </span>
         </div>
       </div>
-    </RecordTypeWrapper>
+    </AppObjectComponentWrapper>
   );
 }

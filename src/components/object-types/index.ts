@@ -12,4 +12,4 @@ export { DealRecord } from "./deal-record";
 export { InvoiceRecord } from "./invoice-record";
 export { ActivityRecord } from "./activity-record";
 export { NoteRecord } from "./note-record";
-export { RecordTypeWrapper } from "./app-object-wrapper";
+export { AppObjectComponentWrapper } from "./app-object-wrapper";

@@ -9,7 +9,7 @@ import { Record } from "@/components/records/record";
 import { CreateRecordModal } from "../create-record-modal";
 import { EditRecordModal } from "../edit-record-modal";
 import { IRecord } from "@/components/records/types";
-import { RecordType } from "@/lib/schemas";
+import { AppObjectKey } from "@/lib/schemas";
 import { RefreshCw, Inbox } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -18,9 +18,9 @@ const EmptyRecordsState = ({
   appObjectKey,
   appObjectLabel,
   onRefetch,
-  onCreateRecord
+  onCreateRecord,
 }: {
-  appObjectKey: RecordType;
+  appObjectKey: AppObjectKey;
   appObjectLabel: string;
   onRefetch?: () => Promise<void>;
   onCreateRecord: (recordData: Record<string, unknown>) => Promise<void>;
@@ -50,7 +50,8 @@ const EmptyRecordsState = ({
           No {capitalize(getPluralForm(appObjectLabel))} Found
         </h3>
         <p className="text-sm text-gray-600 mb-6 tracking-tight">
-          There are no {getPluralForm(appObjectLabel)} available in this integration.
+          There are no {getPluralForm(appObjectLabel)} available in this
+          integration.
         </p>
         <div className="flex items-center justify-center gap-3">
           {onRefetch && (
@@ -60,8 +61,10 @@ const EmptyRecordsState = ({
               disabled={isRefetching}
               className="flex items-center gap-2"
             >
-              <RefreshCw className={`w-4 h-4 ${isRefetching ? 'animate-spin' : ''}`} />
-              {isRefetching ? 'Refreshing...' : 'Refresh'}
+              <RefreshCw
+                className={`w-4 h-4 ${isRefetching ? "animate-spin" : ""}`}
+              />
+              {isRefetching ? "Refreshing..." : "Refresh"}
             </Button>
           )}
           {config?.allowCreate && (
@@ -89,7 +92,7 @@ interface RecordsProps {
   records: IRecord[];
 
   /** The key of the app object to be displayed (e.g., 'user', 'email', 'file') */
-  appObjectKey: RecordType;
+  appObjectKey: AppObjectKey;
 
   /** Flag indicating if the records are currently being loaded */
   isLoading: boolean;
@@ -164,15 +167,19 @@ export const Records = memo(function Records({
     }
   }, [onRefetch]);
 
-  const config =
-    appObjects[appObjectKey as keyof typeof appObjects];
+  const config = appObjects[appObjectKey as keyof typeof appObjects];
   const IconComponent = config?.icon;
 
   return (
     <>
       {records.length === 0 && !isLoading ? (
         // Show only empty state when no records and not loading
-        <EmptyRecordsState appObjectKey={appObjectKey} appObjectLabel={appObjectLabel} onRefetch={onRefetch} onCreateRecord={onCreateRecord} />
+        <EmptyRecordsState
+          appObjectKey={appObjectKey}
+          appObjectLabel={appObjectLabel}
+          onRefetch={onRefetch}
+          onCreateRecord={onCreateRecord}
+        />
       ) : (
         // Show full records interface when there are records or loading
         <div className="space-y-4">
@@ -189,7 +196,9 @@ export const Records = memo(function Records({
                   disabled={isRefetching || isLoading}
                   className="ml-2 p-1 h-6 w-6"
                 >
-                  <RefreshCw className={`w-4 h-4 ${isRefetching ? 'animate-spin' : ''}`} />
+                  <RefreshCw
+                    className={`w-4 h-4 ${isRefetching ? "animate-spin" : ""}`}
+                  />
                 </Button>
               )}
             </h2>
@@ -235,11 +244,11 @@ export const Records = memo(function Records({
                     index={idx}
                     onRecordDeleted={onDeleteRecord}
                     onEditRecord={handleEditRecord}
-                    recordType={appObjectKey}
+                    appObjectKey={appObjectKey}
+                    appObjectLabel={appObjectLabel}
                     renderRight={renderRight ? renderRight(record) : null}
                   />
-                ))
-              }
+                ))}
             </div>
           </div>
         </div>

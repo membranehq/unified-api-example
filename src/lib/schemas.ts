@@ -498,7 +498,7 @@ export const companiesSchema = z.object({
   updatedBy: z.string(),
   lastActivityTime: z.string().datetime(),
 });
-export type RecordType =
+export type AppObjectKey =
   | "job-candidates"
   | "tasks"
   | "products"

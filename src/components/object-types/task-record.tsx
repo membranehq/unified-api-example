@@ -1,5 +1,5 @@
 import { IRecord } from "@/components/records/types";
-import { RecordTypeWrapper } from "./app-object-wrapper";
+import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { AlertCircle } from "lucide-react";
 import { tasksSchema } from "@/lib/schemas";
 import { z } from "zod";
@@ -21,7 +21,7 @@ export function TaskRecord({ record }: TaskRecordProps) {
   const ownerId = typeof taskData?.ownerId === 'string' ? taskData.ownerId : null;
 
   return (
-    <RecordTypeWrapper>
+    <AppObjectComponentWrapper>
       <div className="flex items-center gap-1 sm:gap-2 min-w-0">
         <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
@@ -44,6 +44,6 @@ export function TaskRecord({ record }: TaskRecordProps) {
           </div>
         </div>
       </div>
-    </RecordTypeWrapper>
+    </AppObjectComponentWrapper>
   );
 }

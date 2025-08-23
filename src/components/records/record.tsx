@@ -33,7 +33,8 @@ interface RecordProps {
   index: number;
   onRecordDeleted?: (recordId: string) => Promise<void>;
   onEditRecord?: (record: IRecord) => void;
-  recordType: string;
+  appObjectKey: string;
+  appObjectLabel: string;
   renderRight?: React.ReactNode;
 }
 
@@ -41,7 +42,8 @@ export function Record({
   record,
   onRecordDeleted,
   onEditRecord,
-  recordType,
+  appObjectKey,
+  appObjectLabel,
   renderRight,
 }: RecordProps) {
   const [expanded, setExpanded] = useState(false);
@@ -68,14 +70,14 @@ export function Record({
     try {
       console.log("record.id", record.id);
       await onRecordDeleted?.(record.id);
-      toast.success(`${recordType} deleted successfully`);
+      toast.success(`${appObjectLabel} deleted successfully`);
       setDeleteDialogOpen(false);
     } catch (error) {
       console.error("Failed to delete record:", error);
       toast.error(
         error instanceof Error
           ? error.message
-          : `Failed to delete ${recordType}`
+          : `Failed to delete ${appObjectLabel}`
       );
     } finally {
       setIsDeleting(false);
@@ -86,11 +88,10 @@ export function Record({
     onEditRecord?.(record);
   };
 
-  const renderRecordTypeComponent = () => {
-    const recordTypeConfig =
-      appObjects[recordType as keyof typeof appObjects];
-    const RecordComponent = recordTypeConfig?.component;
-
+  const renderAppObjectComponent = () => {
+    const RecordComponent =
+      appObjects[appObjectKey as keyof typeof appObjects].component
+ 
     if (RecordComponent) {
       return <RecordComponent record={record as unknown as IRecord} />;
     }
@@ -137,7 +138,7 @@ export function Record({
           </div>
         </div>
 
-        {renderRecordTypeComponent()}
+        {renderAppObjectComponent()}
 
         <div className="px-2 sm:px-4 py-3 text-right sticky right-0 bg-background">
           <div className="flex items-center justify-end gap-1">
@@ -170,14 +171,14 @@ export function Record({
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                {appObjects[recordType as keyof typeof appObjects]
+                {appObjects[appObjectKey as keyof typeof appObjects]
                   ?.allowUpdate && (
                     <DropdownMenuItem
                       onClick={handleEdit}
                       className="flex items-center"
                     >
                       <Edit className="w-4 h-4 mr-2" />
-                      Edit {recordType}
+                      Edit {appObjectLabel}
                     </DropdownMenuItem>
                   )}
 
@@ -186,7 +187,7 @@ export function Record({
                   className="text-red-600 focus:text-red-600"
                 >
                   <Trash2 className="w-4 h-4 mr-2" />
-                  Delete {recordType}
+                  Delete {appObjectLabel}
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -225,8 +226,8 @@ export function Record({
       <ConfirmDialog
         open={deleteDialogOpen}
         onOpenChange={setDeleteDialogOpen}
-        title={`Delete ${recordType}`}
-        description={`Are you sure you want to delete this ${recordType}? This action cannot be undone.`}
+        title={`Delete ${appObjectLabel}`}
+        description={`Are you sure you want to delete this ${appObjectLabel}? This action cannot be undone.`}
         confirmText="Delete"
         cancelText="Cancel"
         variant="destructive"

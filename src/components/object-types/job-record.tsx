@@ -1,5 +1,5 @@
 import { Building2 } from "lucide-react";
-import { RecordTypeWrapper } from "./app-object-wrapper";
+import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { jobsSchema } from "@/lib/schemas";
 import { z } from "zod";
 import { IRecord } from "../records/types";
@@ -20,7 +20,7 @@ export function JobRecord({ record }: JobRecordProps) {
   const description = typeof jobData?.description === 'string' ? jobData.description : null;
 
   return (
-    <RecordTypeWrapper>
+    <AppObjectComponentWrapper>
       <div className="flex items-center gap-1 sm:gap-2 min-w-0">
         <Building2 className="w-3 h-3 sm:w-4 sm:h-4 text-indigo-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
@@ -40,6 +40,6 @@ export function JobRecord({ record }: JobRecordProps) {
           </div>
         </div>
       </div>
-    </RecordTypeWrapper>
+    </AppObjectComponentWrapper>
   );
 }

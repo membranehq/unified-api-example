@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { RecordType } from "@/lib/schemas";
+import { AppObjectKey } from "@/lib/schemas";
 import {
   Mail,
   User,
@@ -86,7 +86,7 @@ interface Config {
   label: string;
 }
 
-const appObjects: Record<RecordType, Config> = {
+const appObjects: Record<AppObjectKey, Config> = {
   orders: {
     label: "Order",
     schema: ordersSchema,
