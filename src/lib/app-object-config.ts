@@ -49,18 +49,46 @@ import {
   notesSchema,
 } from "./schemas";
 
-const appObjectConfig: Record<
-  RecordType,
-  {
-    schema: z.ZodObject<z.ZodRawShape>;
-    allowDelete: boolean;
-    allowUpdate: boolean;
-    allowCreate: boolean;
-    icon: React.ComponentType<{ className?: string }>;
-    component?: React.ComponentType<{ record: IRecord }>;
-  }
-> = {
+interface Config {
+  /**
+   * The schema for the object on this app
+   */
+  schema: z.ZodObject<z.ZodRawShape>;
+
+  /**
+   * Wether users are allowed to delete this object type
+   */
+  allowDelete: boolean;
+
+  /**
+   * Wether users are allowed to update this object type
+   */
+  allowUpdate: boolean;
+
+  /**
+   * Wether users are allowed to create this object type
+   */
+  allowCreate: boolean;
+
+  /**
+   * Icon for this object type
+   */
+  icon: React.ComponentType<{ className?: string }>;
+
+  /**
+   * Component for rendering this object type
+   */
+  component: React.ComponentType<{ record: IRecord }>;
+
+  /**
+   * Readable name for the object
+   */
+  label: string;
+}
+
+const appObjects: Record<RecordType, Config> = {
   orders: {
+    label: "Order",
     schema: ordersSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -69,6 +97,7 @@ const appObjectConfig: Record<
     component: OrderRecord,
   },
   users: {
+    label: "User",
     schema: usersSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -77,6 +106,7 @@ const appObjectConfig: Record<
     component: UserRecord,
   },
   "job-applications": {
+    label: " Job Application",
     schema: jobapplicationsSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -85,6 +115,7 @@ const appObjectConfig: Record<
     component: JobApplicationRecord,
   },
   contacts: {
+    label: "Contact",
     schema: contactsSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -93,6 +124,7 @@ const appObjectConfig: Record<
     component: ContactRecord,
   },
   jobs: {
+    label: "Label",
     schema: jobsSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -101,6 +133,7 @@ const appObjectConfig: Record<
     component: JobRecord,
   },
   companies: {
+    label: "Company",
     schema: companiesSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -109,6 +142,7 @@ const appObjectConfig: Record<
     component: CompanyRecord,
   },
   "job-candidates": {
+    label: "Job Candidates",
     schema: jobcandidatesSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -117,6 +151,7 @@ const appObjectConfig: Record<
     component: JobCandidateRecord,
   },
   tasks: {
+    label: "Task",
     schema: tasksSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -125,6 +160,7 @@ const appObjectConfig: Record<
     component: TaskRecord,
   },
   products: {
+    label: "Product",
     schema: productsSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -133,6 +169,7 @@ const appObjectConfig: Record<
     component: ProductRecord,
   },
   leads: {
+    label: "Lead",
     schema: leadsSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -141,6 +178,7 @@ const appObjectConfig: Record<
     component: LeadRecord,
   },
   deals: {
+    label: "Deal",
     schema: dealsSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -149,6 +187,7 @@ const appObjectConfig: Record<
     component: DealRecord,
   },
   invoices: {
+    label: "Invoice",
     schema: invoicesSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -157,6 +196,7 @@ const appObjectConfig: Record<
     component: InvoiceRecord,
   },
   activities: {
+    label: "Activity",
     schema: activitiesSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -165,6 +205,7 @@ const appObjectConfig: Record<
     component: ActivityRecord,
   },
   notes: {
+    label: "Note",
     schema: notesSchema,
     allowDelete: true,
     allowUpdate: true,
@@ -174,4 +215,4 @@ const appObjectConfig: Record<
   },
 };
 
-export default appObjectConfig;
+export default appObjects;

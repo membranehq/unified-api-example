@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Plus } from "lucide-react";
-import appObjectConfig from "@/lib/app-object-config";
+import appObjects from "@/lib/app-object-config";
 import { ZodFormRenderer } from "@/components/zod-form-renderer";
 import { z } from "zod";
 import { getSingularForm } from '../lib/pluralize-utils';
@@ -32,7 +32,7 @@ export function CreateRecordModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const config =
-    appObjectConfig[recordType as keyof typeof appObjectConfig];
+    appObjects[recordType as keyof typeof appObjects];
 
   if (!config) {
     return null;

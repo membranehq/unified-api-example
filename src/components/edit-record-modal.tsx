@@ -9,7 +9,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Loader2 } from "lucide-react";
-import appObjectConfig from "@/lib/app-object-config";
+import appObjects from "@/lib/app-object-config";
 import { ZodFormRenderer } from "./zod-form-renderer";
 import { IRecord } from "./records/types";
 import { getSingularForm } from "@/lib/pluralize-utils";
@@ -35,7 +35,7 @@ export function EditRecordModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const config =
-    appObjectConfig[recordType as keyof typeof appObjectConfig];
+    appObjects[recordType as keyof typeof appObjects];
 
   // Create a schema without the id field for edit forms
   const editSchema = (config.schema as z.ZodObject<Record<string, z.ZodTypeAny>>).omit({ id: true });

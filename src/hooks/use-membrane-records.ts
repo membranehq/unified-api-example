@@ -28,7 +28,7 @@ export function useMembraneRecords({
       : null;
 
   // Fetcher function for SWR
-  const fetcher = useCallback(async () => {
+  const fetchRecords = useCallback(async () => {
     const actionKey = getElementKey(
       getSingularForm(dataSourceKey!),
       "list-action"
@@ -48,7 +48,7 @@ export function useMembraneRecords({
     error: recordsError,
     isLoading: recordsLoading,
     mutate: mutateRecords,
-  } = useSWR(swrKey, fetcher, {
+  } = useSWR(swrKey, fetchRecords, {
     revalidateOnFocus: false,
     revalidateOnReconnect: false,
   });

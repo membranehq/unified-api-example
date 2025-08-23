@@ -4,7 +4,7 @@ import { memo, useState, useCallback } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { capitalize } from "@/lib/string-utils";
 import { getPluralForm } from "@/lib/pluralize-utils";
-import appObjectConfig from "@/lib/app-object-config";
+import appObjects from "@/lib/app-object-config";
 import { Record } from "@/components/records/record";
 import { CreateRecordModal } from "../create-record-modal";
 import { EditRecordModal } from "../edit-record-modal";
@@ -36,7 +36,7 @@ const EmptyRecordsState = ({
     }
   }, [onRefetch]);
 
-  const config = appObjectConfig[recordType as keyof typeof appObjectConfig];
+  const config = appObjects[recordType as keyof typeof appObjects];
   const IconComponent = config?.icon;
 
   return (
@@ -159,7 +159,7 @@ export const Records = memo(function Records({
   }, [onRefetch]);
 
   const config =
-    appObjectConfig[recordType as keyof typeof appObjectConfig];
+    appObjects[recordType as keyof typeof appObjects];
   const IconComponent = config?.icon;
 
   return (
@@ -187,7 +187,7 @@ export const Records = memo(function Records({
                 </Button>
               )}
             </h2>
-            {appObjectConfig[recordType as keyof typeof appObjectConfig]
+            {appObjects[recordType as keyof typeof appObjects]
               ?.allowCreate && (
                 <CreateRecordModal
                   recordType={recordType}

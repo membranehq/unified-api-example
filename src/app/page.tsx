@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { DataSource } from "@integration-app/sdk";
 import { Button } from "@/components/ui/button";
 import { RecordType } from "@/lib/schemas";
 import Image from "next/image";
@@ -11,9 +10,9 @@ import { useUserTracking } from "@/lib/posthog";
 import { Skeleton } from "@/components/ui/skeleton";
 import { FolderOpen, Database, Zap, RefreshCw, AlertTriangle, Plug2 } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
-import { useDataSources, useIntegration } from "@integration-app/react";
+import { useIntegration } from "@integration-app/react";
 import { JetBrains_Mono } from "next/font/google";
-import appObjectConfig from "@/lib/app-object-config";
+import appObjects from "@/lib/app-object-config";
 import { SelectionGroup } from "../components/selection-group";
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
@@ -351,9 +350,9 @@ export default function Page() {
     string | null
   >(searchParams.get("integration") || null);
 
-  const [selectedDataSourceKey, setSelectedDataSourceKey] = useState<
+  const [selectedAppObjectKey, setSelectedAppObjectKey] = useState<
     string | null
-  >(searchParams.get("dataSource") || null);
+  >(searchParams.get("appObject") || null);
 
   // Update URL when selections change
   const updateURL = (integration: string | null, dataSource: string | null) => {
@@ -366,9 +365,9 @@ export default function Page() {
     }
 
     if (dataSource) {
-      params.set("dataSource", dataSource);
+      params.set("appObject", dataSource);
     } else {
-      params.delete("dataSource");
+      params.delete("appObject");
     }
 
     router.replace(`?${params.toString()}`);
@@ -376,31 +375,31 @@ export default function Page() {
 
   // Update URL when selectedIntegrationKey changes
   useEffect(() => {
-    updateURL(selectedIntegrationKey, selectedDataSourceKey);
-  }, [selectedIntegrationKey, selectedDataSourceKey]);
+    updateURL(selectedIntegrationKey, selectedAppObjectKey);
+  }, [selectedIntegrationKey, selectedAppObjectKey]);
 
-  // Track data source selection
-  const handleDataSourceSelection = (key: string | null) => {
+  // Track app object selection
+  const handleAppObjectSelection = (key: string | null) => {
     if (user?.email) {
-      trackUserAction("data_source_selected", user.email, {
+      trackUserAction("app_object_selected", user.email, {
         data_source: key,
-        previous_data_source: selectedDataSourceKey,
+        previous_app_object: selectedAppObjectKey,
       });
     }
 
-    // Clear integration when data source changes to prevent impossible combinations
-    if (selectedDataSourceKey !== key) {
+    // Clear integration when app object changes to prevent impossible combinations
+    if (selectedAppObjectKey !== key) {
       setSelectedIntegrationKey(null);
     }
-    setSelectedDataSourceKey(key);
+    setSelectedAppObjectKey(key);
   };
 
   // Track integration selection
   const handleIntegrationSelection = (key: string | null) => {
-    if (user?.email && key && selectedDataSourceKey) {
-      trackIntegrationUsage(key, selectedDataSourceKey, user.email, {
+    if (user?.email && key && selectedAppObjectKey) {
+      trackIntegrationUsage(key, selectedAppObjectKey, user.email, {
         integration_key: key,
-        data_source_key: selectedDataSourceKey,
+        data_source_key: selectedAppObjectKey,
       });
     }
 
@@ -418,14 +417,12 @@ export default function Page() {
     },
   } = useIntegration(selectedIntegrationKey!);
 
-  // Fetch all data sources
-  const { items: dataSources, loading: dataSourcesLoading } = useDataSources();
 
   // fetch all integrations that are applied to the selected data source
   const {
     integrations: appliedToIntegrations,
     loading: appliedIntegrationsIsLoading,
-  } = useDataSourceAppliedIntegrations(selectedDataSourceKey);
+  } = useDataSourceAppliedIntegrations(selectedAppObjectKey);
 
   // Get connection to the selected integration
   const {
@@ -437,11 +434,11 @@ export default function Page() {
     integrationKey: selectedIntegrationKey ?? null,
   });
 
-  const dataSourceItems = dataSources.map((dataSource: DataSource) => ({
-    id: dataSource.id,
-    key: dataSource.key,
-    name: dataSource.name,
-    icon: appObjectConfig[dataSource.key as keyof typeof appObjectConfig]?.icon,
+  const appObjectsItems = Object.keys(appObjects).map((key) => ({
+    id: key,
+    key: key,
+    name: appObjects[key as keyof typeof appObjects].label,
+    icon: appObjects[key as keyof typeof appObjects].icon,
   }));
 
   const integrationItems = (appliedToIntegrations || []).map((integration) => ({
@@ -454,10 +451,10 @@ export default function Page() {
 
   // Render the appropriate screen based on current state
   const renderMainContent = () => {
-    if (!selectedDataSourceKey || !selectedIntegrationKey) {
+    if (!selectedAppObjectKey || !selectedIntegrationKey) {
       return (
         <EmptyStateScreen
-          selectedDataSourceKey={selectedDataSourceKey}
+          selectedDataSourceKey={selectedAppObjectKey}
           selectedIntegrationKey={selectedIntegrationKey}
         />
       );
@@ -482,7 +479,7 @@ export default function Page() {
     return (
       <RecordsScreen
         integrationKey={selectedIntegrationKey}
-        dataSourceKey={selectedDataSourceKey}
+        dataSourceKey={selectedAppObjectKey}
         hasConnection={!!connection}
       />
     );
@@ -495,13 +492,12 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-start mb-6">
             <div className="flex-1">
-              {/* Step 1: Data Source Selection*/}
+              {/* Step 1: App Object Selection*/}
               <SelectionGroup
                 title="Object"
-                items={dataSourceItems}
-                selectedKey={selectedDataSourceKey}
-                onSelect={handleDataSourceSelection}
-                loading={dataSourcesLoading}
+                items={appObjectsItems}
+                selectedKey={selectedAppObjectKey}
+                onSelect={handleAppObjectSelection}
                 visibleCount={3}
                 titleIcon={Database}
               />
@@ -515,7 +511,7 @@ export default function Page() {
                 loading={appliedIntegrationsIsLoading}
                 visibleCount={3}
                 titleIcon={Zap}
-                showEmptyMessage={!selectedDataSourceKey}
+                showEmptyMessage={!selectedAppObjectKey}
                 emptyMessage="All available integrations will appear here after object selection"
               />
             </div>

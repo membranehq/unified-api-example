@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { toast } from "sonner";
-import appObjectConfig from "@/lib/app-object-config";
+import appObjects from "@/lib/app-object-config";
 import { IRecord } from "@/components/records/types";
 
 interface RecordProps {
@@ -88,7 +88,7 @@ export function Record({
 
   const renderRecordTypeComponent = () => {
     const recordTypeConfig =
-      appObjectConfig[recordType as keyof typeof appObjectConfig];
+      appObjects[recordType as keyof typeof appObjects];
     const RecordComponent = recordTypeConfig?.component;
 
     if (RecordComponent) {
@@ -170,7 +170,7 @@ export function Record({
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent align="end">
-                {appObjectConfig[recordType as keyof typeof appObjectConfig]
+                {appObjects[recordType as keyof typeof appObjects]
                   ?.allowUpdate && (
                     <DropdownMenuItem
                       onClick={handleEdit}
