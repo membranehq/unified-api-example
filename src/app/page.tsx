@@ -10,7 +10,7 @@ import { useUserTracking } from "@/lib/posthog";
 import { Skeleton } from "@/components/ui/skeleton";
 import { FolderOpen, Database, Zap, RefreshCw, AlertTriangle, Plug2 } from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
-import { useIntegration } from "@integration-app/react";
+import { useIntegration } from "@membranehq/react";
 import { JetBrains_Mono } from "next/font/google";
 import appObjects from "@/lib/app-object-config";
 import { SelectionGroup } from "../components/selection-group";

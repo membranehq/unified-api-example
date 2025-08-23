@@ -2,7 +2,7 @@
 
 import { useState, ReactNode } from 'react';
 import { Button } from '@/components/ui/button';
-import { useConnections } from '@integration-app/react';
+import { useConnections } from '@membranehq/react';
 import { Plug } from 'lucide-react';
 import { cn } from '@/lib/fetch-utils';
 

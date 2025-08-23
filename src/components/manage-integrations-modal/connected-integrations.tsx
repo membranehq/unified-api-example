@@ -2,10 +2,10 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { useConnections } from '@integration-app/react';
+import { useConnections } from '@membranehq/react';
 import { AlertCircle, Loader2, RefreshCw, Plug2 } from 'lucide-react';
 import Image from 'next/image';
-import { useIntegrationApp, type Integration } from '@integration-app/react';
+import { useIntegrationApp, type Integration } from '@membranehq/react';
 import { toast } from 'sonner';
 
 interface IntegrationListItemProps {

@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  Integration,
-  useIntegrationApp,
-} from "@integration-app/react";
+import { Integration, useIntegrationApp } from "@membranehq/react";
 
 export function useDataSourceAppliedIntegrations(dataSourceKey: string | null) {
   const [appliedToIntegrations, setAppliedToIntegrations] = useState<

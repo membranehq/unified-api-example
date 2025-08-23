@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { useIntegrationApp } from "@integration-app/react";
+import { useIntegrationApp } from "@membranehq/react";
 import useSWR from "swr";
 
 import { getElementKey } from "@/lib/element-key";

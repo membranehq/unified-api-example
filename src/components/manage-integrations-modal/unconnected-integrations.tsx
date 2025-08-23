@@ -3,10 +3,10 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { useIntegrations, useConnections } from '@integration-app/react';
+import { useIntegrations, useConnections } from '@membranehq/react';
 import { AlertCircle, Loader2, RefreshCw, Plug2, Search } from 'lucide-react';
 import Image from 'next/image';
-import { useIntegrationApp, type Integration } from '@integration-app/react';
+import { useIntegrationApp, type Integration } from '@membranehq/react';
 import { toast } from 'sonner';
 import { Input } from '@/components/ui/input';
 
