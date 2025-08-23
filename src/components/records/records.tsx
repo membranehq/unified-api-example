@@ -37,7 +37,6 @@ const EmptyRecordsState = ({
   }, [onRefetch]);
 
   const config = appObjects[recordType as keyof typeof appObjects];
-  const IconComponent = config?.icon;
 
   return (
     <div className="bg-gray-50 rounded-lg border border-gray-200">
