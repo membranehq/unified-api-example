@@ -1,5 +1,5 @@
 import { Mail } from "lucide-react";
-import { RecordTypeWrapper } from "./record-type-wrapper";
+import { RecordTypeWrapper } from "./app-object-wrapper";
 import { ordersSchema } from "@/lib/schemas";
 import { z } from "zod";
 import { IRecord } from "../records/types";

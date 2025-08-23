@@ -198,11 +198,11 @@ const ErrorScreen = ({
 // Records Screen Component
 const RecordsScreen = ({
   integrationKey,
-  dataSourceKey,
+  appObjectKey,
   hasConnection,
 }: {
   integrationKey: string | null;
-  dataSourceKey: string | null;
+  appObjectKey: string | null;
   hasConnection: boolean;
 }) => {
   const [cursor, setCursor] = useState<string | null>(null);
@@ -220,7 +220,7 @@ const RecordsScreen = ({
     mutateRecords,
   } = useMembraneRecords({
     integrationKey,
-    dataSourceKey,
+    dataSourceKey: appObjectKey,
     cursor,
     hasConnection,
   });
@@ -255,7 +255,7 @@ const RecordsScreen = ({
   React.useEffect(() => {
     setCursor(null);
     setCursorHistory([]);
-  }, [integrationKey, dataSourceKey]);
+  }, [integrationKey, appObjectKey]);
 
   const handleRetry = async () => {
     setIsRetrying(true);
@@ -282,7 +282,8 @@ const RecordsScreen = ({
   return (
     <Records
       records={cleanedRecords}
-      recordType={dataSourceKey as RecordType}
+      appObjectKey={appObjectKey as RecordType}
+      appObjectLabel={appObjects[appObjectKey as keyof typeof appObjects].label}
       isLoading={recordsLoading}
       onDeleteRecord={async (id: string) => handleDeleteRecord(id)}
       onCreateRecord={async (data: Record<string, unknown>) =>
@@ -315,10 +316,10 @@ const RecordsScreen = ({
 
 // Empty State Screen Component
 const EmptyStateScreen = ({
-  selectedDataSourceKey,
+  selectedAppObjectKey,
   selectedIntegrationKey,
 }: {
-  selectedDataSourceKey: string | null;
+  selectedAppObjectKey: string | null;
   selectedIntegrationKey: string | null;
 }) => (
   <div className="bg-gray-50 rounded-lg border border-gray-200">
@@ -330,7 +331,7 @@ const EmptyStateScreen = ({
         <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
           No Records to Display
         </h3>
-        {!selectedDataSourceKey || !selectedIntegrationKey && (
+        {!selectedAppObjectKey || !selectedIntegrationKey && (
           <p className="text-sm text-gray-600 mb-4 tracking-tight">
             Choose a Object and Integration to view records.
           </p>
@@ -355,7 +356,7 @@ export default function Page() {
   >(searchParams.get("appObject") || null);
 
   // Update URL when selections change
-  const updateURL = (integration: string | null, dataSource: string | null) => {
+  const updateURL = (integration: string | null, appObject: string | null) => {
     const params = new URLSearchParams(searchParams.toString());
 
     if (integration) {
@@ -364,8 +365,8 @@ export default function Page() {
       params.delete("integration");
     }
 
-    if (dataSource) {
-      params.set("appObject", dataSource);
+    if (appObject) {
+      params.set("appObject", appObject);
     } else {
       params.delete("appObject");
     }
@@ -382,7 +383,7 @@ export default function Page() {
   const handleAppObjectSelection = (key: string | null) => {
     if (user?.email) {
       trackUserAction("app_object_selected", user.email, {
-        data_source: key,
+        app_object_key: key,
         previous_app_object: selectedAppObjectKey,
       });
     }
@@ -399,7 +400,7 @@ export default function Page() {
     if (user?.email && key && selectedAppObjectKey) {
       trackIntegrationUsage(key, selectedAppObjectKey, user.email, {
         integration_key: key,
-        data_source_key: selectedAppObjectKey,
+        app_object_key: selectedAppObjectKey,
       });
     }
 
@@ -454,7 +455,7 @@ export default function Page() {
     if (!selectedAppObjectKey || !selectedIntegrationKey) {
       return (
         <EmptyStateScreen
-          selectedDataSourceKey={selectedAppObjectKey}
+          selectedAppObjectKey={selectedAppObjectKey}
           selectedIntegrationKey={selectedIntegrationKey}
         />
       );
@@ -479,7 +480,7 @@ export default function Page() {
     return (
       <RecordsScreen
         integrationKey={selectedIntegrationKey}
-        dataSourceKey={selectedAppObjectKey}
+        appObjectKey={selectedAppObjectKey}
         hasConnection={!!connection}
       />
     );

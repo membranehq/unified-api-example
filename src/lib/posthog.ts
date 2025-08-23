@@ -232,13 +232,13 @@ export function useUserTracking() {
     // Track record operations
     trackRecordOperation: (
       operation: "create" | "update" | "delete",
-      recordType: string,
+      appObjectKey: string,
       email: string,
       properties?: Record<string, unknown>
     ) => {
       posthog.capture("record_operation", {
         operation,
-        record_type: recordType,
+        app_object_key: appObjectKey,
         email,
         user_email: email,
         ...properties,

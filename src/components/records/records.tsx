@@ -15,11 +15,13 @@ import { Button } from "@/components/ui/button";
 
 // Empty State Component
 const EmptyRecordsState = ({
-  recordType,
+  appObjectKey,
+  appObjectLabel,
   onRefetch,
   onCreateRecord
 }: {
-  recordType: RecordType;
+  appObjectKey: RecordType;
+  appObjectLabel: string;
   onRefetch?: () => Promise<void>;
   onCreateRecord: (recordData: Record<string, unknown>) => Promise<void>;
 }) => {
@@ -36,7 +38,7 @@ const EmptyRecordsState = ({
     }
   }, [onRefetch]);
 
-  const config = appObjects[recordType as keyof typeof appObjects];
+  const config = appObjects[appObjectKey as keyof typeof appObjects];
 
   return (
     <div className="bg-gray-50 rounded-lg border border-gray-200">
@@ -45,10 +47,10 @@ const EmptyRecordsState = ({
           <Inbox className="w-8 h-8 text-gray-400" />
         </div>
         <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
-          No {capitalize(getPluralForm(recordType))} Found
+          No {capitalize(getPluralForm(appObjectLabel))} Found
         </h3>
         <p className="text-sm text-gray-600 mb-6 tracking-tight">
-          There are no {getPluralForm(recordType)} available in this integration.
+          There are no {getPluralForm(appObjectLabel)} available in this integration.
         </p>
         <div className="flex items-center justify-center gap-3">
           {onRefetch && (
@@ -64,7 +66,8 @@ const EmptyRecordsState = ({
           )}
           {config?.allowCreate && (
             <CreateRecordModal
-              recordType={recordType}
+              appObjectKey={appObjectKey}
+              appObjectLabel={appObjectLabel}
               onCreatedRecord={onCreateRecord}
             />
           )}
@@ -85,8 +88,8 @@ interface RecordsProps {
   /** Array of record objects to be displayed in the list */
   records: IRecord[];
 
-  /** The type of records being displayed (e.g., 'user', 'email', 'file') */
-  recordType: RecordType;
+  /** The key of the app object to be displayed (e.g., 'user', 'email', 'file') */
+  appObjectKey: RecordType;
 
   /** Flag indicating if the records are currently being loaded */
   isLoading: boolean;
@@ -124,11 +127,14 @@ interface RecordsProps {
 
   /** Optional callback function to handle refetching records */
   onRefetch?: () => Promise<void>;
+
+  /** The label of the app object to be displayed (e.g., 'User', 'Email', 'File') */
+  appObjectLabel: string;
 }
 
 export const Records = memo(function Records({
   records,
-  recordType,
+  appObjectKey,
   isLoading,
   onDeleteRecord,
   onCreateRecord,
@@ -136,6 +142,7 @@ export const Records = memo(function Records({
   renderRight,
   renderHeader,
   onRefetch,
+  appObjectLabel,
 }: RecordsProps) {
   const [editDialogOpen, setEditDialogOpen] = useState(false);
   const [editingRecord, setEditingRecord] = useState<IRecord | null>(null);
@@ -158,14 +165,14 @@ export const Records = memo(function Records({
   }, [onRefetch]);
 
   const config =
-    appObjects[recordType as keyof typeof appObjects];
+    appObjects[appObjectKey as keyof typeof appObjects];
   const IconComponent = config?.icon;
 
   return (
     <>
       {records.length === 0 && !isLoading ? (
         // Show only empty state when no records and not loading
-        <EmptyRecordsState recordType={recordType} onRefetch={onRefetch} onCreateRecord={onCreateRecord} />
+        <EmptyRecordsState appObjectKey={appObjectKey} appObjectLabel={appObjectLabel} onRefetch={onRefetch} onCreateRecord={onCreateRecord} />
       ) : (
         // Show full records interface when there are records or loading
         <div className="space-y-4">
@@ -173,7 +180,7 @@ export const Records = memo(function Records({
             <h2 className="text-xl font-semibold text-gray-700 tracking-tight flex items-center gap-2">
               {/* icon */}
               <IconComponent className="w-5 h-5 text-gray-500" />
-              {capitalize(getPluralForm(recordType))}
+              {getPluralForm(appObjectLabel)}
               {onRefetch && (
                 <Button
                   variant="ghost"
@@ -186,10 +193,11 @@ export const Records = memo(function Records({
                 </Button>
               )}
             </h2>
-            {appObjects[recordType as keyof typeof appObjects]
+            {appObjects[appObjectKey as keyof typeof appObjects]
               ?.allowCreate && (
                 <CreateRecordModal
-                  recordType={recordType}
+                  appObjectKey={appObjectKey}
+                  appObjectLabel={appObjectLabel}
                   onCreatedRecord={onCreateRecord}
                 />
               )}
@@ -227,7 +235,7 @@ export const Records = memo(function Records({
                     index={idx}
                     onRecordDeleted={onDeleteRecord}
                     onEditRecord={handleEditRecord}
-                    recordType={recordType}
+                    recordType={appObjectKey}
                     renderRight={renderRight ? renderRight(record) : null}
                   />
                 ))
@@ -239,7 +247,8 @@ export const Records = memo(function Records({
 
       {editingRecord && (
         <EditRecordModal
-          recordType={recordType}
+          appObjectKey={appObjectKey}
+          appObjectLabel={appObjectLabel}
           record={editingRecord}
           onUpdateRecord={onUpdateRecord}
           open={editDialogOpen}

@@ -1,5 +1,5 @@
 import { IRecord } from "@/components/records/types";
-import { RecordTypeWrapper } from "./record-type-wrapper";
+import { RecordTypeWrapper } from "./app-object-wrapper";
 import { Package } from "lucide-react";
 import { productsSchema } from "@/lib/schemas";
 import { z } from "zod";

@@ -16,13 +16,15 @@ import { z } from "zod";
 import { getSingularForm } from '../lib/pluralize-utils';
 
 interface CreateRecordModalProps {
-  recordType: string;
+  appObjectKey: string;
+  appObjectLabel: string;
   trigger?: React.ReactNode;
   onCreatedRecord?: (recordData: Record<string, unknown>) => Promise<void>;
 }
 
 export function CreateRecordModal({
-  recordType,
+  appObjectKey,
+  appObjectLabel,
   trigger,
   onCreatedRecord,
 }: CreateRecordModalProps) {
@@ -32,7 +34,7 @@ export function CreateRecordModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const config =
-    appObjects[recordType as keyof typeof appObjects];
+    appObjects[appObjectKey as keyof typeof appObjects];
 
   if (!config) {
     return null;
@@ -85,7 +87,7 @@ export function CreateRecordModal({
       <DialogTrigger asChild>
         {trigger || (
           <Button size="sm" className="flex items-center gap-1 sm:gap-2 text-xs sm:text-sm h-8 sm:h-9 px-2 sm:px-3">
-            <span className="hidden sm:inline">Create {getSingularForm(recordType)}</span>
+            <span className="hidden sm:inline">Create {getSingularForm(appObjectLabel)}</span>
             <span className="sm:hidden">Create</span>
             <Plus className="w-3 h-3 sm:w-4 sm:h-4" />
           </Button>
@@ -93,7 +95,7 @@ export function CreateRecordModal({
       </DialogTrigger>
       <DialogContent className="w-[95vw] sm:max-w-[600px] max-h-[90vh] sm:max-h-[80vh] flex flex-col p-0">
         <DialogHeader className="flex-shrink-0 border-b px-4 sm:px-6 py-3 sm:py-4">
-          <DialogTitle className="text-base sm:text-lg">Create {getSingularForm(recordType)}</DialogTitle>
+          <DialogTitle className="text-base sm:text-lg">Create {getSingularForm(appObjectLabel)}</DialogTitle>
         </DialogHeader>
         <form
           onSubmit={handleSubmit}
@@ -140,7 +142,7 @@ export function CreateRecordModal({
               Cancel
             </Button>
             <Button type="submit" disabled={isSubmitting} className="text-xs sm:text-sm h-8 sm:h-9 px-2 sm:px-3">
-              {isSubmitting ? "Creating..." : `Create ${recordType}`}
+              {isSubmitting ? "Creating..." : `Create ${appObjectLabel}`}
             </Button>
           </div>
         </form>

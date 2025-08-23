@@ -17,7 +17,8 @@ import { z } from "zod";
 
 interface EditRecordModalProps {
   record: IRecord;
-  recordType: string;
+  appObjectKey: string;
+  appObjectLabel: string;
   onUpdateRecord?: (recordId: string, recordData: Record<string, unknown>) => Promise<void>;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
@@ -25,7 +26,8 @@ interface EditRecordModalProps {
 
 export function EditRecordModal({
   record,
-  recordType,
+  appObjectKey,
+  appObjectLabel,
   onUpdateRecord,
   open,
   onOpenChange,
@@ -35,7 +37,7 @@ export function EditRecordModal({
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const config =
-    appObjects[recordType as keyof typeof appObjects];
+    appObjects[appObjectKey as keyof typeof appObjects];
 
   // Create a schema without the id field for edit forms
   const editSchema = (config.schema as z.ZodObject<Record<string, z.ZodTypeAny>>).omit({ id: true });
@@ -78,7 +80,7 @@ export function EditRecordModal({
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="w-[95vw] sm:max-w-[600px] max-h-[90vh] sm:max-h-[80vh] flex flex-col p-0">
         <DialogHeader className="flex-shrink-0 border-b px-4 sm:px-6 py-3 sm:py-4">
-          <DialogTitle className="text-base sm:text-lg">Edit {getSingularForm(recordType)}</DialogTitle>
+          <DialogTitle className="text-base sm:text-lg">Edit {getSingularForm(appObjectLabel)}</DialogTitle>
         </DialogHeader>
         <form
           onSubmit={handleSubmit}
@@ -123,7 +125,7 @@ export function EditRecordModal({
                   Updating...
                 </>
               ) : (
-                `Update ${recordType}`
+                `Update ${appObjectLabel}`
               )}
             </Button>
           </div>

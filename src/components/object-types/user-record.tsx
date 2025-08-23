@@ -1,5 +1,5 @@
 import { User } from "lucide-react";
-import { RecordTypeWrapper } from "./record-type-wrapper";
+import { RecordTypeWrapper } from "./app-object-wrapper";
 import Image from "next/image";
 import { usersSchema } from "@/lib/schemas";
 import { z } from "zod";
