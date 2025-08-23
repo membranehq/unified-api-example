@@ -124,7 +124,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     component: ContactRecord,
   },
   jobs: {
-    label: "Label",
+    label: "Job",
     schema: jobsSchema,
     allowDelete: true,
     allowUpdate: true,
