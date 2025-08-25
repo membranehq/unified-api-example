@@ -19,6 +19,7 @@ import { Icons } from "@/components/ui/icons";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
 
+
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 import { useMembraneRecords } from "../hooks/use-membrane-records";
 import { useIntegrationConnection } from "../hooks/use-integration-connection";
@@ -395,6 +396,8 @@ export default function Page() {
     string | null
   >(searchParams.get("appObject") || null);
 
+  const [viewMode, setViewMode] = useState<"all" | "categories">("all");
+
   // Update URL when selections change
   const updateURL = (integration: string | null, appObject: string | null) => {
     const params = new URLSearchParams(searchParams.toString());
@@ -475,11 +478,14 @@ export default function Page() {
     integrationKey: selectedIntegrationKey ?? null,
   });
 
+
+
   const appObjectsItems = Object.keys(appObjects).map((key) => ({
     id: key,
     key: key,
     name: appObjects[key as keyof typeof appObjects].label,
     icon: appObjects[key as keyof typeof appObjects].icon,
+    category: appObjects[key as keyof typeof appObjects].category,
   }));
 
   const integrationItems = (appliedToIntegrations || []).map((integration) => ({
@@ -533,15 +539,17 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-start mb-6">
             <div className="flex-1">
-              {/* Step 1: App Object Selection*/}
+              {/* Step 1: App Object Selection with Categories */}
               <SelectionGroup
                 title="Object"
                 description="Choose the type of object you want to view records for (e.g., contacts, companies, orders)"
                 items={appObjectsItems}
                 selectedKey={selectedAppObjectKey}
                 onSelect={handleAppObjectSelection}
-                visibleCount={3}
+                visibleCount={5}
                 titleIcon={Database}
+                viewMode={viewMode}
+                onViewModeChange={setViewMode}
               />
 
               {/* Step 2: Applied Integrations*/}
@@ -552,7 +560,7 @@ export default function Page() {
                 selectedKey={selectedIntegrationKey ?? null}
                 onSelect={handleIntegrationSelection}
                 loading={appliedIntegrationsIsLoading}
-                visibleCount={3}
+                visibleCount={4}
                 titleIcon={Zap}
                 showEmptyMessage={!selectedAppObjectKey}
                 emptyMessage="All available integrations will appear here after object selection"

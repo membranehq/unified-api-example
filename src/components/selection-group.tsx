@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
-import { Check, ChevronsUpDown } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Check, ChevronsUpDown, ChevronDown, ChevronUp } from "lucide-react";
 import {
   Command,
   CommandEmpty,
@@ -24,6 +25,7 @@ export interface SelectionItem {
   icon?: React.ComponentType<{ className?: string }>;
   logoUri?: string;
   disabled?: boolean;
+  category?: string;
 }
 
 export interface SelectionGroupProps {
@@ -38,13 +40,11 @@ export interface SelectionGroupProps {
   titleIconColor?: string;
   showEmptyMessage?: boolean;
   emptyMessage?: string;
+  viewMode?: "all" | "categories";
+  onViewModeChange?: (mode: "all" | "categories") => void;
 }
 
-// Helper function to render item icon consistently
-const renderItemIcon = (
-  item: SelectionItem,
-  className: string = "w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-1.5"
-) => {
+const ItemIcon = ({ item, className = "w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-1.5" }: { item: SelectionItem; className?: string }) => {
   if (item.logoUri) {
     return (
       <Image
@@ -56,51 +56,159 @@ const renderItemIcon = (
       />
     );
   }
-
-  if (item.icon) {
-    return <item.icon className={className} />;
-  }
-
-  return null;
+  return item.icon ? <item.icon className={className} /> : null;
 };
 
-// Helper function to render title with icon
-const renderTitle = (
-  title: string,
-  description?: string,
-  titleIcon?: React.ComponentType<{ className?: string }>,
-  titleIconColor: string = "text-gray-600"
-) => (
+const Title = ({ title, description, titleIcon, titleIconColor = "text-gray-600" }: {
+  title: string;
+  description?: string;
+  titleIcon?: React.ComponentType<{ className?: string }>;
+  titleIconColor?: string;
+}) => (
   <div className="mb-3">
     <p className="text-md font-semibold flex items-center gap-2 text-gray-900 tracking-tight">
-      {titleIcon &&
-        React.createElement(titleIcon, {
-          className: `w-4 h-4 sm:w-5 sm:h-5 ${titleIconColor}`,
-        })}
+      {titleIcon && React.createElement(titleIcon, {
+        className: `w-4 h-4 sm:w-5 sm:h-5 ${titleIconColor}`,
+      })}
       {title}
     </p>
     {description && (
-      <p className="text-sm text-gray-600 mt-1 ml-6 sm:ml-7">
-        {description}
-      </p>
+      <p className="text-sm text-gray-600 mt-1 ml-6 sm:ml-7">{description}</p>
     )}
   </div>
 );
 
-// Helper function to get button styling based on selection state
-const getButtonStyles = (isSelected: boolean, disabled: boolean = false) => {
+const SelectionButton = ({ item, isSelected, onSelect }: {
+  item: SelectionItem;
+  isSelected: boolean;
+  onSelect: (key: string) => void;
+}) => {
   const baseStyles = "h-8 sm:h-9 px-2 sm:px-3 relative text-xs sm:text-sm";
+  const styles = item.disabled
+    ? `${baseStyles} bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed`
+    : `${baseStyles} ${isSelected
+      ? "bg-blue-50 text-blue-700 border-blue-500 hover:bg-blue-100"
+      : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"}`;
 
-  if (disabled) {
-    return `${baseStyles} bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed`;
-  }
+  return (
+    <Button
+      variant="outline"
+      size="sm"
+      className={styles}
+      onClick={() => !item.disabled && onSelect(item.key)}
+      disabled={item.disabled}
+    >
+      <ItemIcon item={item} />
+      <span className="truncate max-w-[80px] sm:max-w-[120px]">{item.name}</span>
+      {isSelected && !item.disabled && (
+        <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full flex items-center justify-center">
+          <Check className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-white" />
+        </div>
+      )}
+    </Button>
+  );
+};
 
-  const selectedStyles =
-    "bg-blue-50 text-blue-700 border-blue-500 hover:bg-blue-100";
-  const defaultStyles =
-    "bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400";
+const ItemsDropdown = ({ items, title, onSelect, onClose }: {
+  items: SelectionItem[];
+  title: string;
+  onSelect: (key: string) => void;
+  onClose: () => void;
+}) => {
+  const [open, setOpen] = useState(false);
 
-  return `${baseStyles} ${isSelected ? selectedStyles : defaultStyles}`;
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          size="sm"
+          className="h-8 sm:h-9 px-2 sm:px-3 w-auto min-w-[100px] sm:min-w-[140px] bg-white text-gray-700 border-gray-300 hover:bg-gray-50 text-xs sm:text-sm"
+        >
+          {`${items.length} more`}
+          <ChevronsUpDown className="w-3 h-3 sm:w-4 sm:h-4 ml-1 opacity-50" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[200px] p-0">
+        <Command>
+          <CommandInput placeholder={`Search ${title.toLowerCase()}...`} className="h-9" />
+          <CommandList>
+            <CommandEmpty>No items found.</CommandEmpty>
+            <CommandGroup>
+              {items.map((item) => (
+                <CommandItem
+                  key={item.id}
+                  value={item.name}
+                  onSelect={() => {
+                    if (!item.disabled) {
+                      onSelect(item.key);
+                      setOpen(false);
+                      onClose();
+                    }
+                  }}
+                  className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}
+                  disabled={item.disabled}
+                >
+                  <div className="flex items-center gap-2">
+                    <ItemIcon item={item} className="w-4 h-4" />
+                    {item.name}
+                  </div>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+};
+
+const CategorySection = ({ category, items, selectedKey, onSelect, visibleCount }: {
+  category: string;
+  items: SelectionItem[];
+  selectedKey: string | null;
+  onSelect: (key: string) => void;
+  visibleCount: number;
+}) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const selectedItem = items.find(item => item.key === selectedKey);
+  const initialVisible = items.slice(0, visibleCount);
+  const visibleItems = selectedItem && !initialVisible.find(item => item.key === selectedItem.key)
+    ? [...initialVisible, selectedItem].filter((item, index, self) =>
+      index === self.findIndex(t => t.key === item.key))
+    : initialVisible;
+
+  const remainingItems = items.filter(item =>
+    !visibleItems.find(visibleItem => visibleItem.key === item.key)
+  );
+
+  return (
+    <div className="space-y-2">
+      <div className="flex items-center gap-2">
+        <Badge variant="secondary" className="text-xs font-medium">{category}</Badge>
+        <div className="flex-1 h-px bg-gray-200"></div>
+      </div>
+      <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+        {visibleItems.map((item) => (
+          <SelectionButton
+            key={item.id}
+            item={item}
+            isSelected={item.key === selectedKey}
+            onSelect={onSelect}
+          />
+        ))}
+        {remainingItems.length > 0 && (
+          <ItemsDropdown
+            items={remainingItems}
+            title={category}
+            onSelect={onSelect}
+            onClose={() => setDropdownOpen(false)}
+          />
+        )}
+      </div>
+    </div>
+  );
 };
 
 export function SelectionGroup({
@@ -115,14 +223,46 @@ export function SelectionGroup({
   titleIconColor = "text-gray-600",
   showEmptyMessage = false,
   emptyMessage,
+  viewMode = "all",
+  onViewModeChange,
 }: SelectionGroupProps) {
-  const [open, setOpen] = useState(false);
+  const [showAllCategories, setShowAllCategories] = useState(false);
+
+  // Group items by category
+  const categorizedItems = viewMode === "categories"
+    ? items.reduce((acc, item) => {
+      const category = item.category || "Others";
+      if (!acc[category]) acc[category] = [];
+      acc[category].push(item);
+      return acc;
+    }, {} as Record<string, SelectionItem[]>)
+    : null;
+
+  const sortedCategories = categorizedItems
+    ? Object.keys(categorizedItems).sort((a, b) => {
+      if (a === "Other") return 1;
+      if (b === "Other") return -1;
+      return a.localeCompare(b);
+    })
+    : [];
+
+  // Calculate visible items for "all" mode
+  const selectedItem = items.find(item => item.key === selectedKey);
+  const initialVisible = items.slice(0, visibleCount);
+  const visibleItems = selectedItem && !initialVisible.find(item => item.key === selectedItem.key)
+    ? [...initialVisible, selectedItem].filter((item, index, self) =>
+      index === self.findIndex(t => t.key === item.key))
+    : initialVisible;
+
+  const remainingItems = items.filter(item =>
+    !visibleItems.find(visibleItem => visibleItem.key === item.key)
+  );
 
   if (loading) {
     return (
       <div className="p-3 sm:p-5">
-        <Skeleton className="h-6 w-32 mb-3" />
-        <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+        {!showEmptyMessage && <Title title={`Select ${title}`} description={description} titleIcon={titleIcon} titleIconColor={titleIconColor} />}
+        <div className="flex items-center gap-2 sm:gap-3 flex-wrap ml-6 sm:ml-8">
           <Skeleton className="h-8 sm:h-9 w-20 sm:w-24" />
           <Skeleton className="h-8 sm:h-9 w-24 sm:w-28" />
           <Skeleton className="h-8 sm:h-9 w-28 sm:w-32" />
@@ -134,116 +274,97 @@ export function SelectionGroup({
   if (items.length === 0) {
     return (
       <div className="p-3 sm:p-5">
-        {renderTitle(title, description, titleIcon, titleIconColor)}
+        <Title title={title} description={description} titleIcon={titleIcon} titleIconColor={titleIconColor} />
         <div className="text-sm text-gray-500 italic ml-6 sm:ml-7 bg-gray-100 p-2 rounded-md self-start">
-          {showEmptyMessage && emptyMessage
-            ? emptyMessage
-            : "No items available."}
+          {showEmptyMessage && emptyMessage ? emptyMessage : "No items available."}
         </div>
       </div>
     );
   }
 
-  // Calculate items to display
-  const selectedItem = items.find((item) => item.key === selectedKey);
-  const initialVisibleItems = items.slice(0, visibleCount);
-  const buttonItems =
-    selectedItem &&
-      !initialVisibleItems.find((item) => item.key === selectedItem.key)
-      ? [...initialVisibleItems, selectedItem]
-      : initialVisibleItems;
-
-  // Remove duplicates while preserving order
-  const uniqueButtonItems = buttonItems.filter(
-    (item, index, self) => index === self.findIndex((t) => t.key === item.key)
-  );
-
-  // Get remaining items for dropdown
-  const remainingItems = items.filter(
-    (item) =>
-      !uniqueButtonItems.find((buttonItem) => buttonItem.key === item.key)
-  );
-
   return (
     <div className="p-3 sm:p-5">
-      {!showEmptyMessage &&
-        renderTitle(`Select ${title}`, description, titleIcon, titleIconColor)}
-      <div className="flex items-center gap-2 sm:gap-3 flex-wrap ml-6 sm:ml-8">
-        {/* Button items */}
-        {uniqueButtonItems.map((item) => {
-          const isSelected = item.key === selectedKey;
-          return (
-            <Button
-              key={item.id}
-              variant="outline"
-              size="sm"
-              className={getButtonStyles(isSelected, item.disabled)}
-              onClick={() => !item.disabled && onSelect(item.key)}
-              disabled={item.disabled}
-            >
-              {renderItemIcon(item)}
-              <span className="truncate max-w-[80px] sm:max-w-[120px]">
-                {item.name}
-              </span>
-              {isSelected && !item.disabled && (
-                <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full flex items-center justify-center">
-                  <Check className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-white" />
-                </div>
-              )}
-            </Button>
-          );
-        })}
-
-        {/* Dropdown for remaining items */}
-        {remainingItems.length > 0 && (
-          <Popover open={open} onOpenChange={setOpen}>
-            <PopoverTrigger asChild>
-              <Button
-                variant="outline"
-                size="sm"
-                role="combobox"
-                aria-expanded={open}
-                className="h-8 sm:h-9 px-2 sm:px-3 w-auto min-w-[100px] sm:min-w-[140px] bg-white text-gray-700 border-gray-300 hover:bg-gray-50 text-xs sm:text-sm"
+      {!showEmptyMessage && (
+        <div className="flex items-center justify-between mb-3">
+          <Title title={`Select ${title}`} description={description} titleIcon={titleIcon} titleIconColor={titleIconColor} />
+          {onViewModeChange && (
+            <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+              <button
+                onClick={() => onViewModeChange("all")}
+                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${viewMode === "all" ? "bg-white text-gray-900 shadow-sm" : "text-gray-600 hover:text-gray-900"
+                  }`}
               >
-                {`${remainingItems.length} more`}
-                <ChevronsUpDown className="w-3 h-3 sm:w-4 sm:h-4 ml-1 opacity-50" />
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-[200px] p-0">
-              <Command>
-                <CommandInput
-                  placeholder={`Search ${title.toLowerCase()}...`}
-                  className="h-9"
-                />
-                <CommandList>
-                  <CommandEmpty>No items found.</CommandEmpty>
-                  <CommandGroup>
-                    {remainingItems.map((item) => (
-                      <CommandItem
-                        key={item.id}
-                        value={item.name}
-                        onSelect={() => {
-                          if (!item.disabled) {
-                            onSelect(item.key);
-                            setOpen(false);
-                          }
-                        }}
-                        className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}
-                        disabled={item.disabled}
-                      >
-                        <div className="flex items-center gap-2">
-                          {renderItemIcon(item, "w-4 h-4")}
-                          {item.name}
-                        </div>
-                      </CommandItem>
-                    ))}
-                  </CommandGroup>
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
-        )}
-      </div>
+                All
+              </button>
+              <button
+                onClick={() => onViewModeChange("categories")}
+                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${viewMode === "categories" ? "bg-white text-gray-900 shadow-sm" : "text-gray-600 hover:text-gray-900"
+                  }`}
+              >
+                Categories
+              </button>
+            </div>
+          )}
+        </div>
+      )}
+
+      {viewMode === "categories" && categorizedItems ? (
+        <div className="space-y-4 ml-6 sm:ml-8">
+          {(showAllCategories ? sortedCategories : sortedCategories.slice(0, 2)).map((category) => (
+            <CategorySection
+              key={category}
+              category={category}
+              items={categorizedItems[category]}
+              selectedKey={selectedKey}
+              onSelect={onSelect}
+              visibleCount={visibleCount}
+            />
+          ))}
+
+          {!showAllCategories && sortedCategories.length > 2 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setShowAllCategories(true)}
+              className="text-xs text-gray-600 hover:text-gray-900 h-8 px-3"
+            >
+              See {sortedCategories.length - 2} more categories
+              <ChevronDown className="w-3 h-3 ml-1" />
+            </Button>
+          )}
+
+          {showAllCategories && sortedCategories.length > 2 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setShowAllCategories(false)}
+              className="text-xs text-gray-600 hover:text-gray-900 h-8 px-3"
+            >
+              Show less
+              <ChevronUp className="w-3 h-3 ml-1" />
+            </Button>
+          )}
+        </div>
+      ) : (
+        <div className="flex items-center gap-2 sm:gap-3 flex-wrap ml-6 sm:ml-8">
+          {visibleItems.map((item) => (
+            <SelectionButton
+              key={item.id}
+              item={item}
+              isSelected={item.key === selectedKey}
+              onSelect={onSelect}
+            />
+          ))}
+          {remainingItems.length > 0 && (
+            <ItemsDropdown
+              items={remainingItems}
+              title={title}
+              onSelect={onSelect}
+              onClose={() => { }}
+            />
+          )}
+        </div>
+      )}
     </div>
   );
 }

@@ -84,6 +84,11 @@ interface Config {
    * Readable name for the object
    */
   label: string;
+
+  /**
+   * Category for grouping object types
+   */
+  category?: string;
 }
 
 const appObjects: Record<AppObjectKey, Config> = {
@@ -122,6 +127,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     allowCreate: true,
     icon: Users,
     component: ContactRecord,
+    category: "CRM",
   },
   jobs: {
     label: "Job",
@@ -140,6 +146,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     allowCreate: true,
     icon: Building,
     component: CompanyRecord,
+    category: "CRM",
   },
   "job-candidates": {
     label: "Job Candidates",
@@ -158,6 +165,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     allowCreate: true,
     icon: Target,
     component: TaskRecord,
+    category: "CRM",
   },
   products: {
     label: "Product",
@@ -176,6 +184,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     allowCreate: true,
     icon: TrendingUp,
     component: LeadRecord,
+    category: "CRM",
   },
   deals: {
     label: "Deal",
@@ -185,6 +194,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     allowCreate: true,
     icon: TrendingUp,
     component: DealRecord,
+    category: "CRM",
   },
   invoices: {
     label: "Invoice",
@@ -203,6 +213,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     allowCreate: true,
     icon: Calendar,
     component: ActivityRecord,
+    category: "CRM",
   },
   notes: {
     label: "Note",
@@ -212,6 +223,7 @@ const appObjects: Record<AppObjectKey, Config> = {
     allowCreate: true,
     icon: StickyNote,
     component: NoteRecord,
+    category: "CRM",
   },
 };
 
