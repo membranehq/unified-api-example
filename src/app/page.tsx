@@ -536,6 +536,7 @@ export default function Page() {
               {/* Step 1: App Object Selection*/}
               <SelectionGroup
                 title="Object"
+                description="Choose the type of object you want to view records for (e.g., contacts, companies, orders)"
                 items={appObjectsItems}
                 selectedKey={selectedAppObjectKey}
                 onSelect={handleAppObjectSelection}
@@ -546,6 +547,7 @@ export default function Page() {
               {/* Step 2: Applied Integrations*/}
               <SelectionGroup
                 title="Integration"
+                description="Select the third-party service you want to fetch records from"
                 items={integrationItems}
                 selectedKey={selectedIntegrationKey ?? null}
                 onSelect={handleIntegrationSelection}

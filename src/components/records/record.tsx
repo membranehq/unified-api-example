@@ -91,7 +91,7 @@ export function Record({
   const renderAppObjectComponent = () => {
     const RecordComponent =
       appObjects[appObjectKey as keyof typeof appObjects].component
- 
+
     if (RecordComponent) {
       return <RecordComponent record={record as unknown as IRecord} />;
     }
@@ -178,7 +178,7 @@ export function Record({
                       className="flex items-center"
                     >
                       <Edit className="w-4 h-4 mr-2" />
-                      Edit {appObjectLabel}
+                      Edit
                     </DropdownMenuItem>
                   )}
 
@@ -187,7 +187,7 @@ export function Record({
                   className="text-red-600 focus:text-red-600"
                 >
                   <Trash2 className="w-4 h-4 mr-2" />
-                  Delete {appObjectLabel}
+                  Delete
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -233,6 +233,7 @@ export function Record({
         variant="destructive"
         loading={isDeleting}
         onConfirm={confirmDelete}
+        icon={appObjects[appObjectKey as keyof typeof appObjects].icon}
       />
     </div>
   );

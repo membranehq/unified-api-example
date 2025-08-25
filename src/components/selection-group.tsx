@@ -28,6 +28,7 @@ export interface SelectionItem {
 
 export interface SelectionGroupProps {
   title: string;
+  description?: string;
   items: SelectionItem[];
   selectedKey: string | null;
   onSelect: (key: string) => void;
@@ -66,16 +67,24 @@ const renderItemIcon = (
 // Helper function to render title with icon
 const renderTitle = (
   title: string,
+  description?: string,
   titleIcon?: React.ComponentType<{ className?: string }>,
   titleIconColor: string = "text-gray-600"
 ) => (
-  <p className="text-md font-semibold mb-3 flex items-center gap-2 text-gray-900 tracking-tight">
-    {titleIcon &&
-      React.createElement(titleIcon, {
-        className: `w-4 h-4 sm:w-5 sm:h-5 ${titleIconColor}`,
-      })}
-    {title}
-  </p>
+  <div className="mb-3">
+    <p className="text-md font-semibold flex items-center gap-2 text-gray-900 tracking-tight">
+      {titleIcon &&
+        React.createElement(titleIcon, {
+          className: `w-4 h-4 sm:w-5 sm:h-5 ${titleIconColor}`,
+        })}
+      {title}
+    </p>
+    {description && (
+      <p className="text-sm text-gray-600 mt-1 ml-6 sm:ml-7">
+        {description}
+      </p>
+    )}
+  </div>
 );
 
 // Helper function to get button styling based on selection state
@@ -96,6 +105,7 @@ const getButtonStyles = (isSelected: boolean, disabled: boolean = false) => {
 
 export function SelectionGroup({
   title,
+  description,
   items,
   selectedKey,
   onSelect,
@@ -124,7 +134,7 @@ export function SelectionGroup({
   if (items.length === 0) {
     return (
       <div className="p-3 sm:p-5">
-        {renderTitle(title, titleIcon, titleIconColor)}
+        {renderTitle(title, description, titleIcon, titleIconColor)}
         <div className="text-sm text-gray-500 italic ml-6 sm:ml-7 bg-gray-100 p-2 rounded-md self-start">
           {showEmptyMessage && emptyMessage
             ? emptyMessage
@@ -157,7 +167,7 @@ export function SelectionGroup({
   return (
     <div className="p-3 sm:p-5">
       {!showEmptyMessage &&
-        renderTitle(`Select ${title}`, titleIcon, titleIconColor)}
+        renderTitle(`Select ${title}`, description, titleIcon, titleIconColor)}
       <div className="flex items-center gap-2 sm:gap-3 flex-wrap ml-6 sm:ml-8">
         {/* Button items */}
         {uniqueButtonItems.map((item) => {

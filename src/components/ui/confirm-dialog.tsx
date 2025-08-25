@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import {
   Dialog,
   DialogContent,
@@ -14,7 +15,7 @@ import { AlertTriangle } from "lucide-react";
 interface ConfirmDialogProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
-  title: string;
+  title: string | React.ReactNode;
   description: string;
   confirmText?: string;
   cancelText?: string;
@@ -22,6 +23,7 @@ interface ConfirmDialogProps {
   loading?: boolean;
   onConfirm: () => void;
   onCancel?: () => void;
+  icon?: React.ComponentType<{ className?: string }>;
 }
 
 export function ConfirmDialog({
@@ -35,6 +37,7 @@ export function ConfirmDialog({
   loading = false,
   onConfirm,
   onCancel,
+  icon,
 }: ConfirmDialogProps) {
   const handleConfirm = () => {
     if (loading) return; // Prevent multiple calls when loading
@@ -52,9 +55,11 @@ export function ConfirmDialog({
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <div className="flex items-center gap-3">
-            {variant === "destructive" && (
+            {icon ? (
+              React.createElement(icon, { className: "w-5 h-5 text-gray-500" })
+            ) : variant === "destructive" ? (
               <AlertTriangle className="w-5 h-5 text-red-500" />
-            )}
+            ) : null}
             <DialogTitle>{title}</DialogTitle>
           </div>
           <DialogDescription>{description}</DialogDescription>
