@@ -21,7 +21,8 @@ function UnconnectedIntegrationItem({
   const isDisabled = !isReady;
 
   const handleConnect = async () => {
-    if (isDisabled) return;
+
+    if (isDisabled || !integration.key) return;
 
     try {
       setIsConnecting(true);
