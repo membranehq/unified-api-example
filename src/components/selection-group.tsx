@@ -113,7 +113,7 @@ const ItemsDropdown = ({ items, title, onSelect, onClose }: {
   items: SelectionItem[];
   title: string;
   onSelect: (key: string) => void;
-  onClose: () => void;
+  onClose?: () => void;
 }) => {
   const [open, setOpen] = useState(false);
 
@@ -143,7 +143,7 @@ const ItemsDropdown = ({ items, title, onSelect, onClose }: {
                     if (!item.disabled) {
                       onSelect(item.key);
                       setOpen(false);
-                      onClose();
+                      onClose?.();
                     }
                   }}
                   className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}
@@ -170,7 +170,7 @@ const CategorySection = ({ category, items, selectedKey, onSelect, visibleCount 
   onSelect: (key: string) => void;
   visibleCount: number;
 }) => {
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+  // const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const selectedItem = items.find(item => item.key === selectedKey);
   const initialVisible = items.slice(0, visibleCount);
@@ -203,7 +203,6 @@ const CategorySection = ({ category, items, selectedKey, onSelect, visibleCount 
             items={remainingItems}
             title={category}
             onSelect={onSelect}
-            onClose={() => setDropdownOpen(false)}
           />
         )}
       </div>
