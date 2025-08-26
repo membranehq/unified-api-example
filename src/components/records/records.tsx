@@ -254,7 +254,7 @@ export const Records = memo(function Records({
         </div>
       )}
 
-      {editingRecord && (
+      {editDialogOpen && editingRecord && (
         <EditRecordModal
           appObjectKey={appObjectKey}
           appObjectLabel={appObjectLabel}
