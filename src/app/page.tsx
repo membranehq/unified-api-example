@@ -63,12 +63,18 @@ const ConnectionRequiredScreen = ({
   connect,
   isConnecting,
   userEmail,
+  buttonText = "Connect",
+  title,
+  description,
 }: {
   integrationName: string | null;
   integrationLogoUri: string | null;
   connect: () => void;
   isConnecting: boolean;
   userEmail?: string;
+  buttonText?: string;
+  title?: string;
+  description?: string;
 }) => (
   <div className="bg-gray-50 rounded-lg border border-gray-200">
     <div className="p-4 sm:p-8">
@@ -102,17 +108,17 @@ const ConnectionRequiredScreen = ({
           </div>
         </div>
         <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
-          Connect to {integrationName}
+          {title || `Connect to ${integrationName}`}
         </h3>
         <p className="text-gray-600 mb-4 text-sm tracking-tight">
-          Connect to {integrationName} to view records.
+          {description || `Connect to ${integrationName} to view records.`}
         </p>
         <Button
           onClick={connect}
           disabled={isConnecting}
           className="bg-primary text-white hover:bg-primary/90"
         >
-          {isConnecting ? "Connecting..." : "Connect"}
+          {isConnecting ? "Connecting..." : buttonText}
         </Button>
       </div>
     </div>
@@ -531,7 +537,10 @@ export default function Page() {
       return <ConnectionLoadingScreen />;
     }
 
-    if (!connection) {
+    // Connection may be disconnected if authentication was revoked, didn't go though or we couldn't refresh the token
+    const isDisconnected = connection?.disconnected;
+
+    if (!connection || isDisconnected) {
       return (
         <ConnectionRequiredScreen
           integrationName={integrationName}
@@ -539,6 +548,9 @@ export default function Page() {
           connect={connect}
           isConnecting={isConnecting}
           userEmail={user?.email}
+          buttonText={isDisconnected ? "Reconnect" : "Connect"}
+          title={isDisconnected ? `Reconnect to ${integrationName}` : undefined}
+          description={isDisconnected ? `Your connection to ${integrationName} has been disconnected. Please reconnect to view records.` : undefined}
         />
       );
     }

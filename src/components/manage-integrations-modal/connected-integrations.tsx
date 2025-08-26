@@ -20,7 +20,7 @@ function ConnectedIntegrationItem({
   const integrationApp = useIntegrationApp();
 
   const [isDisconnecting, setIsDisconnecting] = useState(false);
-
+  const [isReconnecting, setIsReconnecting] = useState(false);
 
   const handleDisconnect = async () => {
     if (!integration.connection?.id) {
@@ -39,6 +39,28 @@ function ConnectedIntegrationItem({
       });
     } finally {
       setIsDisconnecting(false);
+    }
+  };
+
+  const handleReconnect = async () => {
+    if (!integration.key) {
+      return;
+    }
+
+    try {
+      setIsReconnecting(true);
+
+      await integrationApp.integration(integration.key).openNewConnection();
+
+      await onRefresh();
+
+      toast.success('Successfully reconnected');
+    } catch (error) {
+      toast.error('Failed to reconnect', {
+        description: error instanceof Error ? error.message : 'Unknown error',
+      });
+    } finally {
+      setIsReconnecting(false);
     }
   };
 
@@ -76,19 +98,29 @@ function ConnectedIntegrationItem({
         </div>
 
         <div className="w-full flex justify-between items-end">
-          <Button
-            variant="outline"
-            onClick={handleDisconnect}
-            size="sm"
-            disabled={isDisconnecting}
-            className="text-xs h-7 py-1 text-red-500 hover:text-red-600"
-          >
-            {isDisconnecting ? <Loader2 className="size-3" /> : 'Disconnect'}
-          </Button>
+          {isDisconnected ? (
+            <Button
+              variant="outline"
+              onClick={handleReconnect}
+              size="sm"
+              disabled={isReconnecting}
+              className="text-xs h-7 py-1 text-blue-600 hover:text-blue-700"
+            >
+              {isReconnecting ? <Loader2 className="size-3" /> : 'Reconnect'}
+            </Button>
+          ) : (
+            <Button
+              variant="outline"
+              onClick={handleDisconnect}
+              size="sm"
+              disabled={isDisconnecting}
+              className="text-xs h-7 py-1 text-red-500 hover:text-red-600"
+            >
+              {isDisconnecting ? <Loader2 className="size-3" /> : 'Disconnect'}
+            </Button>
+          )}
         </div>
       </div>
-
-
     </>
   );
 }
