@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { useConnections } from '@membranehq/react';
-import { AlertCircle, Loader2, RefreshCw, Plug2 } from 'lucide-react';
-import Image from 'next/image';
-import { useIntegrationApp, type Integration } from '@membranehq/react';
-import { toast } from 'sonner';
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { useConnections } from "@membranehq/react";
+import { AlertCircle, Loader2, RefreshCw, Plug2 } from "lucide-react";
+import Image from "next/image";
+import { useIntegrationApp, type Integration } from "@membranehq/react";
+import { toast } from "sonner";
 
 interface IntegrationListItemProps {
   integration: Integration;
@@ -34,8 +34,8 @@ function ConnectedIntegrationItem({
 
       await onRefresh();
     } catch (error) {
-      toast.error('Failed to disconnect', {
-        description: error instanceof Error ? error.message : 'Unknown error',
+      toast.error("Failed to disconnect", {
+        description: error instanceof Error ? error.message : "Unknown error",
       });
     } finally {
       setIsDisconnecting(false);
@@ -54,10 +54,10 @@ function ConnectedIntegrationItem({
 
       await onRefresh();
 
-      toast.success('Successfully reconnected');
+      toast.success("Successfully reconnected");
     } catch (error) {
-      toast.error('Failed to reconnect', {
-        description: error instanceof Error ? error.message : 'Unknown error',
+      toast.error("Failed to reconnect", {
+        description: error instanceof Error ? error.message : "Unknown error",
       });
     } finally {
       setIsReconnecting(false);
@@ -106,7 +106,7 @@ function ConnectedIntegrationItem({
               disabled={isReconnecting}
               className="text-xs h-7 py-1 text-blue-600 hover:text-blue-700"
             >
-              {isReconnecting ? <Loader2 className="size-3" /> : 'Reconnect'}
+              {isReconnecting ? <Loader2 className="size-3" /> : "Reconnect"}
             </Button>
           ) : (
             <Button
@@ -116,7 +116,7 @@ function ConnectedIntegrationItem({
               disabled={isDisconnecting}
               className="text-xs h-7 py-1 text-red-500 hover:text-red-600"
             >
-              {isDisconnecting ? <Loader2 className="size-3" /> : 'Disconnect'}
+              {isDisconnecting ? <Loader2 className="size-3" /> : "Disconnect"}
             </Button>
           )}
         </div>
@@ -125,9 +125,7 @@ function ConnectedIntegrationItem({
   );
 }
 
-
 export function ConnectedIntegrations() {
-
   const {
     connections,
     refresh: refreshConnections,
@@ -148,13 +146,8 @@ export function ConnectedIntegrations() {
       return undefined;
     })
     .filter(
-      (integration): integration is Integration => integration !== undefined,
+      (integration): integration is Integration => integration !== undefined
     );
-
-
-
-
-
 
   const refresh = async () => {
     await refreshConnections();
@@ -173,7 +166,7 @@ export function ConnectedIntegrations() {
       <div className="flex flex-col items-center justify-center py-12">
         <AlertCircle />
         <p className="text-sm text-muted-foreground mb-4">
-          {connectionsError.message || 'Failed to load connections'}
+          {connectionsError.message || "Failed to load connections"}
         </p>
         <Button variant="outline" size="sm" onClick={refresh} className="gap-2">
           <RefreshCw /> Try again
@@ -203,9 +196,7 @@ export function ConnectedIntegrations() {
           <h3 className="text-sm font-semibold text-muted-foreground">
             Connected Apps ({connectedIntegrations.length})
           </h3>
-
         </div>
-
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 pt-3">
         {connectedIntegrations.map((integration) => (
