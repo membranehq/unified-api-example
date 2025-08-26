@@ -8,17 +8,27 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useAuth } from "./contexts/auth-context";
 import { useUserTracking } from "@/lib/posthog";
 import { Skeleton } from "@/components/ui/skeleton";
-import { FolderOpen, Database, Zap, RefreshCw, AlertTriangle, Plug2 } from "lucide-react";
+import {
+  FolderOpen,
+  Database,
+  Zap,
+  RefreshCw,
+  AlertTriangle,
+  Plug2,
+} from "lucide-react";
 import { Avatar } from "@/components/ui/avatar";
 import { useIntegration } from "@membranehq/react";
 import { JetBrains_Mono } from "next/font/google";
 import appObjects from "@/lib/app-object-config";
 import { SelectionGroup } from "../components/selection-group";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 import { Icons } from "@/components/ui/icons";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-
 
 const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
 import { useMembraneRecords } from "../hooks/use-membrane-records";
@@ -102,9 +112,7 @@ const ConnectionRequiredScreen = ({
           disabled={isConnecting}
           className="bg-primary text-white hover:bg-primary/90"
         >
-          {isConnecting ? (
-            "Connecting..."
-          ) : "Connect"}
+          {isConnecting ? "Connecting..." : "Connect"}
         </Button>
       </div>
     </div>
@@ -158,14 +166,18 @@ const ErrorScreen = ({
                 <div className="space-y-3 text-sm">
                   <div>
                     <strong className="text-gray-700">Error Message:</strong>
-                    <pre className={`mt-1 p-3 bg-gray-50 rounded text-red-600 overflow-x-auto text-xs border ${jetbrainsMono.className}`}>
+                    <pre
+                      className={`mt-1 p-3 bg-gray-50 rounded text-red-600 overflow-x-auto text-xs border ${jetbrainsMono.className}`}
+                    >
                       {error.message}
                     </pre>
                   </div>
                   {error.stack && (
                     <div>
                       <strong className="text-gray-700">Stack Trace:</strong>
-                      <pre className={`mt-1 p-3 bg-gray-50 rounded text-gray-700 overflow-x-auto text-xs border max-h-40 overflow-y-auto ${jetbrainsMono.className}`}>
+                      <pre
+                        className={`mt-1 p-3 bg-gray-50 rounded text-gray-700 overflow-x-auto text-xs border max-h-40 overflow-y-auto ${jetbrainsMono.className}`}
+                      >
                         {error.stack}
                       </pre>
                     </div>
@@ -282,7 +294,13 @@ const RecordsScreen = ({
   }));
 
   if (recordsError) {
-    return <ErrorScreen error={recordsError} onRetry={handleRetry} isLoading={isRetrying || recordsLoading} />;
+    return (
+      <ErrorScreen
+        error={recordsError}
+        onRetry={handleRetry}
+        isLoading={isRetrying || recordsLoading}
+      />
+    );
   }
 
   return (
@@ -330,7 +348,7 @@ const RecordsScreen = ({
                         style={oneLight}
                         customStyle={{
                           margin: 0,
-                          fontSize: '14px',
+                          fontSize: "14px",
                           fontFamily: jetbrainsMono.style.fontFamily,
                         }}
                         showLineNumbers={true}
@@ -372,11 +390,12 @@ const EmptyStateScreen = ({
         <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
           No Records to Display
         </h3>
-        {!selectedAppObjectKey || !selectedIntegrationKey && (
-          <p className="text-sm text-gray-600 mb-4 tracking-tight">
-            Choose a Object and Integration to view records.
-          </p>
-        )}
+        {!selectedAppObjectKey ||
+          (!selectedIntegrationKey && (
+            <p className="text-sm text-gray-600 mb-4 tracking-tight">
+              Choose a Object and Integration to view records.
+            </p>
+          ))}
       </div>
     </div>
   </div>
@@ -396,7 +415,9 @@ export default function Page() {
     string | null
   >(searchParams.get("appObject") || null);
 
-  const [viewMode, setViewMode] = useState<"all" | "categories">("all");
+  const [objectsViewMode, setObjectsViewMode] = useState<"all" | "categories">(
+    "categories"
+  );
 
   // Update URL when selections change
   const updateURL = (integration: string | null, appObject: string | null) => {
@@ -461,7 +482,6 @@ export default function Page() {
     },
   } = useIntegration(selectedIntegrationKey!);
 
-
   // fetch all integrations that are applied to the selected data source
   const {
     integrations: appliedToIntegrations,
@@ -478,8 +498,6 @@ export default function Page() {
     integrationKey: selectedIntegrationKey ?? null,
   });
 
-
-
   const appObjectsItems = Object.keys(appObjects).map((key) => ({
     id: key,
     key: key,
@@ -488,13 +506,15 @@ export default function Page() {
     category: appObjects[key as keyof typeof appObjects].category,
   }));
 
-  const integrationItems = (appliedToIntegrations || []).map((integration) => ({
-    id: integration.id,
-    key: integration.key!,
-    name: integration.name,
-    logoUri: integration.logoUri,
-    disabled: integration.state !== "READY",
-  }));
+  // filter out integrations that are not ready (credentials not set)
+  const integrationItems = appliedToIntegrations
+    .filter((integration) => integration.state === "READY")
+    .map((integration) => ({
+      id: integration.id,
+      key: integration.key!,
+      name: integration.name,
+      logoUri: integration.logoUri,
+    }));
 
   // Render the appropriate screen based on current state
   const renderMainContent = () => {
@@ -548,8 +568,8 @@ export default function Page() {
                 onSelect={handleAppObjectSelection}
                 visibleCount={5}
                 titleIcon={Database}
-                viewMode={viewMode}
-                onViewModeChange={setViewMode}
+                viewMode={objectsViewMode}
+                onViewModeChange={setObjectsViewMode}
               />
 
               {/* Step 2: Applied Integrations*/}
