@@ -108,7 +108,7 @@ const ConnectionRequiredScreen = ({
           </div>
         </div>
         <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
-          {title || `Connect to ${integrationName}`}
+          {title}
         </h3>
         <p className="text-gray-600 mb-4 text-sm tracking-tight">
           {description || `Connect to ${integrationName} to view records.`}
@@ -549,7 +549,7 @@ export default function Page() {
           isConnecting={isConnecting}
           userEmail={user?.email}
           buttonText={isDisconnected ? "Reconnect" : "Connect"}
-          title={isDisconnected ? `Reconnect to ${integrationName}` : undefined}
+          title={`${isDisconnected ? "Reconnect" : "Connect to"} ${integrationName || ""}`}
           description={isDisconnected ? `Your connection to ${integrationName} has been disconnected. Please reconnect to view records.` : undefined}
         />
       );
