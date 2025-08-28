@@ -8,9 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "membrane:pull:dev": "rm -f membrane.config.yml && cp dev.membrane.config.yml membrane.config.yml && membrane pull",
-    "membrane:push:prod": "rm -f membrane.config.yml && cp prod.membrane.config.yml membrane.config.yml && membrane push",
-    "membrane:dev-to-prod": "npm run membrane:pull:dev && npm run membrane:push:prod"
+    "membrane:push": "membrane push"
   },
   "dependencies": {
     "@membranehq/react": "0.5.4",
@@ -65,7 +63,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@membranehq/cli": "^0.3.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

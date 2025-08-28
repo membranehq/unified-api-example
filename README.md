@@ -19,24 +19,42 @@ cd unified-api-example
 pnpm install
 ```
 
-### 2. Import the Scenario Template
+### 2. Import the elements into your workspace
 
-This example uses a pre-configured scenario template with all interfaces ready to use:
+This example uses the following integration elements:
 
-1. Import the scenario template (link will be provided)
-2. The template includes:
-   - **Data Sources**: Pre-configured data models for Contacts, Companies, Users, Jobs, Job Applications, and other objects
-   - **Integrations**: 50+ integrations
-   - **Actions**: CRUD operations for all supported object types
+- **[Data Sources](https://docs.integration.app/docs/data-sources#/)**: Pre-configured data models for Contacts, Companies, Users, Jobs, Job Applications, and other objects in our [Universal Data Model](https://docs.integration.app/docs/universal-data-models#/)
+- **[Integrations](https://docs.integration.app/docs/external-apps#/)**:  These are third party apps like Hubspot, Salesforce, etc.
+- **[Actions](https://docs.integration.app/docs/actions#/)**: Entities that represent a simple request to an integration. e.g `Create Contact`, `Update Contact`, ...
+
+They can be imported into your workspace using the [Membrane CLI](https://www.npmjs.com/package/@membranehq/cli), to import the elements:
+
+1. Install the Membrane CLI
+
+```bash
+npm install -g @membranehq/cli
+```
+
+2. Populate the config file with your workspace key and secret (This will open your browser to the workspace and get the workspace key and secret)
+
+```bash
+membrane init
+```
+
+3. Pull the elements into your workspace
+
+```bash
+membrane pull
+```
 
 ### 3. Configure Environment Variables
 
-Create a `.env.local` file in the root directory:
+Create a `.env.local` file in the root directory with your workspace key and secret
 
 ```env
 # Integration.app Configuration
-INTEGRATION_API_KEY=your_integration_api_key
-INTEGRATION_WORKSPACE_ID=your_workspace_id
+INTEGRATION_APP_WORKSPACE_KEY=your_workspace_key
+INTEGRATION_APP_WORKSPACE_SECRET=your_workspace_secret
 ```
 
 ### 4. Configure Integrations
@@ -44,7 +62,7 @@ INTEGRATION_WORKSPACE_ID=your_workspace_id
 In your Membrane workspace:
 
 1. Navigate to your [Integrations page](https://console.integration.app/w/0/external-apps/integrations)
-2. For each integration you want to use, add the necessary credentials, some integrations use our [Auth Proxy](https://docs.integration.app/docs/auth-proxy#/) so providing adding credentials isn't required.
+2. For each integration you want to use, add the necessary credentials, some integrations like `Hubspot` use our [Auth Proxy](https://docs.integration.app/docs/auth-proxy#/) so providing adding credentials isn't required.
 
 ### 5. Start the Development Server
 
