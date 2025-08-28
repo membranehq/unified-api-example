@@ -23,9 +23,9 @@ pnpm install
 
 This example uses the following integration elements:
 
-- [**Data Sources**](https://docs.integration.app/docs/data-sources#/): Pre-configured data models for Contacts, Companies, Users, Jobs, Job Applications, and other objects in our [Universal Data Model](https://docs.integration.app/docs/universal-data-models#/)
-- [**Integrations**](https://docs.integration.app/docs/external-apps#/):  These are third party apps like Hubspot, Salesforce, etc.
-- [**Actions**](https://docs.integration.app/docs/actions#/): Entities that represent a simple request to an integration. e.g `Create Contact`, `Update Contact`, ...
+- **[Data Sources](https://docs.integration.app/docs/data-sources#/)**: Pre-configured data models for Contacts, Companies, Users, Jobs, Job Applications, and other objects in our [Universal Data Model](https://docs.integration.app/docs/universal-data-models#/)
+- **[Integrations](https://docs.integration.app/docs/external-apps#/)**: These are third party apps like Hubspot, Salesforce, etc.
+- **[Actions](https://docs.integration.app/docs/actions#/)**: Entities that represent a simple request to an integration. e.g `Create Contact`, `Update Contact`, ...
 
 They can be imported into your workspace using the [Membrane CLI](https://www.npmjs.com/package/@membranehq/cli), to import the elements:
 
