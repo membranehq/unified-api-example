@@ -7,7 +7,7 @@ A comprehensive example application demonstrating how to use [Membrane](https://
 Before you begin, ensure you have:
 
 - Node.js 18+ installed
-- A Integration.app account
+- A [Integration.app](https://integration.app/) account
 
 ## 🛠️ Setup Instructions
 
