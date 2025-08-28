@@ -16,10 +16,8 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Unified API Example",
-    template: "%s | Unified API Example",
-  },
+  title: "Membrane | Unified API Example",
+  metadataBase: new URL(`https://unified-api.examples.integration.app`),
   viewport: {
     width: "device-width",
     initialScale: 1,
