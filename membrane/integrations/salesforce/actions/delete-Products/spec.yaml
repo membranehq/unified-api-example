@@ -1,0 +1,50 @@
+id: 68a8a3992e84328ca528f8c2
+name: Delete Product
+key: delete-Products
+uuid: 6e0a4eaa-0b2b-4817-848b-6b04e8a45bb3
+state: READY
+errors: []
+revision: e4ede1a5-90f7-443a-81e8-1ef6bc324eb6
+createdAt: '2025-08-22T17:06:35.578Z'
+updatedAt: '2025-08-22T17:06:35.578Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a3982e84328ca528f756
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fd99cf8b-f9dd-464b-bcd4-f04f38248a2a
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,24 @@
+id: 68a8a340bc4406f3f0dc497e
+name: Find Lead By Id
+key: find-Leads-by-id
+uuid: df4f419b-998a-4485-b5d6-472c341740c8
+state: READY
+errors: []
+revision: cfdd3db4-9bc2-4927-8602-8bb4e6b3a826
+createdAt: '2025-08-22T17:05:04.347Z'
+updatedAt: '2025-08-22T17:05:04.347Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  id:
+    $var: $.input.id
+isCustomized: false

@@ -1,0 +1,24 @@
+id: 68a8a39d2e84328ca528fcf6
+name: Receive Created Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Products-events
+revision: da7ff3ae-775f-482a-9249-8fe0cca56c3e
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Products-created-trigger:
+    type: data-record-created-trigger
+    name: Product Created Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping:
+        key: products
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

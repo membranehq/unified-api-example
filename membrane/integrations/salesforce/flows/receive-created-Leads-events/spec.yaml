@@ -1,0 +1,51 @@
+id: 68a8a343bc4406f3f0dc4ce2
+name: Receive Created Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Leads-events
+revision: 45f8559a-a955-4797-991a-b3e8529d2893
+universalFlowId: 68a8a342bc4406f3f0dc4b71
+integrationId: 689f2bf000905568ab2f66d1
+universalFlowRevision: e4001059-f45d-406c-bc03-b3c73d9b1bf4
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Leads-created-trigger:
+    type: data-record-created-trigger
+    name: Lead Created Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping:
+        key: leads
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,75 @@
+id: 68a8a248285c02f4152f0309
+name: Search Activities
+key: search-activities
+uuid: 4f9e0c1d-2e83-4b22-ab7e-ddf71c0a80cf
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a244285c02f4152effe8
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a245285c02f4152f0042
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a245285c02f4152f00d0
+revision: e10f47fc-0c0a-42b7-b892-d199dcfe6e1e
+createdAt: '2025-08-22T17:01:00.069Z'
+updatedAt: '2025-08-22T17:01:00.069Z'
+isDeactivated: false
+integrationId: 68a8a244285c02f4152effe8
+parentId: 68a8a247285c02f4152f018a
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 1e57ee4d-82f4-424b-9b39-e9c9fdb6230a
+integration:
+  id: 68a8a244285c02f4152effe8
+  name: Google Calendar
+  key: google-calendar
+  uuid: 87e5e8ee-22dc-446d-aac7-729b09fe6000
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:00:52.838Z'
+  updatedAt: '2025-08-22T17:00:53.382Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/google-calendar/logo.png
+  connectorId: 6466784660f981f3ce6968fa
+  connectorVersion: 1.1.20
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 38
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

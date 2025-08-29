@@ -1,0 +1,50 @@
+id: 68a8a43f7f08dba516dd1348
+name: Delete Job Candidate
+key: delete-Job Candidates
+uuid: c90d1303-80d7-4ff0-9654-a5f5a1b679bd
+state: READY
+errors: []
+revision: 599cc9c8-99f6-40f5-b5b1-521be887e7fa
+createdAt: '2025-08-22T17:09:20.378Z'
+updatedAt: '2025-08-22T17:09:20.378Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a1
+parentId: 68a8a43e7f08dba516dd1290
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: job-candidates
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 96d2cd65-f62b-44df-a7f0-d91fb31e0870
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

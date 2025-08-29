@@ -1,0 +1,50 @@
+id: 68a8a401c172bc720667802f
+name: Receive Deleted Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Tasks-events
+revision: 1ff152b9-c881-45d1-aa42-c7fa383d3920
+universalFlowId: 68a8a400c172bc7206677c92
+integrationId: 689f2bf000905568ab2f66e8
+universalFlowRevision: bd62a40d-5da5-48f2-8bf9-3e1cc911e25e
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Task Deleted Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

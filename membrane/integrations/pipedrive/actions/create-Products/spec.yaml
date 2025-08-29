@@ -1,0 +1,54 @@
+id: 68a8a3992e84328ca528f8ae
+name: Create Product
+key: create-Products
+uuid: d2644cee-06d6-48fd-a728-d3046cf7a333
+state: READY
+errors: []
+revision: a1c6c675-3dcf-4c29-90bb-ba2ead854f6b
+createdAt: '2025-08-22T17:06:35.801Z'
+updatedAt: '2025-08-22T17:06:35.801Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e0
+parentId: 68a8a3982e84328ca528f754
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: products
+  fieldMapping:
+    key: products
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 9e3a9fbc-21f7-4c30-a569-592a4aee089b
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

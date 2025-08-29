@@ -1,0 +1,15 @@
+id: 68a8a245285c02f4152f00a1
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f000b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

@@ -1,0 +1,25 @@
+id: 68a8a247285c02f4152f0186
+name: Match Activity
+key: match-Activities
+uuid: 2c36235a-5f3d-4c75-b3ac-6ec28dd45ec5
+state: READY
+errors: []
+revision: a3d70138-ab03-4634-8208-2f017ef4aac3
+createdAt: '2025-08-22T17:00:55.973Z'
+updatedAt: '2025-08-22T17:00:55.973Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

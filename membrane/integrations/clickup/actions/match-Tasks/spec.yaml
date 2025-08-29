@@ -1,0 +1,52 @@
+id: 68a8a3f6c172bc72066775bd
+name: Match Task
+key: match-Tasks
+uuid: a37d1d28-cd89-4306-9e4f-9703b579f6e9
+state: READY
+errors: []
+revision: 8425dc75-5535-4489-a9ad-24554262c6fb
+createdAt: '2025-08-22T17:08:15.567Z'
+updatedAt: '2025-08-22T17:08:15.567Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e44
+parentId: 68a8a3f5c172bc72066772c5
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 9343a831-2460-479d-8e76-1b6f08789ad1
+integration:
+  id: 68a8a3ebc172bc7206676e44
+  name: Clickup
+  key: clickup
+  uuid: af6fad15-3a7c-441e-89fe-90264262a5f5
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.950Z'
+  updatedAt: '2025-08-22T17:08:00.685Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/clickup/logo.png
+  connectorId: 64359f80986ed1caadafa638
+  connectorVersion: 1.2.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 11
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: true
+  eventsCount: 28
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

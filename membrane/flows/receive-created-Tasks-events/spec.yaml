@@ -1,0 +1,24 @@
+id: 68a8a400c172bc7206677c8e
+name: Receive Created Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Tasks-events
+revision: 99e9ab83-c3bc-4ff6-8c32-02f201db53e1
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-created-trigger:
+    type: data-record-created-trigger
+    name: Task Created Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

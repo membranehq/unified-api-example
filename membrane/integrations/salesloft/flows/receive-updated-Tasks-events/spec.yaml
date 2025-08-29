@@ -1,0 +1,52 @@
+id: 68a8a405c172bc720667828e
+name: Receive Updated Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Tasks-events
+revision: 38e840b6-de59-4547-aad3-6a73c2e7fbe4
+universalFlowId: 68a8a400c172bc7206677c8a
+integrationId: 689f2bf000905568ab2f6719
+universalFlowRevision: 136b407b-3c76-416b-a84b-d8a2f3fa4489
+nodes:
+  Tasks-updated-trigger:
+    type: data-record-updated-trigger
+    name: Task Updated Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

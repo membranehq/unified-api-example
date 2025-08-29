@@ -1,0 +1,58 @@
+id: 68a8a3f6c172bc72066774c5
+name: Update Task
+key: update-Tasks
+uuid: b1fd45c6-d9fb-4d7f-a22b-0b35cc2cc23b
+state: READY
+errors: []
+revision: 40608682-a056-478c-b0ee-f262103b1891
+createdAt: '2025-08-22T17:08:13.777Z'
+updatedAt: '2025-08-22T17:08:13.777Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a8a3f5c172bc72066772c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 3444338b-c96e-46c8-a7ae-0cd1ab6e3480
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

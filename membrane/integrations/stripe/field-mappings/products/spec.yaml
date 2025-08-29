@@ -1,0 +1,80 @@
+id: 68a8a3972e84328ca528f67a
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+customized: false
+revision: eafc1c1a-eecd-45b1-8dc2-1b92605a48bf
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 68a8a3952e84328ca528f546
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f5b0
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  active:
+    $var: $.isActive
+  created:
+    $var: $.createdTime
+  default_price:
+    $var: $.price
+  description:
+    $var: $.description
+  features:
+    $var: $.options
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  object: product
+  package_dimensions:
+    weight:
+      $var: $.weight
+  updated:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: id
+  name:
+    $var: name
+  description:
+    $var: description
+  weight:
+    $var: package_dimensions.weight
+  isActive:
+    $var: active
+  price:
+    $var: default_price
+  createdTime:
+    $var: created
+  updatedTime:
+    $var: updated
+integration:
+  id: 68a8a3952e84328ca528f546
+  name: Stripe
+  key: stripe
+  uuid: 1b044290-8fd1-4e55-b858-84e9ed1de2ed
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:06:29.053Z'
+  updatedAt: '2025-08-22T17:06:30.417Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/stripe/logo.png
+  connectorId: 6466785960f981f3ce696919
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 479
+  hasData: true
+  dataCollectionsCount: 26
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

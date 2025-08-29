@@ -1,0 +1,40 @@
+id: 68a89b5e6f9be8241c5f54b2
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+customized: false
+revision: 3ad3423f-f239-4b09-ab5a-e34c5bbd8e1d
+universalFieldMappingId: 68a89b5e6f9be8241c5f5487
+universalFieldMappingRevision: 1d47f9a4-b7c4-44d5-9428-199e5d1dfbc8
+integrationId: 689f2bf000905568ab2f66dc
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

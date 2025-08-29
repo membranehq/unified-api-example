@@ -1,0 +1,72 @@
+id: 68a8a4417f08dba516dd1635
+name: Receive Updated Job Candidate Events
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a43e7f08dba516dd11eb
+  - message: Field Mapping Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a43e7f08dba516dd1233
+key: receive-updated-Job Candidates-events
+revision: 19a9d142-14f3-4dcb-a8fd-d2fee4a5743b
+universalFlowId: 68a8a4407f08dba516dd14b5
+integrationId: 68a820cb9fc7b352ffc9459d
+universalFlowRevision: 2a7d7234-4bc0-4081-b80c-463a627a855f
+nodes:
+  Job Candidates-updated-trigger:
+    type: data-record-updated-trigger
+    name: Job Candidate Updated Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping:
+        key: job-candidates
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,55 @@
+id: 68a89b606f9be8241c5f56ea
+name: Search Notes
+key: search-notes
+uuid: 530e97ae-d211-4813-ab99-4a6fd9cfda92
+state: READY
+errors: []
+revision: 3f6e9d3f-486a-4874-baaf-7395c6483ab1
+createdAt: '2025-08-22T16:31:30.973Z'
+updatedAt: '2025-08-22T16:31:30.973Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a89b606f9be8241c5f5580
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: ccc82884-870d-487d-a90f-2a20f5c2802a
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

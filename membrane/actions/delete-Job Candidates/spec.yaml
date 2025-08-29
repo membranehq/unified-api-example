@@ -1,0 +1,22 @@
+id: 68a8a43e7f08dba516dd1290
+name: Delete Job Candidate
+key: delete-Job Candidates
+uuid: c90d1303-80d7-4ff0-9654-a5f5a1b679bd
+state: READY
+errors: []
+revision: 96d2cd65-f62b-44df-a7f0-d91fb31e0870
+createdAt: '2025-08-22T17:09:18.933Z'
+updatedAt: '2025-08-22T17:09:18.933Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: job-candidates
+  id:
+    $var: $.input.id
+isCustomized: false

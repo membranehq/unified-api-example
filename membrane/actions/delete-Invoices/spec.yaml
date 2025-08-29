@@ -1,0 +1,22 @@
+id: 68a8a2a7bdd4149f1547761d
+name: Delete Invoice
+key: delete-Invoices
+uuid: f8980ed0-c34c-4427-9d9e-55d930e1d1b1
+state: READY
+errors: []
+revision: 43c9aace-c8c8-4684-a3a8-7ec6ce0393bb
+createdAt: '2025-08-22T17:02:31.107Z'
+updatedAt: '2025-08-22T17:02:31.107Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+isCustomized: false

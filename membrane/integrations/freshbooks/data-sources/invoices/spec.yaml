@@ -1,0 +1,38 @@
+id: 68a8a2a5bdd4149f15477517
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+revision: 7054d8c0-5444-4541-a6d1-65123d74ba4f
+integrationId: 68a8a2a4bdd4149f154774d2
+customized: false
+universalDataSourceId: 68a8a2a5bdd4149f154774f8
+universalDataSourceRevision: 8ec6661f-20c4-4d79-8162-f0f658995cbe
+collectionKey: invoices
+udm: invoices
+defaultPath: /data/invoices
+integration:
+  id: 68a8a2a4bdd4149f154774d2
+  name: Freshbooks
+  key: freshbooks
+  uuid: 629dfb93-251e-45d4-a5e5-fd4742bb0c49
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:02:28.444Z'
+  updatedAt: '2025-08-22T17:02:29.472Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshbooks-connector/logo.png
+  connectorId: 643e84dcbadd839bce47c653
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 161
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

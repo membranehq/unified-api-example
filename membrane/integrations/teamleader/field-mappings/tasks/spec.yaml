@@ -1,0 +1,118 @@
+id: 68a8a3f2c172bc72066770e1
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: ca470c74-0280-424a-9ade-2b5298143047
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 689f2bf000905568ab2f66fd
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc720667700f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  title:
+    $var: $.subject
+  description:
+    $var: $.content
+  project_id:
+    $var: $.projectId
+  due_on:
+    $var: $.dueTime
+  assignee:
+    id:
+      $var: $.assigneeId
+  customer:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value:
+            type: contact
+            id:
+              $var: $.contactId
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: company
+            id:
+              $var: $.companyId
+  deal_id:
+    $var: $.dealId
+  priority:
+    $var: $.priority
+importValue:
+  id:
+    $var: id
+  subject:
+    $var: title
+  content:
+    $var: description
+  priority:
+    $var: priority
+  assigneeId:
+    $var: assignee.id
+  projectId:
+    $var: $.project.id
+  contactId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.customer.type
+            is: contact
+          value:
+            $var: $.customer.id
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.customer.type
+            is: company
+          value:
+            $var: $.customer.id
+  dealId:
+    $var: deal.id
+  dueTime:
+    $var: due_on
+  endTime:
+    $var: completed_at
+  startTime:
+    $var: completed_at
+  ownerId:
+    $var: assignee.id
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

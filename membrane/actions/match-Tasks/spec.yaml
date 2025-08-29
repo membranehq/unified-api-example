@@ -1,0 +1,25 @@
+id: 68a8a3f5c172bc72066772c5
+name: Match Task
+key: match-Tasks
+uuid: a37d1d28-cd89-4306-9e4f-9703b579f6e9
+state: READY
+errors: []
+revision: 9343a831-2460-479d-8e76-1b6f08789ad1
+createdAt: '2025-08-22T17:08:06.062Z'
+updatedAt: '2025-08-22T17:08:06.062Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

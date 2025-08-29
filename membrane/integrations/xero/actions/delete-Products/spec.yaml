@@ -1,0 +1,50 @@
+id: 68a8a3992e84328ca528f8ca
+name: Delete Product
+key: delete-Products
+uuid: 6e0a4eaa-0b2b-4817-848b-6b04e8a45bb3
+state: READY
+errors: []
+revision: f30722cd-2a73-47a4-98cf-cfe90fc4c9df
+createdAt: '2025-08-22T17:06:35.581Z'
+updatedAt: '2025-08-22T17:06:35.581Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a8a3982e84328ca528f756
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fd99cf8b-f9dd-464b-bcd4-f04f38248a2a
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,93 @@
+id: 68a8a3f2c172bc72066770c4
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: 17e2d358-6331-49a0-8ef2-73fc95e2bc5a
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 68a8a3ebc172bc7206676e59
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f52
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  summary:
+    $var: $.subject
+  assignee:
+    $var: $.assigneeId
+  description:
+    $var: $.content
+  reporter:
+    $var: $.ownerId
+  status:
+    id:
+      $var: $.status
+  duedate:
+    $var: $.dueTime
+  issuetype:
+    $var: $.type
+  priority:
+    $var: $.priority
+  project:
+    $var: $.projectId
+  created:
+    $var: $.createdTime
+  updated:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  subject:
+    $var: $.summary
+  dueTime:
+    $var: $.duedate
+  content:
+    $var: $.description
+  createdTime:
+    $var: $.created
+  updatedTime:
+    $var: $.updated
+  assigneeId:
+    $var: $.assignee
+  projectId:
+    $var: $.project
+  status:
+    $var: $.status.id
+  type:
+    $var: $.issuetype
+  ownerId:
+    $var: $.reporter
+  priority:
+    $var: $.priority
+integration:
+  id: 68a8a3ebc172bc7206676e59
+  name: Jira
+  key: jira
+  uuid: 371fbec4-75a0-495a-9055-ccc717ebf6c0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.968Z'
+  updatedAt: '2025-08-22T17:08:01.008Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/jira/logo.png
+  connectorId: 64343d08986ed1caad5b3aa7
+  connectorVersion: 1.6.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 499
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

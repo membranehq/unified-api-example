@@ -1,0 +1,58 @@
+id: 68a8a2e88508b934a6350eb8
+name: Update Deal
+key: update-Deals
+uuid: 1f5611f6-f7e8-4c0c-940d-6f11bf3f5da9
+state: READY
+errors: []
+revision: 64fe5954-25a4-4a84-bf6b-23ad3b8d17ff
+createdAt: '2025-08-22T17:03:39.779Z'
+updatedAt: '2025-08-22T17:03:39.779Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f3
+parentId: 68a8a2e78508b934a6350c98
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: deals
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 48dc531c-3b01-4a77-9d9d-eabed6291877
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

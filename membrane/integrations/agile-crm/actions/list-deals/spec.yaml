@@ -1,0 +1,76 @@
+id: 68a8a2e88508b934a6350e8c
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: a089955c-787f-4ef9-b5fa-f6caf82148c8
+createdAt: '2025-08-22T17:03:42.975Z'
+updatedAt: '2025-08-22T17:03:42.975Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d5
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    expected_value:
+      $var: $.input.filter.amount
+    probability:
+      $var: $.input.filter.probability
+    close_date:
+      $var: $.input.filter.closeTime
+    owner:
+      id:
+        $var: $.input.filter.ownerId
+    created_time:
+      $var: $.input.filter.createdTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

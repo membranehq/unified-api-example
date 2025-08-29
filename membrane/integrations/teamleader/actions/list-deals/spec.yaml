@@ -1,0 +1,74 @@
+id: 68a8a2e88508b934a6350e92
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: d6832adf-9673-4cae-9745-ccacf5d5f023
+createdAt: '2025-08-22T17:03:40.787Z'
+updatedAt: '2025-08-22T17:03:40.787Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    title:
+      $var: $.input.filter.name
+    summary:
+      $var: $.input.filter.description
+    status:
+      $var: $.input.filter.status
+    estimated_value:
+      amount:
+        $var: $.input.filter.amount
+      currency:
+        $var: $.input.filter.currency
+    estimated_closing_date:
+      $var: $.input.filter.closeTime
+    estimated_probability:
+      $var: $.input.filter.probability
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

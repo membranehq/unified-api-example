@@ -1,0 +1,79 @@
+id: 68a8a248285c02f4152f02dc
+name: Match Activity
+key: match-Activities
+uuid: 2c36235a-5f3d-4c75-b3ac-6ec28dd45ec5
+state: READY
+errors: []
+revision: abbb46af-8a3e-4274-82f4-5d8300e0da3f
+createdAt: '2025-08-22T17:01:01.756Z'
+updatedAt: '2025-08-22T17:01:01.756Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a247285c02f4152f0186
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      Subject:
+        $var: $.input.query.title
+      Location:
+        $var: $.input.query.location
+      ActivityDateTime:
+        $var: $.input.query.startTime
+      DurationInMinutes:
+        $var: $.input.query.durationSeconds
+      StartDateTime:
+        $var: $.input.query.startTime
+      EndDateTime:
+        $var: $.input.query.endTime
+      OwnerId:
+        $var: $.input.query.ownerId
+      CreatedDate:
+        $var: $.input.query.createdTime
+      CreatedById:
+        $var: $.input.query.createdBy
+      LastModifiedDate:
+        $var: $.input.query.updatedTime
+      LastModifiedById:
+        $var: $.input.query.updatedBy
+      IsRecurrence:
+        $var: $.input.query.isRecurrent
+      EventSubtype:
+        $var: $.input.query.type
+isCustomized: false
+parentRevision: a3d70138-ab03-4634-8208-2f017ef4aac3
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

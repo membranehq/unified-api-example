@@ -1,0 +1,55 @@
+id: 68a8a3992e84328ca528f95d
+name: Search Products
+key: search-products
+uuid: 9d2acf9c-ba63-4bd8-8ebb-e46d7b15f6d3
+state: READY
+errors: []
+revision: 18eef842-aa4f-4355-91e8-7b93283c4775
+createdAt: '2025-08-22T17:06:35.981Z'
+updatedAt: '2025-08-22T17:06:35.981Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c7d
+parentId: 68a8a3982e84328ca528f761
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: c45ecfae-cce4-49a0-a095-2f8a77ef5c20
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

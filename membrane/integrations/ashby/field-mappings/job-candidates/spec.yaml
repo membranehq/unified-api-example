@@ -1,0 +1,131 @@
+id: 68a8a43e7f08dba516dd123c
+name: Job Candidates
+isDeactivated: false
+state: READY
+errors: []
+key: job-candidates
+customized: false
+revision: 24d6b41e-bd02-4ccb-8ef3-0a5de071bb07
+universalFieldMappingId: 68a8a43e7f08dba516dd121e
+universalFieldMappingRevision: 2b27b236-f726-4359-b7d0-8cff44ed92c3
+integrationId: 68a820cb9fc7b352ffc94593
+dataSourceKey: job-candidates
+dataSourceId: 68a8a43e7f08dba516dd11e9
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.fullName
+  primaryEmailAddress:
+    value:
+      $var: $.primaryEmail
+  emailAddresses:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  primaryPhoneNumber:
+    value:
+      $var: $.primaryPhone
+  phoneNumbers:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  socialLinks:
+    url:
+      $var: $.urls[0].value
+    type:
+      $var: $.urls[0].type
+  position:
+    $var: $.title
+  company:
+    $var: $.company
+  applicationIds:
+    $var: $.applicationIds
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  firstName:
+    $firstName:
+      $var: $.name
+  lastName:
+    $lastName:
+      $var: $.name
+  company:
+    $var: $.company
+  title:
+    $var: $.position
+  addresses: []
+  phones:
+    $iterate:
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+      source:
+        $var: $.phoneNumbers
+  primaryEmail:
+    $var: $.primaryEmailAddress.value
+  primaryPhone:
+    $var: $.primaryPhoneNumber.value
+  emails:
+    $iterate:
+      source:
+        $var: $.emailAddresses
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  urls:
+    $iterate:
+      source:
+        $var: $.socialLinks
+      item:
+        value:
+          $var: $.item.url
+        type:
+          $var: $.item.type
+  applicationIds:
+    $var: $.applicationIds
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

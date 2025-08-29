@@ -1,0 +1,50 @@
+id: 68a8a2f18508b934a635158e
+name: Receive Deleted Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Deals-events
+revision: 1b4873ec-072f-4d92-b6a7-dd92d5b4bc0b
+universalFlowId: 68a8a2ef8508b934a6351318
+integrationId: 689f2bf000905568ab2f66e4
+universalFlowRevision: 28d91682-f6d9-418c-8552-5625aa6a5f25
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Deals-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Deal Deleted Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

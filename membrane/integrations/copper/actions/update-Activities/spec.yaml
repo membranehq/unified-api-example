@@ -1,0 +1,58 @@
+id: 68a8a248285c02f4152f0290
+name: Update Activity
+key: update-Activities
+uuid: 0abd1df5-c8a2-4ad5-9103-dceb4fb542c8
+state: READY
+errors: []
+revision: 1ff49fff-c3f3-4be6-a718-1883fdcd3406
+createdAt: '2025-08-22T17:00:59.665Z'
+updatedAt: '2025-08-22T17:00:59.665Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f3
+parentId: 68a8a247285c02f4152f017e
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: activities
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: b821bdad-e8f7-451a-a5aa-c5eb669b713e
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

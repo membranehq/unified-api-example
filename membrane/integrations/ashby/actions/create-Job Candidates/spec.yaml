@@ -1,0 +1,54 @@
+id: 68a8a43f7f08dba516dd136a
+name: Create Job Candidate
+key: create-Job Candidates
+uuid: 677c4ecb-e90c-4599-b7c9-dd0197e652ab
+state: READY
+errors: []
+revision: 51997f26-7cca-42f5-b441-3920014fe0ea
+createdAt: '2025-08-22T17:09:20.581Z'
+updatedAt: '2025-08-22T17:09:20.581Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc94593
+parentId: 68a8a43e7f08dba516dd1288
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: job-candidates
+  fieldMapping:
+    key: job-candidates
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 6d6d59b1-990e-4e63-90df-2a04dda57ce9
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

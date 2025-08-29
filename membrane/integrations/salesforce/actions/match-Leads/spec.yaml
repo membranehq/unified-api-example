@@ -1,0 +1,95 @@
+id: 68a8a340bc4406f3f0dc4a34
+name: Match Lead
+key: match-Leads
+uuid: eec10c2e-1293-4c56-81bf-b748cde50a18
+state: READY
+errors: []
+revision: 653fa915-a68e-4a9d-abf7-1064a42dfb50
+createdAt: '2025-08-22T17:05:06.388Z'
+updatedAt: '2025-08-22T17:05:06.388Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a340bc4406f3f0dc4980
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      LastName:
+        $var: $.input.query.lastName
+      FirstName:
+        $var: $.input.query.firstName
+      Name:
+        $var: $.input.query.fullName
+      Title:
+        $var: $.input.query.jobTitle
+      Company:
+        $var: $.input.query.companyName
+      Street:
+        $var: $.input.query.primaryAddress.street
+      City:
+        $var: $.input.query.primaryAddress.city
+      State:
+        $var: $.input.query.primaryAddress.state
+      PostalCode:
+        $var: $.input.query.primaryAddress.zip
+      Country:
+        $var: $.input.query.primaryAddress.country
+      Phone:
+        $var: $.input.query.primaryPhone
+      MobilePhone:
+        $var: $.input.query.phones[1].value
+      Email:
+        $var: $.input.query.primaryEmail
+      LeadSource:
+        $var: $.input.query.source
+      OwnerId:
+        $var: $.input.query.ownerId
+      ConvertedAccountId:
+        $var: $.input.query.companyId
+      CreatedDate:
+        $var: $.input.query.createdTime
+      CreatedById:
+        $var: $.input.query.createdBy
+      LastModifiedDate:
+        $var: $.input.query.updatedTime
+      LastModifiedById:
+        $var: $.input.query.updatedBy
+      LastActivityDate:
+        $var: $.input.query.lastActivityTime
+isCustomized: false
+parentRevision: 9d6375ea-c269-4ebd-b782-ec891792382f
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,38 @@
+id: 68a89b5d6f9be8241c5f541b
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+revision: c98d5050-9752-41e8-9202-d50d63897d59
+integrationId: 689f2bf000905568ab2f66fb
+customized: false
+universalDataSourceId: 68a89b5d6f9be8241c5f53f1
+universalDataSourceRevision: 01077565-2ae6-47a8-99bc-21c5764625b0
+collectionKey: note
+udm: notes
+defaultPath: /data/note
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

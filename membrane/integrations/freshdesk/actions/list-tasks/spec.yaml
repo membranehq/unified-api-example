@@ -1,0 +1,87 @@
+id: 68a8a3f6c172bc7206677595
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 49a08f76-2f78-4f2f-8715-963f068c1a04
+createdAt: '2025-08-22T17:08:14.001Z'
+updatedAt: '2025-08-22T17:08:14.001Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    priority:
+      $var: $.input.filter.priority
+    status:
+      $var: $.input.filter.status
+    subject:
+      $var: $.input.filter.subject
+    id:
+      $var: $.input.filter.id
+    type:
+      $var: $.input.filter.type
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    due_by:
+      $var: $.input.filter.dueTime
+    description:
+      $var: $.input.filter.content
+    tags:
+      $var: $.input.filter.tags
+    parent_id:
+      $var: $.input.filter.parentTaskId
+    requester_id:
+      $var: $.input.filter.assigneeId
+    responder_id:
+      $var: $.input.filter.contactId
+    company_id:
+      $var: $.input.filter.companyId
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

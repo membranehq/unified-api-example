@@ -1,0 +1,75 @@
+id: 68a8a3f6c172bc720667757c
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: df8cf36b-4633-4d86-804b-6d9694287f69
+createdAt: '2025-08-22T17:08:14.866Z'
+updatedAt: '2025-08-22T17:08:14.866Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    description:
+      $var: $.input.filter.subject
+    category:
+      $var: $.input.filter.type
+    detail:
+      $var: $.input.filter.content
+    owner:
+      $var: $.input.filter.ownerId
+    createdAt:
+      $var: $.input.filter.createdTime
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    dueOn:
+      $var: $.input.filter.dueTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

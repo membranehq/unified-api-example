@@ -1,0 +1,58 @@
+id: 68a8a3f6c172bc72066774d8
+name: Update Task
+key: update-Tasks
+uuid: b1fd45c6-d9fb-4d7f-a22b-0b35cc2cc23b
+state: READY
+errors: []
+revision: d5a48e9e-1406-47c8-b755-a14cc9c5ba9c
+createdAt: '2025-08-22T17:08:12.286Z'
+updatedAt: '2025-08-22T17:08:12.286Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e46
+parentId: 68a8a3f5c172bc72066772c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 3444338b-c96e-46c8-a7ae-0cd1ab6e3480
+integration:
+  id: 68a8a3ebc172bc7206676e46
+  name: Github
+  key: github
+  uuid: 6efb002f-0555-4734-8b82-f1d83b910c82
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.951Z'
+  updatedAt: '2025-08-22T17:08:00.091Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/github/logo.png
+  connectorId: 6446a060badd839bce1ac1ac
+  connectorVersion: 1.1.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 889
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

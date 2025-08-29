@@ -1,0 +1,80 @@
+id: 68a8a245285c02f4152f00c2
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: 8213d13b-1906-463b-98f1-93c64d82a7e7
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 689f2bf000905568ab2f66e6
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f0028
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  hubspot_owner_id:
+    $var: $.ownerId
+  hs_timestamp:
+    $var: $.createdTime
+  hs_lastmodifieddate:
+    $var: $.updatedTime
+  company_ids:
+    - $var: $.companyId
+  contact_ids:
+    - $var: $.contactId
+  deal_ids:
+    - $var: $.dealId
+  hs_created_by_user_id:
+    $var: $.createdBy
+  hs_updated_by_user_id:
+    $var: $.updatedBy
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.hs_object_id
+  contactId:
+    $var: contact_ids[0]
+  companyId:
+    $var: company_ids[0]
+  dealId:
+    $var: deal_ids[0]
+  ownerId:
+    $var: hubspot_owner_id
+  createdTime:
+    $var: hs_timestamp
+  createdBy:
+    $var: hs_created_by_user_id
+  updatedTime:
+    $var: hs_lastmodifieddate
+  updatedBy:
+    $var: hs_updated_by_user_id
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

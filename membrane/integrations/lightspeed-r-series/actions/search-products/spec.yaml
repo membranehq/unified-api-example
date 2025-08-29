@@ -1,0 +1,76 @@
+id: 68a8a3992e84328ca528f96c
+name: Search Products
+key: search-products
+uuid: 9d2acf9c-ba63-4bd8-8ebb-e46d7b15f6d3
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c8d
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f5b8
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3982e84328ca528f6ea
+revision: 722b85d7-d983-47f9-af1a-560307dd4b6d
+createdAt: '2025-08-22T17:06:35.991Z'
+updatedAt: '2025-08-22T17:06:35.991Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c8d
+parentId: 68a8a3982e84328ca528f761
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: c45ecfae-cce4-49a0-a095-2f8a77ef5c20
+integration:
+  id: 68a84efe7702482264c62c8d
+  name: Lightspeed R-Series
+  key: lightspeed-r-series
+  uuid: 2cee0c2e-162d-41ab-a07b-7f80337f7a40
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.340Z'
+  updatedAt: '2025-08-22T11:05:41.148Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/lightspeed-r-series/asset-ec862902-f916-4b32-ab9e-13fa9b8f9481.png
+  connectorId: 66b2291668e75461beba804b
+  connectorVersion: 1.0.3
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 256
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

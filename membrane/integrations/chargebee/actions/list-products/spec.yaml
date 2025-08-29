@@ -1,0 +1,70 @@
+id: 68a8a3992e84328ca528f91d
+name: List Products
+key: list-products
+uuid: ec8eba46-f3c0-4fc4-9a0f-b2b72e7249d6
+state: READY
+errors: []
+revision: a758d75d-0619-4000-889b-498b4a2cf65c
+createdAt: '2025-08-22T17:06:36.554Z'
+updatedAt: '2025-08-22T17:06:36.554Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c83
+parentId: 68a8a3982e84328ca528f759
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    status:
+      $var: $.input.filter.status
+    type:
+      $var: $.input.filter.type
+isCustomized: false
+parentRevision: 56fa3db7-c684-4379-ba90-c0e05fb01225
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

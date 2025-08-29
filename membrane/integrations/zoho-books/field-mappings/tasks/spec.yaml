@@ -1,0 +1,69 @@
+id: 68a8a3f2c172bc720667716c
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: 4b102373-427b-4ad5-a140-df87f44a027f
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 689f2bf000905568ab2f66f7
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f6f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  project_id:
+    $var: $.projectId
+  task_id:
+    $var: $.id
+  customer_id:
+    $var: $.contactId
+  task_name:
+    $var: $.subject
+  description:
+    $var: $.content
+importValue:
+  id:
+    $var: task_id
+  subject:
+    $var: task_name
+  content:
+    $var: description
+  projectId:
+    $var: project_id
+  tags: null
+  contactId:
+    $var: customer_id
+  status: null
+  type: null
+  startTime: null
+  endTime: null
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

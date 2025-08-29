@@ -1,0 +1,84 @@
+id: 68a8a3f6c172bc7206677572
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 6e30758a-5a90-4e14-9eaa-bb230bba20fc
+createdAt: '2025-08-22T17:08:14.455Z'
+updatedAt: '2025-08-22T17:08:14.455Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e59
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    assignee:
+      $var: $.input.filter.assigneeId
+    summary:
+      $var: $.input.filter.subject
+    description:
+      $var: $.input.filter.content
+    duedate:
+      $var: $.input.filter.dueTime
+    reporter:
+      $var: $.input.filter.ownerId
+    created:
+      $var: $.input.filter.createdTime
+    updated:
+      $var: $.input.filter.updatedTime
+    id:
+      $var: $.input.filter.id
+    project:
+      $var: $.input.filter.projectId
+    issuetype:
+      $var: $.input.filter.type
+    status:
+      id:
+        $var: $.input.filter.status
+    priority:
+      $var: $.input.filter.priority
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 68a8a3ebc172bc7206676e59
+  name: Jira
+  key: jira
+  uuid: 371fbec4-75a0-495a-9055-ccc717ebf6c0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.968Z'
+  updatedAt: '2025-08-22T17:08:01.008Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/jira/logo.png
+  connectorId: 64343d08986ed1caad5b3aa7
+  connectorVersion: 1.6.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 499
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

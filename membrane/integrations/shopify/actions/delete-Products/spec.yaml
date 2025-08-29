@@ -1,0 +1,64 @@
+id: 68a8a3992e84328ca528f8ce
+name: Delete Product
+key: delete-Products
+uuid: 6e0a4eaa-0b2b-4817-848b-6b04e8a45bb3
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c85
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f5a1
+revision: a5cba8c2-7c86-4660-a10c-39d6f016169e
+createdAt: '2025-08-22T17:06:35.587Z'
+updatedAt: '2025-08-22T17:06:35.587Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c85
+parentId: 68a8a3982e84328ca528f756
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fd99cf8b-f9dd-464b-bcd4-f04f38248a2a
+integration:
+  id: 68a84efe7702482264c62c85
+  name: Shopify
+  key: shopify
+  uuid: 605b2fc9-0180-4a14-9917-19fe62a96c32
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.336Z'
+  updatedAt: '2025-08-22T11:05:38.392Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/shopify/logo.png
+  connectorId: 6466785860f981f3ce696916
+  connectorVersion: 2.0.4
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,105 @@
+id: 68a8a2a6bdd4149f15477596
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+customized: false
+revision: d5bc5139-157d-4cef-81b5-63d0356d144b
+universalFieldMappingId: 68a8a2a6bdd4149f15477576
+universalFieldMappingRevision: 310fd1f1-a5fe-484c-9490-b63dc40e99b2
+integrationId: 68a8a2a4bdd4149f154774d2
+dataSourceKey: invoices
+dataSourceId: 68a8a2a5bdd4149f15477517
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  amount:
+    amount:
+      $var: $.totalAmount
+    code:
+      $var: $.currency
+  customerid:
+    $var: $.customerId
+  description:
+    $var: $.memo
+  discount_total:
+    amount:
+      $var: $.totalDiscount
+    code:
+      $var: $.currency
+  due_date:
+    $var: $.dueDate
+  id:
+    $var: $.id
+  invoice_number:
+    $var: $.number
+  outstanding:
+    amount:
+      $var: $.balance
+    code:
+      $var: $.currency
+importValue:
+  id:
+    $var: id
+  number:
+    $var: invoice_number
+  name:
+    $var: organization
+  memo:
+    $var: notes
+  status:
+    $var: display_status
+  paymentMethod:
+    $var: payment_status
+  customerId:
+    $var: customerid
+  currency:
+    $var: currency_code
+  totalAmount:
+    $var: amount.amount
+  totalDiscount:
+    $var: discount_total.amount
+  subTotal:
+    $var: paid.amount
+  balance:
+    $var: outstanding.amount
+  ledgerAccountId:
+    $var: accountid
+  issueDate:
+    $var: create_date
+  dueDate:
+    $var: due_date
+  paidOnDate:
+    $var: date_paid
+  createdTime:
+    $var: created_at
+  updatedTime:
+    $var: updated
+integration:
+  id: 68a8a2a4bdd4149f154774d2
+  name: Freshbooks
+  key: freshbooks
+  uuid: 629dfb93-251e-45d4-a5e5-fd4742bb0c49
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:02:28.444Z'
+  updatedAt: '2025-08-22T17:02:29.472Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshbooks-connector/logo.png
+  connectorId: 643e84dcbadd839bce47c653
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 161
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

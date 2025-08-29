@@ -1,0 +1,58 @@
+id: 68a8a3f6c172bc72066774de
+name: Update Task
+key: update-Tasks
+uuid: b1fd45c6-d9fb-4d7f-a22b-0b35cc2cc23b
+state: READY
+errors: []
+revision: def4226d-8728-43fb-a2db-c6e2902b6476
+createdAt: '2025-08-22T17:08:12.378Z'
+updatedAt: '2025-08-22T17:08:12.378Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e59
+parentId: 68a8a3f5c172bc72066772c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 3444338b-c96e-46c8-a7ae-0cd1ab6e3480
+integration:
+  id: 68a8a3ebc172bc7206676e59
+  name: Jira
+  key: jira
+  uuid: 371fbec4-75a0-495a-9055-ccc717ebf6c0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.968Z'
+  updatedAt: '2025-08-22T17:08:01.008Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/jira/logo.png
+  connectorId: 64343d08986ed1caad5b3aa7
+  connectorVersion: 1.6.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 499
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

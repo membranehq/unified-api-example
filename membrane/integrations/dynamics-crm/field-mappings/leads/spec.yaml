@@ -1,0 +1,190 @@
+id: 68a8a33fbc4406f3f0dc4915
+name: Leads
+isDeactivated: false
+state: READY
+errors: []
+key: leads
+customized: false
+revision: 0be45fd5-6968-470f-9e5c-43b72a546821
+universalFieldMappingId: 68a8a33fbc4406f3f0dc4902
+universalFieldMappingRevision: 9ba71530-33d6-4c8f-9252-163da2de1903
+integrationId: 689f2bf000905568ab2f66d3
+dataSourceKey: leads
+dataSourceId: 68a8a33fbc4406f3f0dc48cf
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  address1_city:
+    $var: $.primaryAddress.city
+  address1_composite:
+    $var: $.primaryAddress.full
+  address1_line1:
+    $var: $.primaryAddress.street
+  address1_postalcode:
+    $var: $.primaryAddress.zip
+  address1_stateorprovince:
+    $var: $.primaryAddress.state
+  companyname:
+    $var: $.companyName
+  createdby:
+    $var: $.createdBy
+  createdon:
+    $var: $.createdTime
+  customerid:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: accounts
+            id:
+              $var: $.companyId
+  emailaddress1:
+    $var: $.primaryEmail
+  emailaddress2:
+    $var: $.emails[1].value
+  emailaddress3:
+    $var: $.emails[2].value
+  estimatedamount:
+    $var: $.value
+  firstname:
+    $var: $.firstName
+  fullname:
+    $var: $.fullName
+  jobtitle:
+    $var: $.jobTitle
+  lastname:
+    $var: $.lastName
+  leadsourcecode:
+    $var: $.source
+  mobilephone:
+    $var: $.phones[3].value
+  modifiedby:
+    $var: $.updatedBy
+  modifiedon:
+    $var: $.updatedTime
+  ownerid:
+    $var: $.ownerId
+  salesstage:
+    $var: $.stage
+  telephone1:
+    $var: $.primaryPhone
+  telephone2:
+    $var: $.phones[1].value
+  telephone3:
+    $var: $.phones[2].value
+importValue:
+  fullName:
+    $var: $.fullname
+  firstName:
+    $var: $.firstname
+  lastName:
+    $var: $.lastname
+  primaryEmail:
+    $var: $.emailaddress1
+  jobTitle:
+    $var: $.jobtitle
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.customerid.type
+            is: accounts
+          value:
+            $var: $.customerid.id
+  emails:
+    - value:
+        $var: $.emailaddress1
+    - value:
+        $var: $.emailaddress2
+    - value:
+        $var: $.emailaddress3
+  primaryPhone:
+    $var: $.telephone1
+  phones:
+    - value:
+        $var: $.telephone1
+    - value:
+        $var: $.telephone2
+    - value:
+        $var: $.telephone3
+    - value:
+        $var: $.mobilephone
+  primaryAddress:
+    full:
+      $var: $.address1_composite
+    state:
+      $var: $.address1_stateorprovince
+    country:
+      $var: $.address1_country
+    city:
+      $var: $.address1_city
+    street:
+      $var: $.address1_line1
+    zip:
+      $var: $.address1_postalcode
+  ownerId:
+    $var: $.ownerid
+  createdTime:
+    $var: $.createdon
+  createdBy:
+    $var: $.createdby
+  updatedTime:
+    $var: $.modifiedon
+  updatedBy:
+    $var: $.modifiedby
+  id:
+    $var: $.leadid
+  source:
+    $var: $.leadsourcecode
+  companyName:
+    $var: $.companyname
+  value:
+    $var: $.estimatedamount
+  stage:
+    $var: $.salesstage
+  addresses:
+    - value:
+        full:
+          $var: $.address1_composite
+        state:
+          $var: $.address1_stateorprovince
+        country:
+          $var: $.address1_country
+        city:
+          $var: $.address1_city
+        street:
+          $var: $.address1_line1
+        zip:
+          $var: $.address1_postalcode
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

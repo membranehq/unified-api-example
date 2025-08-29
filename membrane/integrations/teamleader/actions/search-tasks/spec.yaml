@@ -1,0 +1,55 @@
+id: 68a8a3f6c172bc72066775ff
+name: Search Tasks
+key: search-tasks
+uuid: a4ede812-1fc9-46f3-8f46-404617670de4
+state: READY
+errors: []
+revision: 7f534f96-80d5-42b2-bf8b-f2f0580fbae1
+createdAt: '2025-08-22T17:08:13.287Z'
+updatedAt: '2025-08-22T17:08:13.287Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fd
+parentId: 68a8a3f5c172bc72066772c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 7f75c598-8318-4b71-bdd7-5a8411cedfb5
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,38 @@
+id: 68a89b5d6f9be8241c5f541d
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+revision: ab4e7cd8-3422-437d-a120-0dfc60f958e4
+integrationId: 689f2bf000905568ab2f6719
+customized: false
+universalDataSourceId: 68a89b5d6f9be8241c5f53f1
+universalDataSourceRevision: 01077565-2ae6-47a8-99bc-21c5764625b0
+collectionKey: notes
+udm: notes
+defaultPath: /data/notes
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

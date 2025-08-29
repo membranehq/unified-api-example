@@ -1,0 +1,31 @@
+id: 68a8a247285c02f4152f017e
+name: Update Activity
+key: update-Activities
+uuid: 0abd1df5-c8a2-4ad5-9103-dceb4fb542c8
+state: READY
+errors: []
+revision: b821bdad-e8f7-451a-a5aa-c5eb669b713e
+createdAt: '2025-08-22T17:00:55.958Z'
+updatedAt: '2025-08-22T17:00:55.958Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: activities
+    input:
+      $var: $.input.fields
+isCustomized: false

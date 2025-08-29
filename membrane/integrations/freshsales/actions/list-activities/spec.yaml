@@ -1,0 +1,94 @@
+id: 68a8a248285c02f4152f02b8
+name: List Activities
+key: list-activities
+uuid: bc602fb3-7c15-4ecf-abca-19ea4631bd42
+state: READY
+errors: []
+revision: 0c125112-105d-4c96-bc2f-48bcf7652c91
+createdAt: '2025-08-22T17:01:01.353Z'
+updatedAt: '2025-08-22T17:01:01.353Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a8a247285c02f4152f0184
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    title:
+      $var: $.input.filter.title
+    notes:
+      $var: $.input.filter.description
+    start_date:
+      $var: $.input.filter.startTime
+    end_date:
+      $var: $.input.filter.endTime
+    owner_id:
+      $var: $.input.filter.ownerId
+    location:
+      $var: $.input.filter.location
+    targetable_id:
+      $firstNotEmpty:
+        - $var: $.input.filter.contactId
+        - $var: $.input.filter.companyId
+        - $var: $.input.filter.dealId
+    status:
+      $var: $.input.filter.status
+    checkedin_duration:
+      $var: $.input.filter.durationSeconds
+    sales_activity_type_id:
+      $var: $.input.filter.type
+    checkedout_location:
+      $var: $.input.filter.location
+    created_at:
+      $var: $.input.filter.createdTime
+    creater_id:
+      $var: $.input.filter.createdBy
+    updated_at:
+      $var: $.input.filter.updatedTime
+    updater_id:
+      $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: fd42077d-f98e-4355-aad6-fb7b01a47164
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,54 @@
+id: 68a89b606f9be8241c5f566c
+name: Create Note
+key: create-Notes
+uuid: 60a0f447-4491-4400-8fbd-e2dc63a5fafc
+state: READY
+errors: []
+revision: 07aeb042-1299-40e3-b6f7-04e5c7b84f41
+createdAt: '2025-08-22T16:31:31.469Z'
+updatedAt: '2025-08-22T16:31:31.469Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a89b606f9be8241c5f5582
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: notes
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 1508db0c-ac65-4b58-9242-31dcb3c64254
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,38 @@
+id: 68a8a3f1c172bc7206676f5a
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+revision: 77f31466-10cb-4047-96a2-bc4ef18471d0
+integrationId: 689f2bf000905568ab2f66d1
+customized: false
+universalDataSourceId: 68a8a3f1c172bc7206676f0a
+universalDataSourceRevision: 1e77689d-61bf-43e9-a49c-c66d27640de5
+collectionKey: tasks
+udm: tasks
+defaultPath: /data/tasks
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

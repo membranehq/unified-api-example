@@ -1,0 +1,58 @@
+id: 68a8a3f6c172bc72066774bd
+name: Update Task
+key: update-Tasks
+uuid: b1fd45c6-d9fb-4d7f-a22b-0b35cc2cc23b
+state: READY
+errors: []
+revision: fa7a76cb-92e5-4a42-b747-df3d34661477
+createdAt: '2025-08-22T17:08:12.288Z'
+updatedAt: '2025-08-22T17:08:12.288Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 68a8a3f5c172bc72066772c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 3444338b-c96e-46c8-a7ae-0cd1ab6e3480
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

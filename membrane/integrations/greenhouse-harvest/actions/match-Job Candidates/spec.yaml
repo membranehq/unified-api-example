@@ -1,0 +1,53 @@
+id: 68a8a43f7f08dba516dd133a
+name: Match Job Candidate
+key: match-Job Candidates
+uuid: c4cc5af9-f7af-4668-b6d3-23bc493a6268
+state: READY
+errors: []
+revision: 57ddc1b7-ba00-474a-9102-c75e6ff05dac
+createdAt: '2025-08-22T17:09:20.766Z'
+updatedAt: '2025-08-22T17:09:20.766Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a9
+parentId: 68a8a43e7f08dba516dd128e
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: job-candidates
+  dataSource:
+    key: job-candidates
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: ea6a190c-d4eb-40be-8c43-d75734bdc5c2
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

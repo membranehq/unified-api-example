@@ -1,0 +1,77 @@
+id: 68a8a3972e84328ca528f698
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+customized: false
+revision: 5005c6cb-87f9-45c6-94e7-15b10eb18193
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 68a84efe7702482264c62c7d
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f5c3
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  type:
+    $var: $.type
+  status:
+    $var: $.status
+  description:
+    $var: $.description
+  sku:
+    $var: $.code
+  weight:
+    $var: $.weight
+importValue:
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  code:
+    $var: $.sku
+  type:
+    $var: $.type
+  weight:
+    $var: $.weight
+  price:
+    $var: $.price
+  status:
+    $var: $.status
+  variants:
+    $iterate:
+      source:
+        $var: $.variations
+      item:
+        id:
+          $var: $.item
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

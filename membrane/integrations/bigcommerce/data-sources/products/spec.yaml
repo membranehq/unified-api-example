@@ -1,0 +1,37 @@
+id: 68a8a3972e84328ca528f5fa
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+revision: e7faa97a-15f4-4159-9780-f0c8d510f7c7
+integrationId: 68a8a3952e84328ca528f548
+customized: false
+universalDataSourceId: 68a8a3962e84328ca528f576
+universalDataSourceRevision: 67df05ec-e200-4816-ad21-ab5b6db254da
+udm: products
+integration:
+  id: 68a8a3952e84328ca528f548
+  name: BigCommerce
+  key: bigcommerce
+  uuid: 9f6e64ce-a68e-4a83-a0a2-2e0b355e4ea5
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:06:29.054Z'
+  updatedAt: '2025-08-22T17:06:30.705Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/bigcommerce/logo-aa5562ee-36f5-4df9-a146-b5192099d05c.png
+  connectorId: 6526734570089fac484b2009
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 119
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

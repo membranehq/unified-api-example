@@ -1,0 +1,63 @@
+id: 68a8a3f6c172bc72066775a5
+name: Match Task
+key: match-Tasks
+uuid: a37d1d28-cd89-4306-9e4f-9703b579f6e9
+state: READY
+errors: []
+revision: afac4904-09cb-41f8-a902-ed003678ce06
+createdAt: '2025-08-22T17:08:15.653Z'
+updatedAt: '2025-08-22T17:08:15.653Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e6
+parentId: 68a8a3f5c172bc72066772c5
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      hs_task_subject:
+        $var: $.input.query.subject
+      hs_task_status:
+        $var: $.input.query.status
+      contact_ids:
+        - $var: $.input.query.contactId
+      deal_ids:
+        - $var: $.input.query.dealId
+      company_ids:
+        - $var: $.input.query.companyId
+isCustomized: false
+parentRevision: 9343a831-2460-479d-8e76-1b6f08789ad1
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

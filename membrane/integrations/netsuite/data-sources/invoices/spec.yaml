@@ -1,0 +1,39 @@
+id: 68a8a2a5bdd4149f1547751b
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+revision: 8874d2bd-f7f1-4d0e-b376-5654253c33a3
+integrationId: 68a839f321039ff70f89b5bd
+customized: false
+universalDataSourceId: 68a8a2a5bdd4149f154774f8
+universalDataSourceRevision: 8ec6661f-20c4-4d79-8162-f0f658995cbe
+collectionKey: invoices
+udm: invoices
+defaultPath: /data/invoices
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

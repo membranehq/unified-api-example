@@ -1,0 +1,113 @@
+id: 68a8a2e58508b934a6350bc0
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 13336a00-a05e-48b2-add0-f3c61ed26f65
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66f3
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a83
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  assignee_id:
+    $var: $.ownerId
+  close_date:
+    $var: $.closeTime
+  company_id:
+    $var: $.companyId
+  details:
+    $var: $.description
+  primary_contact_id:
+    $var: $.contactId
+  status:
+    $map:
+      value:
+        $var: $.status
+      mapping:
+        - from: open
+          to: Open
+        - from: won
+          to: Won
+        - from: lost
+          to: Lost
+      default: Abandoned
+  monetary_value:
+    $var: $.amount
+  monetary_unit:
+    $var: $.currency
+  win_probability:
+    $var: $.probability
+  date_created:
+    $var: $.createdTime
+  date_modified:
+    $var: $.updatedTime
+importValue:
+  name:
+    $var: $.name
+  amount:
+    $var: $.monetary_value
+  currency:
+    $var: $.monetary_unit
+  companyId:
+    $var: $.company_id
+  ownerId:
+    $var: $.assignee_id
+  contactId:
+    $var: $.primary_contact_id
+  description:
+    $var: $.details
+  status:
+    $map:
+      value:
+        $var: $.status
+      mapping:
+        - from: Open
+          to: open
+        - from: Won
+          to: won
+        - from: Lost
+          to: lost
+  closeTime:
+    $var: $.close_date
+  createdTime:
+    $var: $.date_created
+  updatedTime:
+    $var: $.date_modified
+  lastActivityTime:
+    $var: $.date_last_contacted
+  probability:
+    $var: $.win_probability
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

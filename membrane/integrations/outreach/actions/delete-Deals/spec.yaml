@@ -1,0 +1,50 @@
+id: 68a8a2e78508b934a6350e14
+name: Delete Deal
+key: delete-Deals
+uuid: e4bd05da-b3d8-416e-aab1-458665e6f5e3
+state: READY
+errors: []
+revision: 4c7334d3-b9b0-4301-a99f-e7aefc4dd580
+createdAt: '2025-08-22T17:03:38.767Z'
+updatedAt: '2025-08-22T17:03:38.767Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e4
+parentId: 68a8a2e78508b934a6350c9a
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: b35127b9-3677-479a-a351-5e646cf6c06a
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

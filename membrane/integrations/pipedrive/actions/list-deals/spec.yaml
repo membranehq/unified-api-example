@@ -1,0 +1,91 @@
+id: 68a8a2e78508b934a6350e7e
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: 69c54153-df97-457b-a789-47d0fd81c17a
+createdAt: '2025-08-22T17:03:43.093Z'
+updatedAt: '2025-08-22T17:03:43.093Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e0
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    title:
+      $var: $.input.filter.name
+    user_id:
+      $var: $.input.filter.ownerId
+    person_id:
+      $var: $.input.filter.contactId
+    org_id:
+      $var: $.input.filter.companyId
+    value:
+      $var: $.input.filter.amount
+    currency:
+      $var: $.input.filter.currency
+    probability:
+      $var: $.input.filter.probability
+    renewal_type:
+      $var: $.input.filter.type
+    stage_id:
+      $var: $.input.filter.stageId
+    status:
+      $var: $.input.filter.status
+    close_time:
+      $var: $.input.filter.closeTime
+    creator_user_id:
+      $var: $.input.filter.createdBy
+    add_time:
+      $var: $.input.filter.createdTime
+    update_time:
+      $var: $.input.filter.updatedTime
+    last_activity_date:
+      $var: $.input.filter.lastActivityTime
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

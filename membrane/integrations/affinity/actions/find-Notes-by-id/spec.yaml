@@ -1,0 +1,51 @@
+id: 68a89b606f9be8241c5f568a
+name: Find Note By Id
+key: find-Notes-by-id
+uuid: 8dff6feb-1c69-4b05-a9d2-48485b3ef0ad
+state: READY
+errors: []
+revision: 303d4128-cd61-49de-91b4-a155d20b2bf8
+createdAt: '2025-08-22T16:31:30.867Z'
+updatedAt: '2025-08-22T16:31:30.867Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 68a89b606f9be8241c5f5576
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 1a3b4dd4-0e6f-4c99-8f21-62d7065903e8
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

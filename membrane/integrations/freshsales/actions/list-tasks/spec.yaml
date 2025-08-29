@@ -1,0 +1,88 @@
+id: 68a8a3f6c172bc720667756e
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 32626d48-fd49-4753-aded-84e14a407a9f
+createdAt: '2025-08-22T17:08:14.875Z'
+updatedAt: '2025-08-22T17:08:14.875Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    title:
+      $var: $.input.filter.subject
+    description:
+      $var: $.input.filter.content
+    status:
+      $var: $.input.filter.status
+    task_type_id:
+      $var: $.input.filter.type
+    due_date:
+      $var: $.input.filter.dueTime
+    owner_id:
+      $var: $.input.filter.ownerId
+    targetable_id:
+      $firstNotEmpty:
+        - $var: $.input.filter.contactId
+        - $var: $.input.filter.companyId
+        - $var: $.input.filter.dealId
+    created_at:
+      $var: $.input.filter.createdTime
+    creater_id:
+      $var: $.input.filter.createdBy
+    updated_at:
+      $var: $.input.filter.updatedTime
+    updater_id:
+      $var: $.input.filter.updatedBy
+    completed_date:
+      $var: $.input.filter.endTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,80 @@
+id: 68a8a245285c02f4152f00e2
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: 58ce0f67-8714-4888-beb1-997c3136c7c8
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 689f2bf000905568ab2f66fb
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f0085
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  lead_id:
+    $var: $.companyId
+  contact_id:
+    $var: $.contactId
+  user_id:
+    $var: $.ownerId
+  _type:
+    $var: $.type
+  date_created:
+    $var: $.createdTime
+  date_updated:
+    $var: $.updatedTime
+  created_by:
+    $var: $.createdBy
+  updated_by:
+    $var: $.updatedBy
+importValue:
+  id:
+    $var: $.id
+  companyId:
+    $var: $.lead_id
+  contactId:
+    $var: $.contact_id
+  ownerId:
+    $var: $.user_id
+  type:
+    $var: $._type
+  createdTime:
+    $var: $.date_created
+  updatedTime:
+    $var: $.date_updated
+  createdBy:
+    $var: $.created_by
+  updatedBy:
+    $var: $.updated_by
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

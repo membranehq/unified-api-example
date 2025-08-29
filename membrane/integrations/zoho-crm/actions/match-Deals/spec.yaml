@@ -1,0 +1,58 @@
+id: 68a8a2e78508b934a6350e30
+name: Match Deal
+key: match-Deals
+uuid: dabc2a3f-24f9-438c-b4ad-10e084377651
+state: READY
+errors: []
+revision: 5a9f8edd-40e5-47a9-8ea9-451b34414ea7
+createdAt: '2025-08-22T17:03:43.468Z'
+updatedAt: '2025-08-22T17:03:43.468Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a8a2e78508b934a6350c9e
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      Deal_Name:
+        $var: $.input.query.name
+      Account_Name:
+        id:
+          $var: $.input.query.companyId
+isCustomized: false
+parentRevision: 1bd7d941-136a-4741-97c2-0e4771420c4b
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

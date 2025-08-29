@@ -1,0 +1,58 @@
+id: 68a8a43f7f08dba516dd1354
+name: Update Job Candidate
+key: update-Job Candidates
+uuid: 2fafc49d-f0ca-41d1-91f5-d8cab990fa11
+state: READY
+errors: []
+revision: 017f1d7e-e525-419b-b85b-3d3292bd57f6
+createdAt: '2025-08-22T17:09:20.575Z'
+updatedAt: '2025-08-22T17:09:20.575Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a1
+parentId: 68a8a43e7f08dba516dd1292
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: job-candidates
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: job-candidates
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 7117d22f-6afb-4853-aba7-b7dda3f0945f
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

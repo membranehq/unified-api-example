@@ -1,0 +1,52 @@
+id: 68a8a406c172bc72066782f1
+name: Receive Created Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Tasks-events
+revision: 75844835-b2ea-4d35-9f02-31629fa9b0da
+universalFlowId: 68a8a400c172bc7206677c8e
+integrationId: 68a8a3ebc172bc7206676e4a
+universalFlowRevision: 99e9ab83-c3bc-4ff6-8c32-02f201db53e1
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-created-trigger:
+    type: data-record-created-trigger
+    name: Task Created Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e4a
+  name: Deel
+  key: deel
+  uuid: 375ef7b8-5062-49b7-a2b7-d638083e3b4d
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.953Z'
+  updatedAt: '2025-08-22T17:08:00.759Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/deel-connector/logo-0306de7e-75aa-4354-a30a-b637da5b32c7.png
+  connectorId: 652672eb70089fac484af1b0
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 145
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

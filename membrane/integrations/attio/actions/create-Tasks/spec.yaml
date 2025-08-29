@@ -1,0 +1,55 @@
+id: 68a8a3f6c172bc720667763f
+name: Create Task
+key: create-Tasks
+uuid: 32bad3d7-5397-46e8-8c3f-b774a4edf057
+state: READY
+errors: []
+revision: 1eb00239-fc06-4595-bf5a-6dcaac107f61
+createdAt: '2025-08-22T17:08:13.473Z'
+updatedAt: '2025-08-22T17:08:13.473Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6705
+parentId: 68a8a3f5c172bc72066772c9
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: tasks
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 5db6e2a2-0c2d-417b-96b2-01b0797eb8e1
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

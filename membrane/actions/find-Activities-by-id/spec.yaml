@@ -1,0 +1,24 @@
+id: 68a8a247285c02f4152f0188
+name: Find Activity By Id
+key: find-Activities-by-id
+uuid: c4553451-6969-4b40-a8b6-bf4408408737
+state: READY
+errors: []
+revision: 7881aa63-73ac-4b89-bbf0-99d7f075ef13
+createdAt: '2025-08-22T17:00:55.980Z'
+updatedAt: '2025-08-22T17:00:55.980Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+isCustomized: false

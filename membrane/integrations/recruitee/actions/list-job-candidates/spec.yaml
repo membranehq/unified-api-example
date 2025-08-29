@@ -1,0 +1,80 @@
+id: 68a8a4407f08dba516dd13ec
+name: List Job Candidates
+key: list-job-candidates
+uuid: 0eed6722-e978-4b94-b970-4a126718919d
+state: READY
+errors: []
+revision: cf8a7e1a-e985-4508-938f-370bbf7eef12
+createdAt: '2025-08-22T17:09:20.768Z'
+updatedAt: '2025-08-22T17:09:20.768Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc9459f
+parentId: 68a8a43e7f08dba516dd128c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: job-candidates
+  dataSource:
+    key: job-candidates
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    candidate:
+      name:
+        $var: $.input.filter.fullName
+      emails:
+        $iterate:
+          source:
+            $var: $.input.filter.emails
+          item:
+            $var: $.item.value
+      phones:
+        $iterate:
+          source:
+            $var: $.input.filter.phones
+          item:
+            $var: $.item.value
+      links:
+        $iterate:
+          source:
+            $var: $.input.filter.urls
+          item:
+            $var: $.item.value
+isCustomized: false
+parentRevision: c7f2766f-3c04-4213-adcc-394b15a785cf
+integration:
+  id: 68a820cb9fc7b352ffc9459f
+  name: Recruitee
+  key: recruitee
+  uuid: 7dd6d57d-d6d0-476a-8950-9fc36446637a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.347Z'
+  updatedAt: '2025-08-22T07:48:28.540Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/recruitee/logo.png
+  connectorId: 6466785560f981f3ce696912
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 686
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

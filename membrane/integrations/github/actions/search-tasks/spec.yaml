@@ -1,0 +1,55 @@
+id: 68a8a3f6c172bc72066775f7
+name: Search Tasks
+key: search-tasks
+uuid: a4ede812-1fc9-46f3-8f46-404617670de4
+state: READY
+errors: []
+revision: ae7de43c-43aa-4c42-b1ed-c3bd5f4d54f3
+createdAt: '2025-08-22T17:08:13.281Z'
+updatedAt: '2025-08-22T17:08:13.281Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e46
+parentId: 68a8a3f5c172bc72066772c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 7f75c598-8318-4b71-bdd7-5a8411cedfb5
+integration:
+  id: 68a8a3ebc172bc7206676e46
+  name: Github
+  key: github
+  uuid: 6efb002f-0555-4734-8b82-f1d83b910c82
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.951Z'
+  updatedAt: '2025-08-22T17:08:00.091Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/github/logo.png
+  connectorId: 6446a060badd839bce1ac1ac
+  connectorVersion: 1.1.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 889
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,144 @@
+id: 68a8a3f2c172bc72066770be
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: d9b6afac-1a7a-4f82-8397-fcb443b2d6db
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 689f2bf000905568ab2f66ec
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f5e
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  title:
+    $var: $.subject
+  description:
+    $var: $.content
+  status:
+    $var: $.status
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  owner_id:
+    $var: $.ownerId
+  due_date:
+    $var: $.dueTime
+  completed_date:
+    $var: $.endTime
+  task_type_id:
+    $var: $.type
+  targetable_id:
+    $firstNotEmpty:
+      - $var: $.contactId
+      - $var: $.companyId
+      - $var: $.dealId
+  targetable_type:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value: Contact
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value: SalesAccount
+        - filter:
+            $eval:
+              $var: $.dealId
+            isNotEmpty: true
+          value: Deal
+  creater_id:
+    $var: $.createdBy
+  updater_id:
+    $var: $.updatedBy
+importValue:
+  id:
+    $var: $.id
+  subject:
+    $var: $.title
+  dueTime:
+    $var: $.due_date
+  ownerId:
+    $var: $.owner_id
+  contactId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.targetable_type
+            is: Contact
+          value:
+            $var: $.targetable_id
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.targetable_type
+            is: SalesAccount
+          value:
+            $var: $.targetable_id
+  dealId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.targetable_type
+            is: Deal
+          value:
+            $var: $.targetable_id
+  createdBy:
+    $var: $.creater_id
+  createdTime:
+    $var: $.created_at
+  updatedBy:
+    $var: $.updater_id
+  updatedTime:
+    $var: $.updated_at
+  content:
+    $var: $.description
+  status:
+    $var: $.status
+  type:
+    $var: $.task_type_id
+  endTime:
+    $var: $.completed_date
+  startTime:
+    $var: $.completed_date
+  assigneeId:
+    $var: $.owner_id
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

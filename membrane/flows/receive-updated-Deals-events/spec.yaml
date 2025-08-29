@@ -1,0 +1,25 @@
+id: 68a8a2ef8508b934a6351314
+name: Receive Updated Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Deals-events
+revision: 7589319e-d46c-4b20-b23a-ded7f48dbbe4
+nodes:
+  Deals-updated-trigger:
+    type: data-record-updated-trigger
+    name: Deal Updated Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false

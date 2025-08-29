@@ -1,0 +1,94 @@
+id: 68a8a2e48508b934a6350b60
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 101993b3-2e75-48b4-8554-a104abc061dd
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66f9
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a91
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  value:
+    $var: $.amount
+  type:
+    $var: $.type
+  campaignId:
+    $var: $.campaignId
+  closedAt:
+    $var: $.closeTime
+  probability:
+    $var: $.probability
+  stage:
+    $var: $.stage
+  status:
+    $var: $.status
+  createdAt:
+    $var: $.createdTime
+  createdById:
+    $var: $.createdBy
+  updatedAt:
+    $var: $.updatedTime
+  updatedById:
+    $var: $.updatedBy
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  amount:
+    $var: $.value
+  stage:
+    $var: $.stage
+  status:
+    $var: $.status
+  type:
+    $var: $.type
+  probability:
+    $var: $.probability
+  campaignId:
+    $var: $.campaignId
+  closeTime:
+    $var: $.closedAt
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
+  createdBy:
+    $var: $.createdById
+  updatedBy:
+    $var: $.updatedById
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

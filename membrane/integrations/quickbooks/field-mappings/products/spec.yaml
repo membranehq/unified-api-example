@@ -1,0 +1,82 @@
+id: 68a8a3972e84328ca528f67c
+name: Products
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f597
+key: products
+customized: false
+revision: 36a0d10d-c239-43cc-9ccd-274bc68a5909
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 68a8a2a4bdd4149f154774d4
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f597
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  Active:
+    $var: $.isActive
+  Type:
+    $var: $.type
+  Name:
+    $var: $.name
+  QtyOnHand:
+    $var: $.weight
+importValue:
+  id:
+    $var: $.Id
+  name:
+    $var: $.Name
+  type:
+    $var: $.Type
+  weight:
+    $var: $.QtyOnHand
+  isActive:
+    $var: $.Active
+  status:
+    $var: $.Active
+  createdTime:
+    $var: $.MetaData.CreateTime
+  updatedTime:
+    $var: $.MetaData.LastUpdatedTime
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

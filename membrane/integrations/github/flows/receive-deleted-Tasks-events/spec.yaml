@@ -1,0 +1,50 @@
+id: 68a8a404c172bc7206678172
+name: Receive Deleted Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Tasks-events
+revision: 06a0c907-3d91-4a0d-b923-b1180c812d94
+universalFlowId: 68a8a400c172bc7206677c92
+integrationId: 68a8a3ebc172bc7206676e46
+universalFlowRevision: bd62a40d-5da5-48f2-8bf9-3e1cc911e25e
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Task Deleted Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e46
+  name: Github
+  key: github
+  uuid: 6efb002f-0555-4734-8b82-f1d83b910c82
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.951Z'
+  updatedAt: '2025-08-22T17:08:00.091Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/github/logo.png
+  connectorId: 6446a060badd839bce1ac1ac
+  connectorVersion: 1.1.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 889
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,54 @@
+id: 68a89b606f9be8241c5f5670
+name: Create Note
+key: create-Notes
+uuid: 60a0f447-4491-4400-8fbd-e2dc63a5fafc
+state: READY
+errors: []
+revision: 4d30eb6f-d3e8-4f99-b377-74faa064c158
+createdAt: '2025-08-22T16:31:30.663Z'
+updatedAt: '2025-08-22T16:31:30.663Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a89b606f9be8241c5f5582
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: notes
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 1508db0c-ac65-4b58-9242-31dcb3c64254
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,54 @@
+id: 68a89b606f9be8241c5f5676
+name: Create Note
+key: create-Notes
+uuid: 60a0f447-4491-4400-8fbd-e2dc63a5fafc
+state: READY
+errors: []
+revision: 34e20d2b-c6ba-4154-abf1-d75d79397d9f
+createdAt: '2025-08-22T16:31:30.866Z'
+updatedAt: '2025-08-22T16:31:30.866Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 68a89b606f9be8241c5f5582
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: notes
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 1508db0c-ac65-4b58-9242-31dcb3c64254
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

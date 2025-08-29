@@ -1,0 +1,54 @@
+id: 68a8a248285c02f4152f0273
+name: Create Activity
+key: create-Activities
+uuid: 11b4b1d7-c118-43b2-b06f-66553ecfb559
+state: READY
+errors: []
+revision: 2a1faf9f-4c9c-480f-9321-dcd206deb923
+createdAt: '2025-08-22T17:00:59.567Z'
+updatedAt: '2025-08-22T17:00:59.567Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a8a247285c02f4152f0182
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: activities
+  fieldMapping:
+    key: activities
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: d45712a2-80e0-4b26-a8b7-8b6776dcc9b8
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

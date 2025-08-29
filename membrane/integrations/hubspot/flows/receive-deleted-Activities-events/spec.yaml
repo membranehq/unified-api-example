@@ -1,0 +1,50 @@
+id: 68a8a24f285c02f4152f073e
+name: Receive Deleted Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Activities-events
+revision: 424f02b5-99d9-40eb-ae9d-12873706bb4e
+universalFlowId: 68a8a24d285c02f4152f05ad
+integrationId: 689f2bf000905568ab2f66e6
+universalFlowRevision: a45e705d-4ca4-4dad-9939-b97b0bf0eec0
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Activity Deleted Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,78 @@
+id: 68a8a3972e84328ca528f67e
+name: Products
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f5ab
+key: products
+customized: false
+revision: c0ca15c3-aef1-419e-b5fb-03edfc2f27b8
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 689f2bf000905568ab2f6701
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f5ab
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  description:
+    $var: $.description
+  item_code:
+    $var: $.code
+  cost_price:
+    $var: $.price
+  active:
+    $var: $.isActive
+  catalog_item_type_id:
+    $var: $.type
+importValue:
+  id:
+    $var: id
+  description:
+    $var: description
+  code:
+    $var: item_code
+  isActive:
+    $var: active
+  price:
+    $var: $.cost_price
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

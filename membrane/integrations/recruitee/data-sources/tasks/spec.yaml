@@ -1,0 +1,38 @@
+id: 68a8a3f1c172bc7206676f7f
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+revision: 1c96f687-ef79-4d0f-9249-97eda036a35f
+integrationId: 68a820cb9fc7b352ffc9459f
+customized: false
+universalDataSourceId: 68a8a3f1c172bc7206676f0a
+universalDataSourceRevision: 1e77689d-61bf-43e9-a49c-c66d27640de5
+collectionKey: tasks
+udm: tasks
+defaultPath: /data/tasks
+integration:
+  id: 68a820cb9fc7b352ffc9459f
+  name: Recruitee
+  key: recruitee
+  uuid: 7dd6d57d-d6d0-476a-8950-9fc36446637a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.347Z'
+  updatedAt: '2025-08-22T07:48:28.540Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/recruitee/logo.png
+  connectorId: 6466785560f981f3ce696912
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 686
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

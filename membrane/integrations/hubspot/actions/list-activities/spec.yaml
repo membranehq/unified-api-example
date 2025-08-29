@@ -1,0 +1,79 @@
+id: 68a8a248285c02f4152f02b0
+name: List Activities
+key: list-activities
+uuid: bc602fb3-7c15-4ecf-abca-19ea4631bd42
+state: READY
+errors: []
+revision: f52b0b03-d062-4c83-acb5-df9a899ab858
+createdAt: '2025-08-22T17:01:01.171Z'
+updatedAt: '2025-08-22T17:01:01.171Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e6
+parentId: 68a8a247285c02f4152f0184
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    hs_note_body:
+      $var: $.input.filter.content
+    hubspot_owner_id:
+      $var: $.input.filter.ownerId
+    hs_timestamp:
+      $var: $.input.filter.createdTime
+    hs_created_by_user_id:
+      $var: $.input.filter.createdBy
+    hs_lastmodifieddate:
+      $var: $.input.filter.updatedTime
+    hs_updated_by_user_id:
+      $var: $.input.filter.updatedBy
+    company_ids:
+      - $var: $.input.filter.companyId
+    contact_ids:
+      - $var: $.input.filter.contactId
+    deal_ids:
+      - $var: $.input.filter.dealId
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: fd42077d-f98e-4355-aad6-fb7b01a47164
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

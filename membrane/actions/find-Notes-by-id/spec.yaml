@@ -1,0 +1,24 @@
+id: 68a89b606f9be8241c5f5576
+name: Find Note By Id
+key: find-Notes-by-id
+uuid: 8dff6feb-1c69-4b05-a9d2-48485b3ef0ad
+state: READY
+errors: []
+revision: 1a3b4dd4-0e6f-4c99-8f21-62d7065903e8
+createdAt: '2025-08-22T16:31:28.478Z'
+updatedAt: '2025-08-22T16:31:28.478Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+isCustomized: false

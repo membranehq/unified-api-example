@@ -1,0 +1,25 @@
+id: 68a8a4407f08dba516dd14b5
+name: Receive Updated Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Job Candidates-events
+revision: 2a7d7234-4bc0-4081-b80c-463a627a855f
+nodes:
+  Job Candidates-updated-trigger:
+    type: data-record-updated-trigger
+    name: Job Candidate Updated Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping:
+        key: job-candidates
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false

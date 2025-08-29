@@ -1,0 +1,92 @@
+id: 68a8a3f2c172bc72066770fd
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: c45137f4-90f7-400a-b9be-52300bc986f8
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 689f2bf000905568ab2f66fb
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f73
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  text:
+    $var: $.subject
+  assigned_to:
+    $var: $.ownerId
+  _type:
+    $var: $.type
+  lead_id:
+    $var: $.companyId
+  contact_id:
+    $var: $.contactId
+  date:
+    $var: $.startTime
+  date_created:
+    $var: $.createdTime
+  date_updated:
+    $var: $.updatedTime
+  created_by:
+    $var: $.createdBy
+  updated_by:
+    $var: $.updatedBy
+importValue:
+  id:
+    $var: $.id
+  subject:
+    $var: $.text
+  startTime:
+    $var: $.date
+  dueTime:
+    $var: $.due_date
+  companyId:
+    $var: $.lead_id
+  contactId:
+    $var: $.contact_id
+  ownerId:
+    $var: $.assigned_to
+  type:
+    $var: $._type
+  createdTime:
+    $var: $.date_created
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_updated
+  updatedBy:
+    $var: $.updated_by
+  endTime:
+    $var: $.date
+  assigneeId:
+    $var: $.assigned_to
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,52 @@
+id: 68a8a3a02e84328ca52900f2
+name: Receive Created Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Products-events
+revision: 34ec56ec-c5fe-489e-ba4f-bf5735a794c7
+universalFlowId: 68a8a39d2e84328ca528fcf6
+integrationId: 68a839f321039ff70f89b5c9
+universalFlowRevision: da7ff3ae-775f-482a-9249-8fe0cca56c3e
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Products-created-trigger:
+    type: data-record-created-trigger
+    name: Product Created Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping:
+        key: products
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a839f321039ff70f89b5c9
+  name: Ontraport
+  key: ontraport
+  uuid: c0df51a8-557d-46c1-b2a3-ad27dcc044d6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.281Z'
+  updatedAt: '2025-08-22T09:35:49.709Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/ontraport/logo-56571cbe-9f4f-48e6-bc24-07634dbed2c0.png
+  connectorId: 65f45bb115058a59b3807b33
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

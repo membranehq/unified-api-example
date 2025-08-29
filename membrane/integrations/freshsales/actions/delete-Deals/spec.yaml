@@ -1,0 +1,50 @@
+id: 68a8a2e78508b934a6350e0e
+name: Delete Deal
+key: delete-Deals
+uuid: e4bd05da-b3d8-416e-aab1-458665e6f5e3
+state: READY
+errors: []
+revision: ab24f140-1b59-4183-bde5-3414606fa7c8
+createdAt: '2025-08-22T17:03:38.679Z'
+updatedAt: '2025-08-22T17:03:38.679Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a8a2e78508b934a6350c9a
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: b35127b9-3677-479a-a351-5e646cf6c06a
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

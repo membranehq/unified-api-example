@@ -1,0 +1,54 @@
+id: 68a8a2e88508b934a6350edd
+name: Create Deal
+key: create-Deals
+uuid: 85392d6c-5e3d-45d7-9134-371be7b37ec7
+state: READY
+errors: []
+revision: e61fee07-1e2c-4de1-87df-d3a00030bb00
+createdAt: '2025-08-22T17:03:39.868Z'
+updatedAt: '2025-08-22T17:03:39.868Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a2e78508b934a6350c96
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: deals
+  fieldMapping:
+    key: deals
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 47064490-c49e-47f0-b8d1-4a9e50f43aae
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

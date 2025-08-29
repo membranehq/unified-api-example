@@ -1,0 +1,46 @@
+id: 68a8a43e7f08dba516dd11eb
+name: Job Candidates
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+key: job-candidates
+revision: 038643f8-af43-4ac6-bb4a-7cd3c3bf743e
+integrationId: 68a820cb9fc7b352ffc9459d
+customized: false
+universalDataSourceId: 68a8a43e7f08dba516dd11d0
+universalDataSourceRevision: 1b317848-7f59-4c6e-9e1b-731b2bfb94cc
+collectionKey: opportunities
+udm: job-candidates
+defaultPath: /data/opportunities
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

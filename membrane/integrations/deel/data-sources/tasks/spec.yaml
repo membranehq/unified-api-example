@@ -1,0 +1,39 @@
+id: 68a8a3f1c172bc7206676f8e
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+revision: ca233198-8cb6-4240-a0e4-be6fa9b2309b
+integrationId: 68a8a3ebc172bc7206676e4a
+customized: false
+universalDataSourceId: 68a8a3f1c172bc7206676f0a
+universalDataSourceRevision: 1e77689d-61bf-43e9-a49c-c66d27640de5
+collectionKey: tasks
+udm: tasks
+defaultPath: /data/tasks
+integration:
+  id: 68a8a3ebc172bc7206676e4a
+  name: Deel
+  key: deel
+  uuid: 375ef7b8-5062-49b7-a2b7-d638083e3b4d
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.953Z'
+  updatedAt: '2025-08-22T17:08:00.759Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/deel-connector/logo-0306de7e-75aa-4354-a30a-b637da5b32c7.png
+  connectorId: 652672eb70089fac484af1b0
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 145
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

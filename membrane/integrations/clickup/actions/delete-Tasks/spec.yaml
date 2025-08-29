@@ -1,0 +1,50 @@
+id: 68a8a3f6c172bc720667750c
+name: Delete Task
+key: delete-Tasks
+uuid: c3ed3a49-2947-479f-b0f6-07880043db91
+state: READY
+errors: []
+revision: ac3f8d0e-bc82-4f58-a1a0-d523f1279bfb
+createdAt: '2025-08-22T17:08:11.564Z'
+updatedAt: '2025-08-22T17:08:11.564Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e44
+parentId: 68a8a3f5c172bc72066772bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: e34f473f-8f4b-4ba4-bd37-caef889a0473
+integration:
+  id: 68a8a3ebc172bc7206676e44
+  name: Clickup
+  key: clickup
+  uuid: af6fad15-3a7c-441e-89fe-90264262a5f5
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.950Z'
+  updatedAt: '2025-08-22T17:08:00.685Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/clickup/logo.png
+  connectorId: 64359f80986ed1caadafa638
+  connectorVersion: 1.2.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 11
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: true
+  eventsCount: 28
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

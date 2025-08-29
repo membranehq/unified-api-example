@@ -1,0 +1,94 @@
+id: 68a8a3f2c172bc72066770e3
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: 03cebd76-9a27-4744-b5f2-4c4bcf15e413
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 689f2bf000905568ab2f66e8
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f54
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.subject
+  assigned_user_id:
+    $var: $.ownerId
+  description:
+    $var: $.content
+  status:
+    $var: $.status
+  date_due:
+    $var: $.dueTime
+  date_start:
+    $var: $.startTime
+  contact_id:
+    $var: $.contactId
+  date_entered:
+    $var: $.createdTime
+  date_modified:
+    $var: $.updatedTime
+  modified_user_id:
+    $var: $.updatedBy
+  created_by:
+    $var: $.createdBy
+importValue:
+  id:
+    $var: $.id
+  subject:
+    $var: $.name
+  content:
+    $var: $.description
+  status:
+    $var: $.status
+  ownerId:
+    $var: $.assigned_user_id
+  contactId:
+    $var: $.contact_id
+  dueTime:
+    $var: $.date_due
+  startTime:
+    $var: $.date_start
+  createdTime:
+    $var: $.date_entered
+  createdBy:
+    $var: $.created_by
+  updatedBy:
+    $var: $.modified_user_id
+  updatedTime:
+    $var: $.date_modified
+  endTime:
+    $var: $.date_start
+  assigneeId:
+    $var: $.assigned_user_id
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

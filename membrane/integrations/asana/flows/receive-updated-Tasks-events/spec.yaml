@@ -1,0 +1,52 @@
+id: 68a8a405c172bc72066782a3
+name: Receive Updated Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Tasks-events
+revision: b4edb720-3cd5-418a-b619-c581d36fb268
+universalFlowId: 68a8a400c172bc7206677c8a
+integrationId: 68a8a3ebc172bc7206676e42
+universalFlowRevision: 136b407b-3c76-416b-a84b-d8a2f3fa4489
+nodes:
+  Tasks-updated-trigger:
+    type: data-record-updated-trigger
+    name: Task Updated Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e42
+  name: Asana
+  key: asana
+  uuid: 9629267f-230d-4491-bc36-86ebfcac0337
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.899Z'
+  updatedAt: '2025-08-22T17:08:00.890Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/asana/logo.png
+  connectorId: 6435316c986ed1caad932104
+  connectorVersion: 1.0.13
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

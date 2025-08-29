@@ -1,0 +1,74 @@
+id: 68a8a2a7bdd4149f154776f5
+name: Create Invoice
+key: create-Invoices
+uuid: 01c9531f-1e8c-4375-9518-488f12a7ad0f
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477513
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a2a6bdd4149f15477592
+revision: 4dcb6b91-4128-4157-ac42-1b6dc8c7e68c
+createdAt: '2025-08-22T17:02:33.193Z'
+updatedAt: '2025-08-22T17:02:33.193Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6701
+parentId: 68a8a2a7bdd4149f15477628
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: invoices
+  fieldMapping:
+    key: invoices
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 02abbf92-2c63-42c5-9b27-f6c07ab6baad
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

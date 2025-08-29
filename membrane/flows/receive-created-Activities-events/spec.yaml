@@ -1,0 +1,24 @@
+id: 68a8a24d285c02f4152f05a8
+name: Receive Created Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Activities-events
+revision: 46c52bf2-63d6-4e03-a736-522037b6bc7a
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-created-trigger:
+    type: data-record-created-trigger
+    name: Activity Created Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

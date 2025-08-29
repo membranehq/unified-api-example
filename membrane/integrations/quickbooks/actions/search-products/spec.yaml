@@ -1,0 +1,75 @@
+id: 68a8a3992e84328ca528f951
+name: Search Products
+key: search-products
+uuid: 9d2acf9c-ba63-4bd8-8ebb-e46d7b15f6d3
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f597
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3972e84328ca528f67c
+revision: 31241894-89ac-4885-8006-7ead790b7684
+createdAt: '2025-08-22T17:06:35.982Z'
+updatedAt: '2025-08-22T17:06:35.982Z'
+isDeactivated: false
+integrationId: 68a8a2a4bdd4149f154774d4
+parentId: 68a8a3982e84328ca528f761
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: c45ecfae-cce4-49a0-a095-2f8a77ef5c20
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

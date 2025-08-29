@@ -1,0 +1,78 @@
+id: 68a8a248285c02f4152f02b2
+name: List Activities
+key: list-activities
+uuid: bc602fb3-7c15-4ecf-abca-19ea4631bd42
+state: READY
+errors: []
+revision: 60c8b9a4-ec08-4198-8fe4-68870914959c
+createdAt: '2025-08-22T17:01:00.868Z'
+updatedAt: '2025-08-22T17:01:00.868Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d3
+parentId: 68a8a247285c02f4152f0184
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    subject:
+      $var: $.input.filter.title
+    description:
+      $var: $.input.filter.description
+    scheduledend:
+      $var: $.input.filter.endTime
+    scheduledstart:
+      $var: $.input.filter.startTime
+    ownerid:
+      $var: $.input.filter.ownerId
+    createdby:
+      $var: $.input.filter.createdBy
+    createdon:
+      $var: $.input.filter.createdTime
+    modifiedby:
+      $var: $.input.filter.updatedBy
+    modifiedon:
+      $var: $.input.filter.updatedTime
+isCustomized: false
+parentRevision: fd42077d-f98e-4355-aad6-fb7b01a47164
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

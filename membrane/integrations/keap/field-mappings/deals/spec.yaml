@@ -1,0 +1,76 @@
+id: 68a8a2e48508b934a6350b6a
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 9fadee14-a8d3-4f9c-a6cc-b5f704ba613e
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66e2
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a73
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  contact_id:
+    $var: $.contactId
+  date_created:
+    $var: $.createdTime
+  estimated_close_date:
+    $var: $.closeTime
+  last_updated:
+    $var: $.updatedTime
+  opportunity_notes:
+    $var: $.description
+  opportunity_title:
+    $var: $.name
+  user_id:
+    $var: $.ownerId
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.opportunity_title
+  contactId:
+    $var: $.contact_id
+  description:
+    $var: $.opportunity_notes
+  ownerId:
+    $var: $.user_id
+  closeTime:
+    $var: $.estimated_close_date
+  createdTime:
+    $var: $.date_created
+  updatedTime:
+    $var: $.last_updated
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

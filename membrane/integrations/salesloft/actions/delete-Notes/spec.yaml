@@ -1,0 +1,50 @@
+id: 68a89b606f9be8241c5f569a
+name: Delete Note
+key: delete-Notes
+uuid: 08963599-874c-4c0b-b3ae-3f3b5f6cd4e4
+state: READY
+errors: []
+revision: 2498bb87-4cdb-4c7d-bc8b-c8886dceee3e
+createdAt: '2025-08-22T16:31:30.253Z'
+updatedAt: '2025-08-22T16:31:30.253Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a89b606f9be8241c5f5578
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 2c036121-0ec9-4aa1-a6e6-c7c1b27d8b2c
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

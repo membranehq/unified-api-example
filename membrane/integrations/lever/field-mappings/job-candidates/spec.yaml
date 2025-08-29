@@ -1,0 +1,122 @@
+id: 68a8a43e7f08dba516dd1233
+name: Job Candidates
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a820cb9fc7b352ffc9459d
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a43e7f08dba516dd11eb
+key: job-candidates
+customized: false
+revision: 4528d4c0-af6b-4878-b09f-20d57797fd49
+universalFieldMappingId: 68a8a43e7f08dba516dd121e
+universalFieldMappingRevision: 2b27b236-f726-4359-b7d0-8cff44ed92c3
+integrationId: 68a820cb9fc7b352ffc9459d
+dataSourceKey: job-candidates
+dataSourceId: 68a8a43e7f08dba516dd11eb
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.fullName
+  updatedAt:
+    $var: $.updatedTime
+  phones:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        value:
+          $var: $.item.value
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        $var: $.item.value
+  applications:
+    $var: $.applicationIds
+  createdAt:
+    $var: $.createdTime
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.name
+  phones:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        value:
+          $var: $.item.value
+  primaryEmail:
+    $var: $.emails[0]
+  primaryPhone:
+    $var: $.phones[0].value
+  emails:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        value:
+          $var: $.item
+  urls:
+    $iterate:
+      source:
+        $var: $.links
+      item:
+        value:
+          $var: $.item
+  applicationIds:
+    $var: $.applications
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
+  firstName:
+    $firstName:
+      $var: $.name
+  lastName:
+    $lastName:
+      $var: $.name
+integration:
+  id: 68a820cb9fc7b352ffc9459d
+  name: Lever
+  key: lever
+  uuid: e93a3ea6-7037-4cc2-8125-b47e3f300cda
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T07:48:27.345Z'
+  updatedAt: '2025-08-22T07:48:29.216Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/lever/logohq.png
+  connectorId: 6466784c60f981f3ce696903
+  connectorVersion: 1.0.2
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 68
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,73 @@
+id: 68a8a248285c02f4152f02bc
+name: List Activities
+key: list-activities
+uuid: bc602fb3-7c15-4ecf-abca-19ea4631bd42
+state: READY
+errors: []
+revision: f13b7fe1-c002-4d8f-a809-c64cb12efc8e
+createdAt: '2025-08-22T17:01:00.460Z'
+updatedAt: '2025-08-22T17:01:00.460Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a8a247285c02f4152f0184
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    sentiment:
+      $var: $.input.filter.title
+    duration:
+      $var: $.input.filter.durationSeconds
+    person_id:
+      $var: $.input.filter.contactId
+    user_id:
+      $var: $.input.filter.ownerId
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: fd42077d-f98e-4355-aad6-fb7b01a47164
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

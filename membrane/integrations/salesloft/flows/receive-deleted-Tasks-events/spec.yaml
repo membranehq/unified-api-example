@@ -1,0 +1,50 @@
+id: 68a8a401c172bc7206678028
+name: Receive Deleted Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Tasks-events
+revision: 30196902-890f-4abd-b601-50b3e68386ef
+universalFlowId: 68a8a400c172bc7206677c92
+integrationId: 689f2bf000905568ab2f6719
+universalFlowRevision: bd62a40d-5da5-48f2-8bf9-3e1cc911e25e
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Task Deleted Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

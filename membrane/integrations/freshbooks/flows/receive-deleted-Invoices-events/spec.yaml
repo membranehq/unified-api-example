@@ -1,0 +1,50 @@
+id: 68a8a2abbdd4149f15477c04
+name: Receive Deleted Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Invoices-events
+revision: fb51aef9-4998-4ee3-868a-0897bca4cf04
+universalFlowId: 68a8a2aabdd4149f154779c1
+integrationId: 68a8a2a4bdd4149f154774d2
+universalFlowRevision: 435c3d29-36bb-4de3-9128-02c3b11fa134
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Invoices-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Invoice Deleted Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a2a4bdd4149f154774d2
+  name: Freshbooks
+  key: freshbooks
+  uuid: 629dfb93-251e-45d4-a5e5-fd4742bb0c49
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:02:28.444Z'
+  updatedAt: '2025-08-22T17:02:29.472Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshbooks-connector/logo.png
+  connectorId: 643e84dcbadd839bce47c653
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 161
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

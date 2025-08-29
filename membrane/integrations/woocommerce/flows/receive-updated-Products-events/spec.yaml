@@ -1,0 +1,52 @@
+id: 68a8a3a02e84328ca52900f6
+name: Receive Updated Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Products-events
+revision: 026c417b-3b74-464b-a43f-935b336a330c
+universalFlowId: 68a8a39d2e84328ca528fcf2
+integrationId: 68a84efe7702482264c62c7d
+universalFlowRevision: f9438364-77d7-45b3-8070-32138588f76f
+nodes:
+  Products-updated-trigger:
+    type: data-record-updated-trigger
+    name: Product Updated Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping:
+        key: products
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c7d
+  name: Woocommerce
+  key: woocommerce
+  uuid: c7525959-49d7-49fd-8847-916e41cfa6a0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.332Z'
+  updatedAt: '2025-08-22T11:05:41.476Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/woocommerce/logo.png
+  connectorId: 6466785d60f981f3ce69691f
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 152
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,38 @@
+id: 68a8a43e7f08dba516dd11e9
+name: Job Candidates
+isDeactivated: false
+state: READY
+errors: []
+key: job-candidates
+revision: e3a760df-2acb-4006-8535-0a601a9c8404
+integrationId: 68a820cb9fc7b352ffc94593
+customized: false
+universalDataSourceId: 68a8a43e7f08dba516dd11d0
+universalDataSourceRevision: 1b317848-7f59-4c6e-9e1b-731b2bfb94cc
+collectionKey: candidates
+udm: job-candidates
+defaultPath: /data/candidates
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,38 @@
+id: 68a8a2a5bdd4149f1547750f
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+revision: f7f34ff1-e3db-4677-a9ac-d803056d2f8e
+integrationId: 689f2bf000905568ab2f66da
+customized: false
+universalDataSourceId: 68a8a2a5bdd4149f154774f8
+universalDataSourceRevision: 8ec6661f-20c4-4d79-8162-f0f658995cbe
+collectionKey: invoices
+udm: invoices
+defaultPath: /data/invoices
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

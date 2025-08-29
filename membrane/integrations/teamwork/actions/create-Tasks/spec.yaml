@@ -1,0 +1,75 @@
+id: 68a8a3f6c172bc720667764d
+name: Create Task
+key: create-Tasks
+uuid: 32bad3d7-5397-46e8-8c3f-b774a4edf057
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a3ebc172bc7206676e57
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3f1c172bc7206676f79
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3f2c172bc72066770e9
+revision: 8455b086-2b9f-410b-a4fa-bd405c753df1
+createdAt: '2025-08-22T17:08:13.672Z'
+updatedAt: '2025-08-22T17:08:13.672Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e57
+parentId: 68a8a3f5c172bc72066772c9
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: tasks
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 5db6e2a2-0c2d-417b-96b2-01b0797eb8e1
+integration:
+  id: 68a8a3ebc172bc7206676e57
+  name: Teamwork
+  key: teamwork
+  uuid: b3857935-787f-4f73-9757-678dac7e8074
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:07:55.967Z'
+  updatedAt: '2025-08-22T17:08:00.079Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/teamwork/logo-cac242af-aa95-411c-9025-e94c1f711b96.png
+  connectorId: 645e0e37edb0b5ee6c3c856d
+  connectorVersion: 1.0.6
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 177
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

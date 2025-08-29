@@ -1,0 +1,38 @@
+id: 68a8a2e38508b934a6350a91
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+revision: 8a039fd6-f07e-4139-8a3b-5dc8c122227f
+integrationId: 689f2bf000905568ab2f66f9
+customized: false
+universalDataSourceId: 68a8a2e38508b934a6350a3e
+universalDataSourceRevision: d89eccb8-e2a0-4c4f-9f56-bdd5bd6c4f42
+collectionKey: opportunities
+udm: deals
+defaultPath: /data/opportunities
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

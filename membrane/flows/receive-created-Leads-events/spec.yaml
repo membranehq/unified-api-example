@@ -1,0 +1,24 @@
+id: 68a8a342bc4406f3f0dc4b71
+name: Receive Created Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Leads-events
+revision: e4001059-f45d-406c-bc03-b3c73d9b1bf4
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Leads-created-trigger:
+    type: data-record-created-trigger
+    name: Lead Created Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping:
+        key: leads
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

@@ -1,0 +1,82 @@
+id: 68a8a3972e84328ca528f670
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+customized: false
+revision: fe47218a-00d0-496a-ae38-4f943ace6948
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 689f2bf000905568ab2f66d1
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f5a3
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  Name:
+    $var: $.name
+  ProductCode:
+    $var: $.code
+  Description:
+    $var: $.description
+  IsActive:
+    $var: $.isActive
+  CreatedDate:
+    $var: $.createdTime
+  CreatedById:
+    $var: $.createdBy
+  LastModifiedDate:
+    $var: $.updatedTime
+  LastModifiedById:
+    $var: $.updatedBy
+  Type:
+    $var: $.type
+importValue:
+  id:
+    $var: $.Id
+  name:
+    $var: $.Name
+  description:
+    $var: $.Description
+  code:
+    $var: $.ProductCode
+  type:
+    $var: $.Type
+  isActive:
+    $var: $.IsActive
+  createdTime:
+    $var: $.CreatedDate
+  createdBy:
+    $var: $.CreatedById
+  updatedTime:
+    $var: $.LastModifiedDate
+  updatedBy:
+    $var: $.LastModifiedById
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

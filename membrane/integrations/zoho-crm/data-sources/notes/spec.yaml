@@ -1,0 +1,38 @@
+id: 68a89b5d6f9be8241c5f5419
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+revision: 2e41b6f6-fa0b-4f28-acb9-335699c822f0
+integrationId: 689f2bf000905568ab2f66d8
+customized: false
+universalDataSourceId: 68a89b5d6f9be8241c5f53f1
+universalDataSourceRevision: 01077565-2ae6-47a8-99bc-21c5764625b0
+collectionKey: Notes
+udm: notes
+defaultPath: /data/Notes
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

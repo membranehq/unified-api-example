@@ -1,0 +1,51 @@
+id: 68a8a3f6c172bc7206677524
+name: Delete Task
+key: delete-Tasks
+uuid: c3ed3a49-2947-479f-b0f6-07880043db91
+state: READY
+errors: []
+revision: 23b1b536-0207-4077-a70a-3a0f0c6b7910
+createdAt: '2025-08-22T17:08:11.769Z'
+updatedAt: '2025-08-22T17:08:11.769Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e4a
+parentId: 68a8a3f5c172bc72066772bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: e34f473f-8f4b-4ba4-bd37-caef889a0473
+integration:
+  id: 68a8a3ebc172bc7206676e4a
+  name: Deel
+  key: deel
+  uuid: 375ef7b8-5062-49b7-a2b7-d638083e3b4d
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.953Z'
+  updatedAt: '2025-08-22T17:08:00.759Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/deel-connector/logo-0306de7e-75aa-4354-a30a-b637da5b32c7.png
+  connectorId: 652672eb70089fac484af1b0
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 145
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

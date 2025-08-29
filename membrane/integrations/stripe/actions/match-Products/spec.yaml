@@ -1,0 +1,52 @@
+id: 68a8a3992e84328ca528f939
+name: Match Product
+key: match-Products
+uuid: 9fe448af-7311-49b8-b3bc-4170c4c3a75f
+state: READY
+errors: []
+revision: bca64b79-7ac9-4ba5-8c67-e069ffc61e12
+createdAt: '2025-08-22T17:06:36.660Z'
+updatedAt: '2025-08-22T17:06:36.660Z'
+isDeactivated: false
+integrationId: 68a8a3952e84328ca528f546
+parentId: 68a8a3982e84328ca528f75f
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: ec5f4de5-3168-4c82-9ca4-8854d981e1e7
+integration:
+  id: 68a8a3952e84328ca528f546
+  name: Stripe
+  key: stripe
+  uuid: 1b044290-8fd1-4e55-b858-84e9ed1de2ed
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:06:29.053Z'
+  updatedAt: '2025-08-22T17:06:30.417Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/stripe/logo.png
+  connectorId: 6466785960f981f3ce696919
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 479
+  hasData: true
+  dataCollectionsCount: 26
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

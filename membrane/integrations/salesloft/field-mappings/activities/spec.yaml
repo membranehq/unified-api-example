@@ -1,0 +1,72 @@
+id: 68a8a245285c02f4152f00d2
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: e1724bc0-27b3-4fea-88df-5732525a6c6a
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 689f2bf000905568ab2f6719
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f0032
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  duration:
+    $var: $.durationSeconds
+  sentiment:
+    $var: $.title
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  person_id:
+    $var: $.contactId
+  user_id:
+    $var: $.ownerId
+importValue:
+  id:
+    $var: $.id
+  title:
+    $var: $.sentiment
+  durationSeconds:
+    $var: $.duration
+  contactId:
+    $var: $.person_id
+  ownerId:
+    $var: $.user_id
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

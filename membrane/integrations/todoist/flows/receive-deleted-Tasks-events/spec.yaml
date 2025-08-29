@@ -1,0 +1,50 @@
+id: 68a8a403c172bc72066780b0
+name: Receive Deleted Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Tasks-events
+revision: aac364d2-3cbf-4bdf-8a8f-5ef048e743cf
+universalFlowId: 68a8a400c172bc7206677c92
+integrationId: 68a8a3ebc172bc7206676e48
+universalFlowRevision: bd62a40d-5da5-48f2-8bf9-3e1cc911e25e
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Task Deleted Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e48
+  name: Todoist
+  key: todoist
+  uuid: fc9354af-da42-46ee-b0b4-eee5c7b169f9
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.952Z'
+  updatedAt: '2025-08-22T17:08:00.161Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/todoist-connector/logo.png
+  connectorId: 64d0ea29d8707ad2f865acb7
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 5
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

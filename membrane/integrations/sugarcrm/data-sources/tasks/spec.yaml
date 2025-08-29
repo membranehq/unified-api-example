@@ -1,0 +1,38 @@
+id: 68a8a3f1c172bc7206676f54
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+revision: 5f509c10-0592-4df4-b423-5dbc60caeff3
+integrationId: 689f2bf000905568ab2f66e8
+customized: false
+universalDataSourceId: 68a8a3f1c172bc7206676f0a
+universalDataSourceRevision: 1e77689d-61bf-43e9-a49c-c66d27640de5
+collectionKey: tasks
+udm: tasks
+defaultPath: /data/tasks
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

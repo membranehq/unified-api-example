@@ -1,0 +1,79 @@
+id: 68a8a3992e84328ca528f8c0
+name: Update Product
+key: update-Products
+uuid: 585b7403-55e1-4c5e-8b7f-e8d0286e321d
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c8d
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f5b8
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3982e84328ca528f6ea
+revision: bd0760cb-678a-4c2a-accf-68804f187b43
+createdAt: '2025-08-22T17:06:36.200Z'
+updatedAt: '2025-08-22T17:06:36.200Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c8d
+parentId: 68a8a3982e84328ca528f75b
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: products
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 08367aa7-badf-4460-856b-0a0335a3dabe
+integration:
+  id: 68a84efe7702482264c62c8d
+  name: Lightspeed R-Series
+  key: lightspeed-r-series
+  uuid: 2cee0c2e-162d-41ab-a07b-7f80337f7a40
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.340Z'
+  updatedAt: '2025-08-22T11:05:41.148Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/lightspeed-r-series/asset-ec862902-f916-4b32-ab9e-13fa9b8f9481.png
+  connectorId: 66b2291668e75461beba804b
+  connectorVersion: 1.0.3
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 256
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

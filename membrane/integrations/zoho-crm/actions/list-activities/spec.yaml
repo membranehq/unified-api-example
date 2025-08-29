@@ -1,0 +1,89 @@
+id: 68a8a248285c02f4152f02b4
+name: List Activities
+key: list-activities
+uuid: bc602fb3-7c15-4ecf-abca-19ea4631bd42
+state: READY
+errors: []
+revision: fd0359fc-103f-41ff-bcf4-128da50d8faa
+createdAt: '2025-08-22T17:01:01.169Z'
+updatedAt: '2025-08-22T17:01:01.169Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a8a247285c02f4152f0184
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Subject:
+      $var: $.input.filter.title
+    Description:
+      $var: $.input.filter.description
+    Owner:
+      id:
+        $var: $.input.filter.ownerId
+    Call_Start_Time:
+      $var: $.input.filter.startTime
+    Call_Type:
+      $var: $.input.filter.type
+    Who_Id:
+      id:
+        $var: $.input.filter.contactId
+    Created_Time:
+      $var: $.input.filter.createdTime
+    Created_By:
+      id:
+        $var: $.input.filter.createdBy
+    Modified_Time:
+      $var: $.input.filter.updatedTime
+    Modified_By:
+      id:
+        $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+    Call_Duration_in_seconds:
+      $var: $.input.filter.durationSeconds
+    Call_Status:
+      $var: $.input.filter.status
+isCustomized: false
+parentRevision: fd42077d-f98e-4355-aad6-fb7b01a47164
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

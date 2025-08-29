@@ -1,0 +1,96 @@
+id: 68a8a3f6c172bc7206677599
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a3ebc172bc7206676e57
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3f1c172bc7206676f79
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3f2c172bc72066770e9
+revision: 8ad70be6-158d-4c47-9cb0-34f616ddb0a4
+createdAt: '2025-08-22T17:08:14.002Z'
+updatedAt: '2025-08-22T17:08:14.002Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e57
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.subject
+    description:
+      $var: $.input.filter.content
+    priority:
+      $var: $.input.filter.priority
+    status:
+      $var: $.input.filter.status
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    createdAt:
+      $var: $.input.filter.createdTime
+    createdBy:
+      $var: $.input.filter.createdBy
+    parentTaskId:
+      $var: $.input.filter.parentTaskId
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 68a8a3ebc172bc7206676e57
+  name: Teamwork
+  key: teamwork
+  uuid: b3857935-787f-4f73-9757-678dac7e8074
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:07:55.967Z'
+  updatedAt: '2025-08-22T17:08:00.079Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/teamwork/logo-cac242af-aa95-411c-9025-e94c1f711b96.png
+  connectorId: 645e0e37edb0b5ee6c3c856d
+  connectorVersion: 1.0.6
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 177
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

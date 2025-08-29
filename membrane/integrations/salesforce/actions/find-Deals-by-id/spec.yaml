@@ -1,0 +1,51 @@
+id: 68a8a2e78508b934a6350e50
+name: Find Deal By Id
+key: find-Deals-by-id
+uuid: 29e71c13-f3aa-4f5c-a53c-025135ef5f0c
+state: READY
+errors: []
+revision: dcb54846-6244-4b11-8c66-a6239a593e87
+createdAt: '2025-08-22T17:03:39.663Z'
+updatedAt: '2025-08-22T17:03:39.663Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a2e78508b934a6350ca0
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 5650a0cd-0aaa-4e1f-8ef7-9c22712971b9
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,50 @@
+id: 68a8a2a7bdd4149f15477723
+name: Delete Invoice
+key: delete-Invoices
+uuid: f8980ed0-c34c-4427-9d9e-55d930e1d1b1
+state: READY
+errors: []
+revision: bb796cad-0fd0-4b6e-9057-945ce4c51873
+createdAt: '2025-08-22T17:02:33.156Z'
+updatedAt: '2025-08-22T17:02:33.156Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a8a2a7bdd4149f1547761d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 43c9aace-c8c8-4684-a3a8-7ec6ce0393bb
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

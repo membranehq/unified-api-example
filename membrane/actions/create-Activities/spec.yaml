@@ -1,0 +1,27 @@
+id: 68a8a247285c02f4152f0182
+name: Create Activity
+key: create-Activities
+uuid: 11b4b1d7-c118-43b2-b06f-66553ecfb559
+state: READY
+errors: []
+revision: d45712a2-80e0-4b26-a8b7-8b6776dcc9b8
+createdAt: '2025-08-22T17:00:55.960Z'
+updatedAt: '2025-08-22T17:00:55.960Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: activities
+  fieldMapping:
+    key: activities
+    input:
+      $var: $.input.fields
+isCustomized: false

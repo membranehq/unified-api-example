@@ -1,0 +1,64 @@
+id: 68a8a2abbdd4149f15477b20
+name: Receive Deleted Invoice Events
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477511
+key: receive-deleted-Invoices-events
+revision: 4a95d25c-74b9-4d98-b796-c01c079e1bcc
+universalFlowId: 68a8a2aabdd4149f154779c1
+integrationId: 68a8a2a4bdd4149f154774d4
+universalFlowRevision: 435c3d29-36bb-4de3-9128-02c3b11fa134
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Invoices-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Invoice Deleted Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,74 @@
+id: 68a8a3972e84328ca528f674
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+customized: false
+revision: 34731803-7f37-4974-8890-a1ce69c4cf6a
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 689f2bf000905568ab2f66f7
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f59f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  item_id:
+    $var: $.id
+  name:
+    $var: $.name
+  status: null
+  description:
+    $var: $.description
+  rate:
+    $var: $.price
+  sku:
+    $var: $.code
+  product_type:
+    $var: $.type
+importValue:
+  id:
+    $var: item_id
+  name:
+    $var: name
+  description:
+    $var: description
+  code:
+    $var: sku
+  type:
+    $var: product_type
+  isActive: null
+  price:
+    $var: rate
+  status: null
+  options: null
+  variants: null
+  createdTime: null
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

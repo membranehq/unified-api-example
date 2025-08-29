@@ -1,0 +1,31 @@
+id: 68a8a3982e84328ca528f75b
+name: Update Product
+key: update-Products
+uuid: 585b7403-55e1-4c5e-8b7f-e8d0286e321d
+state: READY
+errors: []
+revision: 08367aa7-badf-4460-856b-0a0335a3dabe
+createdAt: '2025-08-22T17:06:33.015Z'
+updatedAt: '2025-08-22T17:06:33.015Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: products
+    input:
+      $var: $.input.fields
+isCustomized: false

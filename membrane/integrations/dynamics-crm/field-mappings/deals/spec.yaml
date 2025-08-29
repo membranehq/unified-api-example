@@ -1,0 +1,179 @@
+id: 68a8a2e48508b934a6350b72
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 34e532ee-3cd3-4ba3-9b29-4c555083f845
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66d3
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a6b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  campaignid:
+    $var: $.campaignId
+  closeprobability:
+    $var: $.probability
+  createdby:
+    $var: $.createdBy
+  createdon:
+    $var: $.createdTime
+  customerid:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: accounts
+            id:
+              $var: $.companyId
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value:
+            type: contacts
+            id:
+              $var: $.contactId
+  description:
+    $var: $.description
+  estimatedclosedate:
+    $var: $.closeTime
+  modifiedby:
+    $var: $.updatedBy
+  modifiedon:
+    $var: $.updatedTime
+  name:
+    $var: $.name
+  ownerid:
+    $var: $.ownerId
+  parentcontactid:
+    $var: $.contactId
+  salesstage:
+    $var: $.stage
+  statuscode:
+    $map:
+      value:
+        $var: $.status
+      mapping:
+        - from: open
+          to:
+            $record:
+              id: 1
+              name: In Progress
+        - from: won
+          to:
+            $record:
+              id: 3
+              name: Won
+        - from: lost
+          to:
+            $record:
+              id: 4
+              name: Canceled
+  totalamount:
+    $var: $.amount
+importValue:
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  amount:
+    $var: $.totalamount
+  campaignId:
+    $var: $.campaignid
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.customerid.type
+            is: accounts
+          value:
+            $var: $.customerid.id
+  contactId:
+    $firstNotEmpty:
+      - $var: $.parentcontactid
+      - $case:
+          cases:
+            - filter:
+                $eval:
+                  $var: $.customerid.type
+                is: contacts
+              value:
+                $var: $.customerid.id
+  stage:
+    $var: $.salesstage
+  probability:
+    $var: $.closeprobability
+  ownerId:
+    $var: $.ownerid
+  closeTime:
+    $var: $.estimatedclosedate
+  createdTime:
+    $var: $.createdon
+  createdBy:
+    $var: $.createdby
+  updatedTime:
+    $var: $.modifiedon
+  updatedBy:
+    $var: $.modifiedby
+  status:
+    $map:
+      value:
+        $var: $.statuscode
+      mapping:
+        - from: 1
+          to:
+            $record:
+              id: open
+        - from: 3
+          to:
+            $record:
+              id: won
+        - from: 4
+          to:
+            $record:
+              id: lost
+        - from: 5
+          to:
+            $record:
+              id: lost
+        - from: 2
+          to:
+            $record:
+              id: open
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

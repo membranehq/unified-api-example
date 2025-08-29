@@ -1,0 +1,55 @@
+id: 68a8a248285c02f4152f0303
+name: Search Activities
+key: search-activities
+uuid: 4f9e0c1d-2e83-4b22-ab7e-ddf71c0a80cf
+state: READY
+errors: []
+revision: 09281261-728b-459f-960a-26ad22300e6b
+createdAt: '2025-08-22T17:01:00.055Z'
+updatedAt: '2025-08-22T17:01:00.055Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f9
+parentId: 68a8a247285c02f4152f018a
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 1e57ee4d-82f4-424b-9b39-e9c9fdb6230a
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

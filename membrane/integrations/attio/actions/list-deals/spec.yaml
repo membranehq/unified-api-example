@@ -1,0 +1,90 @@
+id: 68a8a2e88508b934a6350e96
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: bea86f3e-1761-4d6a-b975-4a37332f7fbb
+createdAt: '2025-08-22T17:03:40.788Z'
+updatedAt: '2025-08-22T17:03:40.788Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6705
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      record_id:
+        $var: $.input.filter.id
+    values:
+      name:
+        - value:
+            $var: $.input.filter.name
+      stage:
+        - status:
+            title:
+              $var: $.input.filter.stage
+            id:
+              status_id:
+                $var: $.input.filter.stageId
+      value:
+        - currency_value:
+            $var: $.input.filter.amount
+          currency_code:
+            $var: $.input.filter.currency
+      owner:
+        - referenced_actor_id:
+            $var: $.input.filter.ownerId
+      associated_people:
+        - target_record_id:
+            $var: $.input.filter.contactId
+      associated_company:
+        - target_record_id:
+            $var: $.input.filter.companyId
+    created_at:
+      $var: $.input.filter.createdTime
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,50 @@
+id: 68a8a2e78508b934a6350e18
+name: Delete Deal
+key: delete-Deals
+uuid: e4bd05da-b3d8-416e-aab1-458665e6f5e3
+state: READY
+errors: []
+revision: 4d3730c7-18c4-491d-b265-82939156ffd2
+createdAt: '2025-08-22T17:03:38.774Z'
+updatedAt: '2025-08-22T17:03:38.774Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 68a8a2e78508b934a6350c9a
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: b35127b9-3677-479a-a351-5e646cf6c06a
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

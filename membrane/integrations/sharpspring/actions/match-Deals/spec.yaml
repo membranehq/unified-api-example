@@ -1,0 +1,53 @@
+id: 68a8a2e78508b934a6350e44
+name: Match Deal
+key: match-Deals
+uuid: dabc2a3f-24f9-438c-b4ad-10e084377651
+state: READY
+errors: []
+revision: aa8f319e-d305-40b8-8bc2-e6fd31bc093f
+createdAt: '2025-08-22T17:03:43.726Z'
+updatedAt: '2025-08-22T17:03:43.726Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ea
+parentId: 68a8a2e78508b934a6350c9e
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 1bd7d941-136a-4741-97c2-0e4771420c4b
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

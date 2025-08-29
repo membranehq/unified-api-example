@@ -1,0 +1,31 @@
+id: 68a8a2e78508b934a6350c9c
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: 42910870-1628-4cbc-a569-10f52d82b308
+createdAt: '2025-08-22T17:03:35.670Z'
+updatedAt: '2025-08-22T17:03:35.670Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

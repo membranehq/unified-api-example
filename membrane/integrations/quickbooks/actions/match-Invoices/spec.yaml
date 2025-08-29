@@ -1,0 +1,80 @@
+id: 68a8a2a7bdd4149f15477749
+name: Match Invoice
+key: match-Invoices
+uuid: d5351434-b90a-474d-8e04-25418d748018
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477511
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a2a6bdd4149f1547759c
+revision: e2ebd417-20f2-4e50-9646-b6d2405c0253
+createdAt: '2025-08-22T17:02:33.852Z'
+updatedAt: '2025-08-22T17:02:33.852Z'
+isDeactivated: false
+integrationId: 68a8a2a4bdd4149f154774d4
+parentId: 68a8a2a7bdd4149f15477624
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      TotalAmt:
+        $var: $.input.query.totalAmount
+      DocNumber:
+        $var: $.input.query.number
+      CustomerRef:
+        value:
+          $var: $.input.query.customerId
+isCustomized: false
+parentRevision: 9d5c7e5f-68f2-41ae-bd48-04d86feaff44
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

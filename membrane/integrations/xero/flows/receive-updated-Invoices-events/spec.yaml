@@ -1,0 +1,52 @@
+id: 68a8a2abbdd4149f15477bfd
+name: Receive Updated Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Invoices-events
+revision: ca301f44-d256-4d1c-ab04-3b7e35d6e74d
+universalFlowId: 68a8a2aabdd4149f154779bd
+integrationId: 689f2bf000905568ab2f66da
+universalFlowRevision: 0ef6373f-ca5b-4eaa-806e-2b3dbd65eb95
+nodes:
+  Invoices-updated-trigger:
+    type: data-record-updated-trigger
+    name: Invoice Updated Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping:
+        key: invoices
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

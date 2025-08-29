@@ -1,0 +1,72 @@
+id: 68a8a3a02e84328ca52900bb
+name: Receive Updated Product Events
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f597
+  - message: Field Mapping Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3972e84328ca528f67c
+key: receive-updated-Products-events
+revision: 691a5f6c-55dc-411b-bcb9-e92100aca8b1
+universalFlowId: 68a8a39d2e84328ca528fcf2
+integrationId: 68a8a2a4bdd4149f154774d4
+universalFlowRevision: f9438364-77d7-45b3-8070-32138588f76f
+nodes:
+  Products-updated-trigger:
+    type: data-record-updated-trigger
+    name: Product Updated Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping:
+        key: products
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

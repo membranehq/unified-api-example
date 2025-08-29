@@ -1,0 +1,58 @@
+id: 68a8a39a2e84328ca528fa19
+name: List Products
+key: list-products
+uuid: ec8eba46-f3c0-4fc4-9a0f-b2b72e7249d6
+state: READY
+errors: []
+revision: cae63123-4265-49e4-9caf-31c324f213e1
+createdAt: '2025-08-22T17:06:36.463Z'
+updatedAt: '2025-08-22T17:06:36.463Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6710
+parentId: 68a8a3982e84328ca528f759
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false
+parentRevision: 56fa3db7-c684-4379-ba90-c0e05fb01225
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

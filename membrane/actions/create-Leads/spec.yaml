@@ -1,0 +1,27 @@
+id: 68a8a340bc4406f3f0dc4978
+name: Create Lead
+key: create-Leads
+uuid: 42b03ed5-ee48-4467-bbc3-c363d263be95
+state: READY
+errors: []
+revision: 942e17de-6bec-45d0-ac73-b27fad83bf92
+createdAt: '2025-08-22T17:05:04.371Z'
+updatedAt: '2025-08-22T17:05:04.371Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: leads
+  fieldMapping:
+    key: leads
+    input:
+      $var: $.input.fields
+isCustomized: false

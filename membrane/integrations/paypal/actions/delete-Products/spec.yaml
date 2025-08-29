@@ -1,0 +1,51 @@
+id: 68a8a3992e84328ca528f8e1
+name: Delete Product
+key: delete-Products
+uuid: 6e0a4eaa-0b2b-4817-848b-6b04e8a45bb3
+state: READY
+errors: []
+revision: 4cea2ca2-ef88-4989-b092-5786c80394dd
+createdAt: '2025-08-22T17:06:35.489Z'
+updatedAt: '2025-08-22T17:06:35.489Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c89
+parentId: 68a8a3982e84328ca528f756
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fd99cf8b-f9dd-464b-bcd4-f04f38248a2a
+integration:
+  id: 68a84efe7702482264c62c89
+  name: PayPal
+  key: paypal
+  uuid: 3f7450ae-67f4-4940-ac36-ffa248ea5acb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.338Z'
+  updatedAt: '2025-08-22T11:05:38.391Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/paypal/asset-0f0851b5-76ed-412e-bfa9-d2618b5e6162.png
+  connectorId: 665ee151c57ef06438e068f2
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 109
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

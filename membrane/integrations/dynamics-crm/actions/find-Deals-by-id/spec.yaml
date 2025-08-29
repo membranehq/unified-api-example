@@ -1,0 +1,52 @@
+id: 68a8a2e78508b934a6350e54
+name: Find Deal By Id
+key: find-Deals-by-id
+uuid: 29e71c13-f3aa-4f5c-a53c-025135ef5f0c
+state: READY
+errors: []
+revision: dbe21d9d-62cd-4307-9529-66553b1145cc
+createdAt: '2025-08-22T17:03:39.378Z'
+updatedAt: '2025-08-22T17:03:39.378Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d3
+parentId: 68a8a2e78508b934a6350ca0
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 5650a0cd-0aaa-4e1f-8ef7-9c22712971b9
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

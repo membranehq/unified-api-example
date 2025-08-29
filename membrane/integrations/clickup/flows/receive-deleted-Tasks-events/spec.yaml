@@ -1,0 +1,50 @@
+id: 68a8a402c172bc7206678041
+name: Receive Deleted Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Tasks-events
+revision: 238769f4-6db7-495e-83fe-e086105ecdfb
+universalFlowId: 68a8a400c172bc7206677c92
+integrationId: 68a8a3ebc172bc7206676e44
+universalFlowRevision: bd62a40d-5da5-48f2-8bf9-3e1cc911e25e
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Task Deleted Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e44
+  name: Clickup
+  key: clickup
+  uuid: af6fad15-3a7c-441e-89fe-90264262a5f5
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.950Z'
+  updatedAt: '2025-08-22T17:08:00.685Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/clickup/logo.png
+  connectorId: 64359f80986ed1caadafa638
+  connectorVersion: 1.2.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 11
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: true
+  eventsCount: 28
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,15 @@
+id: 68a8a2a6bdd4149f15477576
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+customized: false
+revision: 310fd1f1-a5fe-484c-9490-b63dc40e99b2
+dataSourceKey: invoices
+dataSourceId: 68a8a2a5bdd4149f154774f8
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

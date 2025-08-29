@@ -1,0 +1,51 @@
+id: 68a8a343bc4406f3f0dc4cf6
+name: Receive Created Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Leads-events
+revision: 164096c2-a3bf-4d8d-9af5-a037df46864b
+universalFlowId: 68a8a342bc4406f3f0dc4b71
+integrationId: 689f2bf000905568ab2f66d8
+universalFlowRevision: e4001059-f45d-406c-bc03-b3c73d9b1bf4
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Leads-created-trigger:
+    type: data-record-created-trigger
+    name: Lead Created Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping:
+        key: leads
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

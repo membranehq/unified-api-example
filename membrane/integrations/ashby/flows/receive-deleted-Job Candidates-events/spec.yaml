@@ -1,0 +1,50 @@
+id: 68a8a4417f08dba516dd159d
+name: Receive Deleted Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Job Candidates-events
+revision: d0a2994f-48b7-4a86-890f-a8de9c7699b6
+universalFlowId: 68a8a4407f08dba516dd14ad
+integrationId: 68a820cb9fc7b352ffc94593
+universalFlowRevision: 39ee7d4c-761e-411b-a461-810bd58ad688
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Job Candidates-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Job Candidate Deleted Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

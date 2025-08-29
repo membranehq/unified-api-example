@@ -1,0 +1,87 @@
+id: 68a8a3f6c172bc7206677568
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 662094ba-d024-466e-9bb4-efb1be00273d
+createdAt: '2025-08-22T17:08:14.877Z'
+updatedAt: '2025-08-22T17:08:14.877Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e6
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    hs_object_id:
+      $var: $.input.filter.id
+    hs_updated_by_user_id:
+      $var: $.input.filter.updatedBy
+    hs_created_by_user_id:
+      $var: $.input.filter.createdBy
+    hubspot_owner_id:
+      $var: $.input.filter.ownerId
+    hs_timestamp:
+      $var: $.input.filter.createdTime
+    hs_task_type:
+      $var: $.input.filter.type
+    hs_task_subject:
+      $var: $.input.filter.subject
+    hs_task_status:
+      $var: $.input.filter.status
+    hs_task_completion_date:
+      $var: $.input.filter.endTime
+    hs_task_body:
+      $var: $.input.filter.content
+    hs_lastmodifieddate:
+      $var: $.input.filter.updatedTime
+    company_ids:
+      - $var: $.input.filter.companyId
+    contact_ids:
+      - $var: $.input.filter.contactId
+    deal_ids:
+      - $var: $.input.filter.dealId
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

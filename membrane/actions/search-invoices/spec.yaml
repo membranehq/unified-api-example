@@ -1,0 +1,28 @@
+id: 68a8a2a7bdd4149f1547762a
+name: Search Invoices
+key: search-invoices
+uuid: 7a31d949-2e0a-4512-b9da-d26b97848e51
+state: READY
+errors: []
+revision: d07205bc-5196-4060-ad41-4f8af642ac2a
+createdAt: '2025-08-22T17:02:31.118Z'
+updatedAt: '2025-08-22T17:02:31.118Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

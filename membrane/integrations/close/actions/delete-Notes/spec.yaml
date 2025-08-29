@@ -1,0 +1,50 @@
+id: 68a89b606f9be8241c5f56a0
+name: Delete Note
+key: delete-Notes
+uuid: 08963599-874c-4c0b-b3ae-3f3b5f6cd4e4
+state: READY
+errors: []
+revision: b76b7c15-78c5-4148-b5d3-b52ee808982f
+createdAt: '2025-08-22T16:31:30.456Z'
+updatedAt: '2025-08-22T16:31:30.456Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a89b606f9be8241c5f5578
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 2c036121-0ec9-4aa1-a6e6-c7c1b27d8b2c
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

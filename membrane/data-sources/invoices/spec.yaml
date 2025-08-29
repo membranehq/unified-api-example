@@ -1,0 +1,9 @@
+id: 68a8a2a5bdd4149f154774f8
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+revision: 8ec6661f-20c4-4d79-8162-f0f658995cbe
+customized: false
+udm: invoices

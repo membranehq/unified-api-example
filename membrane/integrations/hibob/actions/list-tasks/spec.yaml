@@ -1,0 +1,66 @@
+id: 68a8a3f6c172bc720667759d
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 7c8775ec-80c3-4fd9-93fd-60bf7af70328
+createdAt: '2025-08-22T17:08:14.064Z'
+updatedAt: '2025-08-22T17:08:14.064Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e62
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    title:
+      $var: $.input.filter.subject
+    description:
+      $var: $.input.filter.content
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 68a8a3ebc172bc7206676e62
+  name: HiBob
+  key: hibob
+  uuid: 231b2d51-fa3d-469e-8d70-9a51dcb2db28
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.974Z'
+  updatedAt: '2025-08-22T17:08:00.085Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/hibob/asset-28f2023f-0917-4df5-8f35-dda50a82158f.png
+  connectorId: 65a59ef5af9ac1360fd6bad2
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 88
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: true
+  eventsCount: 7
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: client-credentials

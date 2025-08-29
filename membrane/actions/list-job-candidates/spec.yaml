@@ -1,0 +1,31 @@
+id: 68a8a43e7f08dba516dd128c
+name: List Job Candidates
+key: list-job-candidates
+uuid: 0eed6722-e978-4b94-b970-4a126718919d
+state: READY
+errors: []
+revision: c7f2766f-3c04-4213-adcc-394b15a785cf
+createdAt: '2025-08-22T17:09:18.956Z'
+updatedAt: '2025-08-22T17:09:18.956Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: job-candidates
+  dataSource:
+    key: job-candidates
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

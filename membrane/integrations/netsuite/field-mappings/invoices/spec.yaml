@@ -1,0 +1,102 @@
+id: 68a8a2a6bdd4149f1547759a
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+customized: false
+revision: f5b3b215-e03f-4c4c-acd0-02439ed95946
+universalFieldMappingId: 68a8a2a6bdd4149f15477576
+universalFieldMappingRevision: 310fd1f1-a5fe-484c-9490-b63dc40e99b2
+integrationId: 68a839f321039ff70f89b5bd
+dataSourceKey: invoices
+dataSourceId: 68a8a2a5bdd4149f1547751b
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  memo:
+    $var: $.memo
+  discountTotal:
+    $var: $.totalDiscount
+  status:
+    id:
+      $var: $.status
+  createdDate:
+    $var: $.createdTime
+  exchangeRate:
+    $var: $.exchangeRate
+  total:
+    $var: $.totalAmount
+  lastModifiedDate:
+    $var: $.updatedTime
+  dueDate:
+    $var: $.dueDate
+  account:
+    id:
+      $var: $.ledgerAccountId
+importValue:
+  id:
+    $var: $.id
+  memo:
+    $var: $.memo
+  status:
+    $var: $.status.id
+  currency:
+    $var: $.currency.id
+  totalAmount:
+    $var: $.total
+  exchangeRate:
+    $var: $.exchangeRate
+  totalDiscount:
+    $var: $.discountTotal
+  subTotal:
+    $var: $.subtotal
+  ledgerAccountId:
+    $var: $.account.id
+  dueDate:
+    $var: $.dueDate
+  createdTime:
+    $var: $.createdDate
+  updatedTime:
+    $var: $.lastModifiedDate
+  lineItems:
+    $iterate:
+      source:
+        $var: $.time.items
+      item:
+        id:
+          $var: $.item.item.id
+        itemName:
+          $var: $.item.item.refName
+        description:
+          $var: $.item.memo
+        totalAmount:
+          $var: $.item.amount
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

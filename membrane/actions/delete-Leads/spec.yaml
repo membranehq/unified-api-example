@@ -1,0 +1,22 @@
+id: 68a8a340bc4406f3f0dc497c
+name: Delete Lead
+key: delete-Leads
+uuid: 6dcff1aa-c465-4386-8f09-e733ca918c71
+state: READY
+errors: []
+revision: dbb97cad-1d12-4c0b-a623-142de0a3e104
+createdAt: '2025-08-22T17:05:04.339Z'
+updatedAt: '2025-08-22T17:05:04.339Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: leads
+  id:
+    $var: $.input.id
+isCustomized: false

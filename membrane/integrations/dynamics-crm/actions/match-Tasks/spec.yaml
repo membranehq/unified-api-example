@@ -1,0 +1,56 @@
+id: 68a8a3f6c172bc72066775a7
+name: Match Task
+key: match-Tasks
+uuid: a37d1d28-cd89-4306-9e4f-9703b579f6e9
+state: READY
+errors: []
+revision: 0a25ec12-0d49-45bc-81c8-b838a75a7bd3
+createdAt: '2025-08-22T17:08:16.112Z'
+updatedAt: '2025-08-22T17:08:16.112Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d3
+parentId: 68a8a3f5c172bc72066772c5
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      subject:
+        $var: $.input.query.subject
+isCustomized: false
+parentRevision: 9343a831-2460-479d-8e76-1b6f08789ad1
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

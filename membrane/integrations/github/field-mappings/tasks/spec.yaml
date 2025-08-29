@@ -1,0 +1,79 @@
+id: 68a8a3f2c172bc72066770dd
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: 31740425-7534-4999-844f-b7aebc68957f
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 68a8a3ebc172bc7206676e46
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f56
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  state:
+    $var: $.status
+  title:
+    $var: $.subject
+  body:
+    $var: $.content
+  milestone:
+    title:
+      $var: $.subject
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  assignees_ids:
+    - $var: $.assigneeId
+importValue:
+  subject:
+    $var: title
+  content:
+    $var: body
+  status:
+    $var: state
+  assigneeId:
+    $var: $.assignee.login
+  tags:
+    $var: labels
+  createdTime:
+    $var: created_at
+  createdBy:
+    $var: user.login
+  updatedTime:
+    $var: updated_at
+  updatedBy:
+    $var: user.login
+  ownerId:
+    $var: $.assignee.login
+integration:
+  id: 68a8a3ebc172bc7206676e46
+  name: Github
+  key: github
+  uuid: 6efb002f-0555-4734-8b82-f1d83b910c82
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.951Z'
+  updatedAt: '2025-08-22T17:08:00.091Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/github/logo.png
+  connectorId: 6446a060badd839bce1ac1ac
+  connectorVersion: 1.1.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 889
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

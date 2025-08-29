@@ -1,0 +1,52 @@
+id: 68a8a2acbdd4149f15477ce3
+name: Receive Created Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Invoices-events
+revision: c76d1375-9221-4ce9-83ff-e2cc7e9c1d25
+universalFlowId: 68a8a2aabdd4149f154779b9
+integrationId: 68a839f321039ff70f89b5bd
+universalFlowRevision: b8177af0-fb79-412d-b575-96f7c8da8834
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Invoices-created-trigger:
+    type: data-record-created-trigger
+    name: Invoice Created Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping:
+        key: invoices
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

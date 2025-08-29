@@ -1,0 +1,67 @@
+id: 68a8a3972e84328ca528f684
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+customized: false
+revision: f599eb51-8fc3-446c-80c0-e0df6e53b385
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 689f2bf000905568ab2f66da
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f5a9
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  Code:
+    $var: $.code
+  Name:
+    $var: $.name
+  Description:
+    $var: $.description
+  PurchaseDetails:
+    UnitPrice:
+      $var: $.price
+  ItemID:
+    $var: $.id
+importValue:
+  id:
+    $var: $.ItemID
+  name:
+    $var: $.Name
+  description:
+    $var: $.Description
+  code:
+    $var: $.Code
+  updatedTime:
+    $var: $.UpdatedDateUTC
+  price:
+    $var: $.PurchaseDetails.UnitPrice
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

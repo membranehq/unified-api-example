@@ -1,0 +1,112 @@
+id: 68a8a2e48508b934a6350b70
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: d21c58d5-64f3-4c6e-bf38-d173d92d1bd2
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66e8
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a7d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  date_entered:
+    $var: $.createdTime
+  date_modified:
+    $var: $.updatedTime
+  modified_user_id:
+    $var: $.updatedBy
+  created_by:
+    $var: $.createdBy
+  description:
+    $var: $.description
+  opportunity_type:
+    $var: $.type
+  account_id:
+    $var: $.companyId
+  campaign_id:
+    $var: $.campaignId
+  lead_source:
+    $var: $.source
+  amount:
+    $var: $.amount
+  date_closed:
+    $var: $.closeTime
+  sales_stage:
+    $var: $.stage
+  sales_status:
+    $var: $.status
+  probability:
+    $var: $.probability
+  currency_name:
+    $var: $.currency
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  amount:
+    $var: $.amount
+  currency:
+    $var: $.currency_name
+  companyId:
+    $var: $.account_id
+  campaignId:
+    $var: $.campaign_id
+  source:
+    $var: $.lead_source
+  description:
+    $var: $.description
+  stage:
+    $var: $.sales_stage
+  status:
+    $var: $.sales_status
+  type:
+    $var: $.opportunity_type
+  ownerId:
+    $var: $.assigned_user_id
+  closeTime:
+    $var: $.date_closed
+  createdTime:
+    $var: $.date_entered
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_modified
+  updatedBy:
+    $var: $.modified_user_id
+  probability:
+    $var: $.probability
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

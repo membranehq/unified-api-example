@@ -1,0 +1,58 @@
+id: 68a89b606f9be8241c5f56a8
+name: Update Note
+key: update-Notes
+uuid: 46e306b2-9fca-41b7-92ce-5d5cf20d2614
+state: READY
+errors: []
+revision: 7ad3be63-d868-48c8-bca2-d50e33a192cb
+createdAt: '2025-08-22T16:31:30.759Z'
+updatedAt: '2025-08-22T16:31:30.759Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a89b606f9be8241c5f557a
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 84730d91-29a1-4bd9-9cab-b9da83c62e9f
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

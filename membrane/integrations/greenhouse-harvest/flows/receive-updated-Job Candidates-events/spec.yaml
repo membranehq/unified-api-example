@@ -1,0 +1,53 @@
+id: 68a8a4417f08dba516dd167a
+name: Receive Updated Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Job Candidates-events
+revision: 65eb2686-0f87-4b57-a869-9b71f8c40763
+universalFlowId: 68a8a4407f08dba516dd14b5
+integrationId: 68a820cb9fc7b352ffc945a9
+universalFlowRevision: 2a7d7234-4bc0-4081-b80c-463a627a855f
+nodes:
+  Job Candidates-updated-trigger:
+    type: data-record-updated-trigger
+    name: Job Candidate Updated Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping:
+        key: job-candidates
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

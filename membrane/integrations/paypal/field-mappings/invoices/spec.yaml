@@ -1,0 +1,100 @@
+id: 68a8a2a6bdd4149f154775ab
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+customized: false
+revision: aeb3daae-e4f6-4030-a57a-d9b9b228e7fe
+universalFieldMappingId: 68a8a2a6bdd4149f15477576
+universalFieldMappingRevision: 310fd1f1-a5fe-484c-9490-b63dc40e99b2
+integrationId: 68a84efe7702482264c62c89
+dataSourceKey: invoices
+dataSourceId: 68a8a2a5bdd4149f15477532
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  status:
+    $var: $.status
+  detail:
+    invoice_number:
+      $var: $.number
+    invoice_date:
+      $var: $.issueDate
+    currency_code:
+      $var: $.currency
+    memo:
+      $var: $.memo
+    payment_term:
+      due_date:
+        $var: $.dueDate
+    metadata:
+      create_time:
+        $var: $.createdTime
+  invoicer:
+    email_address:
+      $var: $.createdBy
+  items:
+    $var: $.lineItems
+  amount:
+    value:
+      $var: $.totalAmount
+    breakdown:
+      tax_total:
+        value:
+          $var: $.totalTax
+importValue:
+  id:
+    $var: $.id
+  number:
+    $var: $.detail.invoice_number
+  memo:
+    $var: $.detail.memo
+  status:
+    $var: $.status
+  currency:
+    $var: $.detail.currency_code
+  totalAmount:
+    $var: $.amount.value
+  totalTax:
+    $var: $.amount.breakdown.tax_total.value
+  issueDate:
+    $var: $.detail.invoice_date
+  createdTime:
+    $var: $.detail.metadata.create_time
+  createdBy:
+    $var: $.invoicer.email_address
+  lineItems:
+    $var: $.items
+  dueDate:
+    $var: $.detail.payment_term.due_date
+integration:
+  id: 68a84efe7702482264c62c89
+  name: PayPal
+  key: paypal
+  uuid: 3f7450ae-67f4-4940-ac36-ffa248ea5acb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.338Z'
+  updatedAt: '2025-08-22T11:05:38.391Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/paypal/asset-0f0851b5-76ed-412e-bfa9-d2618b5e6162.png
+  connectorId: 665ee151c57ef06438e068f2
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 109
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

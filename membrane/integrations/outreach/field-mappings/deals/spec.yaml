@@ -1,0 +1,96 @@
+id: 68a8a2e48508b934a6350b66
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: e74c98dd-e58f-43dc-a55e-9d313c246e63
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66e4
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a71
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  amount:
+    $var: $.amount
+  account_id:
+    $var: $.companyId
+  closeDate:
+    $var: $.closeTime
+  createdAt:
+    $var: $.createdTime
+  currencyType:
+    $var: $.currency
+  description:
+    $var: $.description
+  name:
+    $var: $.name
+  opportunityType:
+    $var: $.type
+  probability:
+    $var: $.probability
+  updatedAt:
+    $var: $.updatedTime
+  creator_id:
+    $var: $.createdBy
+  updater_id:
+    $var: $.updatedBy
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  amount:
+    $var: $.amount
+  currency:
+    $var: $.currencyType
+  companyId:
+    $var: $.account_id
+  description:
+    $var: $.description
+  type:
+    $var: $.opportunityType
+  ownerId:
+    $var: $.owner_id
+  closeTime:
+    $var: $.closeDate
+  createdTime:
+    $var: $.createdAt
+  createdBy:
+    $var: $.creator_id
+  updatedTime:
+    $var: $.updatedAt
+  updatedBy:
+    $var: $.updater_id
+  probability:
+    $var: $.probability
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

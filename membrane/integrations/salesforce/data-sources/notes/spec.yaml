@@ -1,0 +1,38 @@
+id: 68a89b5d6f9be8241c5f540d
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+revision: 2d717dc7-a28d-4c2a-8b2b-b76962e3ef4e
+integrationId: 689f2bf000905568ab2f66d1
+customized: false
+universalDataSourceId: 68a89b5d6f9be8241c5f53f1
+universalDataSourceRevision: 01077565-2ae6-47a8-99bc-21c5764625b0
+collectionKey: notes
+udm: notes
+defaultPath: /data/notes
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

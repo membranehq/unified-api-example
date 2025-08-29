@@ -1,0 +1,50 @@
+id: 68a8a3992e84328ca528f8c4
+name: Delete Product
+key: delete-Products
+uuid: 6e0a4eaa-0b2b-4817-848b-6b04e8a45bb3
+state: READY
+errors: []
+revision: d670f2e9-f7f6-4655-92bb-e5f22dd6779f
+createdAt: '2025-08-22T17:06:35.580Z'
+updatedAt: '2025-08-22T17:06:35.580Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a8a3982e84328ca528f756
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fd99cf8b-f9dd-464b-bcd4-f04f38248a2a
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

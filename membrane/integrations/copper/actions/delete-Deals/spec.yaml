@@ -1,0 +1,50 @@
+id: 68a8a2e78508b934a6350e26
+name: Delete Deal
+key: delete-Deals
+uuid: e4bd05da-b3d8-416e-aab1-458665e6f5e3
+state: READY
+errors: []
+revision: 51f0b098-17fb-458b-83ea-69bbced69bd7
+createdAt: '2025-08-22T17:03:38.767Z'
+updatedAt: '2025-08-22T17:03:38.767Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f3
+parentId: 68a8a2e78508b934a6350c9a
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: b35127b9-3677-479a-a351-5e646cf6c06a
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

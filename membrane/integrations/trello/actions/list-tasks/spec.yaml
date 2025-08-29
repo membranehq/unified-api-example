@@ -1,0 +1,77 @@
+id: 68a8a3f6c172bc7206677591
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: ab427e84-bb2f-4b49-a9ab-f94b1d15675e
+createdAt: '2025-08-22T17:08:14.000Z'
+updatedAt: '2025-08-22T17:08:14.000Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e68
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.subject
+    desc:
+      $var: $.input.filter.content
+    name:
+      $var: $.input.filter.subject
+    type:
+      $var: $.input.filter.type
+    title:
+      $var: $.input.filter.subject
+    labels:
+      $var: $.input.filter.tags
+    due:
+      $var: $.input.filter.dueTime
+    start:
+      $var: $.input.filter.startTime
+    idBoard:
+      $var: $.input.filter.projectId
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 68a8a3ebc172bc7206676e68
+  name: Trello Connector
+  key: trello
+  uuid: 98d65928-fadb-417a-b5d2-dc0470c74f29
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.977Z'
+  updatedAt: '2025-08-22T17:08:00.166Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/trello-connector/logo.png
+  connectorId: 64ff82d2f51a74915b9840da
+  connectorVersion: 1.1.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 257
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth1

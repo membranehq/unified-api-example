@@ -1,0 +1,24 @@
+id: 68a8a3f5c172bc72066772c3
+name: Find Task By Id
+key: find-Tasks-by-id
+uuid: 59c3027e-85b1-45d8-bcbd-e51f8690ccf1
+state: READY
+errors: []
+revision: 90dfa9d8-15c2-497e-8265-5a5fb03ad345
+createdAt: '2025-08-22T17:08:06.067Z'
+updatedAt: '2025-08-22T17:08:06.067Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+isCustomized: false

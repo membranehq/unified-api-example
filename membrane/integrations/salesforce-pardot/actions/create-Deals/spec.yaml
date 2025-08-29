@@ -1,0 +1,54 @@
+id: 68a8a2e88508b934a6350ed3
+name: Create Deal
+key: create-Deals
+uuid: 85392d6c-5e3d-45d7-9134-371be7b37ec7
+state: READY
+errors: []
+revision: b4f162d4-975b-4dc4-9bd1-b070ddac8449
+createdAt: '2025-08-22T17:03:39.789Z'
+updatedAt: '2025-08-22T17:03:39.789Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f9
+parentId: 68a8a2e78508b934a6350c96
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: deals
+  fieldMapping:
+    key: deals
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 47064490-c49e-47f0-b8d1-4a9e50f43aae
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

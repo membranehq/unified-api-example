@@ -1,0 +1,154 @@
+id: 68a8a245285c02f4152f00c6
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: d46476cf-6e14-41c4-a650-a18b14415947
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 689f2bf000905568ab2f66d8
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f002a
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  Who_Id:
+    id:
+      $var: $.contactId
+  Subject:
+    $var: $.title
+  What_Id:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: Accounts
+            id:
+              $var: $.companyId
+        - filter:
+            $eval:
+              $var: $.dealId
+            isNotEmpty: true
+          value:
+            type: Deals
+            id:
+              $var: $.dealId
+        - filter:
+            $eval:
+              $var: $.leadId
+            isNotEmpty: true
+          value:
+            type: Leads
+            id:
+              $var: $.leadId
+  Call_Type:
+    $var: $.type
+  Call_Start_Time:
+    $var: $.startTime
+  Call_Duration_in_seconds:
+    $var: $.durationSeconds
+  Description:
+    $var: $.description
+  Owner:
+    id:
+      $var: $.ownerId
+  Created_By:
+    id:
+      $var: $.createdBy
+  Modified_By:
+    id:
+      $var: $.updatedBy
+  Created_Time:
+    $var: $.createdTime
+  Modified_Time:
+    $var: $.updatedTime
+  Call_Status:
+    $var: $.status
+importValue:
+  id:
+    $var: $.id
+  description:
+    $var: $.Description
+  title:
+    $var: $.Subject
+  type:
+    $var: $.Call_Type
+  durationSeconds:
+    $var: $.Call_Duration_in_seconds
+  contactId:
+    $var: $.Who_Id.id
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.What_Id.type
+            is: Accounts
+          value:
+            $var: $.What_Id.id
+  dealId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.What_Id.type
+            is: Deals
+          value:
+            $var: $.What_Id.id
+  leadId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.What_Id.type
+            is: Leads
+          value:
+            $var: $.What_Id.id
+  ownerId:
+    $var: $.Owner.id
+  startTime:
+    $var: $.Call_Start_Time
+  createdTime:
+    $var: $.Created_Time
+  updatedTime:
+    $var: $.Modified_Time
+  createdBy:
+    $var: $.Created_By.id
+  updatedBy:
+    $var: $.Modified_By.id
+  status:
+    $var: $.Call_Status
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

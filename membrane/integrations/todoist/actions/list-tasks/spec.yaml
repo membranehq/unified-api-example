@@ -1,0 +1,67 @@
+id: 68a8a3f6c172bc7206677597
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 9132b924-6686-46b7-93f4-6333bb70bf98
+createdAt: '2025-08-22T17:08:14.001Z'
+updatedAt: '2025-08-22T17:08:14.001Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e48
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    content:
+      $var: $.input.filter.content
+    project_id:
+      $var: $.input.filter.projectId
+    due_string:
+      $var: $.input.filter.dueTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 68a8a3ebc172bc7206676e48
+  name: Todoist
+  key: todoist
+  uuid: fc9354af-da42-46ee-b0b4-eee5c7b169f9
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.952Z'
+  updatedAt: '2025-08-22T17:08:00.161Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/todoist-connector/logo.png
+  connectorId: 64d0ea29d8707ad2f865acb7
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 5
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

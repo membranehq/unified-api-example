@@ -1,0 +1,28 @@
+id: 68a8a2e78508b934a6350ca2
+name: Search Deals
+key: search-deals
+uuid: 826e5ede-3560-418b-9a0e-0df3c2fe1780
+state: READY
+errors: []
+revision: ae16bdf0-dcb3-4353-a4e8-8301c6198540
+createdAt: '2025-08-22T17:03:35.686Z'
+updatedAt: '2025-08-22T17:03:35.686Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

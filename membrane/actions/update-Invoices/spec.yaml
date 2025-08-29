@@ -1,0 +1,31 @@
+id: 68a8a2a7bdd4149f1547761f
+name: Update Invoice
+key: update-Invoices
+uuid: 7e158c05-28e9-4bc2-a5a3-fb187470897b
+state: READY
+errors: []
+revision: b7d380eb-adc8-4836-90e9-57c04804feef
+createdAt: '2025-08-22T17:02:31.115Z'
+updatedAt: '2025-08-22T17:02:31.115Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: invoices
+    input:
+      $var: $.input.fields
+isCustomized: false

@@ -1,0 +1,117 @@
+id: 68a8a3f2c172bc72066770ef
+name: Tasks
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a3ebc172bc7206676e4c
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3f1c172bc7206676f7d
+key: tasks
+customized: false
+revision: 7ec1e398-0440-4743-87f1-d48e951d6fda
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 68a8a3ebc172bc7206676e4c
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f7d
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  createdAt:
+    $var: $.createdTime
+  updatedAt:
+    $var: $.updatedTime
+  title:
+    $var: $.subject
+  priority:
+    $var: $.priority
+  startedAt:
+    $var: $.startTime
+  completedAt:
+    $var: $.endTime
+  dueDate:
+    $var: $.dueTime
+  project:
+    id:
+      $var: $.projectId
+  creator:
+    id:
+      $var: $.createdBy
+  assignee:
+    id:
+      $var: $.assigneeId
+  state:
+    id:
+      $var: $.status
+  description:
+    $var: $.content
+importValue:
+  id:
+    $var: $.id
+  subject:
+    $var: $.title
+  status:
+    $var: $.state.id
+  priority:
+    $var: $.priority
+  projectId:
+    $var: $.project.id
+  dueTime:
+    $var: $.dueDate
+  startTime:
+    $var: $.startedAt
+  createdTime:
+    $var: $.createdAt
+  createdBy:
+    $var: $.creator.id
+  updatedTime:
+    $var: $.updatedAt
+  endTime:
+    $var: $.completedAt
+  assigneeId:
+    $var: $.assignee.id
+  content:
+    $var: $.description
+  ownerId:
+    $var: $.assignee.id
+integration:
+  id: 68a8a3ebc172bc7206676e4c
+  name: Linear
+  key: linear
+  uuid: fa48aa44-0e7a-4aea-99d2-879d2a9236a3
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:07:55.954Z'
+  updatedAt: '2025-08-22T17:08:01.492Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/linear/logo-0c34c3da-739d-4b18-b8e9-03246d2e0825.png
+  connectorId: 65a59efaaf9ac1360fd6bdac
+  connectorVersion: 1.1.3
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,52 @@
+id: 68a8a2f28508b934a635166d
+name: Receive Updated Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Deals-events
+revision: 4f7619d5-7e22-4bd9-82a9-0c42a3788a9b
+universalFlowId: 68a8a2ef8508b934a6351314
+integrationId: 689f2bf000905568ab2f66e8
+universalFlowRevision: 7589319e-d46c-4b20-b23a-ded7f48dbbe4
+nodes:
+  Deals-updated-trigger:
+    type: data-record-updated-trigger
+    name: Deal Updated Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,51 @@
+id: 68a8a39a2e84328ca528fa03
+name: Find Product By Id
+key: find-Products-by-id
+uuid: 66de6526-3258-48a3-9508-45428eda0a4c
+state: READY
+errors: []
+revision: f9588887-f59c-47ba-87dc-914d992a92d5
+createdAt: '2025-08-22T17:06:36.198Z'
+updatedAt: '2025-08-22T17:06:36.198Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a8a3982e84328ca528f75d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 46946322-048c-4747-85ac-7dd07ba438ef
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

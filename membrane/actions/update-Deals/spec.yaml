@@ -1,0 +1,31 @@
+id: 68a8a2e78508b934a6350c98
+name: Update Deal
+key: update-Deals
+uuid: 1f5611f6-f7e8-4c0c-940d-6f11bf3f5da9
+state: READY
+errors: []
+revision: 48dc531c-3b01-4a77-9d9d-eabed6291877
+createdAt: '2025-08-22T17:03:35.674Z'
+updatedAt: '2025-08-22T17:03:35.674Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: deals
+    input:
+      $var: $.input.fields
+isCustomized: false

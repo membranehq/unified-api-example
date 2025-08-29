@@ -1,0 +1,51 @@
+id: 68a8a3f6c172bc7206677536
+name: Find Task By Id
+key: find-Tasks-by-id
+uuid: 59c3027e-85b1-45d8-bcbd-e51f8690ccf1
+state: READY
+errors: []
+revision: 38d4f38b-c882-43e3-a5f7-6f5d4dbdd4a1
+createdAt: '2025-08-22T17:08:12.578Z'
+updatedAt: '2025-08-22T17:08:12.578Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e2
+parentId: 68a8a3f5c172bc72066772c3
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 90dfa9d8-15c2-497e-8265-5a5fb03ad345
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,25 @@
+id: 68a8a340bc4406f3f0dc4980
+name: Match Lead
+key: match-Leads
+uuid: eec10c2e-1293-4c56-81bf-b748cde50a18
+state: READY
+errors: []
+revision: 9d6375ea-c269-4ebd-b782-ec891792382f
+createdAt: '2025-08-22T17:05:04.348Z'
+updatedAt: '2025-08-22T17:05:04.348Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

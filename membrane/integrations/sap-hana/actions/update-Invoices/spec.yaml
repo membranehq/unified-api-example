@@ -1,0 +1,58 @@
+id: 68a8a2a7bdd4149f1547773d
+name: Update Invoice
+key: update-Invoices
+uuid: 7e158c05-28e9-4bc2-a5a3-fb187470897b
+state: READY
+errors: []
+revision: 83222ae6-31f0-4639-bb49-7149d072fb17
+createdAt: '2025-08-22T17:02:33.385Z'
+updatedAt: '2025-08-22T17:02:33.385Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c7f
+parentId: 68a8a2a7bdd4149f1547761f
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: invoices
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: b7d380eb-adc8-4836-90e9-57c04804feef
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

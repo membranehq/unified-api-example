@@ -1,0 +1,54 @@
+id: 68a8a2a7bdd4149f154776f9
+name: Create Invoice
+key: create-Invoices
+uuid: 01c9531f-1e8c-4375-9518-488f12a7ad0f
+state: READY
+errors: []
+revision: e22e5bca-fe01-4af9-9c85-b87210dd8c8a
+createdAt: '2025-08-22T17:02:33.191Z'
+updatedAt: '2025-08-22T17:02:33.191Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a8a2a7bdd4149f15477628
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: invoices
+  fieldMapping:
+    key: invoices
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 02abbf92-2c63-42c5-9b27-f6c07ab6baad
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

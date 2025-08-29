@@ -1,0 +1,93 @@
+id: 68a8a2e88508b934a6350e98
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: 182cb72e-8fa5-421e-aa16-546cc29c9284
+createdAt: '2025-08-22T17:03:41.679Z'
+updatedAt: '2025-08-22T17:03:41.679Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f3
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    monetary_value:
+      $var: $.input.filter.amount
+    monetary_unit:
+      $var: $.input.filter.currency
+    company_id:
+      $var: $.input.filter.companyId
+    assignee_id:
+      $var: $.input.filter.ownerId
+    close_date:
+      $var: $.input.filter.closeTime
+    details:
+      $var: $.input.filter.description
+    primary_contact_id:
+      $var: $.input.filter.contactId
+    status:
+      $map:
+        value:
+          $var: $.input.filter.status
+        mapping:
+          - from: open
+            to: Open
+          - from: won
+            to: Won
+          - from: lost
+            to: Lost
+        default: Abandoned
+    win_probability:
+      $var: $.input.filter.probability
+    date_created:
+      $var: $.input.filter.createdTime
+    date_modified:
+      $var: $.input.filter.updatedTime
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,28 @@
+id: 68a8a3982e84328ca528f761
+name: Search Products
+key: search-products
+uuid: 9d2acf9c-ba63-4bd8-8ebb-e46d7b15f6d3
+state: READY
+errors: []
+revision: c45ecfae-cce4-49a0-a095-2f8a77ef5c20
+createdAt: '2025-08-22T17:06:33.022Z'
+updatedAt: '2025-08-22T17:06:33.022Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

@@ -1,0 +1,57 @@
+id: 68a8a3992e84328ca528f92f
+name: Match Product
+key: match-Products
+uuid: 9fe448af-7311-49b8-b3bc-4170c4c3a75f
+state: READY
+errors: []
+revision: d5d536df-50b6-4116-8ee6-07f420778645
+createdAt: '2025-08-22T17:06:36.574Z'
+updatedAt: '2025-08-22T17:06:36.574Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a8a3982e84328ca528f75f
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      Name:
+        $var: $.input.query.name
+      Code:
+        $var: $.input.query.code
+isCustomized: false
+parentRevision: ec5f4de5-3168-4c82-9ca4-8854d981e1e7
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

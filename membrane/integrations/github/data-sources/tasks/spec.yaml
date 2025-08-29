@@ -1,0 +1,38 @@
+id: 68a8a3f1c172bc7206676f56
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+revision: bac62a9c-a5fa-4f91-b8a7-6210f224c236
+integrationId: 68a8a3ebc172bc7206676e46
+customized: false
+universalDataSourceId: 68a8a3f1c172bc7206676f0a
+universalDataSourceRevision: 1e77689d-61bf-43e9-a49c-c66d27640de5
+collectionKey: issues
+udm: tasks
+defaultPath: /data/issues
+integration:
+  id: 68a8a3ebc172bc7206676e46
+  name: Github
+  key: github
+  uuid: 6efb002f-0555-4734-8b82-f1d83b910c82
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.951Z'
+  updatedAt: '2025-08-22T17:08:00.091Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/github/logo.png
+  connectorId: 6446a060badd839bce1ac1ac
+  connectorVersion: 1.1.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 889
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

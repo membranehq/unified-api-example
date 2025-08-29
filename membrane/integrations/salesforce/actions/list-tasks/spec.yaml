@@ -1,0 +1,87 @@
+id: 68a8a3f6c172bc7206677566
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 3aa2f1dd-ed28-4717-b42a-cd85c27e49f9
+createdAt: '2025-08-22T17:08:14.666Z'
+updatedAt: '2025-08-22T17:08:14.666Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Id:
+      $var: $.input.filter.id
+    Subject:
+      $var: $.input.filter.subject
+    Description:
+      $var: $.input.filter.content
+    TaskSubtype:
+      $var: $.input.filter.type
+    Status:
+      $var: $.input.filter.status
+    OwnerId:
+      $var: $.input.filter.ownerId
+    AccountId:
+      $var: $.input.filter.companyId
+    ActivityDate:
+      $var: $.input.filter.dueTime
+    CompletedDateTime:
+      $var: $.input.filter.endTime
+    CreatedDate:
+      $var: $.input.filter.createdTime
+    CreatedById:
+      $var: $.input.filter.createdBy
+    LastModifiedDate:
+      $var: $.input.filter.updatedTime
+    LastModifiedById:
+      $var: $.input.filter.updatedBy
+    Priority:
+      $var: $.input.filter.priority
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

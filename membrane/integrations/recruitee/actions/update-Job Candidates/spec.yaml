@@ -1,0 +1,58 @@
+id: 68a8a43f7f08dba516dd135c
+name: Update Job Candidate
+key: update-Job Candidates
+uuid: 2fafc49d-f0ca-41d1-91f5-d8cab990fa11
+state: READY
+errors: []
+revision: ca63d36b-84b8-4801-9bc0-3aeb1702cdd6
+createdAt: '2025-08-22T17:09:20.583Z'
+updatedAt: '2025-08-22T17:09:20.583Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc9459f
+parentId: 68a8a43e7f08dba516dd1292
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: job-candidates
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: job-candidates
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 7117d22f-6afb-4853-aba7-b7dda3f0945f
+integration:
+  id: 68a820cb9fc7b352ffc9459f
+  name: Recruitee
+  key: recruitee
+  uuid: 7dd6d57d-d6d0-476a-8950-9fc36446637a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.347Z'
+  updatedAt: '2025-08-22T07:48:28.540Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/recruitee/logo.png
+  connectorId: 6466785560f981f3ce696912
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 686
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

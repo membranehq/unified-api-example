@@ -1,0 +1,55 @@
+id: 68a89b606f9be8241c5f56f7
+name: Search Notes
+key: search-notes
+uuid: 530e97ae-d211-4813-ab99-4a6fd9cfda92
+state: READY
+errors: []
+revision: 6c766ebe-e8c2-407d-94bd-d47a8e20b43a
+createdAt: '2025-08-22T16:31:31.070Z'
+updatedAt: '2025-08-22T16:31:31.070Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a89b606f9be8241c5f5580
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: ccc82884-870d-487d-a90f-2a20f5c2802a
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

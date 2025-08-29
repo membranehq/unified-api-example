@@ -1,0 +1,31 @@
+id: 68a8a43e7f08dba516dd1292
+name: Update Job Candidate
+key: update-Job Candidates
+uuid: 2fafc49d-f0ca-41d1-91f5-d8cab990fa11
+state: READY
+errors: []
+revision: 7117d22f-6afb-4853-aba7-b7dda3f0945f
+createdAt: '2025-08-22T17:09:18.968Z'
+updatedAt: '2025-08-22T17:09:18.968Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: job-candidates
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: job-candidates
+    input:
+      $var: $.input.fields
+isCustomized: false

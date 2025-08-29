@@ -1,0 +1,51 @@
+id: 68a8a250285c02f4152f080c
+name: Receive Created Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Activities-events
+revision: bad9cbb0-0fdb-4e5f-bf9f-92dae4a7ded3
+universalFlowId: 68a8a24d285c02f4152f05a8
+integrationId: 689f2bf000905568ab2f66f9
+universalFlowRevision: 46c52bf2-63d6-4e03-a736-522037b6bc7a
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-created-trigger:
+    type: data-record-created-trigger
+    name: Activity Created Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,15 @@
+id: 68a8a3f2c172bc720667707a
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f0a
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

@@ -1,0 +1,146 @@
+id: 68a8a2e48508b934a6350b62
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: ef200086-8e9b-4159-b847-03e58f381af8
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66ea
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a77
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  opportunityName:
+    $var: $.name
+  ownerID:
+    $var: $.ownerId
+  dealStageID:
+    $var: $.stage
+  accountID:
+    $var: $.companyId
+  campaignID:
+    $var: $.campaignId
+  probability:
+    $var: $.probability
+  amount:
+    $var: $.amount
+  isClosed:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.status
+            oneOf:
+              - won
+              - lost
+          value: '1'
+      default: '0'
+  isWon:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.status
+            is: won
+          value: '1'
+      default: '0'
+  closeDate:
+    $var: $.closeTime
+  createTimestamp:
+    $var: $.createdTime
+  primaryLeadID:
+    $var: $.contactId
+  isActive:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.status
+            is: open
+          value: '1'
+        - filter:
+            $eval:
+              $var: $.status
+            isNot: open
+          value: '0'
+  id:
+    $var: $.id
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.opportunityName
+  amount:
+    $var: $.amount
+  probability:
+    $var: $.probability
+  companyId:
+    $var: $.accountID
+  campaignId:
+    $var: $.campaignID
+  contactId:
+    $var: $.primaryLeadID
+  ownerId:
+    $var: $.ownerID
+  stage:
+    $var: $.dealStageID
+  status:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.isWon
+            is: '1'
+          value: won
+        - filter:
+            $and:
+              - $eval:
+                  $var: $.isClosed
+                is: '1'
+              - $eval:
+                  $var: $.isWon
+                is: '0'
+          value: lost
+        - filter:
+            $eval:
+              $var: $.isActive
+            is: '1'
+          value: open
+  closeTime:
+    $var: $.closeDate
+  createdTime:
+    $var: $.createTimestamp
+  updatedTime:
+    $var: $.updateTimestamp
+integration:
+  id: 689f2bf000905568ab2f66ea
+  name: SharpSpring
+  key: sharpspring
+  uuid: c2d68aec-02ec-4ccb-a04a-a9ac232b373c
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:47.269Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/sharpspring/logo-7d08538a-0c9f-4916-ab99-d214433c1307.png
+  connectorId: 640a32a474be562abded2875
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

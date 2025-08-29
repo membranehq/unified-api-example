@@ -1,0 +1,50 @@
+id: 68a8a3f6c172bc7206677500
+name: Delete Task
+key: delete-Tasks
+uuid: c3ed3a49-2947-479f-b0f6-07880043db91
+state: READY
+errors: []
+revision: 5d1690b0-aca8-4298-9ea9-6aa30debaab3
+createdAt: '2025-08-22T17:08:11.682Z'
+updatedAt: '2025-08-22T17:08:11.682Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e42
+parentId: 68a8a3f5c172bc72066772bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: e34f473f-8f4b-4ba4-bd37-caef889a0473
+integration:
+  id: 68a8a3ebc172bc7206676e42
+  name: Asana
+  key: asana
+  uuid: 9629267f-230d-4491-bc36-86ebfcac0337
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.899Z'
+  updatedAt: '2025-08-22T17:08:00.890Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/asana/logo.png
+  connectorId: 6435316c986ed1caad932104
+  connectorVersion: 1.0.13
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

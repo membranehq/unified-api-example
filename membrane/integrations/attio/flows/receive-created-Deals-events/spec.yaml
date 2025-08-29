@@ -1,0 +1,52 @@
+id: 68a8a2f28508b934a635168e
+name: Receive Created Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Deals-events
+revision: d2165120-c856-4092-b241-634a582ca635
+universalFlowId: 68a8a2ef8508b934a6351310
+integrationId: 689f2bf000905568ab2f6705
+universalFlowRevision: 0df4f7c3-2e8c-4b8f-bb29-5270aed50502
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Deals-created-trigger:
+    type: data-record-created-trigger
+    name: Deal Created Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

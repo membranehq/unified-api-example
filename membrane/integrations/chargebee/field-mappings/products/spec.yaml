@@ -1,0 +1,72 @@
+id: 68a8a3972e84328ca528f682
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+customized: false
+revision: ddec1f7b-0b91-43d8-badd-c19332cbc798
+universalFieldMappingId: 68a8a3972e84328ca528f648
+universalFieldMappingRevision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+integrationId: 68a84efe7702482264c62c83
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f5b4
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  status:
+    $var: $.status
+  type:
+    $var: $.type
+importValue:
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  type:
+    $var: $.type
+  isActive:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.status
+            is: active
+          value: true
+      default: false
+  status:
+    $var: $.status
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,31 @@
+id: 68a89b606f9be8241c5f557c
+name: List Notes
+key: list-notes
+uuid: 873fc935-080e-47b4-ba5f-ddbba90dfc6d
+state: READY
+errors: []
+revision: 2fa8faba-ace8-4401-a606-db090e5d2844
+createdAt: '2025-08-22T16:31:28.459Z'
+updatedAt: '2025-08-22T16:31:28.459Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

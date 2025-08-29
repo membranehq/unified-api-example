@@ -1,0 +1,105 @@
+id: 68a8a3f6c172bc7206677576
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 9efec864-2012-4ee0-9ffd-666861a910ef
+createdAt: '2025-08-22T17:08:14.007Z'
+updatedAt: '2025-08-22T17:08:14.007Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e42
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    gid:
+      $var: $.input.filter.id
+    name:
+      $var: $.input.filter.subject
+    resource_subtype:
+      $var: $.input.filter.type
+    approval_status:
+      $var: $.input.filter.status
+    completed:
+      $var: $.input.filter.status
+    created_at:
+      $var: $.input.filter.createdTime
+    due_at:
+      $var: $.input.filter.dueTime
+    modified_at:
+      $var: $.input.filter.updatedTime
+    notes:
+      $var: $.input.filter.content
+    start_at:
+      $var: $.input.filter.startTime
+    assignee:
+      gid:
+        $var: $.input.filter.assigneeId
+    parent:
+      $var: $.input.filter.parentTaskId
+    projects:
+      - gid:
+          $var: $.input.filter.projectId
+    followers:
+      $iterate:
+        source:
+          $var: $.input.filter.followerIds
+        item:
+          gid:
+            $var: $.item
+    tags:
+      $iterate:
+        source:
+          $var: $.input.filter.tags
+        item:
+          gid:
+            $var: $.item
+    tag_ids:
+      $var: $.input.filter.tags
+    parent_id:
+      $var: $.input.filter.parentTaskId
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 68a8a3ebc172bc7206676e42
+  name: Asana
+  key: asana
+  uuid: 9629267f-230d-4491-bc36-86ebfcac0337
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.899Z'
+  updatedAt: '2025-08-22T17:08:00.890Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/asana/logo.png
+  connectorId: 6435316c986ed1caad932104
+  connectorVersion: 1.0.13
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

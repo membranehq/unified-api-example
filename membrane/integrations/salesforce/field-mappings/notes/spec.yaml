@@ -1,0 +1,40 @@
+id: 68a89b5e6f9be8241c5f54a6
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+customized: false
+revision: abf44f84-d7c1-4006-b65f-899f9639252b
+universalFieldMappingId: 68a89b5e6f9be8241c5f5487
+universalFieldMappingRevision: 1d47f9a4-b7c4-44d5-9428-199e5d1dfbc8
+integrationId: 689f2bf000905568ab2f66d1
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

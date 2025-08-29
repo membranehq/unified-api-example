@@ -1,0 +1,62 @@
+id: 68a8a340bc4406f3f0dc4a36
+name: Match Lead
+key: match-Leads
+uuid: eec10c2e-1293-4c56-81bf-b748cde50a18
+state: READY
+errors: []
+revision: 5d5acf90-b5d5-4cef-85ce-70bca3565c6f
+createdAt: '2025-08-22T17:05:06.422Z'
+updatedAt: '2025-08-22T17:05:06.422Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d3
+parentId: 68a8a340bc4406f3f0dc4980
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      fullname:
+        $var: $.input.query.fullName
+      emailaddress1:
+        $var: $.input.query.primaryEmail
+      emailaddress2:
+        $var: $.input.query.emails[1].value
+      emailaddress3:
+        $var: $.input.query.emails[2].value
+isCustomized: false
+parentRevision: 9d6375ea-c269-4ebd-b782-ec891792382f
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

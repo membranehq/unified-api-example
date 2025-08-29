@@ -1,0 +1,85 @@
+id: 68a8a341bc4406f3f0dc4acd
+name: List Leads
+key: list-leads
+uuid: 4b35cc8b-b9cb-4edd-b7d3-75a2f26c87ed
+state: READY
+errors: []
+revision: 8fd076f3-e403-4a8e-9644-9c29e562ba57
+createdAt: '2025-08-22T17:05:05.722Z'
+updatedAt: '2025-08-22T17:05:05.722Z'
+isDeactivated: false
+integrationId: 68a8a33dbc4406f3f0dc4891
+parentId: 68a8a340bc4406f3f0dc4982
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    email:
+      $var: $.input.filter.primaryEmail
+    firstName:
+      $var: $.input.filter.firstName
+    lastName:
+      $var: $.input.filter.lastName
+    createdAt:
+      $var: $.input.filter.createdTime
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    address:
+      $var: $.input.filter.primaryAddress.full
+    city:
+      $var: $.input.filter.primaryAddress.city
+    country:
+      $var: $.input.filter.primaryAddress.country
+    postalCode:
+      $var: $.input.filter.primaryAddress.zip
+    state:
+      $var: $.input.filter.primaryAddress.state
+    mainPhone:
+      $var: $.input.filter.primaryPhone
+    company:
+      $var: $.input.filter.companyName
+isCustomized: false
+parentRevision: 5528905b-aac1-45ee-b59d-4763d7f1ee13
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

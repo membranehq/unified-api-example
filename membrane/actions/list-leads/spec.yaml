@@ -1,0 +1,31 @@
+id: 68a8a340bc4406f3f0dc4982
+name: List Leads
+key: list-leads
+uuid: 4b35cc8b-b9cb-4edd-b7d3-75a2f26c87ed
+state: READY
+errors: []
+revision: 5528905b-aac1-45ee-b59d-4763d7f1ee13
+createdAt: '2025-08-22T17:05:04.365Z'
+updatedAt: '2025-08-22T17:05:04.365Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

@@ -1,0 +1,51 @@
+id: 68a8a248285c02f4152f02da
+name: Find Activity By Id
+key: find-Activities-by-id
+uuid: c4553451-6969-4b40-a8b6-bf4408408737
+state: READY
+errors: []
+revision: 214db008-8e7a-43da-8f45-f7f95253d693
+createdAt: '2025-08-22T17:00:59.874Z'
+updatedAt: '2025-08-22T17:00:59.874Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8a247285c02f4152f0188
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 7881aa63-73ac-4b89-bbf0-99d7f075ef13
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

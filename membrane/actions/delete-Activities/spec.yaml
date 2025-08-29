@@ -1,0 +1,22 @@
+id: 68a8a247285c02f4152f0180
+name: Delete Activity
+key: delete-Activities
+uuid: b21187d1-7e03-4b4a-a21a-57f6851489c6
+state: READY
+errors: []
+revision: f9b96bec-290e-4b72-a921-085e9b2f4d2d
+createdAt: '2025-08-22T17:00:55.961Z'
+updatedAt: '2025-08-22T17:00:55.961Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+isCustomized: false

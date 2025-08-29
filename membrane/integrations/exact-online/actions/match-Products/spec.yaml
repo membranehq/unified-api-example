@@ -1,0 +1,73 @@
+id: 68a8a3992e84328ca528f93f
+name: Match Product
+key: match-Products
+uuid: 9fe448af-7311-49b8-b3bc-4170c4c3a75f
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f595
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3972e84328ca528f678
+revision: 267db292-4189-46eb-bd98-f8a9b1b79224
+createdAt: '2025-08-22T17:06:36.660Z'
+updatedAt: '2025-08-22T17:06:36.660Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670c
+parentId: 68a8a3982e84328ca528f75f
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: ec5f4de5-3168-4c82-9ca4-8854d981e1e7
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

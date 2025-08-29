@@ -1,0 +1,22 @@
+id: 68a8a4407f08dba516dd14ad
+name: Receive Deleted Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Job Candidates-events
+revision: 39ee7d4c-761e-411b-a461-810bd58ad688
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Job Candidates-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Job Candidate Deleted Trigger
+    config:
+      dataSource:
+        key: job-candidates
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

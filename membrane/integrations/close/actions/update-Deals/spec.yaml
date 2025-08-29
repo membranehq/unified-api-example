@@ -1,0 +1,58 @@
+id: 68a8a2e88508b934a6350eba
+name: Update Deal
+key: update-Deals
+uuid: 1f5611f6-f7e8-4c0c-940d-6f11bf3f5da9
+state: READY
+errors: []
+revision: 89821bd2-0284-4d57-b230-482bd2dd6202
+createdAt: '2025-08-22T17:03:39.865Z'
+updatedAt: '2025-08-22T17:03:39.865Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8a2e78508b934a6350c98
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: deals
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 48dc531c-3b01-4a77-9d9d-eabed6291877
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

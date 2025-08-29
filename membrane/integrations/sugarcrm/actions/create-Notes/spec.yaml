@@ -1,0 +1,54 @@
+id: 68a89b606f9be8241c5f5664
+name: Create Note
+key: create-Notes
+uuid: 60a0f447-4491-4400-8fbd-e2dc63a5fafc
+state: READY
+errors: []
+revision: cca76e97-0c7a-4b49-b342-dd523da66ca1
+createdAt: '2025-08-22T16:31:31.263Z'
+updatedAt: '2025-08-22T16:31:31.263Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 68a89b606f9be8241c5f5582
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: notes
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 1508db0c-ac65-4b58-9242-31dcb3c64254
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

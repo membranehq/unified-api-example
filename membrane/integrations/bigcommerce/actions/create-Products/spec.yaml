@@ -1,0 +1,55 @@
+id: 68a8a3992e84328ca528f8a0
+name: Create Product
+key: create-Products
+uuid: d2644cee-06d6-48fd-a728-d3046cf7a333
+state: READY
+errors: []
+revision: 3283a236-c820-41c2-9bb1-97279d1e4c6d
+createdAt: '2025-08-22T17:06:35.778Z'
+updatedAt: '2025-08-22T17:06:35.778Z'
+isDeactivated: false
+integrationId: 68a8a3952e84328ca528f548
+parentId: 68a8a3982e84328ca528f754
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: products
+  fieldMapping:
+    key: products
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 9e3a9fbc-21f7-4c30-a569-592a4aee089b
+integration:
+  id: 68a8a3952e84328ca528f548
+  name: BigCommerce
+  key: bigcommerce
+  uuid: 9f6e64ce-a68e-4a83-a0a2-2e0b355e4ea5
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:06:29.054Z'
+  updatedAt: '2025-08-22T17:06:30.705Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/bigcommerce/logo-aa5562ee-36f5-4df9-a146-b5192099d05c.png
+  connectorId: 6526734570089fac484b2009
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 119
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,50 @@
+id: 68a8a24f285c02f4152f0716
+name: Receive Deleted Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Activities-events
+revision: 0e0c3256-b53f-4b18-bbbb-2a5df893660a
+universalFlowId: 68a8a24d285c02f4152f05ad
+integrationId: 689f2bf000905568ab2f66e0
+universalFlowRevision: a45e705d-4ca4-4dad-9939-b97b0bf0eec0
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Activity Deleted Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

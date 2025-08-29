@@ -1,0 +1,31 @@
+id: 68a8a2a7bdd4149f15477626
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+createdAt: '2025-08-22T17:02:31.110Z'
+updatedAt: '2025-08-22T17:02:31.110Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

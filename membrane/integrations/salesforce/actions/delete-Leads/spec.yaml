@@ -1,0 +1,50 @@
+id: 68a8a340bc4406f3f0dc4a22
+name: Delete Lead
+key: delete-Leads
+uuid: 6dcff1aa-c465-4386-8f09-e733ca918c71
+state: READY
+errors: []
+revision: 61fd2644-1acf-4e12-8c32-36febbd57373
+createdAt: '2025-08-22T17:05:05.088Z'
+updatedAt: '2025-08-22T17:05:05.088Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a340bc4406f3f0dc497c
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: leads
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: dbb97cad-1d12-4c0b-a623-142de0a3e104
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

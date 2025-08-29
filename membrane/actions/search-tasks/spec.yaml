@@ -1,0 +1,28 @@
+id: 68a8a3f5c172bc72066772c1
+name: Search Tasks
+key: search-tasks
+uuid: a4ede812-1fc9-46f3-8f46-404617670de4
+state: READY
+errors: []
+revision: 7f75c598-8318-4b71-bdd7-5a8411cedfb5
+createdAt: '2025-08-22T17:08:06.062Z'
+updatedAt: '2025-08-22T17:08:06.062Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

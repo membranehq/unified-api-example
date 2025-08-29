@@ -1,0 +1,131 @@
+id: 68a8a2e48508b934a6350b68
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: fecf017d-460f-46d3-9592-7dfab4295ef3
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66fd
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a75
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  title:
+    $var: $.name
+  summary:
+    $var: $.description
+  status:
+    $var: $.status
+  lead:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value:
+            customer:
+              type: contact
+              id:
+                $var: $.contactId
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            customer:
+              type: company
+              id:
+                $var: $.companyId
+  estimated_value:
+    amount:
+      $var: $.amount
+    currency:
+      $var: $.currency
+  estimated_closing_date:
+    $var: $.closeTime
+  estimated_probability:
+    $var: $.probability
+  responsible_user:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.ownerId
+            isNotEmpty: true
+          value:
+            type: user
+            id:
+              $var: $.ownerId
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.title
+  amount:
+    $var: $.estimated_value.amount
+  currency:
+    $var: $.estimated_value.currency
+  description:
+    $var: $.summary
+  status:
+    $var: $.status
+  ownerId:
+    $var: $.responsible_user.id
+  closeTime:
+    $var: $.estimated_closing_date
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+  probability:
+    $var: $.estimated_probability
+  contactId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.lead.contact_person_id
+            isNotEmpty: true
+          value:
+            $var: $.lead.contact_person_id
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.lead.customer.type
+            is: company
+          value:
+            $var: $.lead.customer.id
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

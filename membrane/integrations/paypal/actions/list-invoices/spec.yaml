@@ -1,0 +1,91 @@
+id: 68a8a2a7bdd4149f1547771f
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: c72774d2-e45c-4b03-bce3-c507f599451e
+createdAt: '2025-08-22T17:02:33.771Z'
+updatedAt: '2025-08-22T17:02:33.771Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c89
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    detail:
+      currency_code:
+        $var: $.input.filter.currency
+      invoice_number:
+        $var: $.input.filter.number
+      invoice_date:
+        $var: $.input.filter.issueDate
+      payment_term:
+        due_date:
+          $var: $.input.filter.dueDate
+      metadata:
+        create_time:
+          $var: $.input.filter.createdTime
+      memo:
+        $var: $.input.filter.memo
+    status:
+      $var: $.input.filter.status
+    items:
+      $var: $.input.filter.lineItems
+    amount:
+      value:
+        $var: $.input.filter.totalAmount
+      breakdown:
+        tax_total:
+          value:
+            $var: $.input.filter.totalTax
+    invoicer:
+      email_address:
+        $var: $.input.filter.createdBy
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 68a84efe7702482264c62c89
+  name: PayPal
+  key: paypal
+  uuid: 3f7450ae-67f4-4940-ac36-ffa248ea5acb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.338Z'
+  updatedAt: '2025-08-22T11:05:38.391Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/paypal/asset-0f0851b5-76ed-412e-bfa9-d2618b5e6162.png
+  connectorId: 665ee151c57ef06438e068f2
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 109
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

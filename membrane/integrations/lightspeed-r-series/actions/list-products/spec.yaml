@@ -1,0 +1,96 @@
+id: 68a8a3992e84328ca528f925
+name: List Products
+key: list-products
+uuid: ec8eba46-f3c0-4fc4-9a0f-b2b72e7249d6
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c8d
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f5b8
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3982e84328ca528f6ea
+revision: dfac574a-6a66-4704-81e8-37cdc129cefa
+createdAt: '2025-08-22T17:06:36.658Z'
+updatedAt: '2025-08-22T17:06:36.658Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c8d
+parentId: 68a8a3982e84328ca528f759
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    itemID:
+      $var: $.input.filter.id
+    systemSku:
+      $var: $.input.filter.code
+    defaultCost:
+      $var: $.input.filter.price
+    itemType:
+      $var: $.input.filter.type
+    description:
+      $var: $.input.filter.description
+    timeStamp:
+      $var: $.input.filter.updatedTime
+    createTime:
+      $var: $.input.filter.createdTime
+    archived:
+      $var: $.input.filter.isActive
+isCustomized: false
+parentRevision: 56fa3db7-c684-4379-ba90-c0e05fb01225
+integration:
+  id: 68a84efe7702482264c62c8d
+  name: Lightspeed R-Series
+  key: lightspeed-r-series
+  uuid: 2cee0c2e-162d-41ab-a07b-7f80337f7a40
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.340Z'
+  updatedAt: '2025-08-22T11:05:41.148Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/lightspeed-r-series/asset-ec862902-f916-4b32-ab9e-13fa9b8f9481.png
+  connectorId: 66b2291668e75461beba804b
+  connectorVersion: 1.0.3
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 256
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

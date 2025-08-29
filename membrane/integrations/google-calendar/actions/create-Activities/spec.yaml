@@ -1,0 +1,74 @@
+id: 68a8a248285c02f4152f027b
+name: Create Activity
+key: create-Activities
+uuid: 11b4b1d7-c118-43b2-b06f-66553ecfb559
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a244285c02f4152effe8
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a245285c02f4152f0042
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a245285c02f4152f00d0
+revision: 164c9bfb-9414-49ba-a26a-69171b6832c1
+createdAt: '2025-08-22T17:00:59.651Z'
+updatedAt: '2025-08-22T17:00:59.651Z'
+isDeactivated: false
+integrationId: 68a8a244285c02f4152effe8
+parentId: 68a8a247285c02f4152f0182
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: activities
+  fieldMapping:
+    key: activities
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: d45712a2-80e0-4b26-a8b7-8b6776dcc9b8
+integration:
+  id: 68a8a244285c02f4152effe8
+  name: Google Calendar
+  key: google-calendar
+  uuid: 87e5e8ee-22dc-446d-aac7-729b09fe6000
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:00:52.838Z'
+  updatedAt: '2025-08-22T17:00:53.382Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/google-calendar/logo.png
+  connectorId: 6466784660f981f3ce6968fa
+  connectorVersion: 1.1.20
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 38
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

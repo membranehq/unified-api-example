@@ -1,0 +1,53 @@
+id: 68a8a343bc4406f3f0dc4d12
+name: Receive Updated Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Leads-events
+revision: 302797e4-767c-4300-8b14-04bde35afa88
+universalFlowId: 68a8a342bc4406f3f0dc4b79
+integrationId: 689f2bf000905568ab2f66d3
+universalFlowRevision: c68779a0-a77f-4c83-8bd9-c989041a392d
+nodes:
+  Leads-updated-trigger:
+    type: data-record-updated-trigger
+    name: Lead Updated Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping:
+        key: leads
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

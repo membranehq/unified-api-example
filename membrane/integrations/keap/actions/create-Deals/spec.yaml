@@ -1,0 +1,54 @@
+id: 68a8a2e88508b934a6350ec7
+name: Create Deal
+key: create-Deals
+uuid: 85392d6c-5e3d-45d7-9134-371be7b37ec7
+state: READY
+errors: []
+revision: e0605e8a-ba53-4518-909c-5b3a0b7ca460
+createdAt: '2025-08-22T17:03:39.785Z'
+updatedAt: '2025-08-22T17:03:39.785Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e2
+parentId: 68a8a2e78508b934a6350c96
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: deals
+  fieldMapping:
+    key: deals
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 47064490-c49e-47f0-b8d1-4a9e50f43aae
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

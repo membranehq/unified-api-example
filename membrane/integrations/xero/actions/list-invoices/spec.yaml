@@ -1,0 +1,93 @@
+id: 68a8a2a7bdd4149f1547770f
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: d4cc5b68-40f4-4715-a63e-70295d784079
+createdAt: '2025-08-22T17:02:33.709Z'
+updatedAt: '2025-08-22T17:02:33.709Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Contact:
+      ContactID:
+        $var: $.input.filter.customerId
+    Date:
+      $var: $.input.filter.issueDate
+    DueDate:
+      $var: $.input.filter.dueDate
+    InvoiceNumber:
+      $var: $.input.filter.number
+    CurrencyCode:
+      $var: $.input.filter.currency
+    CurrencyRate:
+      $var: $.input.filter.exchangeRate
+    Status:
+      $var: $.input.filter.status
+    InvoiceID:
+      $var: $.input.filter.id
+    LineItems:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          Description:
+            $var: $.item.description
+          Quantity:
+            $var: $.item.quantity
+          ItemCode:
+            $var: $.item.code
+          AccountID:
+            $var: $.item.ledgerAccountId
+          TaxAmount:
+            $var: $.item.taxAmount
+          LineAmount:
+            $var: $.item.totalAmount
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

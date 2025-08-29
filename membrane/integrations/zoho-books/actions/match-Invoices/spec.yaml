@@ -1,0 +1,56 @@
+id: 68a8a2a7bdd4149f15477753
+name: Match Invoice
+key: match-Invoices
+uuid: d5351434-b90a-474d-8e04-25418d748018
+state: READY
+errors: []
+revision: aa80ada4-d9f3-4bc5-a71c-e9274f4e37a5
+createdAt: '2025-08-22T17:02:33.851Z'
+updatedAt: '2025-08-22T17:02:33.851Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a8a2a7bdd4149f15477624
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      customer_name: null
+      status:
+        $var: $.input.query.status
+isCustomized: false
+parentRevision: 9d5c7e5f-68f2-41ae-bd48-04d86feaff44
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

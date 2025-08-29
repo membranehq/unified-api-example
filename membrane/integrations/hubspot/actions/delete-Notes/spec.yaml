@@ -1,0 +1,50 @@
+id: 68a89b606f9be8241c5f568e
+name: Delete Note
+key: delete-Notes
+uuid: 08963599-874c-4c0b-b3ae-3f3b5f6cd4e4
+state: READY
+errors: []
+revision: 1e8bbf58-4b79-43b5-882c-fd5611b56749
+createdAt: '2025-08-22T16:31:30.465Z'
+updatedAt: '2025-08-22T16:31:30.465Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e6
+parentId: 68a89b606f9be8241c5f5578
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 2c036121-0ec9-4aa1-a6e6-c7c1b27d8b2c
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

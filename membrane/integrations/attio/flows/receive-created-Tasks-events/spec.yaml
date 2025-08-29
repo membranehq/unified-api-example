@@ -1,0 +1,52 @@
+id: 68a8a406c172bc72066782c2
+name: Receive Created Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Tasks-events
+revision: 0b81df86-5c68-4d96-a5b6-82978bb91d3b
+universalFlowId: 68a8a400c172bc7206677c8e
+integrationId: 689f2bf000905568ab2f6705
+universalFlowRevision: 99e9ab83-c3bc-4ff6-8c32-02f201db53e1
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-created-trigger:
+    type: data-record-created-trigger
+    name: Task Created Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

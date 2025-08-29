@@ -1,0 +1,50 @@
+id: 68a8a39f2e84328ca528ff40
+name: Receive Deleted Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Products-events
+revision: 7d48d31c-042f-41a5-9ed8-5898093e1b19
+universalFlowId: 68a8a39d2e84328ca528fcfa
+integrationId: 68a8a3952e84328ca528f546
+universalFlowRevision: 551751af-44bf-4c26-bc30-68e6b5329766
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Products-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Product Deleted Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3952e84328ca528f546
+  name: Stripe
+  key: stripe
+  uuid: 1b044290-8fd1-4e55-b858-84e9ed1de2ed
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:06:29.053Z'
+  updatedAt: '2025-08-22T17:06:30.417Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/stripe/logo.png
+  connectorId: 6466785960f981f3ce696919
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 479
+  hasData: true
+  dataCollectionsCount: 26
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

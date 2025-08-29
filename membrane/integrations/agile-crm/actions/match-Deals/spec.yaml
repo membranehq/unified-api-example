@@ -1,0 +1,52 @@
+id: 68a8a2e78508b934a6350e40
+name: Match Deal
+key: match-Deals
+uuid: dabc2a3f-24f9-438c-b4ad-10e084377651
+state: READY
+errors: []
+revision: 1b76c121-7601-4dda-a4a1-4c0163888d93
+createdAt: '2025-08-22T17:03:43.174Z'
+updatedAt: '2025-08-22T17:03:43.174Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d5
+parentId: 68a8a2e78508b934a6350c9e
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 1bd7d941-136a-4741-97c2-0e4771420c4b
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

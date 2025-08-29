@@ -1,0 +1,84 @@
+id: 68a8a2a7bdd4149f15477715
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: 1e253069-0a20-485c-89e2-2d249be8cfdd
+createdAt: '2025-08-22T17:02:33.770Z'
+updatedAt: '2025-08-22T17:02:33.770Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f7
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    invoice_id:
+      $var: $.input.filter.id
+    invoice_number:
+      $var: $.input.filter.number
+    status:
+      $var: $.input.filter.status
+    due_date:
+      $var: $.input.filter.dueDate
+    customer_id:
+      $var: $.input.filter.customerId
+    customer_name: null
+    currency_id:
+      $var: $.input.filter.currency
+    exchange_rate:
+      $var: $.input.filter.exchangeRate
+    discount:
+      $var: $.input.filter.totalDiscount
+    line_items:
+      $var: $.input.filter.lineItemsIds
+    created_time:
+      $var: $.input.filter.createdTime
+    last_payment_date:
+      $var: $.input.filter.paidOnDate
+    date:
+      $var: $.input.filter.issueDate
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,128 @@
+id: 68a8a2e48508b934a6350b64
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 4b2a6189-3dd1-416c-a003-b837a6e97309
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f671b
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a7f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  party:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value:
+            type: person
+            id:
+              $var: $.contactId
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: organisation
+            id:
+              $var: $.companyId
+  owner:
+    $var: $.ownerId
+  milestone:
+    $var: $.stage
+  value:
+    amount:
+      $var: $.amount
+    currency:
+      $var: $.currency
+  probability:
+    $var: $.probability
+  closedOn:
+    $var: $.closeTime
+  lastContactedAt:
+    $var: $.lastActivityTime
+  createdAt:
+    $var: $.createdTime
+  updatedAt:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  amount:
+    $var: $.value.amount
+  currency:
+    $var: $.value.currency
+  description:
+    $var: $.description
+  stage:
+    $var: $.milestone
+  ownerId:
+    $var: $.owner
+  contactId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.party.type
+            is: person
+          value:
+            $var: $.party.id
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.party.type
+            is: organisation
+          value:
+            $var: $.party.id
+  closeTime:
+    $var: $.closedOn
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
+  lastActivityTime:
+    $var: $.lastContactedAt
+  probability:
+    $var: $.probability
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

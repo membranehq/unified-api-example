@@ -1,0 +1,15 @@
+id: 68a8a43e7f08dba516dd121e
+name: Job Candidates
+isDeactivated: false
+state: READY
+errors: []
+key: job-candidates
+customized: false
+revision: 2b27b236-f726-4359-b7d0-8cff44ed92c3
+dataSourceKey: job-candidates
+dataSourceId: 68a8a43e7f08dba516dd11d0
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

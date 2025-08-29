@@ -1,0 +1,52 @@
+id: 68a8a2e78508b934a6350e3e
+name: Match Deal
+key: match-Deals
+uuid: dabc2a3f-24f9-438c-b4ad-10e084377651
+state: READY
+errors: []
+revision: b14755f9-9a5a-45b1-9eaf-c752a912232e
+createdAt: '2025-08-22T17:03:43.471Z'
+updatedAt: '2025-08-22T17:03:43.471Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f671b
+parentId: 68a8a2e78508b934a6350c9e
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: 1bd7d941-136a-4741-97c2-0e4771420c4b
+integration:
+  id: 689f2bf000905568ab2f671b
+  name: Capsule CRM
+  key: capsule-crm
+  uuid: dd9423db-fc3b-425b-b7c6-730ea47e27c8
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.602Z'
+  updatedAt: '2025-08-15T12:45:44.531Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/capsule-crm/logo.png
+  connectorId: 640734343685521f9f0c9fe7
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 10
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

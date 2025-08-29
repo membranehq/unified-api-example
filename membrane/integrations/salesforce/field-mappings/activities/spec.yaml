@@ -1,0 +1,180 @@
+id: 68a8a245285c02f4152f00d6
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: 61dedea3-eeec-4bb1-928c-9a5b5a164c6b
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 689f2bf000905568ab2f66d1
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f0026
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  WhoId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value:
+            type: Contact
+            id:
+              $var: $.contactId
+        - filter:
+            $eval:
+              $var: $.leadId
+            isNotEmpty: true
+          value:
+            type: Lead
+            id:
+              $var: $.leadId
+  WhatId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.dealId
+            isNotEmpty: true
+          value:
+            type: Deal
+            id:
+              $var: $.dealId
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: Account
+            id:
+              $var: $.companyId
+  Subject:
+    $var: $.title
+  Location:
+    $var: $.location
+  ActivityDateTime:
+    $var: $.startTime
+  DurationInMinutes:
+    $var: $.durationSeconds
+  StartDateTime:
+    $var: $.startTime
+  EndDateTime:
+    $var: $.endTime
+  Description:
+    $var: $.description
+  OwnerId:
+    $var: $.ownerId
+  CreatedDate:
+    $var: $.createdTime
+  CreatedById:
+    $var: $.createdBy
+  LastModifiedDate:
+    $var: $.updatedTime
+  LastModifiedById:
+    $var: $.updatedBy
+  IsRecurrence:
+    $var: $.isRecurrent
+  EventSubtype:
+    $var: $.type
+importValue:
+  title:
+    $var: $.Subject
+  description:
+    $var: $.Description
+  durationSeconds:
+    $var: $.DurationInMinutes
+  location:
+    $var: $.Location
+  isRecurrent:
+    $var: $.IsRecurrence
+  ownerId:
+    $var: $.OwnerId
+  startTime:
+    $var: $.StartDateTime
+  endTime:
+    $var: $.EndDateTime
+  createdTime:
+    $var: $.CreatedDate
+  createdBy:
+    $var: $.CreatedById
+  updatedTime:
+    $var: $.LastModifiedDate
+  updatedBy:
+    $var: $.LastModifiedById
+  dueTime:
+    $var: $.ActivityDateTime
+  companyId:
+    $formula:
+      $case:
+        cases:
+          - filter:
+              $eval:
+                $var: $.WhatId.type
+              is: Account
+            value:
+              $var: $.WhatId.id
+  dealId:
+    $formula:
+      $case:
+        cases:
+          - filter:
+              $eval:
+                $var: $.WhatId.type
+              is: Opportunity
+            value:
+              $var: $.WhatId.id
+  contactId:
+    $formula:
+      $case:
+        cases:
+          - filter:
+              $eval:
+                $var: $.WhoId.type
+              is: Contact
+            value:
+              $var: $.WhoId.id
+  leadId:
+    $formula:
+      $case:
+        cases:
+          - filter:
+              $eval:
+                $var: $.WhoId.type
+              is: Lead
+            value:
+              $var: $.WhoId.id
+  id:
+    $var: $.Id
+  type:
+    $var: $.EventSubtype
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

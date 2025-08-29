@@ -1,0 +1,27 @@
+id: 68a89b606f9be8241c5f5582
+name: Create Note
+key: create-Notes
+uuid: 60a0f447-4491-4400-8fbd-e2dc63a5fafc
+state: READY
+errors: []
+revision: 1508db0c-ac65-4b58-9242-31dcb3c64254
+createdAt: '2025-08-22T16:31:28.477Z'
+updatedAt: '2025-08-22T16:31:28.477Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: notes
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false

@@ -1,0 +1,51 @@
+id: 68a8a342bc4406f3f0dc4c2c
+name: Receive Deleted Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Leads-events
+revision: 56579de8-4cf0-41a9-8d63-f6aeda1ccb33
+universalFlowId: 68a8a342bc4406f3f0dc4b75
+integrationId: 689f2bf000905568ab2f66d3
+universalFlowRevision: 875be9dd-d404-476b-adc0-c2cfef4f23bf
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Leads-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Lead Deleted Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

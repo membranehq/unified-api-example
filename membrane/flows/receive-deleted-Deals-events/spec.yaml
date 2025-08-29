@@ -1,0 +1,22 @@
+id: 68a8a2ef8508b934a6351318
+name: Receive Deleted Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Deals-events
+revision: 28d91682-f6d9-418c-8552-5625aa6a5f25
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Deals-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Deal Deleted Trigger
+    config:
+      dataSource:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

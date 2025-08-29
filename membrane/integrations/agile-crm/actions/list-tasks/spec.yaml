@@ -1,0 +1,82 @@
+id: 68a8a3f6c172bc7206677583
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: c839e509-ebe1-4724-8296-a14512fdc11c
+createdAt: '2025-08-22T17:08:14.668Z'
+updatedAt: '2025-08-22T17:08:14.668Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d5
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    subject:
+      $var: $.input.filter.subject
+    taskDescription:
+      $var: $.input.filter.content
+    status:
+      $var: $.input.filter.status
+    type:
+      $var: $.input.filter.type
+    due:
+      $var: $.input.filter.dueTime
+    task_completed_time:
+      $var: $.input.filter.endTime
+    task_start_time:
+      $var: $.input.filter.startTime
+    created_time:
+      $var: $.input.filter.createdTime
+    taskOwner:
+      id:
+        $var: $.input.filter.ownerId
+    owner_id:
+      $var: $.input.filter.ownerId
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

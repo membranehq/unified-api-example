@@ -1,0 +1,52 @@
+id: 68a8a405c172bc720667828c
+name: Receive Updated Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Tasks-events
+revision: a0ff340c-42e9-4159-b988-e06b3618b430
+universalFlowId: 68a8a400c172bc7206677c8a
+integrationId: 68a8a3ebc172bc7206676e68
+universalFlowRevision: 136b407b-3c76-416b-a84b-d8a2f3fa4489
+nodes:
+  Tasks-updated-trigger:
+    type: data-record-updated-trigger
+    name: Task Updated Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e68
+  name: Trello Connector
+  key: trello
+  uuid: 98d65928-fadb-417a-b5d2-dc0470c74f29
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.977Z'
+  updatedAt: '2025-08-22T17:08:00.166Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/trello-connector/logo.png
+  connectorId: 64ff82d2f51a74915b9840da
+  connectorVersion: 1.1.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 257
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth1

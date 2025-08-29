@@ -1,0 +1,50 @@
+id: 68a8a3f6c172bc720667750a
+name: Delete Task
+key: delete-Tasks
+uuid: c3ed3a49-2947-479f-b0f6-07880043db91
+state: READY
+errors: []
+revision: ec505714-dad8-4b1d-99ef-1a4ebceba031
+createdAt: '2025-08-22T17:08:11.671Z'
+updatedAt: '2025-08-22T17:08:11.671Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a8a3f5c172bc72066772bd
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: e34f473f-8f4b-4ba4-bd37-caef889a0473
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

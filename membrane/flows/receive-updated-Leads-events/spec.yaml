@@ -1,0 +1,25 @@
+id: 68a8a342bc4406f3f0dc4b79
+name: Receive Updated Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Leads-events
+revision: c68779a0-a77f-4c83-8bd9-c989041a392d
+nodes:
+  Leads-updated-trigger:
+    type: data-record-updated-trigger
+    name: Lead Updated Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping:
+        key: leads
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false

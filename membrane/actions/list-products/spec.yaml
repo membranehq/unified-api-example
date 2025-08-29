@@ -1,0 +1,31 @@
+id: 68a8a3982e84328ca528f759
+name: List Products
+key: list-products
+uuid: ec8eba46-f3c0-4fc4-9a0f-b2b72e7249d6
+state: READY
+errors: []
+revision: 56fa3db7-c684-4379-ba90-c0e05fb01225
+createdAt: '2025-08-22T17:06:33.035Z'
+updatedAt: '2025-08-22T17:06:33.035Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

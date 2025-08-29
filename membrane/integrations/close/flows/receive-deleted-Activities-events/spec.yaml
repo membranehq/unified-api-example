@@ -1,0 +1,50 @@
+id: 68a8a250285c02f4152f0824
+name: Receive Deleted Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Activities-events
+revision: 6515c2a9-29dc-4549-8bd5-9e130a55724e
+universalFlowId: 68a8a24d285c02f4152f05ad
+integrationId: 689f2bf000905568ab2f66fb
+universalFlowRevision: a45e705d-4ca4-4dad-9939-b97b0bf0eec0
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Activity Deleted Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

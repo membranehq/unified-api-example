@@ -1,0 +1,56 @@
+id: 68a8a2a7bdd4149f15477769
+name: Search Invoices
+key: search-invoices
+uuid: 7a31d949-2e0a-4512-b9da-d26b97848e51
+state: READY
+errors: []
+revision: 2481d040-5ca5-46c4-9f72-d75a57b9fae3
+createdAt: '2025-08-22T17:02:33.448Z'
+updatedAt: '2025-08-22T17:02:33.448Z'
+isDeactivated: false
+integrationId: 68a839f321039ff70f89b5bd
+parentId: 68a8a2a7bdd4149f1547762a
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: d07205bc-5196-4060-ad41-4f8af642ac2a
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

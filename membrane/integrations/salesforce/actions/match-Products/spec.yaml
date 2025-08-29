@@ -1,0 +1,71 @@
+id: 68a8a3992e84328ca528f927
+name: Match Product
+key: match-Products
+uuid: 9fe448af-7311-49b8-b3bc-4170c4c3a75f
+state: READY
+errors: []
+revision: 3106b30c-d53b-48e0-95b7-92dbb28bfb3f
+createdAt: '2025-08-22T17:06:37.174Z'
+updatedAt: '2025-08-22T17:06:37.174Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a3982e84328ca528f75f
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      Name:
+        $var: $.input.query.name
+      ProductCode:
+        $var: $.input.query.code
+      Description:
+        $var: $.input.query.description
+      IsActive:
+        $var: $.input.query.isActive
+      CreatedDate:
+        $var: $.input.query.createdTime
+      CreatedById:
+        $var: $.input.query.createdBy
+      LastModifiedDate:
+        $var: $.input.query.updatedTime
+      LastModifiedById:
+        $var: $.input.query.updatedBy
+      Type:
+        $var: $.input.query.type
+isCustomized: false
+parentRevision: ec5f4de5-3168-4c82-9ca4-8854d981e1e7
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

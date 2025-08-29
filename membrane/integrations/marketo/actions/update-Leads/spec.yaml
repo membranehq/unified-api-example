@@ -1,0 +1,58 @@
+id: 68a8a340bc4406f3f0dc4a3a
+name: Update Lead
+key: update-Leads
+uuid: 941b53bf-d8bb-4f43-8dcc-a8285fd30b4f
+state: READY
+errors: []
+revision: a253a51f-8b08-4a32-8298-8b6a81ae0af1
+createdAt: '2025-08-22T17:05:05.373Z'
+updatedAt: '2025-08-22T17:05:05.373Z'
+isDeactivated: false
+integrationId: 68a8a33dbc4406f3f0dc4891
+parentId: 68a8a340bc4406f3f0dc497a
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: leads
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: leads
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 2a31f0e9-0780-4b1a-a1a7-a54e13e2f130
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

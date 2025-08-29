@@ -1,0 +1,15 @@
+id: 68a8a3972e84328ca528f648
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+customized: false
+revision: 2fa8dfec-a42b-4e70-89e2-8958ab0664dc
+dataSourceKey: products
+dataSourceId: 68a8a3962e84328ca528f576
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

@@ -1,0 +1,50 @@
+id: 68a8a39e2e84328ca528ff37
+name: Receive Deleted Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Products-events
+revision: 0598900b-4cd6-4002-bd8c-6f66d46214a3
+universalFlowId: 68a8a39d2e84328ca528fcfa
+integrationId: 689f2bf000905568ab2f6710
+universalFlowRevision: 551751af-44bf-4c26-bc30-68e6b5329766
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Products-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Product Deleted Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6710
+  name: Freshdesk
+  key: freshdesk
+  uuid: caed8cb4-7ac1-4d55-9ad5-099e6169befc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.373Z'
+  updatedAt: '2025-08-15T12:45:45.800Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshdesk-connector/logo.png
+  connectorId: 64b114f5d2605720d2134075
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 39
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

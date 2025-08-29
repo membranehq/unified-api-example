@@ -1,0 +1,25 @@
+id: 68a8a24d285c02f4152f05a4
+name: Receive Updated Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Activities-events
+revision: 04e7070c-ce61-471a-814e-3df8f830becf
+nodes:
+  Activities-updated-trigger:
+    type: data-record-updated-trigger
+    name: Activity Updated Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false

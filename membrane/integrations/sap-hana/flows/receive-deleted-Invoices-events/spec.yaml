@@ -1,0 +1,50 @@
+id: 68a8a2abbdd4149f15477c41
+name: Receive Deleted Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Invoices-events
+revision: d7935ff4-2c6c-4f5d-89fa-0012b1f4744f
+universalFlowId: 68a8a2aabdd4149f154779c1
+integrationId: 68a84efe7702482264c62c7f
+universalFlowRevision: 435c3d29-36bb-4de3-9128-02c3b11fa134
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Invoices-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Invoice Deleted Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

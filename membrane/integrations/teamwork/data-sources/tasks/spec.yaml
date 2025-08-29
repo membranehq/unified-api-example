@@ -1,0 +1,47 @@
+id: 68a8a3f1c172bc7206676f79
+name: Tasks
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a3ebc172bc7206676e57
+key: tasks
+revision: ab73839d-2ced-4615-bd7f-968eb3d1b94d
+integrationId: 68a8a3ebc172bc7206676e57
+customized: false
+universalDataSourceId: 68a8a3f1c172bc7206676f0a
+universalDataSourceRevision: 1e77689d-61bf-43e9-a49c-c66d27640de5
+collectionKey: tasks
+udm: tasks
+defaultPath: /data/tasks
+integration:
+  id: 68a8a3ebc172bc7206676e57
+  name: Teamwork
+  key: teamwork
+  uuid: b3857935-787f-4f73-9757-678dac7e8074
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:07:55.967Z'
+  updatedAt: '2025-08-22T17:08:00.079Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/teamwork/logo-cac242af-aa95-411c-9025-e94c1f711b96.png
+  connectorId: 645e0e37edb0b5ee6c3c856d
+  connectorVersion: 1.0.6
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 177
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

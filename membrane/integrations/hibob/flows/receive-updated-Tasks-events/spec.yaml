@@ -1,0 +1,53 @@
+id: 68a8a406c172bc72066782bf
+name: Receive Updated Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Tasks-events
+revision: 1651b12a-8ae4-485d-846a-1f23ec2e9f7d
+universalFlowId: 68a8a400c172bc7206677c8a
+integrationId: 68a8a3ebc172bc7206676e62
+universalFlowRevision: 136b407b-3c76-416b-a84b-d8a2f3fa4489
+nodes:
+  Tasks-updated-trigger:
+    type: data-record-updated-trigger
+    name: Task Updated Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e62
+  name: HiBob
+  key: hibob
+  uuid: 231b2d51-fa3d-469e-8d70-9a51dcb2db28
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.974Z'
+  updatedAt: '2025-08-22T17:08:00.085Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/hibob/asset-28f2023f-0917-4df5-8f35-dda50a82158f.png
+  connectorId: 65a59ef5af9ac1360fd6bad2
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 88
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: true
+  eventsCount: 7
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: client-credentials

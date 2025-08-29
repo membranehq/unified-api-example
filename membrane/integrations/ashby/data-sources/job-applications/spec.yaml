@@ -4,12 +4,14 @@ isDeactivated: false
 state: READY
 errors: []
 key: job-applications
-revision: 652b9764-3c76-46d4-8770-2a8b2636b8f6
+revision: b499d25d-f710-418d-8331-112efe3ccbae
 integrationId: 68a820cb9fc7b352ffc94593
-customized: false
+customized: true
 universalDataSourceId: 68a839b4f8d786c131d7f87f
 universalDataSourceRevision: 06f7c850-bfaa-44db-bac0-0e7d1a788d08
+collectionKey: applications
 udm: job-applications
+defaultPath: /data/applications
 integration:
   id: 68a820cb9fc7b352ffc94593
   name: Ashby

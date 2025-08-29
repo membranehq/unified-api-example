@@ -1,0 +1,24 @@
+id: 68a8a3982e84328ca528f75d
+name: Find Product By Id
+key: find-Products-by-id
+uuid: 66de6526-3258-48a3-9508-45428eda0a4c
+state: READY
+errors: []
+revision: 46946322-048c-4747-85ac-7dd07ba438ef
+createdAt: '2025-08-22T17:06:33.016Z'
+updatedAt: '2025-08-22T17:06:33.016Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+isCustomized: false

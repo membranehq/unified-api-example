@@ -1,0 +1,155 @@
+id: 68a8a2a7bdd4149f1547770d
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477511
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a2a6bdd4149f1547759c
+revision: 1595e876-1459-4bbe-acf1-6a50574c3f35
+createdAt: '2025-08-22T17:02:33.714Z'
+updatedAt: '2025-08-22T17:02:33.714Z'
+isDeactivated: false
+integrationId: 68a8a2a4bdd4149f154774d4
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    TotalAmt:
+      $var: $.input.filter.totalAmount
+    DueDate:
+      $var: $.input.filter.dueDate
+    DocNumber:
+      $var: $.input.filter.number
+    CustomerMemo:
+      value:
+        $var: $.input.filter.memo
+    Balance:
+      $var: $.input.filter.balance
+    CustomerRef:
+      value:
+        $var: $.input.filter.customerId
+    TxnTaxDetail:
+      TotalTax:
+        $var: $.input.filter.totalTax
+    MetaData:
+      CreateTime:
+        $var: $.input.filter.createdTime
+      LastUpdatedTime:
+        $var: $.input.filter.updatedTime
+    Id:
+      $var: $.input.filter.id
+    Line:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          Description:
+            $var: $.item.description
+          Amount:
+            $var: $.item.totalAmount
+          DetailType:
+            $var: $.item.type
+          SalesItemLineDetail:
+            Qty:
+              $case:
+                cases:
+                  - filter:
+                      $eval:
+                        $var: $.item.type
+                      is: SalesItemLineDetail
+                    value:
+                      $var: $.item.quantity
+            UnitPrice:
+              $case:
+                cases:
+                  - filter:
+                      $eval:
+                        $var: $.item.type
+                      is: SalesItemLineDetail
+                    value:
+                      $var: $.item.unitPrice
+            TaxAmount:
+              $case:
+                cases:
+                  - filter:
+                      $eval:
+                        $var: $.item.type
+                      is: SalesItemLineDetail
+                    value:
+                      $var: $.item.taxAmount
+          GroupLineDetail:
+            Quantity:
+              $case:
+                cases:
+                  - filter:
+                      $eval:
+                        $var: $.item.type
+                      is: GroupLine
+                    value:
+                      $var: $.item.quantity
+    CurrencyRef:
+      value:
+        $var: $.input.filter.currency
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

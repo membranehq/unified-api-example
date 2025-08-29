@@ -1,0 +1,52 @@
+id: 68a8a343bc4406f3f0dc4c89
+name: Receive Updated Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Leads-events
+revision: 83b472bf-7792-4e65-b319-292db11eaa82
+universalFlowId: 68a8a342bc4406f3f0dc4b79
+integrationId: 68a8a33dbc4406f3f0dc4891
+universalFlowRevision: c68779a0-a77f-4c83-8bd9-c989041a392d
+nodes:
+  Leads-updated-trigger:
+    type: data-record-updated-trigger
+    name: Lead Updated Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping:
+        key: leads
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

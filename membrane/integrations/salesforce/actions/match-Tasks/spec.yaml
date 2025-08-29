@@ -1,0 +1,77 @@
+id: 68a8a3f6c172bc72066775a3
+name: Match Task
+key: match-Tasks
+uuid: a37d1d28-cd89-4306-9e4f-9703b579f6e9
+state: READY
+errors: []
+revision: c0e09b72-11d6-4162-8697-ed40b450fe6e
+createdAt: '2025-08-22T17:08:15.765Z'
+updatedAt: '2025-08-22T17:08:15.765Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a3f5c172bc72066772c5
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      Subject:
+        $var: $.input.query.subject
+      ActivityDate:
+        $var: $.input.query.dueTime
+      Status:
+        $var: $.input.query.status
+      Priority:
+        $var: $.input.query.priority
+      OwnerId:
+        $var: $.input.query.ownerId
+      AccountId:
+        $var: $.input.query.companyId
+      CreatedDate:
+        $var: $.input.query.createdTime
+      CreatedById:
+        $var: $.input.query.createdBy
+      LastModifiedDate:
+        $var: $.input.query.updatedTime
+      LastModifiedById:
+        $var: $.input.query.updatedBy
+      TaskSubtype:
+        $var: $.input.query.type
+      CompletedDateTime:
+        $var: $.input.query.endTime
+isCustomized: false
+parentRevision: 9343a831-2460-479d-8e76-1b6f08789ad1
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

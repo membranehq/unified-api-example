@@ -1,0 +1,54 @@
+id: 68a8a3f6c172bc7206677633
+name: Create Task
+key: create-Tasks
+uuid: 32bad3d7-5397-46e8-8c3f-b774a4edf057
+state: READY
+errors: []
+revision: 4fed58a3-32bc-4cf8-bf2f-a7a449ba6a0c
+createdAt: '2025-08-22T17:08:13.462Z'
+updatedAt: '2025-08-22T17:08:13.462Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e46
+parentId: 68a8a3f5c172bc72066772c9
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: tasks
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 5db6e2a2-0c2d-417b-96b2-01b0797eb8e1
+integration:
+  id: 68a8a3ebc172bc7206676e46
+  name: Github
+  key: github
+  uuid: 6efb002f-0555-4734-8b82-f1d83b910c82
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.951Z'
+  updatedAt: '2025-08-22T17:08:00.091Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/github/logo.png
+  connectorId: 6446a060badd839bce1ac1ac
+  connectorVersion: 1.1.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 889
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

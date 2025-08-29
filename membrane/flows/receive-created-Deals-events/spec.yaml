@@ -1,0 +1,24 @@
+id: 68a8a2ef8508b934a6351310
+name: Receive Created Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Deals-events
+revision: 0df4f7c3-2e8c-4b8f-bb29-5270aed50502
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Deals-created-trigger:
+    type: data-record-created-trigger
+    name: Deal Created Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

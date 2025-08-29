@@ -1,0 +1,52 @@
+id: 68a8a251285c02f4152f0912
+name: Receive Updated Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Activities-events
+revision: 246e06cd-70d1-4f0a-a45e-6a5e12599fa0
+universalFlowId: 68a8a24d285c02f4152f05a4
+integrationId: 689f2bf000905568ab2f66f3
+universalFlowRevision: 04e7070c-ce61-471a-814e-3df8f830becf
+nodes:
+  Activities-updated-trigger:
+    type: data-record-updated-trigger
+    name: Activity Updated Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66f3
+  name: Copper
+  key: copper
+  uuid: 3269dd1e-4639-4dfb-a7f1-3c8d7ee97e46
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.270Z'
+  updatedAt: '2025-08-15T12:45:46.801Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/copper/logo.png
+  connectorId: 652701bc70089fac488f6230
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 77
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

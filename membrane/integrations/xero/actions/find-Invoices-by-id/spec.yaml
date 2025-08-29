@@ -1,0 +1,51 @@
+id: 68a8a2a8bdd4149f154777cf
+name: Find Invoice By Id
+key: find-Invoices-by-id
+uuid: 1bb3bbc9-36c4-4dce-99e1-3aa5b1eeb321
+state: READY
+errors: []
+revision: 4bd88d25-cbdd-45af-9e0b-78a45fa5cbe3
+createdAt: '2025-08-22T17:02:33.583Z'
+updatedAt: '2025-08-22T17:02:33.583Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66da
+parentId: 68a8a2a7bdd4149f15477622
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 796f7092-ba32-4eb1-a7dc-887457e0753c
+integration:
+  id: 689f2bf000905568ab2f66da
+  name: Xero
+  key: xero
+  uuid: 9e918761-cb93-47aa-b4d0-d05137be39c1
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.206Z'
+  updatedAt: '2025-08-15T12:45:48.699Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/xero-connector/logo.png
+  connectorId: 642c613b986ed1caad98172b
+  connectorVersion: 1.1.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 234
+  hasData: true
+  dataCollectionsCount: 17
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

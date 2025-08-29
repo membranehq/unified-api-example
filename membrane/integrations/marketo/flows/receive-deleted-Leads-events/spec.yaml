@@ -1,0 +1,50 @@
+id: 68a8a343bc4406f3f0dc4c51
+name: Receive Deleted Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Leads-events
+revision: 486adbef-e7e4-4e2c-9bc3-07993bd3f3b5
+universalFlowId: 68a8a342bc4406f3f0dc4b75
+integrationId: 68a8a33dbc4406f3f0dc4891
+universalFlowRevision: 875be9dd-d404-476b-adc0-c2cfef4f23bf
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Leads-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Lead Deleted Trigger
+    config:
+      dataSource:
+        key: leads
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

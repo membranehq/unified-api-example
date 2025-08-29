@@ -1,0 +1,174 @@
+id: 68a8a2a6bdd4149f1547759c
+name: Invoices
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477511
+key: invoices
+customized: false
+revision: 27b331c8-45b5-4084-8c1b-0bda6939d231
+universalFieldMappingId: 68a8a2a6bdd4149f15477576
+universalFieldMappingRevision: 310fd1f1-a5fe-484c-9490-b63dc40e99b2
+integrationId: 68a8a2a4bdd4149f154774d4
+dataSourceKey: invoices
+dataSourceId: 68a8a2a5bdd4149f15477511
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  TotalAmt:
+    $var: $.totalAmount
+  Line:
+    $iterate:
+      source:
+        $var: $.lineItems
+      item:
+        Description:
+          $var: $.item.description
+        Amount:
+          $var: $.item.totalAmount
+        DetailType:
+          $var: $.item.type
+        SalesItemLineDetail:
+          Qty:
+            $case:
+              cases:
+                - filter:
+                    $eval:
+                      $var: $.item.type
+                    is: SalesItemLineDetail
+                  value:
+                    $var: $.item.quantity
+          UnitPrice:
+            $case:
+              cases:
+                - filter:
+                    $eval:
+                      $var: $.item.type
+                    is: SalesItemLineDetail
+                  value:
+                    $var: $.item.unitPrice
+          TaxAmount:
+            $case:
+              cases:
+                - filter:
+                    $eval:
+                      $var: $.item.type
+                    is: SalesItemLineDetail
+                  value:
+                    $var: $.item.taxAmount
+        GroupLineDetail:
+          Quantity:
+            $case:
+              cases:
+                - filter:
+                    $eval:
+                      $var: $.item.type
+                    is: GroupLine
+                  value:
+                    $var: $.item.quantity
+  DueDate:
+    $var: $.dueDate
+  DocNumber:
+    $var: $.number
+  CustomerMemo:
+    value:
+      $var: $.memo
+  Balance:
+    $var: $.balance
+  CustomerRef:
+    value:
+      $var: $.customerId
+  CurrencyRef:
+    value:
+      $var: $.currency
+  TxnTaxDetail:
+    TotalTax:
+      $var: $.totalTax
+importValue:
+  id:
+    $var: Id
+  number:
+    $var: DocNumber
+  memo:
+    $var: CustomerMemo.value
+  customerId:
+    $var: CustomerRef.value
+  currency:
+    $var: $.CurrencyRef.value
+  lineItems:
+    $iterate:
+      source:
+        $var: $.Line
+      item:
+        id:
+          $var: $.item.Id
+        description:
+          $var: $.item.Description
+        type:
+          $var: $.item.DetailType
+        totalAmount:
+          $var: $.item.Amount
+        quantity:
+          $firstNotEmpty:
+            - $var: $.item.SalesItemLineDetail.Qty
+            - $var: $.item.GroupLineDetail.Quantity
+        unitPrice:
+          $firstNotEmpty:
+            - $var: $.item.SalesItemLineDetail.UnitPrice
+        taxAmount:
+          $firstNotEmpty:
+            - $var: $.item.SalesItemLineDetail.TaxAmount
+  totalAmount:
+    $var: TotalAmt
+  totalTax:
+    $var: TxnTaxDetail.TotalTax
+  balance:
+    $var: Balance
+  issueDate:
+    $var: $.TxnDate
+  dueDate:
+    $var: DueDate
+  createdTime:
+    $var: MetaData.CreateTime
+  updatedTime:
+    $var: MetaData.LastUpdatedTime
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

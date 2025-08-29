@@ -6,7 +6,7 @@ state: READY
 errors: []
 revision: 2d737198-4022-4c8b-a872-069a11945609
 createdAt: '2025-08-22T09:34:45.988Z'
-updatedAt: '2025-08-22T09:34:45.988Z'
+updatedAt: '2025-08-28T15:29:11.109Z'
 isDeactivated: false
 integrationId: 68a820cb9fc7b352ffc94593
 parentId: 68a839b4f8d786c131d7f90a
@@ -30,6 +30,28 @@ config:
     $var: $.input.cursor
   unifiedFilter:
     $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    createdAt:
+      $var: $.input.filter.createdTime
+    updatedAt:
+      $var: $.input.filter.updatedTime
+    status:
+      $var: $.input.filter.status
+    candidate:
+      id:
+        $var: $.input.filter.candidateId
+    currentInterviewStage:
+      $var: $.input.filter.currentStage
+    source:
+      title:
+        $var: $.input.filter.source
+    job:
+      id:
+        $var: $.input.filter.jobId
+    creditedToUserId:
+      $var: $.input.filter.creditedTo
 isCustomized: false
 parentRevision: 1764531a-1bf6-43ba-a95c-4d672d38ea11
 integration:

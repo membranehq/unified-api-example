@@ -1,0 +1,53 @@
+id: 68a8a2abbdd4149f15477bf0
+name: Receive Updated Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Invoices-events
+revision: 8b5b9b9f-916d-4652-8d5b-5424b3272372
+universalFlowId: 68a8a2aabdd4149f154779bd
+integrationId: 68a84efe7702482264c62c83
+universalFlowRevision: 0ef6373f-ca5b-4eaa-806e-2b3dbd65eb95
+nodes:
+  Invoices-updated-trigger:
+    type: data-record-updated-trigger
+    name: Invoice Updated Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping:
+        key: invoices
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

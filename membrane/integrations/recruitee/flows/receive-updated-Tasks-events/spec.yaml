@@ -1,0 +1,52 @@
+id: 68a8a405c172bc7206678290
+name: Receive Updated Task Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Tasks-events
+revision: f1d16919-89f9-4851-a546-92e1aede239b
+universalFlowId: 68a8a400c172bc7206677c8a
+integrationId: 68a820cb9fc7b352ffc9459f
+universalFlowRevision: 136b407b-3c76-416b-a84b-d8a2f3fa4489
+nodes:
+  Tasks-updated-trigger:
+    type: data-record-updated-trigger
+    name: Task Updated Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc9459f
+  name: Recruitee
+  key: recruitee
+  uuid: 7dd6d57d-d6d0-476a-8950-9fc36446637a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.347Z'
+  updatedAt: '2025-08-22T07:48:28.540Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/recruitee/logo.png
+  connectorId: 6466785560f981f3ce696912
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 686
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

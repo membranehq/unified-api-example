@@ -1,0 +1,94 @@
+id: 68a8a3992e84328ca528f90c
+name: List Products
+key: list-products
+uuid: ec8eba46-f3c0-4fc4-9a0f-b2b72e7249d6
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a2a4bdd4149f154774d4
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f597
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3972e84328ca528f67c
+revision: 73d4553a-baed-4977-97a0-fbe7cf843b41
+createdAt: '2025-08-22T17:06:36.460Z'
+updatedAt: '2025-08-22T17:06:36.460Z'
+isDeactivated: false
+integrationId: 68a8a2a4bdd4149f154774d4
+parentId: 68a8a3982e84328ca528f759
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Id:
+      $var: $.input.filter.id
+    Name:
+      $var: $.input.filter.name
+    Type:
+      $var: $.input.filter.type
+    QtyOnHand:
+      $var: $.input.filter.weight
+    Active:
+      $var: $.input.filter.isActive
+    MetaData:
+      CreateTime:
+        $var: $.input.filter.createdTime
+      LastUpdatedTime:
+        $var: $.input.filter.updatedTime
+isCustomized: false
+parentRevision: 56fa3db7-c684-4379-ba90-c0e05fb01225
+integration:
+  id: 68a8a2a4bdd4149f154774d4
+  name: Quickbooks
+  key: quickbooks
+  uuid: 0fbda943-9f3e-4b48-9ab1-c6322c8519bd
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:02:28.445Z'
+  updatedAt: '2025-08-22T17:02:29.908Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/quickbooks-connector/logo.png
+  connectorId: 642b0c74c594903351a00870
+  connectorVersion: 1.1.13
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 86
+  hasData: true
+  dataCollectionsCount: 31
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

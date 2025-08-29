@@ -1,0 +1,116 @@
+id: 68a8a2a7bdd4149f1547771d
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: fe71a7a0-f7e3-4774-b068-472e973745e0
+createdAt: '2025-08-22T17:02:33.714Z'
+updatedAt: '2025-08-22T17:02:33.714Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c83
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    customer_id:
+      $var: $.input.filter.customerId
+    status:
+      $var: $.input.filter.status
+    date:
+      $var: $.input.filter.issueDate
+    due_date:
+      $var: $.input.filter.dueDate
+    exchange_rate:
+      $var: $.input.filter.exchangeRate
+    currency_code:
+      $var: $.input.filter.currency
+    total:
+      $var: $.input.filter.totalAmount
+    amount_due:
+      $var: $.input.filter.balance
+    paid_at:
+      $var: $.input.filter.paidOnDate
+    updated_at:
+      $var: $.input.filter.updatedTime
+    sub_total:
+      $var: $.input.filter.subTotal
+    tax:
+      $var: $.input.filter.totalTax
+    line_items:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          id:
+            $var: $.item.id
+          description:
+            $var: $.item.description
+          quantity:
+            $var: $.item.quantity
+          pricing_model:
+            $var: $.item.unitOfMeasure
+          unit_amount:
+            $var: $.item.unitPrice
+          customer_id:
+            $var: $.item.companyId
+          amount:
+            $var: $.item.totalAmount
+          tax_amount:
+            $var: $.item.taxAmount
+          is_taxed:
+            $var: $.item.taxable
+    linked_payments:
+      $iterate:
+        source:
+          $var: $.input.filter.payments
+        item:
+          txn_id:
+            $var: $.item
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

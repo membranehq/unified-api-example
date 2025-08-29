@@ -1,0 +1,38 @@
+id: 68a8a3962e84328ca528f59f
+name: Products
+isDeactivated: false
+state: READY
+errors: []
+key: products
+revision: 433fcc85-ae0f-4f1d-aee9-820159946a9a
+integrationId: 689f2bf000905568ab2f66f7
+customized: false
+universalDataSourceId: 68a8a3962e84328ca528f576
+universalDataSourceRevision: 67df05ec-e200-4816-ad21-ab5b6db254da
+collectionKey: items
+udm: products
+defaultPath: /data/items
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

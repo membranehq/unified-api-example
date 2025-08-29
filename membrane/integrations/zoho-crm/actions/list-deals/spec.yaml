@@ -1,0 +1,101 @@
+id: 68a8a2e78508b934a6350e7c
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: d0beb7ee-8d26-4778-8470-8ed4a3d05afe
+createdAt: '2025-08-22T17:03:42.468Z'
+updatedAt: '2025-08-22T17:03:42.468Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d8
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Deal_Name:
+      $var: $.input.filter.name
+    Description:
+      $var: $.input.filter.description
+    Amount:
+      $var: $.input.filter.amount
+    Closing_Date:
+      $var: $.input.filter.closeTime
+    Stage:
+      $var: $.input.filter.stage
+    Account_Name:
+      id:
+        $var: $.input.filter.companyId
+    Probability:
+      $var: $.input.filter.probability
+    Owner:
+      id:
+        $var: $.input.filter.ownerId
+    Contact_Name:
+      id:
+        $var: $.input.filter.contactId
+    Type:
+      $var: $.input.filter.type
+    Lead_Source:
+      $var: $.input.filter.source
+    Campaign_Source:
+      id:
+        $var: $.input.filter.campaignId
+    Created_Time:
+      $var: $.input.filter.createdTime
+    Created_By:
+      id:
+        $var: $.input.filter.createdBy
+    Modified_Time:
+      $var: $.input.filter.updatedTime
+    Modified_By:
+      id:
+        $var: $.input.filter.updatedBy
+    Last_Activity_Time:
+      $var: $.input.filter.lastActivityTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

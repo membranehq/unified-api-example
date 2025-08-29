@@ -1,0 +1,152 @@
+id: 68a8a245285c02f4152f00c4
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: c1f93d33-dc67-4c58-bee0-37e589df03f0
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 689f2bf000905568ab2f66d3
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f002e
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  createdby:
+    $var: $.createdBy
+  createdon:
+    $var: $.createdTime
+  description:
+    $var: $.description
+  modifiedby:
+    $var: $.updatedBy
+  modifiedon:
+    $var: $.updatedTime
+  ownerid:
+    $var: $.ownerId
+  regardingobjectid:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.dealId
+            isNotEmpty: true
+          value:
+            type: opportunities
+            id:
+              $var: $.dealId
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: accounts
+            id:
+              $var: $.companyId
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value:
+            type: contacts
+            id:
+              $var: $.contactId
+        - filter:
+            $eval:
+              $var: $.leadId
+            isNotEmpty: true
+          value:
+            type: leads
+            id:
+              $var: $.leadId
+  scheduledend:
+    $var: $.endTime
+  scheduledstart:
+    $var: $.startTime
+  subject:
+    $var: $.title
+importValue:
+  title:
+    $var: $.subject
+  description:
+    $var: $.description
+  startTime:
+    $var: $.scheduledstart
+  endTime:
+    $var: $.scheduledend
+  ownerId:
+    $var: $.ownerid
+  dealId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.regardingobjectid.type
+            is: opportunities
+          value:
+            $var: $.regardingobjectid.id
+  leadId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.regardingobjectid.type
+            is: leads
+          value:
+            $var: $.regardingobjectid.id
+  contactId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.regardingobjectid.type
+            is: contacts
+          value:
+            $var: $.regardingobjectid.id
+  companyId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.regardingobjectid.type
+            is: accounts
+          value:
+            $var: $.regardingobjectid.id
+  createdTime:
+    $var: $.createdon
+  updatedTime:
+    $var: $.modifiedon
+  createdBy:
+    $var: $.createdby
+  updatedBy:
+    $var: $.modifiedby
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

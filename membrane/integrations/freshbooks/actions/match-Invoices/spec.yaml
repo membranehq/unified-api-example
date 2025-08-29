@@ -1,0 +1,57 @@
+id: 68a8a2a7bdd4149f15477765
+name: Match Invoice
+key: match-Invoices
+uuid: d5351434-b90a-474d-8e04-25418d748018
+state: READY
+errors: []
+revision: 7f2394ae-0edf-46a0-b32b-6b8fb9ad120e
+createdAt: '2025-08-22T17:02:33.960Z'
+updatedAt: '2025-08-22T17:02:33.960Z'
+isDeactivated: false
+integrationId: 68a8a2a4bdd4149f154774d2
+parentId: 68a8a2a7bdd4149f15477624
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  lookup:
+    universalQuery:
+      $var: $.input.query
+    query:
+      invoice_number:
+        $var: $.input.query.number
+      customerid:
+        $var: $.input.query.customerId
+isCustomized: false
+parentRevision: 9d5c7e5f-68f2-41ae-bd48-04d86feaff44
+integration:
+  id: 68a8a2a4bdd4149f154774d2
+  name: Freshbooks
+  key: freshbooks
+  uuid: 629dfb93-251e-45d4-a5e5-fd4742bb0c49
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:02:28.444Z'
+  updatedAt: '2025-08-22T17:02:29.472Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshbooks-connector/logo.png
+  connectorId: 643e84dcbadd839bce47c653
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 161
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

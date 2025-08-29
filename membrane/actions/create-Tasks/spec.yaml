@@ -1,0 +1,27 @@
+id: 68a8a3f5c172bc72066772c9
+name: Create Task
+key: create-Tasks
+uuid: 32bad3d7-5397-46e8-8c3f-b774a4edf057
+state: READY
+errors: []
+revision: 5db6e2a2-0c2d-417b-96b2-01b0797eb8e1
+createdAt: '2025-08-22T17:08:06.068Z'
+updatedAt: '2025-08-22T17:08:06.068Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: tasks
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false

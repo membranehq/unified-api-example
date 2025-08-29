@@ -1,0 +1,50 @@
+id: 68a8a248285c02f4152f02a4
+name: Delete Activity
+key: delete-Activities
+uuid: b21187d1-7e03-4b4a-a21a-57f6851489c6
+state: READY
+errors: []
+revision: cd3fb4e4-3e69-4c3d-870e-c203c4646b26
+createdAt: '2025-08-22T17:00:59.359Z'
+updatedAt: '2025-08-22T17:00:59.359Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a8a247285c02f4152f0180
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: f9b96bec-290e-4b72-a921-085e9b2f4d2d
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,38 @@
+id: 68a8a2a5bdd4149f15477519
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+revision: e5b56933-0b28-4e20-bc83-0ef3c5c89dc8
+integrationId: 689f2bf000905568ab2f66f7
+customized: false
+universalDataSourceId: 68a8a2a5bdd4149f154774f8
+universalDataSourceRevision: 8ec6661f-20c4-4d79-8162-f0f658995cbe
+collectionKey: invoices
+udm: invoices
+defaultPath: /data/invoices
+integration:
+  id: 689f2bf000905568ab2f66f7
+  name: Zoho Books
+  key: zoho-books
+  uuid: baa80d1e-8112-40a2-965b-b76ceb5f6d2e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:48.700Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-books-connector/logo.png
+  connectorId: 6430516e986ed1caad7bf9f9
+  connectorVersion: 1.0.6
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 21
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

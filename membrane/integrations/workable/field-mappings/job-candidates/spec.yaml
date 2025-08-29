@@ -1,0 +1,96 @@
+id: 68a8a43e7f08dba516dd1231
+name: Job Candidates
+isDeactivated: false
+state: READY
+errors: []
+key: job-candidates
+customized: false
+revision: 917be1cb-5d54-41b4-a644-131b03f3ac45
+universalFieldMappingId: 68a8a43e7f08dba516dd121e
+universalFieldMappingRevision: 2b27b236-f726-4359-b7d0-8cff44ed92c3
+integrationId: 68a820cb9fc7b352ffc945a1
+dataSourceKey: job-candidates
+dataSourceId: 68a8a43e7f08dba516dd11de
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.fullName
+  firstname:
+    $var: $.firstName
+  lastname:
+    $var: $.lastName
+  email:
+    $var: $.primaryEmail
+  created_at:
+    $var: $.createdTime
+  updated_at:
+    $var: $.updatedTime
+  address:
+    $var: $.addresses[0].full
+  phone:
+    $var: $.primaryPhone
+importValue:
+  id:
+    $var: id
+  fullName:
+    $var: name
+  firstName:
+    $var: firstname
+  lastName:
+    $var: lastname
+  addresses:
+    - full:
+        $var: $.address
+  phones:
+    - value:
+        $var: phone
+  primaryEmail:
+    $var: email
+  primaryPhone:
+    $var: phone
+  emails:
+    - value:
+        $var: email
+  urls:
+    $iterate:
+      source:
+        $var: $.social_profiles
+      item:
+        value:
+          $var: $.item.url
+        type:
+          $var: $.item.type
+  createdTime:
+    $var: $.created_at
+  updatedTime:
+    $var: $.updated_at
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

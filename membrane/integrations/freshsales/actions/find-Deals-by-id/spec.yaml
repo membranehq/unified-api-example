@@ -1,0 +1,51 @@
+id: 68a8a2e78508b934a6350e5a
+name: Find Deal By Id
+key: find-Deals-by-id
+uuid: 29e71c13-f3aa-4f5c-a53c-025135ef5f0c
+state: READY
+errors: []
+revision: c0bd9ce6-fd3b-42a1-bf66-a21f373e2278
+createdAt: '2025-08-22T17:03:39.381Z'
+updatedAt: '2025-08-22T17:03:39.381Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a8a2e78508b934a6350ca0
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 5650a0cd-0aaa-4e1f-8ef7-9c22712971b9
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

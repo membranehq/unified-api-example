@@ -1,0 +1,22 @@
+id: 68a8a2aabdd4149f154779c1
+name: Receive Deleted Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Invoices-events
+revision: 435c3d29-36bb-4de3-9128-02c3b11fa134
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Invoices-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Invoice Deleted Trigger
+    config:
+      dataSource:
+        key: invoices
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

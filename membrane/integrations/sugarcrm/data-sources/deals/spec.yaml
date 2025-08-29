@@ -1,0 +1,38 @@
+id: 68a8a2e38508b934a6350a7d
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+revision: ae2ccd85-d37a-44a3-820f-9e7cc5bec56b
+integrationId: 689f2bf000905568ab2f66e8
+customized: false
+universalDataSourceId: 68a8a2e38508b934a6350a3e
+universalDataSourceRevision: d89eccb8-e2a0-4c4f-9f56-bdd5bd6c4f42
+collectionKey: opportunities
+udm: deals
+defaultPath: /data/opportunities
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

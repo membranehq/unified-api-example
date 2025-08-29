@@ -1,0 +1,52 @@
+id: 68a8a3992e84328ca528f8fc
+name: Find Product By Id
+key: find-Products-by-id
+uuid: 66de6526-3258-48a3-9508-45428eda0a4c
+state: READY
+errors: []
+revision: 77885d41-7b9d-4b74-9343-1596dfc3bb82
+createdAt: '2025-08-22T17:06:35.881Z'
+updatedAt: '2025-08-22T17:06:35.881Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c83
+parentId: 68a8a3982e84328ca528f75d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 46946322-048c-4747-85ac-7dd07ba438ef
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

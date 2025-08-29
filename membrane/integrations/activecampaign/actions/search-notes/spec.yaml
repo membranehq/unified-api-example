@@ -1,0 +1,55 @@
+id: 68a89b606f9be8241c5f56f5
+name: Search Notes
+key: search-notes
+uuid: 530e97ae-d211-4813-ab99-4a6fd9cfda92
+state: READY
+errors: []
+revision: 77f6cf79-7689-4dc9-ad7e-5fb2532b1d65
+createdAt: '2025-08-22T16:31:31.071Z'
+updatedAt: '2025-08-22T16:31:31.071Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66dc
+parentId: 68a89b606f9be8241c5f5580
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: ccc82884-870d-487d-a90f-2a20f5c2802a
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

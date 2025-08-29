@@ -1,0 +1,51 @@
+id: 68a8a39e2e84328ca528ff24
+name: Receive Deleted Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Products-events
+revision: f9675413-c834-4031-a5aa-7fe604e0e05a
+universalFlowId: 68a8a39d2e84328ca528fcfa
+integrationId: 68a84efe7702482264c62c89
+universalFlowRevision: 551751af-44bf-4c26-bc30-68e6b5329766
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Products-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Product Deleted Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a84efe7702482264c62c89
+  name: PayPal
+  key: paypal
+  uuid: 3f7450ae-67f4-4940-ac36-ffa248ea5acb
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.338Z'
+  updatedAt: '2025-08-22T11:05:38.391Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/paypal/asset-0f0851b5-76ed-412e-bfa9-d2618b5e6162.png
+  connectorId: 665ee151c57ef06438e068f2
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 109
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

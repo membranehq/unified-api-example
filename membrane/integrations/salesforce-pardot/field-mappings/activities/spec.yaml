@@ -1,0 +1,70 @@
+id: 68a8a245285c02f4152f00ca
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+customized: false
+revision: d0eb0ad4-1cd3-4325-88c9-1e15c21a74b5
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 689f2bf000905568ab2f66f9
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f0030
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  prospectId:
+    $var: $.contactId
+  type:
+    $var: $.type
+  value:
+    $var: $.title
+  activityDate:
+    $var: $.startTime
+  createdAt:
+    $var: $.createdTime
+  updatedAt:
+    $var: $.updatedTime
+importValue:
+  id:
+    $var: $.id
+  title:
+    $var: $.value
+  type:
+    $var: $.type
+  contactId:
+    $var: $.prospectId
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
+  startTime:
+    $var: $.activityDate
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

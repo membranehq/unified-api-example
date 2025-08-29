@@ -1,0 +1,106 @@
+id: 68a8a2e78508b934a6350e7a
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: 848afcbb-a896-42e7-a8c2-5db771b77597
+createdAt: '2025-08-22T17:03:41.981Z'
+updatedAt: '2025-08-22T17:03:41.981Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d3
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    description:
+      $var: $.input.filter.description
+    totalamount:
+      $var: $.input.filter.amount
+    ownerid:
+      $var: $.input.filter.ownerId
+    estimatedclosedate:
+      $var: $.input.filter.closeTime
+    closeprobability:
+      $var: $.input.filter.probability
+    campaignid:
+      $var: $.input.filter.campaignId
+    modifiedon:
+      $var: $.input.filter.updatedTime
+    modifiedby:
+      $var: $.input.filter.updatedBy
+    createdby:
+      $var: $.input.filter.createdBy
+    createdon:
+      $var: $.input.filter.createdTime
+    statuscode:
+      $map:
+        value:
+          $var: $.input.filter.status
+        mapping:
+          - from: open
+            to:
+              $record:
+                id: 1
+                name: In Progress
+          - from: won
+            to:
+              $record:
+                id: 3
+                name: Won
+          - from: lost
+            to:
+              $record:
+                id: 4
+                name: Canceled
+    salesstage:
+      $var: $.input.filter.stage
+    parentcontactid:
+      $var: $.input.filter.contactId
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

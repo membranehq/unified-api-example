@@ -1,0 +1,71 @@
+id: 68a8a3992e84328ca528f910
+name: Find Product By Id
+key: find-Products-by-id
+uuid: 66de6526-3258-48a3-9508-45428eda0a4c
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a84efe7702482264c62c85
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3962e84328ca528f5a1
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3972e84328ca528f686
+revision: 7636ac33-a3e3-4091-8480-4504819ed482
+createdAt: '2025-08-22T17:06:35.950Z'
+updatedAt: '2025-08-22T17:06:35.950Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c85
+parentId: 68a8a3982e84328ca528f75d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 46946322-048c-4747-85ac-7dd07ba438ef
+integration:
+  id: 68a84efe7702482264c62c85
+  name: Shopify
+  key: shopify
+  uuid: 605b2fc9-0180-4a14-9917-19fe62a96c32
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T11:05:34.336Z'
+  updatedAt: '2025-08-22T11:05:38.392Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/shopify/logo.png
+  connectorId: 6466785860f981f3ce696916
+  connectorVersion: 2.0.4
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

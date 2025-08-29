@@ -1,0 +1,40 @@
+id: 68a89b5e6f9be8241c5f54b4
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+customized: false
+revision: 964f3ae6-47f2-432e-ab68-08cbf7da1a57
+universalFieldMappingId: 68a89b5e6f9be8241c5f5487
+universalFieldMappingRevision: 1d47f9a4-b7c4-44d5-9428-199e5d1dfbc8
+integrationId: 689f2bf000905568ab2f66e2
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+integration:
+  id: 689f2bf000905568ab2f66e2
+  name: Keap
+  key: keap
+  uuid: 94cbaa45-3d92-461d-bcdd-ce2853d0493a
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.282Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/keap/logo.png
+  connectorId: 635bf847fb02f18af1f1c626
+  connectorVersion: 1.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 140
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

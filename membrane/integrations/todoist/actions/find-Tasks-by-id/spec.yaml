@@ -1,0 +1,51 @@
+id: 68a8a3f6c172bc720667755c
+name: Find Task By Id
+key: find-Tasks-by-id
+uuid: 59c3027e-85b1-45d8-bcbd-e51f8690ccf1
+state: READY
+errors: []
+revision: abb0178c-87fa-4bad-a6ae-a0deb02ccc51
+createdAt: '2025-08-22T17:08:12.568Z'
+updatedAt: '2025-08-22T17:08:12.568Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e48
+parentId: 68a8a3f5c172bc72066772c3
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 90dfa9d8-15c2-497e-8265-5a5fb03ad345
+integration:
+  id: 68a8a3ebc172bc7206676e48
+  name: Todoist
+  key: todoist
+  uuid: fc9354af-da42-46ee-b0b4-eee5c7b169f9
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.952Z'
+  updatedAt: '2025-08-22T17:08:00.161Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/todoist-connector/logo.png
+  connectorId: 64d0ea29d8707ad2f865acb7
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 5
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

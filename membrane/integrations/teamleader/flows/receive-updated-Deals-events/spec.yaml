@@ -1,0 +1,52 @@
+id: 68a8a2f28508b934a6351684
+name: Receive Updated Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Deals-events
+revision: 592591c0-9f72-4429-859e-2e76d4954829
+universalFlowId: 68a8a2ef8508b934a6351314
+integrationId: 689f2bf000905568ab2f66fd
+universalFlowRevision: 7589319e-d46c-4b20-b23a-ded7f48dbbe4
+nodes:
+  Deals-updated-trigger:
+    type: data-record-updated-trigger
+    name: Deal Updated Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66fd
+  name: Teamleader
+  key: teamleader
+  uuid: 594c0ecd-4f97-4acd-a297-acd88e1b31e2
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.274Z'
+  updatedAt: '2025-08-15T12:45:44.299Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/teamleader/logo.png
+  connectorId: 64417517badd839bce44c5df
+  connectorVersion: 0.1.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 225
+  hasData: true
+  dataCollectionsCount: 7
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

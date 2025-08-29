@@ -1,0 +1,156 @@
+id: 68a8a2a6bdd4149f154775ad
+name: Invoices
+isDeactivated: false
+state: READY
+errors: []
+key: invoices
+customized: false
+revision: e609a5cd-1997-4298-adcd-9a9166ec92e8
+universalFieldMappingId: 68a8a2a6bdd4149f15477576
+universalFieldMappingRevision: 310fd1f1-a5fe-484c-9490-b63dc40e99b2
+integrationId: 68a84efe7702482264c62c83
+dataSourceKey: invoices
+dataSourceId: 68a8a2a5bdd4149f15477526
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  customer_id:
+    $var: $.customerId
+  status:
+    $var: $.status
+  date:
+    $var: $.issueDate
+  due_date:
+    $var: $.dueDate
+  exchange_rate:
+    $var: $.exchangeRate
+  currency_code:
+    $var: $.currency
+  total:
+    $var: $.totalAmount
+  amount_due:
+    $var: $.balance
+  paid_at:
+    $var: $.paidOnDate
+  updated_at:
+    $var: $.updatedTime
+  sub_total:
+    $var: $.subTotal
+  tax:
+    $var: $.totalTax
+  line_items:
+    $iterate:
+      source:
+        $var: $.lineItems
+      item:
+        id:
+          $var: $.item.id
+        description:
+          $var: $.item.description
+        quantity:
+          $var: $.item.quantity
+        pricing_model:
+          $var: $.item.unitOfMeasure
+        unit_amount:
+          $var: $.item.unitPrice
+        customer_id:
+          $var: $.item.companyId
+        amount:
+          $var: $.item.totalAmount
+        tax_amount:
+          $var: $.item.taxAmount
+        is_taxed:
+          $var: $.item.taxable
+  linked_payments:
+    $iterate:
+      source:
+        $var: $.payments
+      item:
+        txn_id:
+          $var: $.item
+importValue:
+  id:
+    $var: id
+  status:
+    $var: status
+  customerId:
+    $var: customer_id
+  currency:
+    $var: currency_code
+  totalAmount:
+    $var: total
+  totalTax:
+    $var: tax
+  exchangeRate:
+    $var: exchange_rate
+  subTotal:
+    $var: sub_total
+  issueDate:
+    $var: date
+  dueDate:
+    $var: due_date
+  paidOnDate:
+    $var: paid_at
+  createdTime:
+    $var: generated_at
+  updatedTime:
+    $var: updated_at
+  lineItems:
+    $iterate:
+      source:
+        $var: $.line_items
+      item:
+        id:
+          $var: $.item.id
+        description:
+          $var: $.item.description
+        quantity:
+          $var: $.item.quantity
+        unitOfMeasure:
+          $var: $.item.pricing_model
+        unitPrice:
+          $var: $.item.unit_amount
+        companyId:
+          $var: $.item.customer_id
+        totalAmount:
+          $var: $.item.amount
+        taxAmount:
+          $var: $.item.tax_amount
+        taxable:
+          $var: $.item.is_taxed
+  payments:
+    $iterate:
+      source:
+        $var: $.linked_payments
+      item:
+        $var: $.item.txn_id
+integration:
+  id: 68a84efe7702482264c62c83
+  name: Chargebee
+  key: chargebee
+  uuid: 3f633d0a-9fc3-4236-a822-9939f2ebcdaf
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.335Z'
+  updatedAt: '2025-08-22T11:05:41.260Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/chargebee/logo-2bbf9cd2-a9f9-4d61-abe6-4c968e37adc6.png
+  connectorId: 65c12b99f5af85570011587b
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 336
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

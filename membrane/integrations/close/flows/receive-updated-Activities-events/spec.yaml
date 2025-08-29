@@ -1,0 +1,52 @@
+id: 68a8a251285c02f4152f0956
+name: Receive Updated Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Activities-events
+revision: 0eba50b1-bdce-4a47-905c-dda1f70375c1
+universalFlowId: 68a8a24d285c02f4152f05a4
+integrationId: 689f2bf000905568ab2f66fb
+universalFlowRevision: 04e7070c-ce61-471a-814e-3df8f830becf
+nodes:
+  Activities-updated-trigger:
+    type: data-record-updated-trigger
+    name: Activity Updated Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,55 @@
+id: 68a89b616f9be8241c5f5778
+name: Search Notes
+key: search-notes
+uuid: 530e97ae-d211-4813-ab99-4a6fd9cfda92
+state: READY
+errors: []
+revision: d56c47ec-0c01-4bbd-a2fd-fb61123b8c90
+createdAt: '2025-08-22T16:31:31.758Z'
+updatedAt: '2025-08-22T16:31:31.758Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e6
+parentId: 68a89b606f9be8241c5f5580
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: ccc82884-870d-487d-a90f-2a20f5c2802a
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

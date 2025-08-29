@@ -1,0 +1,22 @@
+id: 68a89b606f9be8241c5f5578
+name: Delete Note
+key: delete-Notes
+uuid: 08963599-874c-4c0b-b3ae-3f3b5f6cd4e4
+state: READY
+errors: []
+revision: 2c036121-0ec9-4aa1-a6e6-c7c1b27d8b2c
+createdAt: '2025-08-22T16:31:28.455Z'
+updatedAt: '2025-08-22T16:31:28.455Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+isCustomized: false

@@ -1,0 +1,120 @@
+id: 68a8a2e58508b934a6350bc2
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 1a959845-7043-4d7d-ac9d-dfe1be6f3d81
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66fb
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a85
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  lead_id:
+    $var: $.companyId
+  lead_name:
+    $var: $.name
+  status_label:
+    $var: $.stage
+  status_type:
+    $map:
+      value:
+        $var: $.status
+      mapping:
+        - from: open
+          to: active
+        - from: won
+          to: won
+        - from: lost
+          to: lost
+  value:
+    $var: $.amount
+  value_currency:
+    $var: $.currency
+  confidence:
+    $var: $.probability
+  note:
+    $var: $.description
+  user_id:
+    $var: $.ownerId
+  contact_id:
+    $var: $.contactId
+  created_by:
+    $var: $.createdBy
+  updated_by:
+    $var: $.updatedBy
+  date_updated:
+    $var: $.updatedTime
+  date_created:
+    $var: $.createdTime
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.lead_name
+  amount:
+    $var: $.value
+  currency:
+    $var: $.value_currency
+  companyId:
+    $var: $.lead_id
+  contactId:
+    $var: $.contact_id
+  description:
+    $var: $.note
+  stage:
+    $var: $.status_label
+  status:
+    $map:
+      value:
+        $var: $.status_type
+      mapping:
+        - from: active
+          to: open
+        - from: won
+          to: won
+        - from: lost
+          to: lost
+  ownerId:
+    $var: $.user_id
+  probability:
+    $var: $.confidence
+  createdTime:
+    $var: $.date_created
+  createdBy:
+    $var: $.created_by
+  updatedTime:
+    $var: $.date_updated
+  updatedBy:
+    $var: $.updated_by
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

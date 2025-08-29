@@ -1,0 +1,80 @@
+id: 68a8a2a7bdd4149f15477729
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: dee96874-278e-413f-a650-243249c72353
+createdAt: '2025-08-22T17:02:33.774Z'
+updatedAt: '2025-08-22T17:02:33.774Z'
+isDeactivated: false
+integrationId: 68a84efe7702482264c62c7f
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    BillingDocument:
+      $var: $.input.filter.id
+    TransactionCurrency:
+      $var: $.input.filter.currency
+    TotalNetAmount:
+      $var: $.input.filter.totalAmount
+    PaymentMethod:
+      $var: $.input.filter.paymentMethod
+    BillingDocumentDate:
+      $var: $.input.filter.issueDate
+    CreationDate:
+      $var: $.input.filter.createdTime
+    _Item:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          BillingDocumentItem:
+            $var: $.item.id
+    TotalTaxAmount:
+      $var: $.input.filter.totalTax
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 68a84efe7702482264c62c7f
+  name: SAP S4 HANA
+  key: sap-hana
+  uuid: 3c83574c-90aa-4d58-9a2d-2acaae76d6f8
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T11:05:34.333Z'
+  updatedAt: '2025-08-22T11:05:34.962Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sap-hana-connector/logo.png
+  connectorId: 64ff3219f51a74915b79b9a0
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 3
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

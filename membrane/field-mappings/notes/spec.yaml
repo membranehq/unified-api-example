@@ -1,0 +1,15 @@
+id: 68a89b5e6f9be8241c5f5487
+name: Notes
+isDeactivated: false
+state: READY
+errors: []
+key: notes
+customized: false
+revision: 1d47f9a4-b7c4-44d5-9428-199e5d1dfbc8
+dataSourceKey: notes
+dataSourceId: 68a89b5d6f9be8241c5f53f1
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

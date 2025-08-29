@@ -1,0 +1,52 @@
+id: 68a8a3a02e84328ca52901ce
+name: Receive Updated Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Products-events
+revision: 948bbe8b-2d4c-4daa-9d35-ce92c4310d3b
+universalFlowId: 68a8a39d2e84328ca528fcf2
+integrationId: 689f2bf000905568ab2f66d8
+universalFlowRevision: f9438364-77d7-45b3-8070-32138588f76f
+nodes:
+  Products-updated-trigger:
+    type: data-record-updated-trigger
+    name: Product Updated Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping:
+        key: products
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

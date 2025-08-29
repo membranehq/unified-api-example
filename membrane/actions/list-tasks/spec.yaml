@@ -1,0 +1,31 @@
+id: 68a8a3f5c172bc72066772bf
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 250959cc-2358-4c5e-9d15-c1155351adb6
+createdAt: '2025-08-22T17:08:06.059Z'
+updatedAt: '2025-08-22T17:08:06.059Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

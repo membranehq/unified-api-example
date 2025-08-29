@@ -1,0 +1,50 @@
+id: 68a8a340bc4406f3f0dc4a2a
+name: Delete Lead
+key: delete-Leads
+uuid: 6dcff1aa-c465-4386-8f09-e733ca918c71
+state: READY
+errors: []
+revision: 35b90c87-8acb-4de6-a912-7dd612c64093
+createdAt: '2025-08-22T17:05:05.091Z'
+updatedAt: '2025-08-22T17:05:05.091Z'
+isDeactivated: false
+integrationId: 68a8a33dbc4406f3f0dc4891
+parentId: 68a8a340bc4406f3f0dc497c
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: leads
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: dbb97cad-1d12-4c0b-a623-142de0a3e104
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

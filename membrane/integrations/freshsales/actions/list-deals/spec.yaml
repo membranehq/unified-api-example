@@ -1,0 +1,83 @@
+id: 68a8a2e78508b934a6350e80
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: b4699671-12bf-4151-9486-251beb80fd4e
+createdAt: '2025-08-22T17:03:41.868Z'
+updatedAt: '2025-08-22T17:03:41.868Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.name
+    amount:
+      $var: $.input.filter.amount
+    closed_date:
+      $var: $.input.filter.closeTime
+    probability:
+      $var: $.input.filter.probability
+    updated_at:
+      $var: $.input.filter.updatedTime
+    created_at:
+      $var: $.input.filter.createdTime
+    last_contacted_via_sales_activity:
+      $var: $.input.filter.lastActivityTime
+    sales_account_id:
+      $var: $.input.filter.companyId
+    owner_id:
+      $var: $.input.filter.ownerId
+    creater_id:
+      $var: $.input.filter.createdBy
+    updater_id:
+      $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

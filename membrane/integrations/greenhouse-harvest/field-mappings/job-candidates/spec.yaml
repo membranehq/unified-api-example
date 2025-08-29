@@ -1,0 +1,151 @@
+id: 68a8a43e7f08dba516dd1235
+name: Job Candidates
+isDeactivated: false
+state: READY
+errors: []
+key: job-candidates
+customized: false
+revision: 454e07ea-7711-4ede-90d2-5194ece18762
+universalFieldMappingId: 68a8a43e7f08dba516dd121e
+universalFieldMappingRevision: 2b27b236-f726-4359-b7d0-8cff44ed92c3
+integrationId: 68a820cb9fc7b352ffc945a9
+dataSourceKey: job-candidates
+dataSourceId: 68a8a43e7f08dba516dd11e7
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  first_name:
+    $var: $.firstName
+  last_name:
+    $var: $.lastName
+  company:
+    $var: $.company
+  title:
+    $var: $.title
+  application_ids:
+    $var: $.applicationIds
+  phone_numbers:
+    $iterate:
+      source:
+        $var: $.phones
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        value:
+          $var: $.item.full
+        type:
+          $var: $.item.type
+  email_addresses:
+    $iterate:
+      source:
+        $var: $.emails
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  website_addresses:
+    $iterate:
+      source:
+        $var: $.urls
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+importValue:
+  id:
+    $var: $.id
+  firstName:
+    $var: $.first_name
+  lastName:
+    $var: $.last_name
+  company:
+    $var: $.company
+  title:
+    $var: $.title
+  addresses:
+    $iterate:
+      source:
+        $var: $.addresses
+      item:
+        type:
+          $var: $.item.type
+        full:
+          $var: $.item.value
+  phones:
+    $iterate:
+      source:
+        $var: $.phone_numbers
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  primaryEmail:
+    $var: $.email_addresses[0].value
+  emails:
+    $iterate:
+      source:
+        $var: $.email_addresses
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  urls:
+    $iterate:
+      source:
+        $var: $.website_addresses
+      item:
+        value:
+          $var: $.item.value
+        type:
+          $var: $.item.type
+  applicationIds:
+    $var: application_ids
+  primaryPhone:
+    $var: $.phone_numbers[0].value
+  fullName:
+    $concat:
+      values:
+        - $var: $.first_name
+        - $var: $.last_name
+      delimiter: ' '
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

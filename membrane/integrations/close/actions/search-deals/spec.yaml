@@ -1,0 +1,55 @@
+id: 68a8a2e78508b934a6350dee
+name: Search Deals
+key: search-deals
+uuid: 826e5ede-3560-418b-9a0e-0df3c2fe1780
+state: READY
+errors: []
+revision: 2581949a-70b6-4e49-b7cf-8d8db64d139e
+createdAt: '2025-08-22T17:03:39.089Z'
+updatedAt: '2025-08-22T17:03:39.089Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8a2e78508b934a6350ca2
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: ae16bdf0-dcb3-4353-a4e8-8301c6198540
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,50 @@
+id: 68a8a4417f08dba516dd1599
+name: Receive Deleted Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Job Candidates-events
+revision: fa6a4e77-6e2d-4e53-a46a-f6e1430bcb13
+universalFlowId: 68a8a4407f08dba516dd14ad
+integrationId: 68a820cb9fc7b352ffc945a1
+universalFlowRevision: 39ee7d4c-761e-411b-a461-810bd58ad688
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Job Candidates-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Job Candidate Deleted Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,58 @@
+id: 68a8a3f6c172bc72066774b9
+name: Update Task
+key: update-Tasks
+uuid: b1fd45c6-d9fb-4d7f-a22b-0b35cc2cc23b
+state: READY
+errors: []
+revision: 7d18d07e-e02c-45cb-8488-21ac607de4ab
+createdAt: '2025-08-22T17:08:12.287Z'
+updatedAt: '2025-08-22T17:08:12.287Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e42
+parentId: 68a8a3f5c172bc72066772c7
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 3444338b-c96e-46c8-a7ae-0cd1ab6e3480
+integration:
+  id: 68a8a3ebc172bc7206676e42
+  name: Asana
+  key: asana
+  uuid: 9629267f-230d-4491-bc36-86ebfcac0337
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.899Z'
+  updatedAt: '2025-08-22T17:08:00.890Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/asana/logo.png
+  connectorId: 6435316c986ed1caad932104
+  connectorVersion: 1.0.13
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,51 @@
+id: 68a8a248285c02f4152f02cc
+name: Find Activity By Id
+key: find-Activities-by-id
+uuid: c4553451-6969-4b40-a8b6-bf4408408737
+state: READY
+errors: []
+revision: 643e90ec-4277-45bf-b402-ddf9b71612db
+createdAt: '2025-08-22T17:01:00.413Z'
+updatedAt: '2025-08-22T17:01:00.413Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e0
+parentId: 68a8a247285c02f4152f0188
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 7881aa63-73ac-4b89-bbf0-99d7f075ef13
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,72 @@
+id: 68a8a407c172bc7206678481
+name: Receive Created Task Events
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a3ebc172bc7206676e57
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3f1c172bc7206676f79
+  - message: Field Mapping Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3f2c172bc72066770e9
+key: receive-created-Tasks-events
+revision: 84aa2b39-abcd-4122-b9d8-75ce25b14204
+universalFlowId: 68a8a400c172bc7206677c8e
+integrationId: 68a8a3ebc172bc7206676e57
+universalFlowRevision: 99e9ab83-c3bc-4ff6-8c32-02f201db53e1
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Tasks-created-trigger:
+    type: data-record-created-trigger
+    name: Task Created Trigger
+    config:
+      dataSource:
+        key: tasks
+      fieldMapping:
+        key: tasks
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a3ebc172bc7206676e57
+  name: Teamwork
+  key: teamwork
+  uuid: b3857935-787f-4f73-9757-678dac7e8074
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:07:55.967Z'
+  updatedAt: '2025-08-22T17:08:00.079Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/teamwork/logo-cac242af-aa95-411c-9025-e94c1f711b96.png
+  connectorId: 645e0e37edb0b5ee6c3c856d
+  connectorVersion: 1.0.6
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 177
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

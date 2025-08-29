@@ -1,0 +1,58 @@
+id: 68a89b606f9be8241c5f56b0
+name: Update Note
+key: update-Notes
+uuid: 46e306b2-9fca-41b7-92ce-5d5cf20d2614
+state: READY
+errors: []
+revision: 3c5e0bd5-ab03-4548-8a9c-aec40bf236a7
+createdAt: '2025-08-22T16:31:30.951Z'
+updatedAt: '2025-08-22T16:31:30.951Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a89b606f9be8241c5f557a
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 84730d91-29a1-4bd9-9cab-b9da83c62e9f
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,94 @@
+id: 68a8a3f7c172bc72066776e4
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 328f4aa4-ee34-406e-b11e-364e1341e535
+createdAt: '2025-08-22T17:08:14.954Z'
+updatedAt: '2025-08-22T17:08:14.954Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e44
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    name:
+      $var: $.input.filter.subject
+    text_content:
+      $var: $.input.filter.content
+    date_created:
+      $var: $.input.filter.createdTime
+    date_updated:
+      $var: $.input.filter.updatedTime
+    creator: {}
+    assignees:
+      - $var: $.input.filter.assigneeId
+    priority:
+      $var: $.input.filter.priority
+    due_date:
+      $var: $.input.filter.dueTime
+    start_date:
+      $var: $.input.filter.startTime
+    time_estimate:
+      $var: $.input.filter.endTime
+    parent:
+      $var: $.input.filter.parentTaskId
+    id:
+      $var: $.input.filter.id
+    watchers:
+      $iterate:
+        source:
+          $var: $.input.filter.followerIds
+        item:
+          id:
+            $var: $.item
+    status:
+      status:
+        $var: $.input.filter.status
+    status_id:
+      $var: $.input.filter.status
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 68a8a3ebc172bc7206676e44
+  name: Clickup
+  key: clickup
+  uuid: af6fad15-3a7c-441e-89fe-90264262a5f5
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.950Z'
+  updatedAt: '2025-08-22T17:08:00.685Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/clickup/logo.png
+  connectorId: 64359f80986ed1caadafa638
+  connectorVersion: 1.2.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 11
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: true
+  eventsCount: 28
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

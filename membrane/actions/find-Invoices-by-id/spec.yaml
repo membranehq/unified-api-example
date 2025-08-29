@@ -1,0 +1,24 @@
+id: 68a8a2a7bdd4149f15477622
+name: Find Invoice By Id
+key: find-Invoices-by-id
+uuid: 1bb3bbc9-36c4-4dce-99e1-3aa5b1eeb321
+state: READY
+errors: []
+revision: 796f7092-ba32-4eb1-a7dc-887457e0753c
+createdAt: '2025-08-22T17:02:31.108Z'
+updatedAt: '2025-08-22T17:02:31.108Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+isCustomized: false

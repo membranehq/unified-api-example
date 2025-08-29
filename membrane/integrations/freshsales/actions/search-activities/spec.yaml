@@ -1,0 +1,55 @@
+id: 68a8a248285c02f4152f02fd
+name: Search Activities
+key: search-activities
+uuid: 4f9e0c1d-2e83-4b22-ab7e-ddf71c0a80cf
+state: READY
+errors: []
+revision: 663280a9-2b56-44a2-8ef6-70b5dae6b245
+createdAt: '2025-08-22T17:01:00.053Z'
+updatedAt: '2025-08-22T17:01:00.053Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ec
+parentId: 68a8a247285c02f4152f018a
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 1e57ee4d-82f4-424b-9b39-e9c9fdb6230a
+integration:
+  id: 689f2bf000905568ab2f66ec
+  name: Freshsales
+  key: freshsales
+  uuid: cf44c7c7-1462-4f05-8dd7-8c89e2b22650
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.265Z'
+  updatedAt: '2025-08-15T12:45:48.892Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshsales-connector/logo.png
+  connectorId: 633af6ef361690ab46d8ed4d
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 22
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

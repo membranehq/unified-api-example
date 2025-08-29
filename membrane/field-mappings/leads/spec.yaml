@@ -1,0 +1,15 @@
+id: 68a8a33fbc4406f3f0dc4902
+name: Leads
+isDeactivated: false
+state: READY
+errors: []
+key: leads
+customized: false
+revision: 9ba71530-33d6-4c8f-9252-163da2de1903
+dataSourceKey: leads
+dataSourceId: 68a8a33fbc4406f3f0dc48bc
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

@@ -1,0 +1,22 @@
+id: 68a8a39d2e84328ca528fcfa
+name: Receive Deleted Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Products-events
+revision: 551751af-44bf-4c26-bc30-68e6b5329766
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Products-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Product Deleted Trigger
+    config:
+      dataSource:
+        key: products
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

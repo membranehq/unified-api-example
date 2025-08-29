@@ -1,0 +1,77 @@
+id: 68a8a2e48508b934a6350b83
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 7c0fe517-fce9-4008-b230-5537ea670a30
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66d5
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a6f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.name
+  description:
+    $var: $.description
+  expected_value:
+    $var: $.amount
+  probability:
+    $var: $.probability
+  close_date:
+    $var: $.closeTime
+  created_time:
+    $var: $.createdTime
+  owner:
+    id:
+      $var: $.ownerId
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: $.name
+  amount:
+    $var: $.expected_value
+  description:
+    $var: $.description
+  ownerId:
+    $var: $.owner.id
+  closeTime:
+    $var: $.close_date
+  probability:
+    $var: $.probability
+  createdTime:
+    $var: $.created_time
+  updatedTime:
+    $var: $.updated_time
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

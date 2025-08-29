@@ -1,0 +1,31 @@
+id: 68a8a340bc4406f3f0dc497a
+name: Update Lead
+key: update-Leads
+uuid: 941b53bf-d8bb-4f43-8dcc-a8285fd30b4f
+state: READY
+errors: []
+revision: 2a31f0e9-0780-4b1a-a1a7-a54e13e2f130
+createdAt: '2025-08-22T17:05:04.346Z'
+updatedAt: '2025-08-22T17:05:04.346Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: leads
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: leads
+    input:
+      $var: $.input.fields
+isCustomized: false

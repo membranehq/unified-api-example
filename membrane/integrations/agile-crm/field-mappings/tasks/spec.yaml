@@ -1,0 +1,87 @@
+id: 68a8a3f2c172bc72066770d7
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: 91739115-18de-4465-a6d1-7ef893a22430
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 689f2bf000905568ab2f66d5
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc720667701f
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  type:
+    $var: $.type
+  due:
+    $var: $.dueTime
+  owner_id:
+    $var: $.ownerId
+  task_completed_time:
+    $var: $.endTime
+  task_start_time:
+    $var: $.startTime
+  created_time:
+    $var: $.createdTime
+  subject:
+    $var: $.subject
+  taskDescription:
+    $var: $.content
+  status:
+    $var: $.status
+  taskOwner:
+    id:
+      $var: $.ownerId
+importValue:
+  id:
+    $var: $.id
+  subject:
+    $var: $.subject
+  content:
+    $var: $.taskDescription
+  status:
+    $var: $.status
+  type:
+    $var: $.type
+  dueTime:
+    $var: $.due
+  startTime:
+    $var: $.task_start_time
+  endTime:
+    $var: $.task_completed_time
+  createdTime:
+    $var: $.created_time
+  ownerId:
+    $var: $.owner_id
+  assigneeId:
+    $var: $.owner_id
+integration:
+  id: 689f2bf000905568ab2f66d5
+  name: Agile CRM
+  key: agile-crm
+  uuid: c1b2baf1-d571-41d1-9869-501944d49400
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.204Z'
+  updatedAt: '2025-08-15T12:45:44.564Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/agile-crm/logo.png
+  connectorId: 64416311badd839bce41fdeb
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 15
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

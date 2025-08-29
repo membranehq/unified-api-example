@@ -1,0 +1,38 @@
+id: 68a8a33fbc4406f3f0dc48dc
+name: Leads
+isDeactivated: false
+state: READY
+errors: []
+key: leads
+revision: dce89da9-1512-4fb8-b2ad-b126838ca2ee
+integrationId: 68a8a33dbc4406f3f0dc4891
+customized: false
+universalDataSourceId: 68a8a33fbc4406f3f0dc48bc
+universalDataSourceRevision: 9a8faad4-ba57-4b10-9c6b-8657e9fe7048
+collectionKey: leads
+udm: leads
+defaultPath: /data/leads
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

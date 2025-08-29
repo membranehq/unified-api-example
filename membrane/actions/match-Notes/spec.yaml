@@ -1,0 +1,25 @@
+id: 68a89b606f9be8241c5f557e
+name: Match Note
+key: match-Notes
+uuid: 6a13a332-e9a5-40ba-896d-7a7648e66038
+state: READY
+errors: []
+revision: b543cb84-5dfd-4597-9385-1cc8569605af
+createdAt: '2025-08-22T16:31:28.459Z'
+updatedAt: '2025-08-22T16:31:28.459Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

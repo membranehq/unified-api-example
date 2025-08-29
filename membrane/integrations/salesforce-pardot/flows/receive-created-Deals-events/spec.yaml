@@ -1,0 +1,51 @@
+id: 68a8a2f38508b934a63516f0
+name: Receive Created Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Deals-events
+revision: 95b4c3d5-6aae-4a1a-a468-ef863f99eb5c
+universalFlowId: 68a8a2ef8508b934a6351310
+integrationId: 689f2bf000905568ab2f66f9
+universalFlowRevision: 0df4f7c3-2e8c-4b8f-bb29-5270aed50502
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Deals-created-trigger:
+    type: data-record-created-trigger
+    name: Deal Created Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66f9
+  name: SalesForce Pardot
+  key: salesforce-pardot
+  uuid: f7ba2530-f704-44af-bf32-f2b8a3995d82
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.272Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-pardot/logo.png
+  connectorId: 63a3723bad7bd4eb80db61e0
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 84
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

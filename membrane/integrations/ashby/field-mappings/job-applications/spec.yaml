@@ -16,6 +16,49 @@ defaultImportValue:
   $var: $
 defaultExportValue:
   $var: $
+exportValue:
+  id:
+    $var: $.id
+  createdAt:
+    $var: $.createdTime
+  updatedAt:
+    $var: $.updatedTime
+  status:
+    $var: $.status
+  candidate:
+    id:
+      $var: $.candidateId
+  currentInterviewStage:
+    $var: $.currentStage
+  source:
+    title:
+      $var: $.source
+  job:
+    id:
+      $var: $.jobId
+  creditedToUserId:
+    $var: $.creditedTo
+importValue:
+  id:
+    $var: $.id
+  candidateId:
+    $var: $.candidate.id
+  jobId:
+    $var: $.job.id
+  appliedAt:
+    $var: $.createdAt
+  status:
+    $var: $.status
+  currentStage:
+    $var: $.currentInterviewStage
+  source:
+    $var: $.source.title
+  rejectionReason:
+    $var: $.archiveReason.text
+  createdTime:
+    $var: $.createdAt
+  updatedTime:
+    $var: $.updatedAt
 integration:
   id: 68a820cb9fc7b352ffc94593
   name: Ashby

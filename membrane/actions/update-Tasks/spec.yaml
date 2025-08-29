@@ -1,0 +1,31 @@
+id: 68a8a3f5c172bc72066772c7
+name: Update Task
+key: update-Tasks
+uuid: b1fd45c6-d9fb-4d7f-a22b-0b35cc2cc23b
+state: READY
+errors: []
+revision: 3444338b-c96e-46c8-a7ae-0cd1ab6e3480
+createdAt: '2025-08-22T17:08:06.066Z'
+updatedAt: '2025-08-22T17:08:06.066Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false

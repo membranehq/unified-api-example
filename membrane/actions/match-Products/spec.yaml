@@ -1,0 +1,25 @@
+id: 68a8a3982e84328ca528f75f
+name: Match Product
+key: match-Products
+uuid: 9fe448af-7311-49b8-b3bc-4170c4c3a75f
+state: READY
+errors: []
+revision: ec5f4de5-3168-4c82-9ca4-8854d981e1e7
+createdAt: '2025-08-22T17:06:33.020Z'
+updatedAt: '2025-08-22T17:06:33.020Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

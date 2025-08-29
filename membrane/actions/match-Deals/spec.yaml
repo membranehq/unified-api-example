@@ -1,0 +1,25 @@
+id: 68a8a2e78508b934a6350c9e
+name: Match Deal
+key: match-Deals
+uuid: dabc2a3f-24f9-438c-b4ad-10e084377651
+state: READY
+errors: []
+revision: 1bd7d941-136a-4741-97c2-0e4771420c4b
+createdAt: '2025-08-22T17:03:35.679Z'
+updatedAt: '2025-08-22T17:03:35.679Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false

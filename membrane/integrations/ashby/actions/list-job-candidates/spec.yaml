@@ -1,0 +1,98 @@
+id: 68a8a43f7f08dba516dd1346
+name: List Job Candidates
+key: list-job-candidates
+uuid: 0eed6722-e978-4b94-b970-4a126718919d
+state: READY
+errors: []
+revision: 976172af-92cb-4689-9bdd-5f8bd1a473c5
+createdAt: '2025-08-22T17:09:20.765Z'
+updatedAt: '2025-08-22T17:09:20.765Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc94593
+parentId: 68a8a43e7f08dba516dd128c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: job-candidates
+  dataSource:
+    key: job-candidates
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    name:
+      $var: $.input.filter.fullName
+    primaryEmailAddress:
+      value:
+        $var: $.input.filter.primaryEmail
+    emailAddresses:
+      $iterate:
+        source:
+          $var: $.input.filter.emails
+        item:
+          value:
+            $var: $.item.value
+          type:
+            $var: $.item.type
+    primaryPhoneNumber:
+      value:
+        $var: $.input.filter.primaryPhone
+    phoneNumbers:
+      $iterate:
+        source:
+          $var: $.input.filter.phones
+        item:
+          value:
+            $var: $.item.value
+          type:
+            $var: $.item.type
+    socialLinks:
+      url:
+        $var: $.input.filter.urls[0].value
+      type:
+        $var: $.input.filter.urls[0].type
+    position:
+      $var: $.input.filter.title
+    company:
+      $var: $.input.filter.company
+    applicationIds:
+      $var: $.input.filter.applicationIds
+isCustomized: false
+parentRevision: c7f2766f-3c04-4213-adcc-394b15a785cf
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

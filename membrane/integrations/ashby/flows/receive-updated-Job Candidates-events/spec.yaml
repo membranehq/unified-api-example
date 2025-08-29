@@ -1,0 +1,52 @@
+id: 68a8a4417f08dba516dd1637
+name: Receive Updated Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Job Candidates-events
+revision: 8b0f90fa-e374-415f-8f00-f4e80291c050
+universalFlowId: 68a8a4407f08dba516dd14b5
+integrationId: 68a820cb9fc7b352ffc94593
+universalFlowRevision: 2a7d7234-4bc0-4081-b80c-463a627a855f
+nodes:
+  Job Candidates-updated-trigger:
+    type: data-record-updated-trigger
+    name: Job Candidate Updated Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping:
+        key: job-candidates
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc94593
+  name: Ashby
+  key: ashby
+  uuid: c9250f30-010b-4aaa-9b63-256717a36fad
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.274Z'
+  updatedAt: '2025-08-22T07:48:29.445Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/ashby/logo.png
+  connectorId: 6466776ada8f15623c4dff79
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 87
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

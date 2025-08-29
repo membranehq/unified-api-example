@@ -1,0 +1,24 @@
+id: 68a8a2aabdd4149f154779b9
+name: Receive Created Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Invoices-events
+revision: b8177af0-fb79-412d-b575-96f7c8da8834
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Invoices-created-trigger:
+    type: data-record-created-trigger
+    name: Invoice Created Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping:
+        key: invoices
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

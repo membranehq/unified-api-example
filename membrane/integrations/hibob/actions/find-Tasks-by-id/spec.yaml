@@ -1,0 +1,52 @@
+id: 68a8a3f6c172bc7206677562
+name: Find Task By Id
+key: find-Tasks-by-id
+uuid: 59c3027e-85b1-45d8-bcbd-e51f8690ccf1
+state: READY
+errors: []
+revision: 8918f9a5-64fe-452b-aef5-6bd52192424a
+createdAt: '2025-08-22T17:08:13.675Z'
+updatedAt: '2025-08-22T17:08:13.675Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e62
+parentId: 68a8a3f5c172bc72066772c3
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 90dfa9d8-15c2-497e-8265-5a5fb03ad345
+integration:
+  id: 68a8a3ebc172bc7206676e62
+  name: HiBob
+  key: hibob
+  uuid: 231b2d51-fa3d-469e-8d70-9a51dcb2db28
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.974Z'
+  updatedAt: '2025-08-22T17:08:00.085Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/hibob/asset-28f2023f-0917-4df5-8f35-dda50a82158f.png
+  connectorId: 65a59ef5af9ac1360fd6bad2
+  connectorVersion: 1.1.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 88
+  hasData: true
+  dataCollectionsCount: 2
+  hasEvents: true
+  eventsCount: 7
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: client-credentials

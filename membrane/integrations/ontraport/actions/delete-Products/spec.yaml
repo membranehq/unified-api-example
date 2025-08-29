@@ -1,0 +1,51 @@
+id: 68a8a3992e84328ca528f8e3
+name: Delete Product
+key: delete-Products
+uuid: 6e0a4eaa-0b2b-4817-848b-6b04e8a45bb3
+state: READY
+errors: []
+revision: 48b46cef-357c-448a-b340-f3cadc850279
+createdAt: '2025-08-22T17:06:35.550Z'
+updatedAt: '2025-08-22T17:06:35.550Z'
+isDeactivated: false
+integrationId: 68a839f321039ff70f89b5c9
+parentId: 68a8a3982e84328ca528f756
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: fd99cf8b-f9dd-464b-bcd4-f04f38248a2a
+integration:
+  id: 68a839f321039ff70f89b5c9
+  name: Ontraport
+  key: ontraport
+  uuid: c0df51a8-557d-46c1-b2a3-ad27dcc044d6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.281Z'
+  updatedAt: '2025-08-22T09:35:49.709Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/ontraport/logo-56571cbe-9f4f-48e6-bc24-07634dbed2c0.png
+  connectorId: 65f45bb115058a59b3807b33
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

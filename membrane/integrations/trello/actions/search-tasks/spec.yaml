@@ -1,0 +1,55 @@
+id: 68a8a3f6c172bc7206677609
+name: Search Tasks
+key: search-tasks
+uuid: a4ede812-1fc9-46f3-8f46-404617670de4
+state: READY
+errors: []
+revision: 948d5608-ef60-40ed-9d88-a7e657d465dc
+createdAt: '2025-08-22T17:08:13.377Z'
+updatedAt: '2025-08-22T17:08:13.377Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e68
+parentId: 68a8a3f5c172bc72066772c1
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 7f75c598-8318-4b71-bdd7-5a8411cedfb5
+integration:
+  id: 68a8a3ebc172bc7206676e68
+  name: Trello Connector
+  key: trello
+  uuid: 98d65928-fadb-417a-b5d2-dc0470c74f29
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.977Z'
+  updatedAt: '2025-08-22T17:08:00.166Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/trello-connector/logo.png
+  connectorId: 64ff82d2f51a74915b9840da
+  connectorVersion: 1.1.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 257
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth1

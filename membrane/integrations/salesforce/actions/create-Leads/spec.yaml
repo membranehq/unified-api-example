@@ -1,0 +1,54 @@
+id: 68a8a340bc4406f3f0dc4a0e
+name: Create Lead
+key: create-Leads
+uuid: 42b03ed5-ee48-4467-bbc3-c363d263be95
+state: READY
+errors: []
+revision: b0851262-aa1b-42c3-9136-84f72fbd5d7e
+createdAt: '2025-08-22T17:05:05.179Z'
+updatedAt: '2025-08-22T17:05:05.179Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a340bc4406f3f0dc4978
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: leads
+  fieldMapping:
+    key: leads
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 942e17de-6bec-45d0-ac73-b27fad83bf92
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

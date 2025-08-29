@@ -1,0 +1,24 @@
+id: 68a8a43e7f08dba516dd128a
+name: Find Job Candidate By Id
+key: find-Job Candidates-by-id
+uuid: b354534a-37b7-460f-af2d-f0d88cd18fdb
+state: READY
+errors: []
+revision: 1d0c01d7-9c9d-491e-be09-3a22b62ec5b8
+createdAt: '2025-08-22T17:09:18.954Z'
+updatedAt: '2025-08-22T17:09:18.954Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: job-candidates
+  dataSource:
+    key: job-candidates
+  id:
+    $var: $.input.id
+isCustomized: false

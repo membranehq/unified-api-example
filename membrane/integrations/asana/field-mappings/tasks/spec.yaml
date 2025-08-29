@@ -1,0 +1,115 @@
+id: 68a8a3f2c172bc72066770c8
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: 3bc6ddfc-3bee-4d00-9c5a-78115cb8e55f
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 68a8a3ebc172bc7206676e42
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f4c
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  name:
+    $var: $.subject
+  resource_subtype:
+    $var: $.type
+  approval_status:
+    $var: $.status
+  completed:
+    $var: $.status
+  due_at:
+    $var: $.dueTime
+  notes:
+    $var: $.content
+  start_at:
+    $var: $.startTime
+  assignee:
+    gid:
+      $var: $.assigneeId
+  followers:
+    $iterate:
+      source:
+        $var: $.followerIds
+      item:
+        gid:
+          $var: $.item
+  parent_id:
+    $var: $.parentTaskId
+  projects:
+    - gid:
+        $var: $.projectId
+  tag_ids:
+    $var: $.tags
+importValue:
+  id:
+    $var: $.gid
+  subject:
+    $var: name
+  content:
+    $var: notes
+  status:
+    $var: approval_status
+  type:
+    $var: $.resource_subtype
+  dueTime:
+    $var: due_at
+  startTime:
+    $var: start_at
+  createdTime:
+    $var: created_at
+  updatedTime:
+    $var: modified_at
+  assigneeId:
+    $var: $.assignee.gid
+  followerIds:
+    $iterate:
+      source:
+        $var: $.followers
+      item:
+        $var: $.item.gid
+  tags:
+    $iterate:
+      source:
+        $var: $.tags
+      item:
+        $var: $.item.gid
+  projectId:
+    $var: $.projects[0].gid
+  parentTaskId:
+    $var: $.parent_id
+  endTime:
+    $var: start_at
+  ownerId:
+    $var: $.assignee.gid
+integration:
+  id: 68a8a3ebc172bc7206676e42
+  name: Asana
+  key: asana
+  uuid: 9629267f-230d-4491-bc36-86ebfcac0337
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.899Z'
+  updatedAt: '2025-08-22T17:08:00.890Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/asana/logo.png
+  connectorId: 6435316c986ed1caad932104
+  connectorVersion: 1.0.13
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 6
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

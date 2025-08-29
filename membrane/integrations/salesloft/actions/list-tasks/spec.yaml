@@ -1,0 +1,81 @@
+id: 68a8a3f6c172bc7206677580
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: ebd808a4-811c-460f-9c7f-9415f8304f92
+createdAt: '2025-08-22T17:08:14.067Z'
+updatedAt: '2025-08-22T17:08:14.067Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f6719
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    subject:
+      $var: $.input.filter.subject
+    description:
+      $var: $.input.filter.content
+    task_type:
+      $var: $.input.filter.type
+    due_date:
+      $var: $.input.filter.dueTime
+    current_state:
+      $var: $.input.filter.status
+    person_id:
+      $var: $.input.filter.contactId
+    user_id:
+      $var: $.input.filter.ownerId
+    created_by_user:
+      $var: $.input.filter.createdBy
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

@@ -1,0 +1,38 @@
+id: 68a8a245285c02f4152f0028
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+revision: b99b2f10-c0f6-4423-92d4-7d7664e3e581
+integrationId: 689f2bf000905568ab2f66e6
+customized: false
+universalDataSourceId: 68a8a245285c02f4152f000b
+universalDataSourceRevision: 0f7c631b-6fec-4613-91c6-7a26e7f91e00
+collectionKey: notes
+udm: activities
+defaultPath: /data/notes
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

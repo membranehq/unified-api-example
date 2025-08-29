@@ -1,0 +1,51 @@
+id: 68a8a250285c02f4152f07db
+name: Receive Created Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Activities-events
+revision: 8e0ac0e2-abbd-4c41-abb4-b136b0152c0d
+universalFlowId: 68a8a24d285c02f4152f05a8
+integrationId: 689f2bf000905568ab2f66e4
+universalFlowRevision: 46c52bf2-63d6-4e03-a736-522037b6bc7a
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-created-trigger:
+    type: data-record-created-trigger
+    name: Activity Created Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

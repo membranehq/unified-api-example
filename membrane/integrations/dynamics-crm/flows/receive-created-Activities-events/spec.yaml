@@ -1,0 +1,52 @@
+id: 68a8a251285c02f4152f08d3
+name: Receive Created Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Activities-events
+revision: 18336440-5c85-436f-8d4b-1f157cc815a1
+universalFlowId: 68a8a24d285c02f4152f05a8
+integrationId: 689f2bf000905568ab2f66d3
+universalFlowRevision: 46c52bf2-63d6-4e03-a736-522037b6bc7a
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-created-trigger:
+    type: data-record-created-trigger
+    name: Activity Created Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66d3
+  name: Microsoft Dynamics 365
+  key: dynamics-crm
+  uuid: 3ee942cc-2960-4dd0-94b4-932e499feb61
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.203Z'
+  updatedAt: '2025-08-15T12:45:48.675Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/dynamics-crm/asset-9eff3af5-d5f3-4634-b807-edd57ca5a56b.png
+  connectorId: 63151d261d39af2f69364172
+  connectorVersion: 1.1.18
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

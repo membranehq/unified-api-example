@@ -1,0 +1,87 @@
+id: 68a8a248285c02f4152f02ae
+name: List Activities
+key: list-activities
+uuid: bc602fb3-7c15-4ecf-abca-19ea4631bd42
+state: READY
+errors: []
+revision: d5483fca-f758-466c-8e78-f0bb4fed448b
+createdAt: '2025-08-22T17:01:01.170Z'
+updatedAt: '2025-08-22T17:01:01.170Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a247285c02f4152f0184
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    Subject:
+      $var: $.input.filter.title
+    Location:
+      $var: $.input.filter.location
+    ActivityDateTime:
+      $var: $.input.filter.startTime
+    DurationInMinutes:
+      $var: $.input.filter.durationSeconds
+    StartDateTime:
+      $var: $.input.filter.startTime
+    EndDateTime:
+      $var: $.input.filter.endTime
+    Description:
+      $var: $.input.filter.description
+    OwnerId:
+      $var: $.input.filter.ownerId
+    CreatedDate:
+      $var: $.input.filter.createdTime
+    CreatedById:
+      $var: $.input.filter.createdBy
+    LastModifiedDate:
+      $var: $.input.filter.updatedTime
+    LastModifiedById:
+      $var: $.input.filter.updatedBy
+    IsRecurrence:
+      $var: $.input.filter.isRecurrent
+    EventSubtype:
+      $var: $.input.filter.type
+isCustomized: false
+parentRevision: fd42077d-f98e-4355-aad6-fb7b01a47164
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

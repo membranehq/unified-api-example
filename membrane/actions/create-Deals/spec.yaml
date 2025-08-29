@@ -1,0 +1,27 @@
+id: 68a8a2e78508b934a6350c96
+name: Create Deal
+key: create-Deals
+uuid: 85392d6c-5e3d-45d7-9134-371be7b37ec7
+state: READY
+errors: []
+revision: 47064490-c49e-47f0-b8d1-4a9e50f43aae
+createdAt: '2025-08-22T17:03:35.672Z'
+updatedAt: '2025-08-22T17:03:35.672Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: deals
+  fieldMapping:
+    key: deals
+    input:
+      $var: $.input.fields
+isCustomized: false

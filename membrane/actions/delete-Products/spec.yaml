@@ -1,0 +1,22 @@
+id: 68a8a3982e84328ca528f756
+name: Delete Product
+key: delete-Products
+uuid: 6e0a4eaa-0b2b-4817-848b-6b04e8a45bb3
+state: READY
+errors: []
+revision: fd99cf8b-f9dd-464b-bcd4-f04f38248a2a
+createdAt: '2025-08-22T17:06:33.019Z'
+updatedAt: '2025-08-22T17:06:33.019Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: products
+  id:
+    $var: $.input.id
+isCustomized: false

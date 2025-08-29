@@ -1,0 +1,55 @@
+id: 68a8a2e78508b934a6350e02
+name: Search Deals
+key: search-deals
+uuid: 826e5ede-3560-418b-9a0e-0df3c2fe1780
+state: READY
+errors: []
+revision: 73311c3b-03d9-425c-b961-f492ed08e229
+createdAt: '2025-08-22T17:03:39.371Z'
+updatedAt: '2025-08-22T17:03:39.371Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a2e78508b934a6350ca2
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: ae16bdf0-dcb3-4353-a4e8-8301c6198540
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,51 @@
+id: 68a8a2abbdd4149f15477bf2
+name: Receive Created Invoice Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Invoices-events
+revision: fb5b48a7-a77d-4769-ae95-755c8b1677b7
+universalFlowId: 68a8a2aabdd4149f154779b9
+integrationId: 68a8a2a4bdd4149f154774d2
+universalFlowRevision: b8177af0-fb79-412d-b575-96f7c8da8834
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Invoices-created-trigger:
+    type: data-record-created-trigger
+    name: Invoice Created Trigger
+    config:
+      dataSource:
+        key: invoices
+      fieldMapping:
+        key: invoices
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a8a2a4bdd4149f154774d2
+  name: Freshbooks
+  key: freshbooks
+  uuid: 629dfb93-251e-45d4-a5e5-fd4742bb0c49
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:02:28.444Z'
+  updatedAt: '2025-08-22T17:02:29.472Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshbooks-connector/logo.png
+  connectorId: 643e84dcbadd839bce47c653
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 161
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

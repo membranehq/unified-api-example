@@ -1,0 +1,22 @@
+id: 68a8a24d285c02f4152f05ad
+name: Receive Deleted Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Activities-events
+revision: a45e705d-4ca4-4dad-9939-b97b0bf0eec0
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Activity Deleted Trigger
+    config:
+      dataSource:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

@@ -1,0 +1,106 @@
+id: 68a8a2e48508b934a6350b5e
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 9d93ed67-253b-40b7-92bf-3686998bf319
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f66e0
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a81
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  creator_user_id:
+    $var: $.createdBy
+  user_id:
+    $var: $.ownerId
+  person_id:
+    $var: $.contactId
+  org_id:
+    $var: $.companyId
+  stage_id:
+    $var: $.stageId
+  title:
+    $var: $.name
+  value:
+    $var: $.amount
+  currency:
+    $var: $.currency
+  add_time:
+    $var: $.createdTime
+  update_time:
+    $var: $.updatedTime
+  status:
+    $var: $.status
+  probability:
+    $var: $.probability
+  last_activity_date:
+    $var: $.lastActivityTime
+  close_time:
+    $var: $.closeTime
+  renewal_type:
+    $var: $.type
+importValue:
+  id:
+    $var: $.id
+  name:
+    $var: title
+  amount:
+    $var: value
+  currency:
+    $var: currency
+  companyId:
+    $var: org_id
+  contactId:
+    $var: person_id
+  probability:
+    $var: probability
+  stageId:
+    $var: $.stage_id
+  status:
+    $var: status
+  type:
+    $var: renewal_type
+  closeTime:
+    $var: close_time
+  ownerId:
+    $var: user_id
+  createdTime:
+    $var: add_time
+  createdBy:
+    $var: creator_user_id
+  updatedTime:
+    $var: update_time
+  lastActivityTime:
+    $var: last_activity_date
+integration:
+  id: 689f2bf000905568ab2f66e0
+  name: Pipedrive
+  key: pipedrive
+  uuid: 75fc6405-33b2-44a2-8b39-f3150f9255eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.210Z'
+  updatedAt: '2025-08-15T12:45:49.178Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/pipedrive-oauth/logo.png
+  connectorId: 644fe4efee0ebe0ca6e9746b
+  connectorVersion: 2.1.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 240
+  hasData: true
+  dataCollectionsCount: 27
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

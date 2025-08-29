@@ -1,0 +1,54 @@
+id: 68a8a3f6c172bc7206677645
+name: Create Task
+key: create-Tasks
+uuid: 32bad3d7-5397-46e8-8c3f-b774a4edf057
+state: READY
+errors: []
+revision: 13c8b5e2-b73d-4911-97b4-2222a34b5952
+createdAt: '2025-08-22T17:08:13.479Z'
+updatedAt: '2025-08-22T17:08:13.479Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e68
+parentId: 68a8a3f5c172bc72066772c9
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: tasks
+  fieldMapping:
+    key: tasks
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 5db6e2a2-0c2d-417b-96b2-01b0797eb8e1
+integration:
+  id: 68a8a3ebc172bc7206676e68
+  name: Trello Connector
+  key: trello
+  uuid: 98d65928-fadb-417a-b5d2-dc0470c74f29
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.977Z'
+  updatedAt: '2025-08-22T17:08:00.166Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/trello-connector/logo.png
+  connectorId: 64ff82d2f51a74915b9840da
+  connectorVersion: 1.1.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 257
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth1

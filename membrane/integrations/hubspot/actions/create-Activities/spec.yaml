@@ -1,0 +1,54 @@
+id: 68a8a248285c02f4152f0271
+name: Create Activity
+key: create-Activities
+uuid: 11b4b1d7-c118-43b2-b06f-66553ecfb559
+state: READY
+errors: []
+revision: bea4eff5-2075-4eb3-b00e-84a94e81bdc6
+createdAt: '2025-08-22T17:01:00.297Z'
+updatedAt: '2025-08-22T17:01:00.297Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e6
+parentId: 68a8a247285c02f4152f0182
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: activities
+  fieldMapping:
+    key: activities
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: d45712a2-80e0-4b26-a8b7-8b6776dcc9b8
+integration:
+  id: 689f2bf000905568ab2f66e6
+  name: HubSpot
+  key: hubspot
+  uuid: 84deb162-bb46-4146-aede-f00a4306d9eb
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.263Z'
+  updatedAt: '2025-08-15T12:45:49.165Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/hubspot/logo.png
+  connectorId: 62471fad996d5c297ae43f5f
+  connectorVersion: 1.8.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 646
+  hasData: true
+  dataCollectionsCount: 32
+  hasEvents: true
+  eventsCount: 37
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

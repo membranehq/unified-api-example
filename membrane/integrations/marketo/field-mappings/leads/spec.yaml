@@ -1,0 +1,120 @@
+id: 68a8a33fbc4406f3f0dc491b
+name: Leads
+isDeactivated: false
+state: READY
+errors: []
+key: leads
+customized: false
+revision: 5c6c63f1-d238-49c8-b68e-8f8bdb714522
+universalFieldMappingId: 68a8a33fbc4406f3f0dc4902
+universalFieldMappingRevision: 9ba71530-33d6-4c8f-9252-163da2de1903
+integrationId: 68a8a33dbc4406f3f0dc4891
+dataSourceKey: leads
+dataSourceId: 68a8a33fbc4406f3f0dc48dc
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  email:
+    $var: $.primaryEmail
+  firstName:
+    $var: $.firstName
+  lastName:
+    $var: $.lastName
+  address:
+    $var: $.primaryAddress.full
+  city:
+    $var: $.primaryAddress.city
+  company:
+    $var: $.companyName
+  country:
+    $var: $.primaryAddress.country
+  mainPhone:
+    $var: $.primaryPhone
+  postalCode:
+    $var: $.primaryAddress.zip
+  state:
+    $var: $.primaryAddress.state
+importValue:
+  id:
+    $var: id
+  fullName:
+    $var: firstName
+  firstName:
+    $var: firstName
+  lastName:
+    $var: lastName
+  primaryEmail:
+    $var: email
+  primaryPhone:
+    $var: mainPhone
+  primaryAddress:
+    city:
+      $var: city
+    state:
+      $var: state
+    country:
+      $var: country
+    zip:
+      $var: postalCode
+    full:
+      $var: $.address
+  stage:
+    $var: leadStatus
+  companyName:
+    $var: company
+  source:
+    $var: leadSource
+  createdTime:
+    $var: createdAt
+  updatedTime:
+    $var: updatedAt
+  emails:
+    - value:
+        $var: $.email
+  phones:
+    - value:
+        $var: $.phone
+    - value:
+        $var: $.mobilePhone
+    - value:
+        $var: $.mainPhone
+  addresses:
+    - full:
+        $var: $.address
+      city:
+        $var: $.city
+      state:
+        $var: $.state
+      country:
+        $var: $.country
+      zip:
+        $var: $.postalCode
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

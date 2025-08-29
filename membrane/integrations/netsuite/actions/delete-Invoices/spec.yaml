@@ -1,0 +1,51 @@
+id: 68a8a2a7bdd4149f1547772f
+name: Delete Invoice
+key: delete-Invoices
+uuid: f8980ed0-c34c-4427-9d9e-55d930e1d1b1
+state: READY
+errors: []
+revision: 89981f2c-436f-47c3-8a67-e6cdfb51fad2
+createdAt: '2025-08-22T17:02:33.080Z'
+updatedAt: '2025-08-22T17:02:33.080Z'
+isDeactivated: false
+integrationId: 68a839f321039ff70f89b5bd
+parentId: 68a8a2a7bdd4149f1547761d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 43c9aace-c8c8-4684-a3a8-7ec6ce0393bb
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

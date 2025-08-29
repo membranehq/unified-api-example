@@ -1,0 +1,64 @@
+id: 68a8a248285c02f4152f02aa
+name: Delete Activity
+key: delete-Activities
+uuid: b21187d1-7e03-4b4a-a21a-57f6851489c6
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a244285c02f4152effe8
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a245285c02f4152f0042
+revision: 4932f5d6-4955-4a46-b12d-adf66f12fe8c
+createdAt: '2025-08-22T17:00:59.363Z'
+updatedAt: '2025-08-22T17:00:59.363Z'
+isDeactivated: false
+integrationId: 68a8a244285c02f4152effe8
+parentId: 68a8a247285c02f4152f0180
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: f9b96bec-290e-4b72-a921-085e9b2f4d2d
+integration:
+  id: 68a8a244285c02f4152effe8
+  name: Google Calendar
+  key: google-calendar
+  uuid: 87e5e8ee-22dc-446d-aac7-729b09fe6000
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:00:52.838Z'
+  updatedAt: '2025-08-22T17:00:53.382Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/google-calendar/logo.png
+  connectorId: 6466784660f981f3ce6968fa
+  connectorVersion: 1.1.20
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 38
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

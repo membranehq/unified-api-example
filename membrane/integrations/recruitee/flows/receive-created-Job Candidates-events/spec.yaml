@@ -1,0 +1,51 @@
+id: 68a8a4417f08dba516dd160f
+name: Receive Created Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Job Candidates-events
+revision: 684e9855-f84d-45a8-b611-338cbfa0a3d1
+universalFlowId: 68a8a4407f08dba516dd14b1
+integrationId: 68a820cb9fc7b352ffc9459f
+universalFlowRevision: ef56e7b9-c951-402b-b3c6-7f929d4e6c7d
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Job Candidates-created-trigger:
+    type: data-record-created-trigger
+    name: Job Candidate Created Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping:
+        key: job-candidates
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc9459f
+  name: Recruitee
+  key: recruitee
+  uuid: 7dd6d57d-d6d0-476a-8950-9fc36446637a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.347Z'
+  updatedAt: '2025-08-22T07:48:28.540Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/recruitee/logo.png
+  connectorId: 6466785560f981f3ce696912
+  connectorVersion: 0.0.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 686
+  hasData: true
+  dataCollectionsCount: 9
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

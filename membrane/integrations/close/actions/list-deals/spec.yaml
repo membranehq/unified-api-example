@@ -1,0 +1,98 @@
+id: 68a8a2e88508b934a6350e9a
+name: List Deals
+key: list-deals
+uuid: 6e088a58-0735-484b-8319-529fd137759c
+state: READY
+errors: []
+revision: f01ce5f6-87b6-48a8-ad43-b910c8c914e3
+createdAt: '2025-08-22T17:03:42.477Z'
+updatedAt: '2025-08-22T17:03:42.477Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8a2e78508b934a6350c9c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    lead_id:
+      $var: $.input.filter.companyId
+    lead_name:
+      $var: $.input.filter.name
+    status_label:
+      $var: $.input.filter.stage
+    status_type:
+      $map:
+        value:
+          $var: $.input.filter.status
+        mapping:
+          - from: open
+            to: active
+          - from: won
+            to: won
+          - from: lost
+            to: lost
+    value:
+      $var: $.input.filter.amount
+    value_currency:
+      $var: $.input.filter.currency
+    confidence:
+      $var: $.input.filter.probability
+    note:
+      $var: $.input.filter.description
+    user_id:
+      $var: $.input.filter.ownerId
+    contact_id:
+      $var: $.input.filter.contactId
+    created_by:
+      $var: $.input.filter.createdBy
+    updated_by:
+      $var: $.input.filter.updatedBy
+    date_updated:
+      $var: $.input.filter.updatedTime
+    date_created:
+      $var: $.input.filter.createdTime
+isCustomized: false
+parentRevision: 42910870-1628-4cbc-a569-10f52d82b308
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

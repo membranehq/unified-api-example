@@ -1,0 +1,52 @@
+id: 68a89b606f9be8241c5f56e8
+name: Match Note
+key: match-Notes
+uuid: 6a13a332-e9a5-40ba-896d-7a7648e66038
+state: READY
+errors: []
+revision: 64bfeafb-65ef-489f-8324-8debb36e6872
+createdAt: '2025-08-22T16:31:31.572Z'
+updatedAt: '2025-08-22T16:31:31.572Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670a
+parentId: 68a89b606f9be8241c5f557e
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: b543cb84-5dfd-4597-9385-1cc8569605af
+integration:
+  id: 689f2bf000905568ab2f670a
+  name: Affinity
+  key: affinity
+  uuid: c5bead84-3765-410f-9174-69bcc0230f6d
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.289Z'
+  updatedAt: '2025-08-15T12:45:46.185Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/affinity/logo.png
+  connectorId: 6466783960f981f3ce6968ed
+  connectorVersion: 2.2.4
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 20
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

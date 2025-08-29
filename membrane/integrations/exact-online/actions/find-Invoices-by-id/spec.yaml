@@ -1,0 +1,72 @@
+id: 68a8a2a7bdd4149f15477707
+name: Find Invoice By Id
+key: find-Invoices-by-id
+uuid: 1bb3bbc9-36c4-4dce-99e1-3aa5b1eeb321
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477528
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a2a6bdd4149f15477598
+revision: f371d01c-c1b9-4bdc-9051-b1c4401b5832
+createdAt: '2025-08-22T17:02:33.478Z'
+updatedAt: '2025-08-22T17:02:33.478Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670c
+parentId: 68a8a2a7bdd4149f15477622
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 796f7092-ba32-4eb1-a7dc-887457e0753c
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

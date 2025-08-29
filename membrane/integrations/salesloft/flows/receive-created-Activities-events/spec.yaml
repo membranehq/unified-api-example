@@ -1,0 +1,51 @@
+id: 68a8a251285c02f4152f0847
+name: Receive Created Activity Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Activities-events
+revision: 57b63035-1873-4c4b-ace6-8057aabad5c7
+universalFlowId: 68a8a24d285c02f4152f05a8
+integrationId: 689f2bf000905568ab2f6719
+universalFlowRevision: 46c52bf2-63d6-4e03-a736-522037b6bc7a
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Activities-created-trigger:
+    type: data-record-created-trigger
+    name: Activity Created Trigger
+    config:
+      dataSource:
+        key: activities
+      fieldMapping:
+        key: activities
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f6719
+  name: Salesloft
+  key: salesloft
+  uuid: 33ad50b9-5677-4bb3-926e-848bb9a06190
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.601Z'
+  updatedAt: '2025-08-15T12:45:47.712Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesloft/logo.png
+  connectorId: 633af74f361690ab46d8ed4e
+  connectorVersion: 2.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 121
+  hasData: true
+  dataCollectionsCount: 19
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

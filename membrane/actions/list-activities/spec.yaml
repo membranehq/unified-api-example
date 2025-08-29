@@ -1,0 +1,31 @@
+id: 68a8a247285c02f4152f0184
+name: List Activities
+key: list-activities
+uuid: bc602fb3-7c15-4ecf-abca-19ea4631bd42
+state: READY
+errors: []
+revision: fd42077d-f98e-4355-aad6-fb7b01a47164
+createdAt: '2025-08-22T17:00:55.974Z'
+updatedAt: '2025-08-22T17:00:55.974Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+isCustomized: false

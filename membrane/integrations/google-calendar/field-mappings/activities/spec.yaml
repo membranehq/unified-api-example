@@ -1,0 +1,108 @@
+id: 68a8a245285c02f4152f00d0
+name: Activities
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a244285c02f4152effe8
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a245285c02f4152f0042
+key: activities
+customized: false
+revision: 0748b76c-e3c2-4d14-8fd0-3dff7c6207ba
+universalFieldMappingId: 68a8a245285c02f4152f00a1
+universalFieldMappingRevision: 9e05cd5a-051c-4ae5-b908-8ffaffc8766d
+integrationId: 68a8a244285c02f4152effe8
+dataSourceKey: activities
+dataSourceId: 68a8a245285c02f4152f0042
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  status:
+    $var: $.status
+  created:
+    $var: $.createdTime
+  updated:
+    $var: $.updatedTime
+  summary:
+    $var: $.title
+  description:
+    $var: $.description
+  location:
+    $var: $.location
+  creator:
+    id:
+      $var: $.createdBy
+  start:
+    dateTime:
+      $var: $.startTime
+  end:
+    dateTime:
+      $var: $.endTime
+  eventType:
+    $var: $.type
+importValue:
+  id:
+    $var: $.id
+  description:
+    $var: $.description
+  title:
+    $var: $.summary
+  type:
+    $var: $.eventType
+  location:
+    $var: $.location
+  isRecurrent:
+    $var: $.recurrence
+    $jsonata: $boolean($count($)) > 0
+  status:
+    $var: $.status
+  startTime:
+    $var: $.start.dateTime
+  endTime:
+    $var: $.end.dateTime
+  createdTime:
+    $var: $.created
+  createdBy:
+    $var: $.creator.id
+  updatedTime:
+    $var: $.updated
+integration:
+  id: 68a8a244285c02f4152effe8
+  name: Google Calendar
+  key: google-calendar
+  uuid: 87e5e8ee-22dc-446d-aac7-729b09fe6000
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:00:52.838Z'
+  updatedAt: '2025-08-22T17:00:53.382Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/google-calendar/logo.png
+  connectorId: 6466784660f981f3ce6968fa
+  connectorVersion: 1.1.20
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 38
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

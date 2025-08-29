@@ -1,0 +1,25 @@
+id: 68a8a39d2e84328ca528fcf2
+name: Receive Updated Product Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Products-events
+revision: f9438364-77d7-45b3-8070-32138588f76f
+nodes:
+  Products-updated-trigger:
+    type: data-record-updated-trigger
+    name: Product Updated Trigger
+    config:
+      dataSource:
+        key: products
+      fieldMapping:
+        key: products
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false

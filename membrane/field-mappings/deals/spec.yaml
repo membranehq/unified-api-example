@@ -1,0 +1,15 @@
+id: 68a8a2e48508b934a6350b28
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: de04af45-8e57-43c5-a757-46125b4c74bd
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350a3e
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $

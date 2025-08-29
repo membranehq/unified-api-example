@@ -1,0 +1,98 @@
+id: 68a8a2a6bdd4149f15477592
+name: Invoices
+isDeactivated: false
+state: CONFIGURATION_ERROR
+errors:
+  - message: Integration Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f6701
+  - message: Data Source Dependency has error(s)
+    type: dependency_error
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477513
+key: invoices
+customized: false
+revision: c90f1898-9f6d-41ad-8b34-e706b34b33d8
+universalFieldMappingId: 68a8a2a6bdd4149f15477576
+universalFieldMappingRevision: 310fd1f1-a5fe-484c-9490-b63dc40e99b2
+integrationId: 689f2bf000905568ab2f6701
+dataSourceKey: invoices
+dataSourceId: 68a8a2a5bdd4149f15477513
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  date:
+    $var: $.issueDate
+  invoice_number:
+    $var: $.number
+  contact_name:
+    $var: $.name
+  due_date:
+    $var: $.dueDate
+  tax_amount:
+    $var: $.totalTax
+  total_amount:
+    $var: $.totalAmount
+  currency_id:
+    $var: $.currency
+  exchange_rate:
+    $var: $.exchangeRate
+  total_discount_amount:
+    $var: $.totalDiscount
+  status_id:
+    $var: $.status
+importValue:
+  id:
+    $var: id
+  number:
+    $var: invoice_number
+  status:
+    $var: status_id
+  currency:
+    $var: currency_id
+  totalAmount:
+    $var: total_amount
+  totalTax:
+    $var: tax_amount
+  exchangeRate:
+    $var: exchange_rate
+  totalDiscount:
+    $var: total_discount_amount
+  issueDate:
+    $var: date
+  dueDate:
+    $var: due_date
+integration:
+  id: 689f2bf000905568ab2f6701
+  name: Sage Accounting
+  key: sage-accounting
+  uuid: e0baef52-2908-44df-bffb-9e4469b4e7ff
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.275Z'
+  updatedAt: '2025-08-15T12:45:52.309Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sage-accounting-connector/logo.png
+  connectorId: 642ac03dc5949033518dae41
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 287
+  hasData: true
+  dataCollectionsCount: 56
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

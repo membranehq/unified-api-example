@@ -1,0 +1,80 @@
+id: 68a8a2a7bdd4149f15477717
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: 7d3631c5-94ab-4c43-8106-e8b6dd7c465e
+createdAt: '2025-08-22T17:02:33.871Z'
+updatedAt: '2025-08-22T17:02:33.871Z'
+isDeactivated: false
+integrationId: 68a839f321039ff70f89b5bd
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    memo:
+      $var: $.input.filter.memo
+    discountTotal:
+      $var: $.input.filter.totalDiscount
+    status:
+      id:
+        $var: $.input.filter.status
+    createdDate:
+      $var: $.input.filter.createdTime
+    exchangeRate:
+      $var: $.input.filter.exchangeRate
+    total:
+      $var: $.input.filter.totalAmount
+    lastModifiedDate:
+      $var: $.input.filter.updatedTime
+    dueDate:
+      $var: $.input.filter.dueDate
+    account:
+      id:
+        $var: $.input.filter.ledgerAccountId
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 68a839f321039ff70f89b5bd
+  name: NetSuite
+  key: netsuite
+  uuid: b75c3db6-9f77-4f3d-85c8-de619f8c87d7
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.274Z'
+  updatedAt: '2025-08-22T09:35:50.297Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/netsuite/logo-6f430e16-656a-4033-94e6-736f9adf35be.png
+  connectorId: 6525b75870089fac48f52375
+  connectorVersion: 2.0.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 1349
+  hasData: true
+  dataCollectionsCount: 18
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

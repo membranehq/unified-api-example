@@ -1,0 +1,125 @@
+id: 68a8a2a7bdd4149f15477719
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f670c
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a2a5bdd4149f15477528
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a2a6bdd4149f15477598
+revision: 8736a8dc-f0ae-4448-9005-752094239a17
+createdAt: '2025-08-22T17:02:33.751Z'
+updatedAt: '2025-08-22T17:02:33.751Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f670c
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    InvoiceID:
+      $var: $.input.filter.id
+    AmountDiscount:
+      $var: $.input.filter.totalDiscount
+    AmountFC:
+      $var: $.input.filter.totalAmount
+    Created:
+      $var: $.input.filter.createdTime
+    Creator:
+      $var: $.input.filter.createdBy
+    Currency:
+      $var: $.input.filter.currency
+    Description:
+      $var: $.input.filter.memo
+    Discount:
+      $var: $.input.filter.totalDiscount
+    DueDate:
+      $var: $.input.filter.dueDate
+    InvoiceDate:
+      $var: $.input.filter.issueDate
+    InvoiceNumber:
+      $var: $.input.filter.number
+    InvoiceTo:
+      $var: $.input.filter.customerId
+    Modified:
+      $var: $.input.filter.updatedTime
+    Modifier:
+      $var: $.input.filter.updatedBy
+    PaymentCondition:
+      $var: $.input.filter.paymentMethod
+    PaymentReference:
+      $var: $.input.filter.payments[0]
+    Status:
+      $var: $.input.filter.status
+    OrderedBy:
+      $var: $.input.filter.customerId
+    SalesInvoiceLines:
+      $iterate:
+        source:
+          $var: $.input.filter.lineItems
+        item:
+          Item:
+            $var: $.item.id
+          Quantity:
+            $var: $.item.quantity
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 689f2bf000905568ab2f670c
+  name: Exact Online
+  key: exact-online
+  uuid: 73761c7c-b22b-4fe6-8050-e6325ed6ec5f
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.290Z'
+  updatedAt: '2025-08-15T12:45:47.307Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/exact-online/logo-ac4be0b0-5dea-4d73-99ca-ee597528c395.png
+  connectorId: 6616dcf7d69be23336c4be9b
+  connectorVersion: 1.0.5
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 698
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

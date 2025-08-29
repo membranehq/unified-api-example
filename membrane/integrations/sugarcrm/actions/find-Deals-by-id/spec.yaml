@@ -1,0 +1,51 @@
+id: 68a8a2e78508b934a6350e5e
+name: Find Deal By Id
+key: find-Deals-by-id
+uuid: 29e71c13-f3aa-4f5c-a53c-025135ef5f0c
+state: READY
+errors: []
+revision: a8d90b3b-a900-4da5-9523-a4a06fbc79d9
+createdAt: '2025-08-22T17:03:39.667Z'
+updatedAt: '2025-08-22T17:03:39.667Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e8
+parentId: 68a8a2e78508b934a6350ca0
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 5650a0cd-0aaa-4e1f-8ef7-9c22712971b9
+integration:
+  id: 689f2bf000905568ab2f66e8
+  name: SugarCRM
+  key: sugarcrm
+  uuid: a0493801-f81b-4499-ac46-922823a0b1b3
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.264Z'
+  updatedAt: '2025-08-15T12:45:46.787Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/sugarcrm/logo.png
+  connectorId: 6466785960f981f3ce69691a
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

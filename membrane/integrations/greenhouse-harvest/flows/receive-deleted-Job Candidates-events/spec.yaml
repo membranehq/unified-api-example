@@ -1,0 +1,51 @@
+id: 68a8a4417f08dba516dd159b
+name: Receive Deleted Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Job Candidates-events
+revision: edf3c171-de0d-4dc3-8795-563e21103eba
+universalFlowId: 68a8a4407f08dba516dd14ad
+integrationId: 68a820cb9fc7b352ffc945a9
+universalFlowRevision: 39ee7d4c-761e-411b-a461-810bd58ad688
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Job Candidates-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Job Candidate Deleted Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping: {}
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false
+integration:
+  id: 68a820cb9fc7b352ffc945a9
+  name: Greenhouse Harvest
+  key: greenhouse-harvest
+  uuid: 89994a4f-3aa2-49af-815d-ae43e233fc3c
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.354Z'
+  updatedAt: '2025-08-22T07:48:29.507Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/greenhouse-harvest/logo-39d42c52-496c-48b3-89ec-cb588f6ec0f2.png
+  connectorId: 65c3755eda65a37b19898497
+  connectorVersion: 1.0.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 129
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

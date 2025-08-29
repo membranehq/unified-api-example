@@ -1,0 +1,51 @@
+id: 68a8a2e78508b934a6350e60
+name: Find Deal By Id
+key: find-Deals-by-id
+uuid: 29e71c13-f3aa-4f5c-a53c-025135ef5f0c
+state: READY
+errors: []
+revision: cea474d1-398b-43a2-ba46-f56abf71f00b
+createdAt: '2025-08-22T17:03:39.672Z'
+updatedAt: '2025-08-22T17:03:39.672Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e4
+parentId: 68a8a2e78508b934a6350ca0
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 5650a0cd-0aaa-4e1f-8ef7-9c22712971b9
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

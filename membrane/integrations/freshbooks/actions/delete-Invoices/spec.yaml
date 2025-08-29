@@ -1,0 +1,50 @@
+id: 68a8a2a7bdd4149f1547772b
+name: Delete Invoice
+key: delete-Invoices
+uuid: f8980ed0-c34c-4427-9d9e-55d930e1d1b1
+state: READY
+errors: []
+revision: 24f93c0d-3ff4-4f09-848d-9cfe76536fcb
+createdAt: '2025-08-22T17:02:33.078Z'
+updatedAt: '2025-08-22T17:02:33.078Z'
+isDeactivated: false
+integrationId: 68a8a2a4bdd4149f154774d2
+parentId: 68a8a2a7bdd4149f1547761d
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: invoices
+  id:
+    $var: $.input.id
+  fieldMapping: {}
+isCustomized: false
+parentRevision: 43c9aace-c8c8-4684-a3a8-7ec6ce0393bb
+integration:
+  id: 68a8a2a4bdd4149f154774d2
+  name: Freshbooks
+  key: freshbooks
+  uuid: 629dfb93-251e-45d4-a5e5-fd4742bb0c49
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:02:28.444Z'
+  updatedAt: '2025-08-22T17:02:29.472Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshbooks-connector/logo.png
+  connectorId: 643e84dcbadd839bce47c653
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 161
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

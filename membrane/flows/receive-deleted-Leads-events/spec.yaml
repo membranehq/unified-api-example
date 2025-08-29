@@ -1,0 +1,22 @@
+id: 68a8a342bc4406f3f0dc4b75
+name: Receive Deleted Lead Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-deleted-Leads-events
+revision: 875be9dd-d404-476b-adc0-c2cfef4f23bf
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Leads-deleted-trigger:
+    type: data-record-deleted-trigger
+    name: Lead Deleted Trigger
+    config:
+      dataSource:
+        key: leads
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

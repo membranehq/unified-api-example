@@ -1,0 +1,53 @@
+id: 68a8a3992e84328ca528f947
+name: Match Product
+key: match-Products
+uuid: 9fe448af-7311-49b8-b3bc-4170c4c3a75f
+state: READY
+errors: []
+revision: f3ec4feb-d1ad-40cf-a479-24424fd07252
+createdAt: '2025-08-22T17:06:36.674Z'
+updatedAt: '2025-08-22T17:06:36.674Z'
+isDeactivated: false
+integrationId: 68a839f321039ff70f89b5c9
+parentId: 68a8a3982e84328ca528f75f
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: products
+  dataSource:
+    key: products
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: ec5f4de5-3168-4c82-9ca4-8854d981e1e7
+integration:
+  id: 68a839f321039ff70f89b5c9
+  name: Ontraport
+  key: ontraport
+  uuid: c0df51a8-557d-46c1-b2a3-ad27dcc044d6
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T09:35:47.281Z'
+  updatedAt: '2025-08-22T09:35:49.709Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/ontraport/logo-56571cbe-9f4f-48e6-bc24-07634dbed2c0.png
+  connectorId: 65f45bb115058a59b3807b33
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

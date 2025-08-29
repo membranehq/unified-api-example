@@ -1,0 +1,65 @@
+id: 68a89b606f9be8241c5f5686
+name: Find Note By Id
+key: find-Notes-by-id
+uuid: 8dff6feb-1c69-4b05-a9d2-48485b3ef0ad
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 689f2bf000905568ab2f66f5
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a89b5e6f9be8241c5f54b0
+revision: 4921c58c-afc2-4bc3-816b-3841f98f3073
+createdAt: '2025-08-22T16:31:30.865Z'
+updatedAt: '2025-08-22T16:38:32.956Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f5
+parentId: 68a89b606f9be8241c5f5576
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: notes
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 1a3b4dd4-0e6f-4c99-8f21-62d7065903e8
+integration:
+  id: 689f2bf000905568ab2f66f5
+  name: Intercom
+  key: intercom
+  uuid: 2b1b26c9-4359-4871-a67f-5dcc7a864403
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-15T12:45:36.271Z'
+  updatedAt: '2025-08-15T12:45:46.788Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/intercom-connector/logo.png
+  connectorId: 64384553986ed1caad49a446
+  connectorVersion: 1.1.7
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 77
+  hasGlobalWebhooks: true
+  hasUdm: true
+  authType: oauth2

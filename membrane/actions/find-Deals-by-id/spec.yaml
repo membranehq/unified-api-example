@@ -1,0 +1,24 @@
+id: 68a8a2e78508b934a6350ca0
+name: Find Deal By Id
+key: find-Deals-by-id
+uuid: 29e71c13-f3aa-4f5c-a53c-025135ef5f0c
+state: READY
+errors: []
+revision: 5650a0cd-0aaa-4e1f-8ef7-9c22712971b9
+createdAt: '2025-08-22T17:03:35.688Z'
+updatedAt: '2025-08-22T17:03:35.688Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: deals
+  dataSource:
+    key: deals
+  id:
+    $var: $.input.id
+isCustomized: false

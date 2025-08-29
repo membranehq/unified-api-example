@@ -1,0 +1,72 @@
+id: 68a8a248285c02f4152f02f0
+name: Match Activity
+key: match-Activities
+uuid: 2c36235a-5f3d-4c75-b3ac-6ec28dd45ec5
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a244285c02f4152effe8
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a245285c02f4152f0042
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a245285c02f4152f00d0
+revision: 2661d28a-7ef3-45f6-a8a9-c15fbbbeac3a
+createdAt: '2025-08-22T17:01:00.772Z'
+updatedAt: '2025-08-22T17:01:00.772Z'
+isDeactivated: false
+integrationId: 68a8a244285c02f4152effe8
+parentId: 68a8a247285c02f4152f0186
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: a3d70138-ab03-4634-8208-2f017ef4aac3
+integration:
+  id: 68a8a244285c02f4152effe8
+  name: Google Calendar
+  key: google-calendar
+  uuid: 87e5e8ee-22dc-446d-aac7-729b09fe6000
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:00:52.838Z'
+  updatedAt: '2025-08-22T17:00:53.382Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/google-calendar/logo.png
+  connectorId: 6466784660f981f3ce6968fa
+  connectorVersion: 1.1.20
+  hasMissingParameters: true
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 38
+  hasData: true
+  dataCollectionsCount: 4
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

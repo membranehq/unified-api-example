@@ -1,0 +1,52 @@
+id: 68a8a2f48508b934a635185f
+name: Receive Updated Deal Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-updated-Deals-events
+revision: 5a5dd9ad-f771-4b98-a79e-826f29d7fcb0
+universalFlowId: 68a8a2ef8508b934a6351314
+integrationId: 689f2bf000905568ab2f66dc
+universalFlowRevision: 7589319e-d46c-4b20-b23a-ded7f48dbbe4
+nodes:
+  Deals-updated-trigger:
+    type: data-record-updated-trigger
+    name: Deal Updated Trigger
+    config:
+      dataSource:
+        key: deals
+      fieldMapping:
+        key: deals
+    links:
+      - key: api-request-to-your-app
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    config: {}
+    links: []
+autoCreateInstances: false
+customized: false
+integration:
+  id: 689f2bf000905568ab2f66dc
+  name: ActiveCampaign
+  key: activecampaign
+  uuid: fc32b9d4-29a1-47b0-96e0-43ffce815330
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.207Z'
+  updatedAt: '2025-08-15T12:45:47.265Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/activecampaign-connector/logo.png
+  connectorId: 6466783960f981f3ce6968ec
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 106
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

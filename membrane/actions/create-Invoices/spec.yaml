@@ -1,0 +1,27 @@
+id: 68a8a2a7bdd4149f15477628
+name: Create Invoice
+key: create-Invoices
+uuid: 01c9531f-1e8c-4375-9518-488f12a7ad0f
+state: READY
+errors: []
+revision: 02abbf92-2c63-42c5-9b27-f6c07ab6baad
+createdAt: '2025-08-22T17:02:31.109Z'
+updatedAt: '2025-08-22T17:02:31.109Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: invoices
+  fieldMapping:
+    key: invoices
+    input:
+      $var: $.input.fields
+isCustomized: false

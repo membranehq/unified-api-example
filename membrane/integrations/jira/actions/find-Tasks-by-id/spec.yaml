@@ -1,0 +1,51 @@
+id: 68a8a3f6c172bc7206677538
+name: Find Task By Id
+key: find-Tasks-by-id
+uuid: 59c3027e-85b1-45d8-bcbd-e51f8690ccf1
+state: READY
+errors: []
+revision: 7b39304e-35b6-4a4d-b24e-480a433cf3cd
+createdAt: '2025-08-22T17:08:12.474Z'
+updatedAt: '2025-08-22T17:08:12.474Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e59
+parentId: 68a8a3f5c172bc72066772c3
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 90dfa9d8-15c2-497e-8265-5a5fb03ad345
+integration:
+  id: 68a8a3ebc172bc7206676e59
+  name: Jira
+  key: jira
+  uuid: 371fbec4-75a0-495a-9055-ccc717ebf6c0
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:07:55.968Z'
+  updatedAt: '2025-08-22T17:08:01.008Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/jira/logo.png
+  connectorId: 64343d08986ed1caad5b3aa7
+  connectorVersion: 1.6.0
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 499
+  hasData: true
+  dataCollectionsCount: 12
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

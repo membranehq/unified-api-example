@@ -1,0 +1,93 @@
+id: 68a8a2e48508b934a6350b85
+name: Deals
+isDeactivated: false
+state: READY
+errors: []
+key: deals
+customized: false
+revision: 3a53e86a-f47a-42c5-9b6c-a246378ec7f3
+universalFieldMappingId: 68a8a2e48508b934a6350b28
+universalFieldMappingRevision: de04af45-8e57-43c5-a757-46125b4c74bd
+integrationId: 689f2bf000905568ab2f6705
+dataSourceKey: deals
+dataSourceId: 68a8a2e38508b934a6350ad8
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    record_id:
+      $var: $.id
+  values:
+    name:
+      - value:
+          $var: $.name
+    stage:
+      - status:
+          title:
+            $var: $.stage
+          id:
+            status_id:
+              $var: $.stageId
+    owner:
+      - referenced_actor_id:
+          $var: $.ownerId
+    value:
+      - currency_value:
+          $var: $.amount
+        currency_code:
+          $var: $.currency
+    associated_people:
+      - target_record_id:
+          $var: $.contactId
+    associated_company:
+      - target_record_id:
+          $var: $.companyId
+importValue:
+  name:
+    $var: $.values.name[0].value
+  id:
+    $var: $.id.record_id
+  stageId:
+    $var: $.values.stage[0].status.id.status_id
+  stage:
+    $var: $.values.stage[0].status.title
+  amount:
+    $var: $.values.value[0].currency_value
+  currency:
+    $var: $.values.value[0].currency_code
+  createdTime:
+    $var: $.created_at
+  ownerId:
+    $var: $.values.owner[0].referenced_actor_id
+  companyId:
+    $var: $.values.associated_company[0].target_record_id
+  contactId:
+    $var: $.values.associated_people[0].target_record_id
+integration:
+  id: 689f2bf000905568ab2f6705
+  name: Attio
+  key: attio
+  uuid: 65c44b83-4561-407c-b4a2-38526fc23078
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.277Z'
+  updatedAt: '2025-08-15T12:45:45.491Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/attio-connector/logo-8f5adba3-1d05-4e42-a0f7-1db76c841e5f.png
+  connectorId: 655caef6a9e1827bf4d915ca
+  connectorVersion: 1.2.6
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 98
+  hasData: true
+  dataCollectionsCount: 16
+  hasEvents: true
+  eventsCount: 1
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

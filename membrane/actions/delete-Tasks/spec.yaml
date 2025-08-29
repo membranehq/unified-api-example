@@ -1,0 +1,22 @@
+id: 68a8a3f5c172bc72066772bd
+name: Delete Task
+key: delete-Tasks
+uuid: c3ed3a49-2947-479f-b0f6-07880043db91
+state: READY
+errors: []
+revision: e34f473f-8f4b-4ba4-bd37-caef889a0473
+createdAt: '2025-08-22T17:08:06.056Z'
+updatedAt: '2025-08-22T17:08:06.056Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: delete-data-record
+config:
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+isCustomized: false

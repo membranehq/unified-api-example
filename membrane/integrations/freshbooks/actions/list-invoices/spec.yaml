@@ -1,0 +1,84 @@
+id: 68a8a2a7bdd4149f15477713
+name: List Invoices
+key: list-invoices
+uuid: 619b196b-7042-440e-a98c-ee2fc6c02349
+state: READY
+errors: []
+revision: 5ca413eb-d09c-4e72-a55d-0f2e244eb26b
+createdAt: '2025-08-22T17:02:33.772Z'
+updatedAt: '2025-08-22T17:02:33.772Z'
+isDeactivated: false
+integrationId: 68a8a2a4bdd4149f154774d2
+parentId: 68a8a2a7bdd4149f15477626
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: invoices
+  dataSource:
+    key: invoices
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    amount:
+      amount:
+        $var: $.input.filter.totalAmount
+      code:
+        $var: $.input.filter.currency
+    customerid:
+      $var: $.input.filter.customerId
+    description:
+      $var: $.input.filter.memo
+    discount_total:
+      amount:
+        $var: $.input.filter.totalDiscount
+      code:
+        $var: $.input.filter.currency
+    due_date:
+      $var: $.input.filter.dueDate
+    invoice_number:
+      $var: $.input.filter.number
+    outstanding:
+      amount:
+        $var: $.input.filter.balance
+      code:
+        $var: $.input.filter.currency
+isCustomized: false
+parentRevision: 58bc6286-a02f-466e-bc0d-edd60fd0ecbe
+integration:
+  id: 68a8a2a4bdd4149f154774d2
+  name: Freshbooks
+  key: freshbooks
+  uuid: 629dfb93-251e-45d4-a5e5-fd4742bb0c49
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:02:28.444Z'
+  updatedAt: '2025-08-22T17:02:29.472Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/freshbooks-connector/logo.png
+  connectorId: 643e84dcbadd839bce47c653
+  connectorVersion: 1.0.5
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 161
+  hasData: true
+  dataCollectionsCount: 15
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

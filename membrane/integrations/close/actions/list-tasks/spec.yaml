@@ -1,0 +1,81 @@
+id: 68a8a3f6c172bc7206677593
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: 1c5cc8d8-f972-4f06-8d97-772a7902f369
+createdAt: '2025-08-22T17:08:14.856Z'
+updatedAt: '2025-08-22T17:08:14.856Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66fb
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    text:
+      $var: $.input.filter.subject
+    date:
+      $var: $.input.filter.startTime
+    lead_id:
+      $var: $.input.filter.companyId
+    contact_id:
+      $var: $.input.filter.contactId
+    assigned_to:
+      $var: $.input.filter.ownerId
+    _type:
+      $var: $.input.filter.type
+    date_created:
+      $var: $.input.filter.createdTime
+    created_by:
+      $var: $.input.filter.createdBy
+    date_updated:
+      $var: $.input.filter.updatedTime
+    updated_by:
+      $var: $.input.filter.updatedBy
+    id:
+      $var: $.input.filter.id
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f66fb
+  name: Close
+  key: close
+  uuid: a10f960b-a22f-439e-b268-4ec753f17367
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.273Z'
+  updatedAt: '2025-08-15T12:45:45.621Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/close/logo.png
+  connectorId: 64fa1e1af51a74915b9fca3c
+  connectorVersion: 1.1.12
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 13
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

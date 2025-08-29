@@ -1,0 +1,31 @@
+id: 68a89b606f9be8241c5f557a
+name: Update Note
+key: update-Notes
+uuid: 46e306b2-9fca-41b7-92ce-5d5cf20d2614
+state: READY
+errors: []
+revision: 84730d91-29a1-4bd9-9cab-b9da83c62e9f
+createdAt: '2025-08-22T16:31:28.458Z'
+updatedAt: '2025-08-22T16:31:28.458Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: update-data-record
+config:
+  dataSource:
+    key: notes
+  id:
+    $var: $.input.id
+  fieldMapping:
+    key: notes
+    input:
+      $var: $.input.fields
+isCustomized: false

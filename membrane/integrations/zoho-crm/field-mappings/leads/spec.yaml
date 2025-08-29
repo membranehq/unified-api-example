@@ -1,0 +1,159 @@
+id: 68a8a33fbc4406f3f0dc491d
+name: Leads
+isDeactivated: false
+state: READY
+errors: []
+key: leads
+customized: false
+revision: 194ba85f-4a4e-4707-9d66-5e8b6f1c42e3
+universalFieldMappingId: 68a8a33fbc4406f3f0dc4902
+universalFieldMappingRevision: 9ba71530-33d6-4c8f-9252-163da2de1903
+integrationId: 689f2bf000905568ab2f66d8
+dataSourceKey: leads
+dataSourceId: 68a8a33fbc4406f3f0dc48d7
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  id:
+    $var: $.id
+  Owner:
+    $var: $.ownerId
+  Company:
+    $var: $.companyName
+  First_Name:
+    $var: $.firstName
+  Last_Name:
+    $var: $.lastName
+  Full_Name:
+    $var: $.fullName
+  Designation:
+    $var: $.jobTitle
+  Email:
+    $var: $.primaryEmail
+  Phone:
+    $var: $.primaryPhone
+  Lead_Source:
+    $var: $.source
+  Created_By:
+    id:
+      $var: $.createdBy
+  Modified_By:
+    id:
+      $var: $.updatedBy
+  Created_Time:
+    $var: $.createdTime
+  Modified_Time:
+    $var: $.updatedTime
+  Street:
+    $var: $.primaryAddress.street
+  City:
+    $var: $.primaryAddress.city
+  State:
+    $var: $.primaryAddress.state
+  Zip_Code:
+    $var: $.primaryAddress.zip
+  Country:
+    $var: $.primaryAddress.country
+importValue:
+  id:
+    $var: $.id
+  fullName:
+    $var: $.Full_Name
+  firstName:
+    $var: $.First_Name
+  lastName:
+    $var: $.Last_Name
+  primaryEmail:
+    $var: $.Email
+  primaryPhone:
+    $var: $.Phone
+  primaryAddress:
+    street:
+      $var: $.Street
+    city:
+      $var: $.City
+    state:
+      $var: $.State
+    country:
+      $var: $.Country
+    zip:
+      $var: $.Zip_Code
+    full:
+      $concat:
+        values:
+          - $var: $.Street
+          - $var: $.City
+          - $var: $.State
+          - $var: $.Country
+          - $var: $.Zip_Code
+        delimiter: ', '
+  companyName:
+    $var: $.Company
+  ownerId:
+    $var: $.Owner
+  jobTitle:
+    $var: $.Designation
+  source:
+    $var: $.Lead_Source
+  createdTime:
+    $var: $.Created_Time
+  createdBy:
+    $var: $.Created_By.id
+  updatedTime:
+    $var: $.Modified_Time
+  updatedBy:
+    $var: $.Modified_By.id
+  emails:
+    - value:
+        $var: $.Email
+  phones:
+    - value:
+        $var: $.Phone
+  addresses:
+    - value:
+        street:
+          $var: $.Street
+        city:
+          $var: $.City
+        state:
+          $var: $.State
+        country:
+          $var: $.Country
+        zip:
+          $var: $.Zip_Code
+        full:
+          $concat:
+            values:
+              - $var: $.Street
+              - $var: $.City
+              - $var: $.State
+              - $var: $.Country
+              - $var: $.Zip_Code
+            delimiter: ', '
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

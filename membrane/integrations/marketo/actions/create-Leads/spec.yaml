@@ -1,0 +1,54 @@
+id: 68a8a340bc4406f3f0dc4a0c
+name: Create Lead
+key: create-Leads
+uuid: 42b03ed5-ee48-4467-bbc3-c363d263be95
+state: READY
+errors: []
+revision: 21ac495b-2b40-4139-88d7-f21e1fcff169
+createdAt: '2025-08-22T17:05:05.179Z'
+updatedAt: '2025-08-22T17:05:05.179Z'
+isDeactivated: false
+integrationId: 68a8a33dbc4406f3f0dc4891
+parentId: 68a8a340bc4406f3f0dc4978
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: leads
+  fieldMapping:
+    key: leads
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 942e17de-6bec-45d0-ac73-b27fad83bf92
+integration:
+  id: 68a8a33dbc4406f3f0dc4891
+  name: Marketo
+  key: marketo
+  uuid: 6e3f9adc-64b2-4687-a067-9993a9d1ab6a
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T17:05:01.875Z'
+  updatedAt: '2025-08-22T17:05:03.110Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/marketo/logo.png
+  connectorId: 64395326986ed1caad948fcd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 315
+  hasData: true
+  dataCollectionsCount: 8
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

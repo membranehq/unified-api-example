@@ -1,0 +1,52 @@
+id: 68a8a248285c02f4152f02e8
+name: Match Activity
+key: match-Activities
+uuid: 2c36235a-5f3d-4c75-b3ac-6ec28dd45ec5
+state: READY
+errors: []
+revision: 721590b0-2594-4a40-8dfc-69fd38dbb540
+createdAt: '2025-08-22T17:01:01.190Z'
+updatedAt: '2025-08-22T17:01:01.190Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66e4
+parentId: 68a8a247285c02f4152f0186
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+type: match-data-record
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  lookup:
+    universalQuery:
+      $var: $.input.query
+isCustomized: false
+parentRevision: a3d70138-ab03-4634-8208-2f017ef4aac3
+integration:
+  id: 689f2bf000905568ab2f66e4
+  name: Outreach
+  key: outreach
+  uuid: 1061fcb7-5e7b-4ae6-a536-38d1ec90a9a4
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.211Z'
+  updatedAt: '2025-08-15T12:45:47.288Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/outreach-connector/logo.png
+  connectorId: 6466785060f981f3ce69690b
+  connectorVersion: 1.1.2
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 176
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,24 @@
+id: 68a8a4407f08dba516dd14b1
+name: Receive Created Job Candidate Events
+isDeactivated: false
+state: READY
+errors: []
+key: receive-created-Job Candidates-events
+revision: ef56e7b9-c951-402b-b3c6-7f929d4e6c7d
+nodes:
+  api-request-to-your-app:
+    type: api-request-to-your-app
+    name: API Request to Your App
+    links: []
+  Job Candidates-created-trigger:
+    type: data-record-created-trigger
+    name: Job Candidate Created Trigger
+    config:
+      dataSource:
+        key: job-candidates
+      fieldMapping:
+        key: job-candidates
+    links:
+      - key: api-request-to-your-app
+autoCreateInstances: false
+customized: false

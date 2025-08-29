@@ -1,0 +1,81 @@
+id: 68a8a3f6c172bc7206677587
+name: List Tasks
+key: list-tasks
+uuid: 6c50fef3-3010-4c1d-820f-635c757b4984
+state: READY
+errors: []
+revision: cc30eafe-3a2a-44f0-84dc-b3f76acd973e
+createdAt: '2025-08-22T17:08:14.070Z'
+updatedAt: '2025-08-22T17:08:14.070Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66f0
+parentId: 68a8a3f5c172bc72066772bf
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    subject:
+      $var: $.input.filter.subject
+    description:
+      $var: $.input.filter.content
+    due_at:
+      $var: $.input.filter.dueTime
+    priority:
+      $var: $.input.filter.priority
+    status:
+      $var: $.input.filter.status
+    tags:
+      $var: $.input.filter.tags
+    type:
+      $var: $.input.filter.type
+    updated_at:
+      $var: $.input.filter.updatedTime
+    assignee_id:
+      $var: $.input.filter.assigneeId
+    created_at:
+      $var: $.input.filter.createdTime
+isCustomized: false
+parentRevision: 250959cc-2358-4c5e-9d15-c1155351adb6
+integration:
+  id: 689f2bf000905568ab2f66f0
+  name: Zendesk
+  key: zendesk
+  uuid: 77c714e0-e2a5-4333-ade5-02cb0e398340
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.267Z'
+  updatedAt: '2025-08-15T12:45:46.486Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zendesk/logo.png
+  connectorId: 643e957fbadd839bce5208e3
+  connectorVersion: 1.5.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 393
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: true
+  eventsCount: 60
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

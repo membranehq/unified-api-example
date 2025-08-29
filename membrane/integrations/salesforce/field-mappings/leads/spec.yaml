@@ -1,0 +1,167 @@
+id: 68a8a33fbc4406f3f0dc4913
+name: Leads
+isDeactivated: false
+state: READY
+errors: []
+key: leads
+customized: false
+revision: 9173d6ab-1655-4681-9d69-cb56a85bef55
+universalFieldMappingId: 68a8a33fbc4406f3f0dc4902
+universalFieldMappingRevision: 9ba71530-33d6-4c8f-9252-163da2de1903
+integrationId: 689f2bf000905568ab2f66d1
+dataSourceKey: leads
+dataSourceId: 68a8a33fbc4406f3f0dc48cd
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  LastName:
+    $var: $.lastName
+  FirstName:
+    $var: $.firstName
+  Title:
+    $var: $.jobTitle
+  Company:
+    $var: $.companyName
+  Street:
+    $var: $.primaryAddress.street
+  City:
+    $var: $.primaryAddress.city
+  State:
+    $var: $.primaryAddress.state
+  PostalCode:
+    $var: $.primaryAddress.zip
+  Country:
+    $var: $.primaryAddress.country
+  Phone:
+    $var: $.primaryPhone
+  MobilePhone:
+    $var: $.phones[1].value
+  Email:
+    $var: $.primaryEmail
+  LeadSource:
+    $var: $.source
+  OwnerId:
+    $var: $.ownerId
+  ConvertedAccountId:
+    $var: $.companyId
+  CreatedDate:
+    $var: $.createdTime
+  CreatedById:
+    $var: $.createdBy
+  LastModifiedDate:
+    $var: $.updatedTime
+  LastModifiedById:
+    $var: $.updatedBy
+  LastActivityDate:
+    $var: $.lastActivityTime
+importValue:
+  id:
+    $var: $.Id
+  fullName:
+    $var: $.Name
+  firstName:
+    $var: $.FirstName
+  lastName:
+    $var: $.LastName
+  companyId:
+    $var: $.ConvertedAccountId
+  companyName:
+    $var: $.Company
+  source:
+    $var: $.LeadSource
+  ownerId:
+    $var: $.OwnerId
+  contactId:
+    $var: $.ConvertedContactId
+  primaryEmail:
+    $var: $.Email
+  primaryPhone:
+    $var: $.Phone
+  phones:
+    - value:
+        $var: $.Phone
+    - value:
+        $var: $.MobilePhone
+  primaryAddress:
+    full:
+      $concat:
+        values:
+          - $var: $.Street
+          - $var: $.City
+          - $var: $.State
+          - $var: $.PostalCode
+          - $var: $.Country
+        delimiter: ' '
+    street:
+      $var: $.Street
+    city:
+      $var: $.City
+    state:
+      $var: $.State
+    country:
+      $var: $.Country
+    zip:
+      $var: $.PostalCode
+  jobTitle:
+    $var: $.Title
+  createdTime:
+    $var: $.CreatedDate
+  createdBy:
+    $var: $.CreatedById
+  updatedTime:
+    $var: $.LastModifiedDate
+  updatedBy:
+    $var: $.LastModifiedById
+  lastActivityTime:
+    $var: $.LastActivityDate
+  emails:
+    - value:
+        $var: $.Email
+  addresses:
+    - value:
+        full:
+          $concat:
+            values:
+              - $var: $.Street
+              - $var: $.City
+              - $var: $.State
+              - $var: $.PostalCode
+              - $var: $.Country
+            delimiter: ' '
+        street:
+          $var: $.Street
+        city:
+          $var: $.City
+        state:
+          $var: $.State
+        country:
+          $var: $.Country
+        zip:
+          $var: $.PostalCode
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

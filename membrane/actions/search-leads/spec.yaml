@@ -1,0 +1,28 @@
+id: 68a8a340bc4406f3f0dc4984
+name: Search Leads
+key: search-leads
+uuid: 455c3e58-0eff-4cdf-a6f4-aba7cfd31bd0
+state: READY
+errors: []
+revision: 0c47b1ec-2153-420c-8576-724287047182
+createdAt: '2025-08-22T17:05:04.372Z'
+updatedAt: '2025-08-22T17:05:04.372Z'
+isDeactivated: false
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false

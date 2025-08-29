@@ -1,0 +1,51 @@
+id: 68a8a248285c02f4152f02c6
+name: Find Activity By Id
+key: find-Activities-by-id
+uuid: c4553451-6969-4b40-a8b6-bf4408408737
+state: READY
+errors: []
+revision: bcb3ab35-96c9-4b94-bf3d-3a011fd9cc69
+createdAt: '2025-08-22T17:00:59.855Z'
+updatedAt: '2025-08-22T17:00:59.855Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66d1
+parentId: 68a8a247285c02f4152f0188
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: activities
+  dataSource:
+    key: activities
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 7881aa63-73ac-4b89-bbf0-99d7f075ef13
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

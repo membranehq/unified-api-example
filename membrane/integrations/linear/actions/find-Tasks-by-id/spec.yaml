@@ -1,0 +1,72 @@
+id: 68a8a3f6c172bc720667758d
+name: Find Task By Id
+key: find-Tasks-by-id
+uuid: 59c3027e-85b1-45d8-bcbd-e51f8690ccf1
+state: CONFIGURATION_ERROR
+errors:
+  - type: dependency_error
+    message: Integration Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: integration
+        id: 68a8a3ebc172bc7206676e4c
+  - type: dependency_error
+    message: Data Source Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: data-source
+        id: 68a8a3f1c172bc7206676f7d
+  - type: dependency_error
+    message: Field Mapping Dependency has error(s)
+    data:
+      workspaceElementReference:
+        type: field-mapping
+        id: 68a8a3f2c172bc72066770ef
+revision: 1bc8ac6e-e473-4982-aa75-23c7d4f5dd90
+createdAt: '2025-08-22T17:08:13.170Z'
+updatedAt: '2025-08-22T17:08:13.170Z'
+isDeactivated: false
+integrationId: 68a8a3ebc172bc7206676e4c
+parentId: 68a8a3f5c172bc72066772c3
+inputSchema:
+  type: object
+  properties:
+    id:
+      type: string
+type: find-data-record-by-id
+config:
+  fieldMapping:
+    key: tasks
+  dataSource:
+    key: tasks
+  id:
+    $var: $.input.id
+isCustomized: false
+parentRevision: 90dfa9d8-15c2-497e-8265-5a5fb03ad345
+integration:
+  id: 68a8a3ebc172bc7206676e4c
+  name: Linear
+  key: linear
+  uuid: fa48aa44-0e7a-4aea-99d2-879d2a9236a3
+  state: CONFIGURATION_ERROR
+  errors:
+    - type: configuration
+      message: Integration is missing required parameters
+  createdAt: '2025-08-22T17:07:55.954Z'
+  updatedAt: '2025-08-22T17:08:01.492Z'
+  isDeactivated: false
+  logoUri: >-
+    https://static.integration.app/connectors/linear/logo-0c34c3da-739d-4b18-b8e9-03246d2e0825.png
+  connectorId: 65a59efaaf9ac1360fd6bdac
+  connectorVersion: 1.1.3
+  hasMissingParameters: true
+  hasDocumentation: false
+  hasOperations: false
+  operationsCount: 0
+  hasData: true
+  dataCollectionsCount: 14
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

@@ -1,0 +1,54 @@
+id: 68a8a43f7f08dba516dd1360
+name: Create Job Candidate
+key: create-Job Candidates
+uuid: 677c4ecb-e90c-4599-b7c9-dd0197e652ab
+state: READY
+errors: []
+revision: 996a670c-eb1c-473d-b550-b44c5fa3db72
+createdAt: '2025-08-22T17:09:20.577Z'
+updatedAt: '2025-08-22T17:09:20.577Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a1
+parentId: 68a8a43e7f08dba516dd1288
+inputSchema:
+  type: object
+  properties:
+    fields:
+      type: object
+      properties:
+        name:
+          type: string
+type: create-data-record
+config:
+  dataSource:
+    key: job-candidates
+  fieldMapping:
+    key: job-candidates
+    input:
+      $var: $.input.fields
+isCustomized: false
+parentRevision: 6d6d59b1-990e-4e63-90df-2a04dda57ce9
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

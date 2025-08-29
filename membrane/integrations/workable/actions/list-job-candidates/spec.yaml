@@ -1,0 +1,77 @@
+id: 68a8a43f7f08dba516dd132f
+name: List Job Candidates
+key: list-job-candidates
+uuid: 0eed6722-e978-4b94-b970-4a126718919d
+state: READY
+errors: []
+revision: a7a9c26c-e9f4-4053-84b1-69c271dc6dd7
+createdAt: '2025-08-22T17:09:20.687Z'
+updatedAt: '2025-08-22T17:09:20.687Z'
+isDeactivated: false
+integrationId: 68a820cb9fc7b352ffc945a1
+parentId: 68a8a43e7f08dba516dd128c
+inputSchema:
+  type: object
+  properties:
+    cursor:
+      type: string
+    filter:
+      type: object
+      properties:
+        name:
+          type: string
+type: list-data-records
+config:
+  fieldMapping:
+    key: job-candidates
+  dataSource:
+    key: job-candidates
+  cursor:
+    $var: $.input.cursor
+  unifiedFilter:
+    $var: $.input.filter
+  filter:
+    id:
+      $var: $.input.filter.id
+    name:
+      $var: $.input.filter.fullName
+    firstname:
+      $var: $.input.filter.firstName
+    lastname:
+      $var: $.input.filter.lastName
+    email:
+      $var: $.input.filter.primaryEmail
+    created_at:
+      $var: $.input.filter.createdTime
+    updated_at:
+      $var: $.input.filter.updatedTime
+    address:
+      $var: $.input.filter.addresses[0].full
+    phone:
+      $var: $.input.filter.primaryPhone
+isCustomized: false
+parentRevision: c7f2766f-3c04-4213-adcc-394b15a785cf
+integration:
+  id: 68a820cb9fc7b352ffc945a1
+  name: Workable
+  key: workable
+  uuid: 93270cf3-38d2-41a6-b786-07dd9165848e
+  state: READY
+  errors: []
+  createdAt: '2025-08-22T07:48:27.348Z'
+  updatedAt: '2025-08-22T07:48:29.208Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/workable/logo.png
+  connectorId: 643eaa3dbadd839bce5a65dd
+  connectorVersion: 1.0.3
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 58
+  hasData: true
+  dataCollectionsCount: 10
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials

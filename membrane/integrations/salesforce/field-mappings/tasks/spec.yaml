@@ -1,0 +1,170 @@
+id: 68a8a3f2c172bc72066770cc
+name: Tasks
+isDeactivated: false
+state: READY
+errors: []
+key: tasks
+customized: false
+revision: e8777cc5-1fd6-4e36-b7bb-c22eeae82e00
+universalFieldMappingId: 68a8a3f2c172bc720667707a
+universalFieldMappingRevision: 342521fa-9f58-4a4d-b103-a4f6f9f7836d
+integrationId: 689f2bf000905568ab2f66d1
+dataSourceKey: tasks
+dataSourceId: 68a8a3f1c172bc7206676f5a
+direction: both
+defaultImportValue:
+  $var: $
+defaultExportValue:
+  $var: $
+exportValue:
+  WhoId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.contactId
+            isNotEmpty: true
+          value:
+            type: Contact
+            id:
+              $var: $.contactId
+        - filter:
+            $eval:
+              $var: $.leadId
+            isNotEmpty: true
+          value:
+            type: Lead
+            id:
+              $var: $.leadId
+  WhatId:
+    $case:
+      cases:
+        - filter:
+            $eval:
+              $var: $.dealId
+            isNotEmpty: true
+          value:
+            type: Deal
+            id:
+              $var: $.dealId
+        - filter:
+            $eval:
+              $var: $.companyId
+            isNotEmpty: true
+          value:
+            type: Account
+            id:
+              $var: $.companyId
+  Subject:
+    $var: $.subject
+  ActivityDate:
+    $var: $.dueTime
+  Status:
+    $var: $.status
+  Priority:
+    $var: $.priority
+  OwnerId:
+    $var: $.ownerId
+  Description:
+    $var: $.content
+  AccountId:
+    $var: $.companyId
+  CreatedDate:
+    $var: $.createdTime
+  CreatedById:
+    $var: $.createdBy
+  LastModifiedDate:
+    $var: $.updatedTime
+  LastModifiedById:
+    $var: $.updatedBy
+  TaskSubtype:
+    $var: $.type
+  CompletedDateTime:
+    $var: $.endTime
+importValue:
+  id:
+    $var: $.Id
+  subject:
+    $var: $.Subject
+  content:
+    $var: $.Description
+  type:
+    $var: $.TaskSubtype
+  status:
+    $var: $.Status
+  ownerId:
+    $var: $.OwnerId
+  companyId:
+    $var: $.AccountId
+  dueTime:
+    $var: $.ActivityDate
+  endTime:
+    $var: $.CompletedDateTime
+  createdTime:
+    $var: $.CreatedDate
+  createdBy:
+    $var: $.CreatedById
+  updatedTime:
+    $var: $.LastModifiedDate
+  updatedBy:
+    $var: $.LastModifiedById
+  dealId:
+    $formula:
+      $case:
+        cases:
+          - filter:
+              $eval:
+                $var: $.WhatId.type
+              is: Opportunity
+            value:
+              $var: $.WhatId.id
+  contactId:
+    $formula:
+      $case:
+        cases:
+          - filter:
+              $eval:
+                $var: $.WhoId.type
+              is: Contact
+            value:
+              $var: $.WhoId.id
+  leadId:
+    $formula:
+      $case:
+        cases:
+          - filter:
+              $eval:
+                $var: $.WhoId.type
+              is: Lead
+            value:
+              $var: $.WhoId.id
+  priority:
+    $var: $.Priority
+  startTime:
+    $var: $.CompletedDateTime
+  assigneeId:
+    $var: $.OwnerId
+integration:
+  id: 689f2bf000905568ab2f66d1
+  name: Salesforce
+  key: salesforce
+  uuid: c718ec46-2294-47bf-b56d-248f6fa11cfc
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.202Z'
+  updatedAt: '2025-08-15T12:45:50.725Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/salesforce-connector/logo.png
+  connectorId: 62471fad996d5c297ae43f5e
+  connectorVersion: 1.6.7
+  hasMissingParameters: false
+  hasDocumentation: true
+  hasOperations: true
+  operationsCount: 303
+  hasData: true
+  dataCollectionsCount: 30
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

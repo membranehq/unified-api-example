@@ -1,0 +1,38 @@
+id: 68a8a245285c02f4152f002a
+name: Activities
+isDeactivated: false
+state: READY
+errors: []
+key: activities
+revision: 92207315-b4d6-462a-8b75-62aa608d7542
+integrationId: 689f2bf000905568ab2f66d8
+customized: false
+universalDataSourceId: 68a8a245285c02f4152f000b
+universalDataSourceRevision: 0f7c631b-6fec-4613-91c6-7a26e7f91e00
+collectionKey: Calls
+udm: activities
+defaultPath: /data/Calls
+integration:
+  id: 689f2bf000905568ab2f66d8
+  name: Zoho CRM
+  key: zoho-crm
+  uuid: ccf1c7bb-8266-4e1a-bca9-d5ac178ab7bf
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.205Z'
+  updatedAt: '2025-08-15T12:45:46.121Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/zoho-crm/logo.png
+  connectorId: 64a158e7d2605720d232e07b
+  connectorVersion: 2.2.0
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 569
+  hasData: true
+  dataCollectionsCount: 20
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: oauth2

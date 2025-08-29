@@ -1,0 +1,55 @@
+id: 68a8a340bc4406f3f0dc4a30
+name: Search Leads
+key: search-leads
+uuid: 455c3e58-0eff-4cdf-a6f4-aba7cfd31bd0
+state: READY
+errors: []
+revision: b23ad25a-c1d8-4080-8ebb-586a07e0234e
+createdAt: '2025-08-22T17:05:05.366Z'
+updatedAt: '2025-08-22T17:05:05.366Z'
+isDeactivated: false
+integrationId: 689f2bf000905568ab2f66ee
+parentId: 68a8a340bc4406f3f0dc4984
+inputSchema:
+  type: object
+  properties:
+    query:
+      type: string
+    cursor:
+      type: string
+type: search-data-record
+config:
+  fieldMapping:
+    key: leads
+  dataSource:
+    key: leads
+  query:
+    $var: $.input.query
+  cursor:
+    $var: $.input.cursor
+isCustomized: false
+parentRevision: 0c47b1ec-2153-420c-8576-724287047182
+integration:
+  id: 689f2bf000905568ab2f66ee
+  name: Insightly
+  key: insightly
+  uuid: 82ba031e-f535-42b3-88e5-2aed137aa21e
+  state: READY
+  errors: []
+  createdAt: '2025-08-15T12:45:36.266Z'
+  updatedAt: '2025-08-15T12:45:46.187Z'
+  isDeactivated: false
+  logoUri: https://static.integration.app/connectors/insightly/logo.png
+  connectorId: 643eedf1badd839bce6a3f71
+  connectorVersion: 1.0.1
+  hasMissingParameters: false
+  hasDocumentation: false
+  hasOperations: true
+  operationsCount: 534
+  hasData: true
+  dataCollectionsCount: 11
+  hasEvents: false
+  eventsCount: 0
+  hasGlobalWebhooks: false
+  hasUdm: true
+  authType: client-credentials
