@@ -41,10 +41,10 @@ npm install -g @membranehq/cli
 membrane init
 ```
 
-3. Pull the elements into your workspace
+3. Push the elements into your workspace
 
 ```bash
-membrane pull
+membrane push
 ```
 
 ### 3. Configure Environment Variables
