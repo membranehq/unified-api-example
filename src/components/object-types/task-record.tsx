@@ -12,7 +12,7 @@ interface TaskRecordProps {
 type TaskData = z.infer<typeof tasksSchema>;
 
 export function TaskRecord({ record }: TaskRecordProps) {
-  const taskData = record.data as Partial<TaskData>;
+  const taskData = record.fields as Partial<TaskData>;
 
   const subject = typeof taskData?.subject === 'string' ? taskData.subject : null;
   const type = typeof taskData?.type === 'string' ? taskData.type : null;
@@ -26,7 +26,7 @@ export function TaskRecord({ record }: TaskRecordProps) {
         <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 text-yellow-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {subject || record.name || "Unknown Task"}
+            {subject || "Unknown Task"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {type && (

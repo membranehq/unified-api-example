@@ -53,11 +53,7 @@ export function useMembraneRecords({
     revalidateOnReconnect: false,
   });
 
-  const records: IRecord[] =
-    recordsData?.output?.records.map((record: Record<string, unknown>) => ({
-      ...record,
-      data: record.fields,
-    })) || [];
+  const records: IRecord[] = recordsData?.output?.records || [];
 
   const handleDeleteRecord = useCallback(
     async (recordId: string) => {

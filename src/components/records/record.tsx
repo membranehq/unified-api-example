@@ -52,7 +52,7 @@ export function Record({
   const [isDeleting, setIsDeleting] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText(JSON.stringify(record.data, null, 2));
+    await navigator.clipboard.writeText(JSON.stringify(record.fields, null, 2));
     setCopied(true);
     setTimeout(() => setCopied(false), 1200);
   };
@@ -68,7 +68,6 @@ export function Record({
   const confirmDelete = async () => {
     setIsDeleting(true);
     try {
-      console.log("record.id", record.id);
       await onRecordDeleted?.(record.id);
       toast.success(`${appObjectLabel} deleted successfully`);
       setDeleteDialogOpen(false);
@@ -200,7 +199,7 @@ export function Record({
         <div className="px-2 sm:px-4 py-3 bg-muted/30">
           <div className="space-y-3">
             <pre className="whitespace-pre-wrap break-all bg-gray-100 rounded p-2 sm:p-3 text-xs border overflow-x-auto">
-              {JSON.stringify(record.data, null, 2)}
+              {JSON.stringify(record.fields, null, 2)}
             </pre>
             <div className="flex flex-col sm:flex-row sm:items-center justify-between text-xs text-gray-500 gap-1 sm:gap-0">
               <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">

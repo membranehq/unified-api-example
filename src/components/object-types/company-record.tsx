@@ -12,7 +12,7 @@ interface CompanyRecordProps {
 type CompanyData = z.infer<typeof companiesSchema>;
 
 export function CompanyRecord({ record }: CompanyRecordProps) {
-  const companyData = record.data as Partial<CompanyData>;
+  const companyData = record.fields as Partial<CompanyData>;
 
   const companyName = typeof companyData?.name === 'string' ? companyData.name : null;
   const industry = typeof companyData?.industry === 'string' ? companyData.industry : null;
@@ -25,7 +25,7 @@ export function CompanyRecord({ record }: CompanyRecordProps) {
         <Building className="w-3 h-3 sm:w-4 sm:h-4 text-gray-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {companyName || record.name || "Unknown Company"}
+            {companyName || "Unknown Company"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {industry && (

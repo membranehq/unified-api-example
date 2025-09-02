@@ -12,7 +12,7 @@ interface JobApplicationRecordProps {
 type JobApplicationData = z.infer<typeof jobapplicationsSchema>;
 
 export function JobApplicationRecord({ record }: JobApplicationRecordProps) {
-  const jobAppData = record.data as Partial<JobApplicationData>;
+  const jobAppData = record.fields as Partial<JobApplicationData>;
 
   const status = typeof jobAppData?.status === 'string' ? jobAppData.status : null;
   const currentStage = typeof jobAppData?.currentStage === 'string' ? jobAppData.currentStage : null;
@@ -23,7 +23,7 @@ export function JobApplicationRecord({ record }: JobApplicationRecordProps) {
         <Briefcase className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {record.name || "Job Application"}
+            {"Job Application"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {status && (

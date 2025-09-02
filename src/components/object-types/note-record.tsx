@@ -12,7 +12,7 @@ interface NoteRecordProps {
 type NoteData = z.infer<typeof notesSchema>;
 
 export function NoteRecord({ record }: NoteRecordProps) {
-  const noteData = record.data as Partial<NoteData>;
+  const noteData = record.fields as Partial<NoteData>;
 
   const title = typeof noteData?.title === 'string' ? noteData.title : null;
   const status = typeof noteData?.status === 'string' ? noteData.status : null;
@@ -24,7 +24,7 @@ export function NoteRecord({ record }: NoteRecordProps) {
         <StickyNote className="w-3 h-3 sm:w-4 sm:h-4 text-amber-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {title || record.name || "Unknown Note"}
+            {title || "Unknown Note"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {status && (

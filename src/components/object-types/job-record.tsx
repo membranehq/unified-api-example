@@ -12,7 +12,7 @@ interface JobRecordProps {
 type JobData = z.infer<typeof jobsSchema>;
 
 export function JobRecord({ record }: JobRecordProps) {
-  const jobData = record.data as Partial<JobData>;
+  const jobData = record.fields as Partial<JobData>;
 
   const jobName = typeof jobData?.name === 'string' ? jobData.name : null;
   const jobCode = typeof jobData?.code === 'string' ? jobData.code : null;
@@ -25,7 +25,7 @@ export function JobRecord({ record }: JobRecordProps) {
         <Building2 className="w-3 h-3 sm:w-4 sm:h-4 text-indigo-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {jobName || record.name || "Unknown Job"}
+            {jobName || "Unknown Job"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {jobCode && (

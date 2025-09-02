@@ -12,7 +12,7 @@ interface ContactRecordProps {
 type ContactData = z.infer<typeof contactsSchema>;
 
 export function ContactRecord({ record }: ContactRecordProps) {
-  const contactData = record.data as Partial<ContactData>;
+  const contactData = record.fields as Partial<ContactData>;
 
   const fullName = typeof contactData?.fullName === 'string' ? contactData.fullName : null;
   const primaryEmail = typeof contactData?.primaryEmail === 'string' ? contactData.primaryEmail : null;
@@ -25,7 +25,7 @@ export function ContactRecord({ record }: ContactRecordProps) {
         <Users className="w-3 h-3 sm:w-4 sm:h-4 text-purple-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {fullName || record.name || "Unknown Contact"}
+            {fullName || "Unknown Contact"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {jobTitle && (

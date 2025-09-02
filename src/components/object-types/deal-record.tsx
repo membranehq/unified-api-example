@@ -12,7 +12,7 @@ interface DealRecordProps {
 type DealData = z.infer<typeof dealsSchema>;
 
 export function DealRecord({ record }: DealRecordProps) {
-  const dealData = record.data as Partial<DealData>;
+  const dealData = record.fields as Partial<DealData>;
 
   const name = typeof dealData?.name === 'string' ? dealData.name : null;
   const amount = typeof dealData?.amount === 'number' ? dealData.amount : null;
@@ -26,7 +26,7 @@ export function DealRecord({ record }: DealRecordProps) {
         <Target className="w-3 h-3 sm:w-4 sm:h-4 text-green-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {name || record.name || "Unknown Deal"}
+            {name || "Unknown Deal"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {amount !== null && currency && (

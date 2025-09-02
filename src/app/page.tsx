@@ -294,10 +294,6 @@ const RecordsScreen = ({
     await mutateRecords();
   };
 
-  const cleanedRecords = records.map((record) => ({
-    id: record.id,
-    data: record.data,
-  }));
 
   if (recordsError) {
     return (
@@ -311,7 +307,7 @@ const RecordsScreen = ({
 
   return (
     <Records
-      records={cleanedRecords}
+      records={records}
       appObjectKey={appObjectKey as AppObjectKey}
       appObjectLabel={appObjects[appObjectKey as keyof typeof appObjects].label}
       isLoading={recordsLoading}
@@ -328,7 +324,7 @@ const RecordsScreen = ({
           <div className="flex items-center gap-2">
             {!recordsLoading ? (
               <div className="text-sm">
-                Showing {cleanedRecords.length} records
+                Showing {records.length} records
               </div>
             ) : (
               <div></div>

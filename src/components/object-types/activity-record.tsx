@@ -12,7 +12,7 @@ interface ActivityRecordProps {
 type ActivityData = z.infer<typeof activitiesSchema>;
 
 export function ActivityRecord({ record }: ActivityRecordProps) {
-  const activityData = record.data as Partial<ActivityData>;
+  const activityData = record.fields as Partial<ActivityData>;
 
   const title = typeof activityData?.title === 'string' ? activityData.title : null;
   const type = typeof activityData?.type === 'string' ? activityData.type : null;
@@ -35,7 +35,7 @@ export function ActivityRecord({ record }: ActivityRecordProps) {
         <AlertCircle className="w-3 h-3 sm:w-4 sm:h-4 text-red-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {title || record.name || "Unknown Activity"}
+            {title || "Unknown Activity"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {type && (

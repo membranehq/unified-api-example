@@ -12,7 +12,7 @@ interface OrderRecordProps {
 type OrderData = z.infer<typeof ordersSchema>;
 
 export function OrderRecord({ record }: OrderRecordProps) {
-  const orderData = record.data as Partial<OrderData>;
+  const orderData = record.fields as Partial<OrderData>;
 
   const orderName = typeof orderData?.name === 'string' ? orderData.name : null;
   const orderStatus = typeof orderData?.status === 'string' ? orderData.status : null;
@@ -25,7 +25,7 @@ export function OrderRecord({ record }: OrderRecordProps) {
         <Mail className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {orderName || record.name || "Unknown Order"}
+            {orderName || "Unknown Order"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {orderStatus && (

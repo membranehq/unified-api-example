@@ -12,7 +12,7 @@ interface LeadRecordProps {
 type LeadData = z.infer<typeof leadsSchema>;
 
 export function LeadRecord({ record }: LeadRecordProps) {
-  const leadData = record.data as Partial<LeadData>;
+  const leadData = record.fields as Partial<LeadData>;
 
   const fullName = typeof leadData?.fullName === 'string' ? leadData.fullName : null;
   const jobTitle = typeof leadData?.jobTitle === 'string' ? leadData.jobTitle : null;
@@ -26,7 +26,7 @@ export function LeadRecord({ record }: LeadRecordProps) {
         <User className="w-3 h-3 sm:w-4 sm:h-4 text-blue-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {fullName || record.name || "Unknown Lead"}
+            {fullName || "Unknown Lead"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {jobTitle && (

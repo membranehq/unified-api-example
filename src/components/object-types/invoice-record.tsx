@@ -12,7 +12,7 @@ interface InvoiceRecordProps {
 type InvoiceData = z.infer<typeof invoicesSchema>;
 
 export function InvoiceRecord({ record }: InvoiceRecordProps) {
-  const invoiceData = record.data as Partial<InvoiceData>;
+  const invoiceData = record.fields as Partial<InvoiceData>;
 
   const name = typeof invoiceData?.name === 'string' ? invoiceData.name : null;
   const number = typeof invoiceData?.number === 'string' ? invoiceData.number : null;
@@ -26,7 +26,7 @@ export function InvoiceRecord({ record }: InvoiceRecordProps) {
         <Receipt className="w-3 h-3 sm:w-4 sm:h-4 text-orange-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {name || record.name || "Unknown Invoice"}
+            {name || "Unknown Invoice"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {number && (

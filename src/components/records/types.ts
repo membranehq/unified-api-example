@@ -1,8 +1,10 @@
 export interface IRecord {
-  id: string;
-  data: Record<string, unknown>;
+  fields: Record<string, unknown>;
 
-  name?: string;
-  createdAt?: Date;
-  updatedAt?: Date;
+  /**
+   * Membrane mappings has these field mapped out for each records by default
+   */
+  id: string;
+  createdAt: Date
+  updatedAt: Date
 }

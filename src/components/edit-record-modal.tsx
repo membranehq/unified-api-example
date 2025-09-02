@@ -32,7 +32,7 @@ export function EditRecordModal({
   open,
   onOpenChange,
 }: EditRecordModalProps) {
-  const [formData, setFormData] = useState<Record<string, unknown>>(() => record.data);
+  const [formData, setFormData] = useState<Record<string, unknown>>(() => record.fields);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
 

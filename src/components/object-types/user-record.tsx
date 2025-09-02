@@ -13,7 +13,7 @@ interface UserRecordProps {
 type UserData = z.infer<typeof usersSchema>;
 
 export function UserRecord({ record }: UserRecordProps) {
-  const userData = record.data as Partial<UserData>;
+  const userData = record.fields as Partial<UserData>;
 
   const userName = typeof userData?.fullName === 'string' ? userData.fullName : null;
   const userAvatar = typeof userData?.imageUrl === 'string' ? userData.imageUrl : null;
@@ -43,7 +43,7 @@ export function UserRecord({ record }: UserRecordProps) {
         )}
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {userName || record.name || "Unknown User"}
+            {userName || "Unknown User"}
           </span>
         </div>
       </div>

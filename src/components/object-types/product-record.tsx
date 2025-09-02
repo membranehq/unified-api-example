@@ -12,7 +12,7 @@ interface ProductRecordProps {
 type ProductData = z.infer<typeof productsSchema>;
 
 export function ProductRecord({ record }: ProductRecordProps) {
-  const productData = record.data as Partial<ProductData>;
+  const productData = record.fields as Partial<ProductData>;
 
   const name = typeof productData?.name === 'string' ? productData.name : null;
   const code = typeof productData?.code === 'string' ? productData.code : null;
@@ -26,7 +26,7 @@ export function ProductRecord({ record }: ProductRecordProps) {
         <Package className="w-3 h-3 sm:w-4 sm:h-4 text-indigo-500 flex-shrink-0" />
         <div className="flex flex-col min-w-0 flex-1">
           <span className="font-medium truncate text-xs sm:text-sm">
-            {name || record.name || "Unknown Product"}
+            {name || "Unknown Product"}
           </span>
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             {code && (
