@@ -1,407 +1,26 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
-import { AppObjectKey } from "@/lib/app-objects-schemas";
-import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useAuth } from "./contexts/auth-context";
 import { useUserTracking } from "@/lib/posthog";
-import { Skeleton } from "@/components/ui/skeleton";
 import {
   FolderOpen,
   Database,
   Zap,
-  RefreshCw,
-  AlertTriangle,
-  Plug2,
 } from "lucide-react";
-import { Avatar } from "@/components/ui/avatar";
 import { useIntegration } from "@membranehq/react";
-import { JetBrains_Mono } from "next/font/google";
 import appObjects from "@/lib/app-objects";
 import { SelectionGroup } from "../components/selection-group";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import { Icons } from "@/components/ui/icons";
-import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { oneLight } from "react-syntax-highlighter/dist/esm/styles/prism";
-
-const jetbrainsMono = JetBrains_Mono({ subsets: ["latin"] });
-import { useMembraneRecords } from "../hooks/use-membrane-records";
 import { useIntegrationConnection } from "../hooks/use-integration-connection";
 import { useDataSourceAppliedIntegrations } from "../hooks/use-applied-integrations";
-import { PaginationControls } from "../components/records/pagination-controls";
-import { Records } from "../components/records/records";
 import { ManageIntegrationsModal } from "../components/manage-integrations-modal/manage-integrations-modal";
-
-// Connection Loading Screen Component
-const ConnectionLoadingScreen = () => (
-  <div className="bg-gray-50 rounded-lg border border-gray-200">
-    <div className="p-4 sm:p-8">
-      <div className="text-center">
-        <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
-        <Skeleton className="h-6 w-48 mx-auto mb-2" />
-        <div className="flex items-center justify-center gap-2 mb-4 flex-wrap">
-          <Skeleton className="h-4 w-32" />
-          <Skeleton className="h-4 w-24" />
-          <Skeleton className="h-4 w-20" />
-        </div>
-        <Skeleton className="h-10 w-40 mx-auto rounded-md" />
-      </div>
-    </div>
-  </div>
-);
-
-// Connection Required Screen Component
-const ConnectionRequiredScreen = ({
-  integrationName,
-  integrationLogoUri,
-  connect,
-  isConnecting,
-  userEmail,
-  buttonText = "Connect",
-  title,
-  description,
-}: {
-  integrationName: string | null;
-  integrationLogoUri: string | null;
-  connect: () => void;
-  isConnecting: boolean;
-  userEmail?: string;
-  buttonText?: string;
-  title?: string;
-  description?: string;
-}) => (
-  <div className="bg-gray-50 rounded-lg border border-gray-200">
-    <div className="p-4 sm:p-8">
-      <div className="text-center">
-        <div className="relative flex items-center justify-center mb-4">
-          {/* User Avatar Circle (Left) */}
-          <div className="w-16 h-16 rounded-full border-2 border-white shadow-sm overflow-hidden">
-            <Avatar email={userEmail} size="lg" className="w-full h-full" />
-          </div>
-
-          {/* App Logo Circle (Right) */}
-          <div className="w-16 h-16 rounded-full border-2 border-white shadow-sm overflow-hidden ml-4">
-            {integrationLogoUri ? (
-              <Image
-                src={integrationLogoUri}
-                alt=""
-                width={48}
-                height={48}
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <div className="w-full h-full bg-amber-500 rounded-full flex items-center justify-center">
-                <span className="text-white text-sm font-medium">A</span>
-              </div>
-            )}
-          </div>
-
-          {/* Connection Icon - Positioned on top */}
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-white rounded-full flex items-center justify-center border-2 border-gray-200">
-            <Plug2 className="w-5 h-5 text-gray-600 rotate-90" />
-          </div>
-        </div>
-        <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
-          {title}
-        </h3>
-        <p className="text-gray-600 mb-4 text-sm tracking-tight">
-          {description || `Connect to ${integrationName} to view records.`}
-        </p>
-        <Button
-          onClick={connect}
-          disabled={isConnecting}
-          className="bg-primary text-white hover:bg-primary/90"
-        >
-          {isConnecting ? "Connecting..." : buttonText}
-        </Button>
-      </div>
-    </div>
-  </div>
-);
-
-// Error Screen Component
-const ErrorScreen = ({
-  error,
-  onRetry,
-  isLoading = false,
-}: {
-  error: Error | null;
-  onRetry: () => void;
-  isLoading?: boolean;
-}) => {
-  const [showFullError, setShowFullError] = useState(false);
-
-  const toggleErrorDetails = () => {
-    setShowFullError(!showFullError);
-  };
-
-  return (
-    <div className="bg-gray-50 rounded-lg border border-gray-200">
-      <div className="p-4 sm:p-8">
-        <div className="text-center">
-          <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <FolderOpen className="w-8 h-8 text-red-400" />
-          </div>
-          <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
-            Error Loading Records
-          </h3>
-
-          {/* Error Badge */}
-          <div className="mb-4">
-            <button
-              onClick={toggleErrorDetails}
-              className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-red-100 text-red-800 hover:bg-red-200 transition-colors cursor-pointer border border-red-200 ${jetbrainsMono.className}`}
-              title="Click to view full error details"
-            >
-              <AlertTriangle className="w-4 h-4 mr-1" />
-              {error?.message || "Failed to load records from the integration."}
-              <span className="ml-1 text-xs">▼</span>
-            </button>
-          </div>
-
-          {/* Full Error Details */}
-          {showFullError && error && (
-            <div className="mb-4 text-left">
-              <div className="bg-white rounded-lg border border-gray-200 p-4 shadow-sm">
-                <div className="space-y-3 text-sm">
-                  <div>
-                    <strong className="text-gray-700">Error Message:</strong>
-                    <pre
-                      className={`mt-1 p-3 bg-gray-50 rounded text-red-600 overflow-x-auto text-xs border ${jetbrainsMono.className}`}
-                    >
-                      {error.message}
-                    </pre>
-                  </div>
-                  {error.stack && (
-                    <div>
-                      <strong className="text-gray-700">Stack Trace:</strong>
-                      <pre
-                        className={`mt-1 p-3 bg-gray-50 rounded text-gray-700 overflow-x-auto text-xs border max-h-40 overflow-y-auto ${jetbrainsMono.className}`}
-                      >
-                        {error.stack}
-                      </pre>
-                    </div>
-                  )}
-                  {error.name && (
-                    <div>
-                      <strong className="text-gray-700">Error Type:</strong>
-                      <span className="ml-1 text-gray-600">{error.name}</span>
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          )}
-
-          <Button onClick={onRetry} variant="outline" disabled={isLoading}>
-            {isLoading ? (
-              <>
-                <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
-                Retrying...
-              </>
-            ) : (
-              <>
-                <RefreshCw className="w-4 h-4 mr-2" />
-                Retry
-              </>
-            )}
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-};
-
-// Records Screen Component
-const RecordsScreen = ({
-  integrationKey,
-  appObjectKey,
-  hasConnection,
-}: {
-  integrationKey: string | null;
-  appObjectKey: string | null;
-  hasConnection: boolean;
-}) => {
-  const [cursor, setCursor] = useState<string | null>(null);
-  const [cursorHistory, setCursorHistory] = useState<string[]>([]);
-  const [isRetrying, setIsRetrying] = useState(false);
-
-  const {
-    records,
-    recordsData,
-    recordsError,
-    recordsLoading,
-    handleDeleteRecord,
-    handleCreateRecord,
-    handleUpdateRecord,
-    mutateRecords,
-    code,
-  } = useMembraneRecords({
-    integrationKey,
-    dataSourceKey: appObjectKey,
-    cursor,
-    hasConnection,
-  });
-
-  const hasNextPage = !!recordsData?.output?.cursor;
-  const hasPreviousPage = cursorHistory.length > 0;
-
-  const pagination = {
-    hasNextPage,
-    hasPreviousPage,
-  };
-
-  const handlePreviousPage = () => {
-    if (!hasPreviousPage) return;
-
-    const previousCursor = cursorHistory[cursorHistory.length - 1];
-    setCursorHistory((prev) => prev.slice(0, -1));
-    setCursor(previousCursor || null);
-  };
-
-  const handleNextPage = () => {
-    if (!hasNextPage) return;
-
-    const nextCursor = recordsData?.output?.cursor;
-    if (cursor) {
-      setCursorHistory((prev) => [...prev, cursor]);
-    }
-    setCursor(nextCursor || null);
-  };
-
-  // Reset pagination when selection changes
-  React.useEffect(() => {
-    setCursor(null);
-    setCursorHistory([]);
-  }, [integrationKey, appObjectKey]);
-
-  const handleRetry = async () => {
-    setIsRetrying(true);
-    try {
-      await mutateRecords();
-    } finally {
-      setIsRetrying(false);
-    }
-  };
-
-  const handleRefetch = async () => {
-    await mutateRecords();
-  };
-
-
-  if (recordsError) {
-    return (
-      <ErrorScreen
-        error={recordsError}
-        onRetry={handleRetry}
-        isLoading={isRetrying || recordsLoading}
-      />
-    );
-  }
-
-  return (
-    <Records
-      records={records}
-      appObjectKey={appObjectKey as AppObjectKey}
-      appObjectLabel={appObjects[appObjectKey as keyof typeof appObjects].label}
-      isLoading={recordsLoading}
-      onDeleteRecord={async (id: string) => handleDeleteRecord(id)}
-      onCreateRecord={async (data: Record<string, unknown>) =>
-        handleCreateRecord(data)
-      }
-      onUpdateRecord={async (id: string, data: Record<string, unknown>) =>
-        handleUpdateRecord(id, data)
-      }
-      onRefetch={handleRefetch}
-      renderHeader={() => (
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2 sm:gap-0">
-          <div className="flex items-center gap-2">
-            {!recordsLoading ? (
-              <div className="text-sm">
-                Showing {records.length} records
-              </div>
-            ) : (
-              <div></div>
-            )}
-            {code && (
-              <Popover>
-                <PopoverTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="h-8 w-8 p-0"
-                    title="View API Code"
-                  >
-                    <Icons.code className="h-4 w-4" />
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-96 p-4" align="start">
-                  <div className="space-y-2">
-                    <h4 className="font-medium text-sm">API Code Example</h4>
-                    <div className="rounded border overflow-hidden">
-                      <SyntaxHighlighter
-                        language="typescript"
-                        style={oneLight}
-                        customStyle={{
-                          margin: 0,
-                          fontSize: "14px",
-                          fontFamily: jetbrainsMono.style.fontFamily,
-                        }}
-                        showLineNumbers={true}
-                      >
-                        {code}
-                      </SyntaxHighlighter>
-                    </div>
-                  </div>
-                </PopoverContent>
-              </Popover>
-            )}
-          </div>
-          <PaginationControls
-            pagination={pagination}
-            isNavigating={recordsLoading}
-            onPreviousPage={handlePreviousPage}
-            onNextPage={handleNextPage}
-          />
-        </div>
-      )}
-    />
-  );
-};
-
-// Empty State Screen Component
-const EmptyStateScreen = ({
-  selectedAppObjectKey,
-  selectedIntegrationKey,
-}: {
-  selectedAppObjectKey: string | null;
-  selectedIntegrationKey: string | null;
-}) => (
-  <div className="bg-gray-50 rounded-lg border border-gray-200">
-    <div className="p-4 sm:p-8">
-      <div className="text-center">
-        <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-          <FolderOpen className="w-8 h-8 text-gray-400" />
-        </div>
-        <h3 className="text-lg font-bold text-gray-900 mb-2 tracking-tight">
-          No Records to Display
-        </h3>
-        {!selectedAppObjectKey ||
-          (!selectedIntegrationKey && (
-            <p className="text-sm text-gray-600 mb-4 tracking-tight">
-              Choose a Object and Integration to view records.
-            </p>
-          ))}
-      </div>
-    </div>
-  </div>
-);
+import {
+  ConnectionLoadingView,
+  ConnectionRequiredView,
+  RecordsView,
+  EmptyStateView,
+} from "../components/views";
 
 export default function Page() {
   const searchParams = useSearchParams();
@@ -522,7 +141,7 @@ export default function Page() {
   const renderMainContent = () => {
     if (!selectedAppObjectKey || !selectedIntegrationKey) {
       return (
-        <EmptyStateScreen
+        <EmptyStateView
           selectedAppObjectKey={selectedAppObjectKey}
           selectedIntegrationKey={selectedIntegrationKey}
         />
@@ -530,7 +149,7 @@ export default function Page() {
     }
 
     if (connectionLoading) {
-      return <ConnectionLoadingScreen />;
+      return <ConnectionLoadingView />;
     }
 
     // Connection may be disconnected if authentication was revoked, didn't go though or we couldn't refresh the token
@@ -538,7 +157,7 @@ export default function Page() {
 
     if (!connection || isDisconnected) {
       return (
-        <ConnectionRequiredScreen
+        <ConnectionRequiredView
           integrationName={integrationName}
           integrationLogoUri={integrationLogoUri}
           connect={connect}
@@ -552,7 +171,7 @@ export default function Page() {
     }
 
     return (
-      <RecordsScreen
+      <RecordsView
         integrationKey={selectedIntegrationKey}
         appObjectKey={selectedAppObjectKey}
         hasConnection={!!connection}
