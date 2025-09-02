@@ -1,7 +1,7 @@
 import { IRecord } from "@/components/records/types";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { AlertCircle } from "lucide-react";
-import { activitiesSchema } from "@/lib/schemas";
+import { activitiesSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 
 interface ActivityRecordProps {

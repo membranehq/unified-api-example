@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { AppObjectKey } from "@/lib/schemas";
+import { AppObjectKey } from "@/lib/app-objects-schemas";
 import Image from "next/image";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useAuth } from "./contexts/auth-context";
@@ -19,7 +19,7 @@ import {
 import { Avatar } from "@/components/ui/avatar";
 import { useIntegration } from "@membranehq/react";
 import { JetBrains_Mono } from "next/font/google";
-import appObjects from "@/lib/app-object-config";
+import appObjects from "@/lib/app-objects";
 import { SelectionGroup } from "../components/selection-group";
 import {
   Popover,

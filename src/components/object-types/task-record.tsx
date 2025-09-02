@@ -1,7 +1,7 @@
 import { IRecord } from "@/components/records/types";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { AlertCircle } from "lucide-react";
-import { tasksSchema } from "@/lib/schemas";
+import { tasksSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 
 interface TaskRecordProps {

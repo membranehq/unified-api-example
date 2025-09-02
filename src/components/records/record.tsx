@@ -25,7 +25,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ConfirmDialog } from "@/components/ui/confirm-dialog";
 import { toast } from "sonner";
-import appObjects from "@/lib/app-object-config";
+import appObjects from "@/lib/app-objects";
 import { IRecord } from "@/components/records/types";
 
 interface RecordProps {

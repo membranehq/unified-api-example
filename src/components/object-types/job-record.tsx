@@ -1,6 +1,6 @@
 import { Building2 } from "lucide-react";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
-import { jobsSchema } from "@/lib/schemas";
+import { jobsSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 import { IRecord } from "../records/types";
 

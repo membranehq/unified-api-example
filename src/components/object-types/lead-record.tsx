@@ -1,7 +1,7 @@
 import { IRecord } from "@/components/records/types";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { User } from "lucide-react";
-import { leadsSchema } from "@/lib/schemas";
+import { leadsSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 
 interface LeadRecordProps {

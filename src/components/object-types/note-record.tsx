@@ -1,7 +1,7 @@
 import { IRecord } from "@/components/records/types";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { StickyNote } from "lucide-react";
-import { notesSchema } from "@/lib/schemas";
+import { notesSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 
 interface NoteRecordProps {

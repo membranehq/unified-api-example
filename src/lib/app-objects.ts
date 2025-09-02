@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { AppObjectKey } from "@/lib/schemas";
+import { AppObjectKey } from "@/lib/app-objects-schemas";
 import {
   Mail,
   User,
@@ -47,9 +47,9 @@ import {
   invoicesSchema,
   activitiesSchema,
   notesSchema,
-} from "./schemas";
+} from "./app-objects-schemas";
 
-interface Config {
+interface AppObject {
   /**
    * The schema for the object on this app
    */
@@ -91,7 +91,7 @@ interface Config {
   category?: string;
 }
 
-const appObjects: Record<AppObjectKey, Config> = {
+const appObjects: Record<AppObjectKey, AppObject> = {
   orders: {
     label: "Order",
     schema: ordersSchema,

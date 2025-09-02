@@ -1,6 +1,6 @@
 import { Users } from "lucide-react";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
-import { contactsSchema } from "@/lib/schemas";
+import { contactsSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 import { IRecord } from "../records/types";
 

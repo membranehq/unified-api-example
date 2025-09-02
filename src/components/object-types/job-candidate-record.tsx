@@ -1,7 +1,7 @@
 import { IRecord } from "@/components/records/types";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { Building } from "lucide-react";
-import { jobcandidatesSchema } from "@/lib/schemas";
+import { jobcandidatesSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 
 interface JobCandidateRecordProps {

@@ -4,12 +4,12 @@ import { memo, useState, useCallback } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { capitalize } from "@/lib/string-utils";
 import { getPluralForm } from "@/lib/pluralize-utils";
-import appObjects from "@/lib/app-object-config";
+import appObjects from "@/lib/app-objects";
 import { Record } from "@/components/records/record";
 import { CreateRecordModal } from "../create-record-modal";
 import { EditRecordModal } from "../edit-record-modal";
 import { IRecord } from "@/components/records/types";
-import { AppObjectKey } from "@/lib/schemas";
+import { AppObjectKey } from "@/lib/app-objects-schemas";
 import { RefreshCw, Inbox } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

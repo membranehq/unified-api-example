@@ -1,7 +1,7 @@
 import { IRecord } from "@/components/records/types";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { Package } from "lucide-react";
-import { productsSchema } from "@/lib/schemas";
+import { productsSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 
 interface ProductRecordProps {

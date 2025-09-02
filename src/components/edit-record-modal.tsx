@@ -9,7 +9,7 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { Loader2 } from "lucide-react";
-import appObjects from "@/lib/app-object-config";
+import appObjects from "@/lib/app-objects";
 import { ZodFormRenderer } from "./zod-form-renderer";
 import { IRecord } from "./records/types";
 import { getSingularForm } from "@/lib/pluralize-utils";

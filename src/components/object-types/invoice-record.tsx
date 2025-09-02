@@ -1,7 +1,7 @@
 import { IRecord } from "@/components/records/types";
 import { AppObjectComponentWrapper } from "./app-object-wrapper";
 import { Receipt } from "lucide-react";
-import { invoicesSchema } from "@/lib/schemas";
+import { invoicesSchema } from "@/lib/app-objects-schemas";
 import { z } from "zod";
 
 interface InvoiceRecordProps {

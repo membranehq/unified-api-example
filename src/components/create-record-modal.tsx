@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Plus } from "lucide-react";
-import appObjects from "@/lib/app-object-config";
+import appObjects from "@/lib/app-objects";
 import { ZodFormRenderer } from "@/components/zod-form-renderer";
 import { z } from "zod";
 import { getSingularForm } from '../lib/pluralize-utils';
