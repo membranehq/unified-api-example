@@ -5,7 +5,6 @@ import { useSearchParams, useRouter } from "next/navigation";
 import { useAuth } from "./contexts/auth-context";
 import { useUserTracking } from "@/lib/posthog";
 import {
-  FolderOpen,
   Database,
   Zap,
 } from "lucide-react";
