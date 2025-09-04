@@ -94,6 +94,7 @@ export default function Page() {
 
   // Fetch more info about the selected integration
   const {
+    loading: selectedIntegrationIsLoading,
     integration: { name: integrationName, logoUri: integrationLogoUri } = {
       key: null,
       name: null,
@@ -147,15 +148,15 @@ export default function Page() {
       );
     }
 
-    if (connectionLoading) {
+    if (connectionLoading || selectedIntegrationIsLoading) {
       return <ConnectionLoadingView />;
     }
 
     // Connection may be disconnected if authentication was revoked, didn't go though or we couldn't refresh the token
     const isDisconnected = connection?.disconnected;
     const title = isDisconnected
-    ? `Reconnect ${integrationName}`
-    : `Connect${integrationName ? ` to ${integrationName}` : ""}`;
+      ? `Reconnect ${integrationName}`
+      : `Connect to ${integrationName} `;
 
     if (!connection || isDisconnected) {
       return (
