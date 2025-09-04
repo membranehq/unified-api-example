@@ -153,6 +153,9 @@ export default function Page() {
 
     // Connection may be disconnected if authentication was revoked, didn't go though or we couldn't refresh the token
     const isDisconnected = connection?.disconnected;
+    const title = isDisconnected
+    ? `Reconnect ${integrationName}`
+    : `Connect${integrationName ? ` to ${integrationName}` : ""}`;
 
     if (!connection || isDisconnected) {
       return (
@@ -163,7 +166,7 @@ export default function Page() {
           isConnecting={isConnecting}
           userEmail={user?.email}
           buttonText={isDisconnected ? "Reconnect" : "Connect"}
-          title={`${isDisconnected ? "Reconnect" : "Connect to"} ${integrationName || ""}`}
+          title={title}
           description={isDisconnected ? `Your connection to ${integrationName} has been disconnected. Please reconnect to view records.` : undefined}
         />
       );
