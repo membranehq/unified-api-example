@@ -2,7 +2,11 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Badge } from "@/components/ui/badge";
-import { Check, ChevronsUpDown, ChevronDown, ChevronUp } from "lucide-react";
+import {
+  Check,
+  ChevronsUpDown,
+  ChevronDown
+} from "lucide-react";
 import {
   Command,
   CommandEmpty,
@@ -28,23 +32,28 @@ export interface SelectionItem {
   category?: string;
 }
 
-export interface SelectionGroupProps {
-  title: string;
-  description?: string;
-  items: SelectionItem[];
-  selectedKey: string | null;
-  onSelect: (key: string) => void;
-  loading?: boolean;
-  visibleCount?: number;
-  titleIcon?: React.ComponentType<{ className?: string }>;
-  titleIconColor?: string;
-  showEmptyMessage?: boolean;
-  emptyMessage?: string;
-  viewMode?: "all" | "categories";
-  onViewModeChange?: (mode: "all" | "categories") => void;
+export interface CategoryIcon {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
 }
 
-const ItemIcon = ({ item, className = "w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-1.5" }: { item: SelectionItem; className?: string }) => {
+export interface SelectionGroupProps {
+  items: SelectionItem[];
+  selectedKey: string | null;
+  onItemSelect: (key: string) => void;
+  loading?: boolean;
+  visibleCount?: number;
+  categoryIcons?: Record<string, CategoryIcon>;
+  onCategorySelect?: () => void;
+}
+
+const ItemIcon = ({
+  item,
+  className = "w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-1.5",
+}: {
+  item: SelectionItem;
+  className?: string;
+}) => {
   if (item.logoUri) {
     return (
       <Image
@@ -59,47 +68,37 @@ const ItemIcon = ({ item, className = "w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-1.5" }: 
   return item.icon ? <item.icon className={className} /> : null;
 };
 
-const Title = ({ title, description, titleIcon, titleIconColor = "text-gray-600" }: {
-  title: string;
-  description?: string;
-  titleIcon?: React.ComponentType<{ className?: string }>;
-  titleIconColor?: string;
-}) => (
-  <div className="mb-3">
-    <p className="text-md font-semibold flex items-center gap-2 text-gray-900 tracking-tight">
-      {titleIcon && React.createElement(titleIcon, {
-        className: `w-4 h-4 sm:w-5 sm:h-5 ${titleIconColor}`,
-      })}
-      {title}
-    </p>
-    {description && (
-      <p className="text-sm text-gray-600 mt-1 ml-6 sm:ml-7">{description}</p>
-    )}
-  </div>
-);
+// Title removed; parent is responsible for rendering headings/labels
 
-const SelectionButton = ({ item, isSelected, onSelect }: {
+const SelectionButton = ({
+  item,
+  isSelected,
+  onItemSelect,
+}: {
   item: SelectionItem;
   isSelected: boolean;
-  onSelect: (key: string) => void;
+  onItemSelect: (key: string) => void;
 }) => {
   const baseStyles = "h-8 sm:h-9 px-2 sm:px-3 relative text-xs sm:text-sm";
   const styles = item.disabled
     ? `${baseStyles} bg-gray-100 text-gray-400 border-gray-200 cursor-not-allowed`
     : `${baseStyles} ${isSelected
       ? "bg-blue-50 text-blue-700 border-blue-500 hover:bg-blue-100"
-      : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"}`;
+      : "bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400"
+    }`;
 
   return (
     <Button
       variant="outline"
       size="sm"
       className={styles}
-      onClick={() => !item.disabled && onSelect(item.key)}
+      onClick={() => !item.disabled && onItemSelect(item.key)}
       disabled={item.disabled}
     >
       <ItemIcon item={item} />
-      <span className="truncate max-w-[80px] sm:max-w-[120px]">{item.name}</span>
+      <span className="truncate max-w-[80px] sm:max-w-[120px]">
+        {item.name}
+      </span>
       {isSelected && !item.disabled && (
         <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-green-500 rounded-full flex items-center justify-center">
           <Check className="w-2 h-2 sm:w-2.5 sm:h-2.5 text-white" />
@@ -109,10 +108,15 @@ const SelectionButton = ({ item, isSelected, onSelect }: {
   );
 };
 
-const ItemsDropdown = ({ items, title, onSelect, onClose }: {
+const ItemsDropdown = ({
+  items,
+  title,
+  onItemSelect,
+  onClose,
+}: {
   items: SelectionItem[];
   title: string;
-  onSelect: (key: string) => void;
+  onItemSelect: (key: string) => void;
   onClose?: () => void;
 }) => {
   const [open, setOpen] = useState(false);
@@ -131,7 +135,10 @@ const ItemsDropdown = ({ items, title, onSelect, onClose }: {
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
-          <CommandInput placeholder={`Search ${title.toLowerCase()}...`} className="h-9" />
+          <CommandInput
+            placeholder={`Search ${title.toLowerCase()}...`}
+            className="h-9"
+          />
           <CommandList>
             <CommandEmpty>No items found.</CommandEmpty>
             <CommandGroup>
@@ -141,12 +148,14 @@ const ItemsDropdown = ({ items, title, onSelect, onClose }: {
                   value={item.name}
                   onSelect={() => {
                     if (!item.disabled) {
-                      onSelect(item.key);
+                      onItemSelect(item.key);
                       setOpen(false);
                       onClose?.();
                     }
                   }}
-                  className={item.disabled ? "opacity-50 cursor-not-allowed" : ""}
+                  className={
+                    item.disabled ? "opacity-50 cursor-not-allowed" : ""
+                  }
                   disabled={item.disabled}
                 >
                   <div className="flex items-center gap-2">
@@ -163,46 +172,165 @@ const ItemsDropdown = ({ items, title, onSelect, onClose }: {
   );
 };
 
-const CategorySection = ({ category, items, selectedKey, onSelect, visibleCount }: {
-  category: string;
+const CategoryPicker = ({
+  categories,
+  selectedCategory,
+  onCategorySelect,
+  categorizedItems,
+  categoryIcons,
+}: {
+  categories: string[];
+  selectedCategory: string;
+  onCategorySelect: (category: string) => void;
+  categorizedItems: Record<string, SelectionItem[]>;
+  categoryIcons?: Record<string, CategoryIcon>;
+}) => {
+  const [open, setOpen] = useState(false);
+
+  const getCategoryIcon = (category: string) => {
+    if (!categoryIcons) return null;
+    const categoryInfo = categoryIcons[category];
+    return categoryInfo?.icon;
+  };
+
+  const getCategoryCount = (category: string) => {
+    if (category === "All") {
+      return Object.values(categorizedItems).reduce((total, items) => total + items.length, 0);
+    }
+    return categorizedItems[category]?.length || 0;
+  };
+
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="outline"
+          size="sm"
+          className="h-8 sm:h-9 px-2 sm:px-3 min-w-[120px] sm:min-w-[160px] bg-white text-gray-700 border-gray-300 hover:bg-gray-50 text-xs sm:text-sm font-bold"
+        >
+          {getCategoryIcon(selectedCategory) && React.createElement(getCategoryIcon(selectedCategory)!, {
+            className: "w-3 h-3 sm:w-4 sm:h-4 mr-1",
+          })}
+          {selectedCategory}
+          <ChevronDown className="w-3 h-3 sm:w-4 sm:h-4 ml-1 opacity-70" />
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-[200px] p-0">
+        <Command>
+          <CommandInput placeholder="Search categories..." className="h-9" />
+          <CommandList>
+            <CommandEmpty>No categories found.</CommandEmpty>
+            <CommandGroup>
+              {categories.map((category) => (
+                <CommandItem
+                  key={category}
+                  value={category}
+                  onSelect={() => {
+                    onCategorySelect(category);
+                    setOpen(false);
+                  }}
+                >
+                  <div className="flex items-center justify-between w-full">
+                    <div className="flex items-center gap-2">
+                      {getCategoryIcon(category) && React.createElement(getCategoryIcon(category)!, {
+                        className: "w-4 h-4",
+                      })}
+                      {category}
+                    </div>
+                    <Badge variant="secondary" className="text-xs px-1.5 py-0.5">
+                      {getCategoryCount(category)}
+                    </Badge>
+                  </div>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+};
+
+const CompactCategoryLayout = ({
+  items,
+  selectedKey,
+  onItemSelect,
+  visibleCount = 4,
+  categoryIcons,
+  onCategorySelect,
+}: {
   items: SelectionItem[];
   selectedKey: string | null;
-  onSelect: (key: string) => void;
-  visibleCount: number;
+  onItemSelect: (key: string) => void;
+  visibleCount?: number;
+  categoryIcons?: Record<string, CategoryIcon>;
+  onCategorySelect?: () => void;
 }) => {
-  // const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState<string>("All");
 
-  const selectedItem = items.find(item => item.key === selectedKey);
-  const initialVisible = items.slice(0, visibleCount);
-  const visibleItems = selectedItem && !initialVisible.find(item => item.key === selectedItem.key)
-    ? [...initialVisible, selectedItem].filter((item, index, self) =>
-      index === self.findIndex(t => t.key === item.key))
-    : initialVisible;
+  // Group items by category
+  const categorizedItems = items.reduce((acc, item) => {
+    const category = item.category;
+    if (category) {
+      if (!acc[category]) acc[category] = [];
+      acc[category].push(item);
+    }
+    return acc;
+  }, {} as Record<string, SelectionItem[]>);
 
-  const remainingItems = items.filter(item =>
-    !visibleItems.find(visibleItem => visibleItem.key === item.key)
+  const categories = Object.keys(categorizedItems).sort((a, b) => {
+    return a.localeCompare(b);
+  });
+
+  // Get items for selected category
+  const currentItems =
+    selectedCategory === "All"
+      ? items
+      : categorizedItems[selectedCategory] || [];
+
+  // Calculate visible items with truncation
+  const selectedItem = currentItems.find((item) => item.key === selectedKey);
+  const initialVisible = currentItems.slice(0, visibleCount);
+  const visibleItems =
+    selectedItem &&
+      !initialVisible.find((item) => item.key === selectedItem.key)
+      ? [...initialVisible, selectedItem].filter(
+        (item, index, self) =>
+          index === self.findIndex((t) => t.key === item.key)
+      )
+      : initialVisible;
+
+  const remainingItems = currentItems.filter(
+    (item) => !visibleItems.find((visibleItem) => visibleItem.key === item.key)
   );
 
   return (
-    <div className="space-y-2">
-      <div className="flex items-center gap-2">
-        <Badge variant="secondary" className="text-xs font-medium">{category}</Badge>
-        <div className="flex-1 h-px bg-gray-200"></div>
-      </div>
+    <div className="flex items-center gap-2 sm:gap-3">
+      <CategoryPicker
+        categories={[...categories, "All"]}
+        selectedCategory={selectedCategory}
+        onCategorySelect={(category) => {
+          setSelectedCategory(category);
+          onCategorySelect?.();
+        }}
+        categorizedItems={categorizedItems}
+        categoryIcons={categoryIcons}
+      />
+      <div className="h-6 w-px bg-gray-300 flex-shrink-0"></div>
       <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
         {visibleItems.map((item) => (
           <SelectionButton
             key={item.id}
             item={item}
             isSelected={item.key === selectedKey}
-            onSelect={onSelect}
+            onItemSelect={onItemSelect}
           />
         ))}
         {remainingItems.length > 0 && (
           <ItemsDropdown
             items={remainingItems}
-            title={category}
-            onSelect={onSelect}
+            title={selectedCategory}
+            onItemSelect={onItemSelect}
           />
         )}
       </div>
@@ -211,154 +339,83 @@ const CategorySection = ({ category, items, selectedKey, onSelect, visibleCount 
 };
 
 export function SelectionGroup({
-  title,
-  description,
   items,
   selectedKey,
-  onSelect,
+  onItemSelect,
   loading = false,
   visibleCount = 3,
-  titleIcon,
-  titleIconColor = "text-gray-600",
-  showEmptyMessage = false,
-  emptyMessage,
-  viewMode = "all",
-  onViewModeChange,
+  categoryIcons,
+  onCategorySelect,
 }: SelectionGroupProps) {
-  const [showAllCategories, setShowAllCategories] = useState(false);
 
-  // Group items by category
-  const categorizedItems = viewMode === "categories"
+  // Group items by category (only if categoryIcons is provided)
+  const categorizedItems = categoryIcons
     ? items.reduce((acc, item) => {
-      const category = item.category || "Others";
-      if (!acc[category]) acc[category] = [];
-      acc[category].push(item);
+      const category = item.category;
+      if (category) {
+        if (!acc[category]) acc[category] = [];
+        acc[category].push(item);
+      }
       return acc;
     }, {} as Record<string, SelectionItem[]>)
     : null;
 
-  const sortedCategories = categorizedItems
-    ? Object.keys(categorizedItems).sort((a, b) => {
-      if (a === "Other") return 1;
-      if (b === "Other") return -1;
-      return a.localeCompare(b);
-    })
-    : [];
-
   // Calculate visible items for "all" mode
-  const selectedItem = items.find(item => item.key === selectedKey);
+  const selectedItem = items.find((item) => item.key === selectedKey);
   const initialVisible = items.slice(0, visibleCount);
-  const visibleItems = selectedItem && !initialVisible.find(item => item.key === selectedItem.key)
-    ? [...initialVisible, selectedItem].filter((item, index, self) =>
-      index === self.findIndex(t => t.key === item.key))
-    : initialVisible;
+  const visibleItems =
+    selectedItem &&
+      !initialVisible.find((item) => item.key === selectedItem.key)
+      ? [...initialVisible, selectedItem].filter(
+        (item, index, self) =>
+          index === self.findIndex((t) => t.key === item.key)
+      )
+      : initialVisible;
 
-  const remainingItems = items.filter(item =>
-    !visibleItems.find(visibleItem => visibleItem.key === item.key)
+  const remainingItems = items.filter(
+    (item) => !visibleItems.find((visibleItem) => visibleItem.key === item.key)
   );
 
   if (loading) {
     return (
-      <div className="p-3 sm:p-5">
-        {!showEmptyMessage && <Title title={`Select ${title}`} description={description} titleIcon={titleIcon} titleIconColor={titleIconColor} />}
-        <div className="flex items-center gap-2 sm:gap-3 flex-wrap ml-6 sm:ml-8">
-          <Skeleton className="h-8 sm:h-9 w-20 sm:w-24" />
-          <Skeleton className="h-8 sm:h-9 w-24 sm:w-28" />
-          <Skeleton className="h-8 sm:h-9 w-28 sm:w-32" />
-        </div>
+      <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
+        <Skeleton className="h-8 sm:h-9 w-20 sm:w-24" />
+        <Skeleton className="h-8 sm:h-9 w-24 sm:w-28" />
+        <Skeleton className="h-8 sm:h-9 w-28 sm:w-32" />
       </div>
     );
   }
 
   if (items.length === 0) {
-    return (
-      <div className="p-3 sm:p-5">
-        <Title title={title} description={description} titleIcon={titleIcon} titleIconColor={titleIconColor} />
-        <div className="text-sm text-gray-500 italic ml-6 sm:ml-7 bg-gray-100 p-2 rounded-md self-start">
-          {showEmptyMessage && emptyMessage ? emptyMessage : "No items available."}
-        </div>
-      </div>
-    );
+    return null;
   }
 
   return (
-    <div className="p-3 sm:p-5">
-      {!showEmptyMessage && (
-        <div className="flex items-center justify-between mb-3">
-          <Title title={`Select ${title}`} description={description} titleIcon={titleIcon} titleIconColor={titleIconColor} />
-          {onViewModeChange && (
-            <div className="flex items-center gap-1 bg-gray-100 rounded-lg p-1">
-              <button
-                onClick={() => onViewModeChange("all")}
-                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${viewMode === "all" ? "bg-white text-gray-900 shadow-sm" : "text-gray-600 hover:text-gray-900"
-                  }`}
-              >
-                All
-              </button>
-              <button
-                onClick={() => onViewModeChange("categories")}
-                className={`px-3 py-1 text-xs font-medium rounded-md transition-colors ${viewMode === "categories" ? "bg-white text-gray-900 shadow-sm" : "text-gray-600 hover:text-gray-900"
-                  }`}
-              >
-                Categories
-              </button>
-            </div>
-          )}
-        </div>
-      )}
-
-      {viewMode === "categories" && categorizedItems ? (
-        <div className="space-y-4 ml-6 sm:ml-8">
-          {(showAllCategories ? sortedCategories : sortedCategories.slice(0, 2)).map((category) => (
-            <CategorySection
-              key={category}
-              category={category}
-              items={categorizedItems[category]}
-              selectedKey={selectedKey}
-              onSelect={onSelect}
-              visibleCount={visibleCount}
-            />
-          ))}
-
-          {!showAllCategories && sortedCategories.length > 2 && (
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowAllCategories(true)}
-              className="text-xs text-gray-600 hover:text-gray-900 h-8 px-3"
-            >
-              See {sortedCategories.length - 2} more categories
-              <ChevronDown className="w-3 h-3 ml-1" />
-            </Button>
-          )}
-
-          {showAllCategories && sortedCategories.length > 2 && (
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowAllCategories(false)}
-              className="text-xs text-gray-600 hover:text-gray-900 h-8 px-3"
-            >
-              Show less
-              <ChevronUp className="w-3 h-3 ml-1" />
-            </Button>
-          )}
-        </div>
+    <div>
+      {categorizedItems && categoryIcons ? (
+        <CompactCategoryLayout
+          items={items}
+          selectedKey={selectedKey}
+          onItemSelect={onItemSelect}
+          visibleCount={visibleCount}
+          categoryIcons={categoryIcons}
+          onCategorySelect={onCategorySelect}
+        />
       ) : (
-        <div className="flex items-center gap-2 sm:gap-3 flex-wrap ml-6 sm:ml-8">
+        <div className="flex items-center gap-2 sm:gap-3 flex-wrap">
           {visibleItems.map((item) => (
             <SelectionButton
               key={item.id}
               item={item}
               isSelected={item.key === selectedKey}
-              onSelect={onSelect}
+              onItemSelect={onItemSelect}
             />
           ))}
           {remainingItems.length > 0 && (
             <ItemsDropdown
               items={remainingItems}
-              title={title}
-              onSelect={onSelect}
+              title="Items"
+              onItemSelect={onItemSelect}
               onClose={() => { }}
             />
           )}

@@ -14,6 +14,7 @@ import {
   Receipt,
   Calendar,
   StickyNote,
+  DollarSign,
 } from "lucide-react";
 import {
   UserRecord,
@@ -91,6 +92,30 @@ interface AppObject {
   category?: string;
 }
 
+export interface CategoryIcon {
+  icon: React.ComponentType<{ className?: string }>;
+  label: string;
+}
+
+export const categoryIcons: Record<string, CategoryIcon> = {
+  CRM: {
+    icon: Users,
+    label: "Customer Relationship Management",
+  },
+  Recruitment: {
+    icon: Briefcase,
+    label: "Recruitment & HR",
+  },
+  Finance: {
+    icon: DollarSign,
+    label: "Finance & Accounting",
+  },
+  Documents: {
+    icon: FileText,
+    label: "Documents & Files",
+  },
+};
+
 const appObjects: Record<AppObjectKey, AppObject> = {
   orders: {
     label: "Order",
@@ -100,6 +125,7 @@ const appObjects: Record<AppObjectKey, AppObject> = {
     allowCreate: true,
     icon: Mail,
     component: OrderRecord,
+    category: "Finance",
   },
   users: {
     label: "User",
@@ -109,6 +135,7 @@ const appObjects: Record<AppObjectKey, AppObject> = {
     allowCreate: true,
     icon: User,
     component: UserRecord,
+    category: "Recruitment",
   },
   "job-applications": {
     label: " Job Application",
@@ -118,6 +145,7 @@ const appObjects: Record<AppObjectKey, AppObject> = {
     allowCreate: true,
     icon: Briefcase,
     component: JobApplicationRecord,
+    category: "Recruitment",
   },
   contacts: {
     label: "Contact",
@@ -137,6 +165,7 @@ const appObjects: Record<AppObjectKey, AppObject> = {
     allowCreate: true,
     icon: Building2,
     component: JobRecord,
+    category: "Recruitment",
   },
   companies: {
     label: "Company",
@@ -156,6 +185,7 @@ const appObjects: Record<AppObjectKey, AppObject> = {
     allowCreate: true,
     icon: FileText,
     component: JobCandidateRecord,
+    category: "Recruitment",
   },
   tasks: {
     label: "Task",
@@ -175,6 +205,7 @@ const appObjects: Record<AppObjectKey, AppObject> = {
     allowCreate: true,
     icon: Package,
     component: ProductRecord,
+    category: "CRM",
   },
   leads: {
     label: "Lead",
@@ -204,6 +235,7 @@ const appObjects: Record<AppObjectKey, AppObject> = {
     allowCreate: true,
     icon: Receipt,
     component: InvoiceRecord,
+    category: "Finance",
   },
   activities: {
     label: "Activity",

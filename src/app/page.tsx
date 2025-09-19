@@ -9,8 +9,9 @@ import {
   Zap,
 } from "lucide-react";
 import { useIntegration } from "@membranehq/react";
-import appObjects from "@/lib/app-objects";
+import appObjects, { categoryIcons } from "@/lib/app-objects";
 import { SelectionGroup } from "../components/selection-group";
+import { SelectionGroupWrapper } from "../components/selection-group-wrapper";
 import { useIntegrationConnection } from "../hooks/use-integration-connection";
 import { useDataSourceAppliedIntegrations } from "../hooks/use-applied-integrations";
 import { ManageIntegrationsModal } from "../components/manage-integrations-modal/manage-integrations-modal";
@@ -35,9 +36,6 @@ export default function Page() {
     string | null
   >(searchParams.get("appObject") || null);
 
-  const [objectsViewMode, setObjectsViewMode] = useState<"all" | "categories">(
-    "categories"
-  );
 
   // Update URL when selections change
   const updateURL = (integration: string | null, appObject: string | null) => {
@@ -189,32 +187,46 @@ export default function Page() {
         <div className="max-w-7xl mx-auto">
           <div className="flex justify-between items-start mb-6">
             <div className="flex-1">
-              {/* Step 1: App Object Selection with Categories */}
-              <SelectionGroup
-                title="Object"
+              <SelectionGroupWrapper
+                title="Select Object"
                 description="Choose the type of object you want to view records for (e.g., contacts, companies, orders)"
-                items={appObjectsItems}
-                selectedKey={selectedAppObjectKey}
-                onSelect={handleAppObjectSelection}
-                visibleCount={5}
-                titleIcon={Database}
-                viewMode={objectsViewMode}
-                onViewModeChange={setObjectsViewMode}
-              />
+                icon={Database}
+                className="p-3 sm:p-5"
+                size="sm"
+              >
+                <SelectionGroup
+                  items={appObjectsItems}
+                  selectedKey={selectedAppObjectKey}
+                  onItemSelect={handleAppObjectSelection}
+                  visibleCount={5}
+                  categoryIcons={categoryIcons}
+                  onCategorySelect={() => {
+                    setSelectedAppObjectKey(null);
+                    if (selectedIntegrationKey) {
+                      handleIntegrationSelection(null);
+                    }
+                  }}
+                />
+              </SelectionGroupWrapper>
 
-              {/* Step 2: Applied Integrations*/}
-              <SelectionGroup
-                title="Integration"
+              <SelectionGroupWrapper
+                title="Select Integration"
                 description="Select the third-party service you want to fetch records from"
-                items={integrationItems}
-                selectedKey={selectedIntegrationKey ?? null}
-                onSelect={handleIntegrationSelection}
+                icon={Zap}
                 loading={appliedIntegrationsIsLoading}
-                visibleCount={4}
-                titleIcon={Zap}
                 showEmptyMessage={!selectedAppObjectKey}
                 emptyMessage="All available integrations will appear here after object selection"
-              />
+                className="p-3 sm:p-5"
+                size="sm"
+              >
+                <SelectionGroup
+                  items={integrationItems}
+                  selectedKey={selectedIntegrationKey ?? null}
+                  onItemSelect={handleIntegrationSelection}
+                  loading={appliedIntegrationsIsLoading}
+                  visibleCount={4}
+                />
+              </SelectionGroupWrapper>
             </div>
 
             {/* Manage Integrations Modal */}
