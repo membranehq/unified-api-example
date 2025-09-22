@@ -18,7 +18,6 @@ import { z } from "zod";
 interface EditRecordModalProps {
   record: IRecord;
   appObjectKey: string;
-  appObjectLabel: string;
   onUpdateRecord?: (recordId: string, recordData: Record<string, unknown>) => Promise<void>;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
@@ -27,7 +26,6 @@ interface EditRecordModalProps {
 export function EditRecordModal({
   record,
   appObjectKey,
-  appObjectLabel,
   onUpdateRecord,
   open,
   onOpenChange,
@@ -82,7 +80,7 @@ export function EditRecordModal({
         <DialogHeader className="flex-shrink-0 border-b px-4 sm:px-6 py-3 sm:py-4">
           <DialogTitle className="text-base sm:text-lg flex items-center gap-2">
             <config.icon className="w-5 h-5 text-gray-500" />
-            Edit {getSingularForm(appObjectLabel)}
+            Edit {getSingularForm(config.label)}
           </DialogTitle>
         </DialogHeader>
         <form
@@ -128,7 +126,7 @@ export function EditRecordModal({
                   Updating...
                 </>
               ) : (
-                `Update ${appObjectLabel}`
+                `Update ${config.label}`
               )}
             </Button>
           </div>

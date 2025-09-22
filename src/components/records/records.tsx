@@ -202,7 +202,7 @@ export const Records = memo(function Records({
                 </Button>
               )}
             </h2>
-            {appObjects[appObjectKey as keyof typeof appObjects]
+            {appObjects[appObjectKey]
               ?.allowCreate && (
                 <CreateRecordModal
                   appObjectKey={appObjectKey}
@@ -257,7 +257,6 @@ export const Records = memo(function Records({
       {editDialogOpen && editingRecord && (
         <EditRecordModal
           appObjectKey={appObjectKey}
-          appObjectLabel={appObjectLabel}
           record={editingRecord}
           onUpdateRecord={onUpdateRecord}
           open={editDialogOpen}

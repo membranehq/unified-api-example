@@ -215,7 +215,7 @@ export default function Page() {
                 icon={Zap}
                 loading={appliedIntegrationsIsLoading}
                 showEmptyMessage={!selectedAppObjectKey}
-                emptyMessage="All available integrations will appear here after object selection"
+                emptyMessage="All applicable integrations will appear here after object selection"
                 className="p-3 sm:p-5"
                 size="sm"
               >
