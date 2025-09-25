@@ -1,29 +1,17 @@
-import { NextRequest, NextResponse } from "next/server";
-import { generateCustomerAccessToken } from "@/lib/integration-token";
-import { getAuthUser } from "@/lib/auth-utils";
+import { NextResponse, NextRequest } from "next/server";
+import { ensureAuth, getUserData } from "@/lib/ensureAuth";
 
 export async function GET(request: NextRequest) {
+  ensureAuth(request);
+
   try {
-    const user = await getAuthUser(request);
+    const { membraneAccessToken } = getUserData(request);
 
-    if (!user) {
-      return NextResponse.json(
-        { error: "Authentication required" },
-        { status: 401 }
-      );
-    }
-
-    // Generate integration access token that will be used to access membrane
-    const token = await generateCustomerAccessToken({
-      id: user.id,
-      name: user.email,
-    });
-
-    return NextResponse.json({ token });
+    return NextResponse.json({ token: membraneAccessToken });
   } catch (error) {
-    console.error("Integration token generation failed:", error);
+    console.error("Error getting integration token:", error);
     return NextResponse.json(
-      { error: "Failed to generate integration token" },
+      { error: "Internal server error" },
       { status: 500 }
     );
   }
