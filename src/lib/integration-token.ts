@@ -10,13 +10,11 @@ interface TokenData {
 }
 
 /**
- * Generates access token for your app user. 
+ * Generates access token for your app user.
  * This token will be used anytime they need to access membrane
  * See https://docs.integration.app/docs/authentication#/workspace-keysecret-token-signing
  */
-export async function generateCustomerAccessToken(
-  tokenData: TokenData
-): Promise<string> {
+export function generateCustomerAccessToken(tokenData: TokenData) {
   if (!WORKSPACE_KEY || !WORKSPACE_SECRET) {
     throw new Error("Integration.app credentials not configured");
   }
